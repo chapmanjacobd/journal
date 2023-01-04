@@ -1,5 +1,6 @@
 Alfred Korzybski
 Avijit Mukul Kishore
+Bborie Park
 Bill Hillier
 Bourdieu
 Bret Victor
