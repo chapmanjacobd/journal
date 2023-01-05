@@ -20,6 +20,7 @@ Jane Jacobs
 Jef Raskin
 Joanna Rutkowska
 Latour
+Lucy Suchman
 Marc Porat
 Meredith L. Patterson
 Neil Freeman
