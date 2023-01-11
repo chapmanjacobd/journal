@@ -1,0 +1,54 @@
+Things I wish I knew before learning programming: (and I'm glad that it took me so long before I began)
+
+Throughout my childhood I enjoyed playing with LEGOs. They came with instructions that were standardized, clear, and everything built upwards in complexity from the first block; simple, iterative steps, until you suddenly had large modules which you fit together.
+
+After seeing, feeling, and living how the LEGO Group imagined up a creation from small blocks it was easy to add some creativity here or there by changing a few blocks and eventually, after years of dutiful service to the LEGO, perhaps one could imagine, architect, and build a few of their own designs. 
+
+Certainly, there are a talented few who are able to pick up blocks from age 1 and imagine and build without observing or living the experience of a LEGO manual but those people are not me.
+
+RTFM: Arbitrage Armchair Programming
+
+Programming is a skill moreso than a language. The best way to learn to speak computer is by listening to how different speakers translate their desires into code. Especially when first starting out, after learning a little bit about how to differentiate syntactic and lexical grammar, the best way to learn programming is to read a lot of source code without touching your pen and without choosing your first language. Now we're cooking with *bicameral mind*.
+
+Think about your favorite applications, if the source code is available, look at how they organized their code, try to figure out what each file and function is doing. Look up words or symbols you don't understand. If it's too difficult, take a step back and read or watch a video about the language itself. Your goal should never be to learn a language, rather, learning a language is the path you must take to accomplish another goal.
+
+After several weeks of doing this across many codebases and languages you will start to develop your own opinion about what language you might want to learn first. It doesn't really matter what you pick as long as you are motivated to learn it. 
+
+Object-oriented programming prevented me from learning programming at a young age because it looked daunting and alien and I thought all programming looked like that. I didn't bother with programming for decades because I didn't think I could learn it. Because OOP looked impenetrable I completely ignored programming and focused my efforts on troubleshooting operating systems, installing linux, setting up email servers, and other sysadmin stuff (Virtuamin et al). This was fruitful in of itself, but eventually it really helps to know how to put a BASH script together.
+
+My point is not that OOP is bad (if it appeals to you, go for it!) but that there are a lot of different styles of languages. Read a lot then pick the one which speaks to you. Don't just pick something because your estranged uncle recommend it and said you won't be able to get a job if you don't learn Java. 
+
+With this language in mind, try to think of a new project or idea for you to build. This might take a couple weeks to get a really good idea--that's normal. Unless you are really motivated by your idea you probably won't finish it. In the meantime, while thinking up some ideas, keep exploring Github for popular projects written in the language of your choice. Within each project look for interesting code organization, deployment strategies, conventions, and functions which seem useful.
+
+While you are reading, you'll probably come across libraries. These packages are projects which were designed for programmers specifically, to help them with certain tasks or language challenges. Most libraries are garbage but there are usually more than a few which are the best thing since sliced bread. Try to discern between these two types of libraries. You'll usually find two or more libraries which try to solve the same problem in different ways and it is extremely rare that one is not better than the other--but there are usually tradeoffs with every decision you make in programming.
+
+Always remain skeptical. Try to see if a different way of doing things is actually beneficial before adopting a practice into your life and changing the way you do things.
+
+Staticlly typed languages are like training wheels which never come off. They might look silly and baby-like but they really do help you program faster by preventing some dumb errors in your logic. When using these languages, I wear the training wheels with pride and you can too! They might seem confusing at first but data types are nearly universal across programming languages and there are usually fewer than twenty base data types so it's worth it to learn about how strings are different from blobs, arrays of objects are different from objects of arrays etc.
+
+On that same note: please spend some time with data structures and databases. Seeing what tradeoffs in data structure choices are actually helpful vs which strategies only make your code more obfuscated. These usually won't be the same across different languages. 
+
+For example, one language might support enums while another language you might have to use factors or numbers. These might not be 100% synonymous so be careful. Whenever there is doubt or something isn't working correctly, try to validate your assumptions first! The most common bug (after syntax error) is the bug of aligning and verifying your assumptions with your code.
+
+Databases can eliminate a lot of your pain. After or while completing your first project I highly recommend taking a look at [SQLITE](https://blog.wesleyac.com/posts/consider-sqlite). Spend some time learning the basics of SQL: scalar vs aggregation functions, the WHERE clause, group by, order by. SQL can save you a lot of time--but it doesn't do everything well but it's estimated that 80% of data related code could be more succinctly written in SQL.
+
+Instead of spending 80% of your time writing data munging code, why not spend 80% of your time learning new tools? The meta game is where the most productivity happens. 
+
+Instead of building one-time documents or one-time tools, try to think about how to build reusable tools which create documents or better yet tools which create tools. It doesn't take much more work. Just a bit more abstraction and you end up with something that is easier to reuse so you are more likely to make iterative changes and improve it over time.
+
+Programming is largely all the things that you do before opening your code editor. What happens between opening your code editor and iterative development is of little consequence. The important bits are how you go about thinking about how to solve a particular problem and how you implement eventual changes (sooner rather than later) which will need to be made to your solution.
+
+Most algorithms have already been written. If you feel the urge to write your own algorithm before researching existing solutions you might be unwise. It's less than likely that your symphony will outperform-in one or more aspects-than an existing algorithm. I feel like algorithms have been overemphasized in academia-for sure we need many smart people to work on algorithms but those people that create major breakthroughs in algorithms are often not programmers themselves. They are more likely mathematicians or physicists.
+
+[Creative solutions](https://john-doe.neocities.org/#home) can lead to a higher quality of life. There are far more unexplored emergent inter-tool solutions than there are new algorithms. The UNIX pipe is a brilliant recognition of this. Interoperability of distinct and auditable building blocks is very often more valuable than minute improvements in speed.
+
+In practice it has been my experience that many programmers have an Achilles heel of data modeling. They are certainly not at fault and it's difficult when you want to create a solution that performs well on a moving target. It's not often that I accurately specify the data types (or object properties) with even unchanging requirements. Type, Refine, Re-type. 
+
+Every program which has an input and output makes a decision about how to store the data and there is no universal way which will be both readable and performant for all possible input data schema. This is not the easiest thing to learn but you will get an intuition for it if you make the conscious effort to try different ways and see what works best. It has been my experience that refining the data model is often the best way to start improving the performance of a seemingly "unscalable" program. 
+
+Instead of trying to capture more data you can often get the same or better value from refining what data you store and how you store it. Lower throughput but the data saved has more meaning and if you refine correctly it's easier for other people to use the data.
+
+The filesystem is global state and people are able to use it every day with few collisions. Local state is certainly very useful but I feel like many programmers overuse it and many conventions keep global state untouched even in languages where that is not necessary. 
+
+I don't really understand why programmers care so much about closures or the separation between public and private methods. I totally understand why closures are necessary to exist in JavaScript and similar languages--but there are also other languages which do a few small things differently so that closures are not as necessary. Encapsulation is very confusing for new programmers and it makes life unnecessarily difficult. If you don't want me to access your objects then just send a blob to my browser. (this kills the programmer)
+
