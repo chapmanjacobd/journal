@@ -1,6 +1,5 @@
 # Tools to try
 
-https://sshuttle.readthedocs.io/en/stable/usage.html
 
 termux gui
 
