@@ -1,3 +1,3 @@
-    Drypoint
-    Aquatint
-    Daguerreotype
+Aquatint
+Daguerreotype
+Drypoint
