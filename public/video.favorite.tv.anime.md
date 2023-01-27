@@ -1,0 +1,16 @@
+Acchi Kocchi
+Ai Yori Aoshi
+Baccano!
+Byousoku 5 Centimeter
+Crayon Shin-Chan
+Darker than Black
+Detroit Metal City
+Doujin Work
+Durarara!!
+Eden of the East
+Initial D
+Samurai Champloo
+School Rumble
+Suzumiya Haruhi no Yuuutsu
+Toki wo Kakeru Shoujo
+Welcome to the NHK
