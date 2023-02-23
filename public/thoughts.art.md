@@ -1,0 +1,1 @@
+I think true art is anything that has syntactic density. When you go back to it, you can learn or extract something new. This doesn't have to be intentionally created or presented. This could be anything. This could even be a person. Art is in appreciation of something and learning from viewing or creating it.
