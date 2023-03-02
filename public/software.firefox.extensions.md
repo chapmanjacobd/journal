@@ -1,71 +1,47 @@
-AutoPagerize
+# extensions
 
-better-youtube-subs
-
-Classic Theme Restorer
-
-Copy Links
-
-Double Click Add New Tab
-
+Absolute Enable Right Click & Copy
+Add-ons Search Detection
+Amazon.com
+base64 decoder
+Bing
+BlockTube
+BroTab
+ClearURLs
+Copy Selected Links
+Copy Selected Tabs to Clipboard
+Copy Text Link
+CORS Everywhere
+Down Right Now
 DownThemAll!
-
-Firefox Hello
-
-Flagfox
-
-Google Reverse Image Search
-
-Google search link fix
-
-HTTPS-Everywhere
-
-Menu Icons Plus
-
-Multi-process staged rollout
-
-Multiple Tab Handler
-
-NetVideoHunter
-
-Perapera Chinese
-
-Pocket
-
-Print Edit
-
+DuckDuckGo
+eBay
+Enhancer for YouTube™
+Export Cookies
+Fast Copy Links
+Flickr Size Pickr
+Google
+Google Search By Image
+I don't care about cookies
+Magnet Links +
+News Feed Eradicator
+Old Reddit Redirect
 Privacy Badger
-
-Random Bookmark From Folder
-
 Reddit Enhancement Suite
-
-Reddit on Youtube
-
-ScrapBook X
-
-Session Manager
-
-Skip adf.ly skip!!
-
-Status-4-Evar
-
-Stylish
-
-Super Drag
-
-Tab Wheel Scroll
-
-TableTools2
-
-TiddlyFox extension for Firefox
-
-Tree Style Tab
-
+Refined GitHub
+ScrollAnywhere
+Sidebery
+Simple Translate
+SponsorBlock for YouTube - Skip Sponsorships
+Stylus
+Torrentz2 Magnet Links +
+uBlacklist
 uBlock Origin
-
-User Agent Switcher
-
-User-Agent JS Fixer
-
-Xmarks
+Video Background Play Fix
+Video DownloadHelper
+Vimium
+weAutoPagerize
+Wikipedia (en)
+xIFr
+YouTube Search Fixer (YSF)
+Open in Browser
