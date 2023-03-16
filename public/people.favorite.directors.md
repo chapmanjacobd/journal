@@ -1,0 +1,12 @@
+
+Alfred Hitchcock
+Andrei Tarkovsky
+Christopher Nolan and his brother
+David Lynch
+Hong Sang-su
+Mathieu Kassovitz
+Satoshi Miki
+Shane Carruth
+Stanley Kubrik
+Wes Anderson
+三谷 幸喜 / Toshiaki Karasawa
