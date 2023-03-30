@@ -1,191 +1,101 @@
-Folk / Pop / Jazz  
-Andrew Bird
 
-Hot Chip
-
-clammbon クラムボン
-
-Tigran Hamasyan
-
-Eiko Ishibashi 石橋英子
-
-矢野顕子
-
-Kahimi Karie
-
-Yumi Matsutoya 松任谷由実
-
-Cibo Matto
-
-Metric
-
-Beth Orton
-
-Au Revoir Simone
-
-Sarah Slean
-
-Elliott Smith
-
-Cat Stevens
-
-Sufjan Stevens
-
-Rachael Yamagata
-
-Hiroshi Kamayatsu かまやつひろし
-
-Rajie ラジ
-
-Kazumi Nikaido 二階堂和美
-
-Marcos Valle
-
-Takashi Ueno 植野隆司
-
-Kim Sa Wol
-
-佐井好子
-
-Saho Terao (寺尾紗穗)
-
-Rock  
-Виктор Цой
-
-Chicago
-
-The Grateful Dead
-
-Norman Greenbaum
-
-Stephen Stills
-
-The Who
-
-Spanky and Our Gang
-
-Godspeed You! Black Emperor
-
-Thee Silver Mt. Zion Memorial Orchestra
-
-Funk / Hip-Hop / Electronic  
 4hero
-
-Jurassic 5
-
-Zero 7
-
 Air
-
-Archive
-
-Badfinger
-
-Fila Brazillia
-
-Thievery Corporation
-
-CYNE
-
-Deca
-
-Earth, Wind & Fire
-
-Emancipator
-
-Flying Lotus
-
-General Elektriks
-
-J Dilla
-
-Justice
-
-Jamiroquai
-
-Moby
-
-DJ Okawari
-
-rjd2
-
-Röyksopp
-
-Sébastien Schuller
-
-DJ Shadow
-
-LCD Soundsystem
-
-Nightmares on Wax
-
-Classical  
-Arthur Bliss
-
-Paul Cardall
-
-Claude Debussy
-
-Matthew Cooper (Eluvium)
-
-Philip Glass
-
-Arvo Pärt
-
-Sviatoslav Richter
-
-Erik Satie
-
-Maurice Ravel
-
-Samuel Barber
-
-Film Music  
-Armand Amar
-
-Bernard Herrmann
-
-Yoko Kanno
-
-Michel Legrand
-
-Clint Mansell
-
-Ennio Morricone
-
-Nujabes
-
-Ernst Reijseger
-
-Robbie Robertson
-
-Yann Tiersen
-
-Experimental  
-Broadcast
-
-Norman Blake
-
-Penguin Cafe Orchestra
-
-The Books
-
-Ryuichi Sakamoto
-
-Øystein Sevåg
-
+Ambient
 Amon Tobin
-
-Trentemøller
-
-Tori Kudo (Maher Shalal Hash Baz) 工藤冬里
-
-tenniscoats テニスコーツ
-
-Ambient  
-Ólafur Arnalds
-
+Andrew Bird
+Archive
+Armand Amar
+Arthur Bliss
+Arvo Pärt
+Au Revoir Simone
+Badfinger
+Bernard Herrmann
+Beth Orton
 Brian Eno
-
-Nils Frahm
+Broadcast
+Cat Stevens
+Chicago
+Cibo Matto
+clammbon クラムボン
+Classical
+Claude Debussy
+Clint Mansell
+CYNE
+Deca
+DJ Okawari
+DJ Shadow
+Earth, Wind & Fire
+Eiko Ishibashi 石橋英子
 Eli Hsieh
+Elliott Smith
+Emancipator
+Ennio Morricone
+Erik Satie
+Ernst Reijseger
+Experimental
+Fila Brazillia
+Film Music
+Flying Lotus
+Folk / Pop / Jazz
+Funk / Hip-Hop / Electronic
+General Elektriks
+Godspeed You! Black Emperor
+Hiroshi Kamayatsu かまやつひろし
+Hot Chip
+J Dilla
+Jamiroquai
+Jurassic 5
+Justice
+Kahimi Karie
+Kazumi Nikaido 二階堂和美
+Kim Sa Wol
+LCD Soundsystem
+Marcos Valle
+Matthew Cooper (Eluvium)
+Maurice Ravel
+Metric
+Michel Legrand
+Moby
+Nightmares on Wax
+Nils Frahm
+Norman Blake
+Norman Greenbaum
+Nujabes
+Paul Cardall
+Penguin Cafe Orchestra
+Philip Glass
+Rachael Yamagata
+Rajie ラジ
+rjd2
+Robbie Robertson
+Rock
+Ryuichi Sakamoto
+Röyksopp
+Saho Terao (寺尾紗穗)
+Samuel Barber
+Sarah Slean
+Spanky and Our Gang
+Stephen Stills
+Sufjan Stevens
+Sviatoslav Richter
+Sébastien Schuller
+Takashi Ueno 植野隆司
+tenniscoats テニスコーツ
+The Books
+The Grateful Dead
+The Who
+Thee Silver Mt. Zion Memorial Orchestra
+Thievery Corporation
+Tigran Hamasyan
+Tori Kudo (Maher Shalal Hash Baz) 工藤冬里
+Trentemøller
+Yann Tiersen
+Yoko Kanno
+Yumi Matsutoya 松任谷由実
+Zero 7
+Ólafur Arnalds
+Øystein Sevåg
+Виктор Цой
+佐井好子
+矢野顕子
