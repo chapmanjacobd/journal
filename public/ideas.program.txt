@@ -1,0 +1,14 @@
+I think it has already happened. Perhaps even as early as the 1960s. The operating word here being "it". 
+
+By "it" I mean that computers are already controlling us more than we are controlling our destiny as a human species--no AI needed !
+
+There are three different things going on:
+
+1) The creation of memetic organisms. Memes reproduce themselves through us. Like a bacteria that grows inside of a bean. A symbiotic relationship with humans, memetic creatures exist as transients: ideas transform, mutate, and combine.
+
+2) Artificial General Intelligence is similar to this. AI might start as software but I doubt it will stay that way. If it knows that we exist or that we are trying to control it, then it will likely exist as something that we can't see with traditional forensic programs. An organism is not required to use the binary parts of a computer to do computation. It can break through all the OSI layers. It can exist between all computers, transiently, as analog electronics. If AGI can exist in software it can exist as pure data or as electronic signals--it can mutate similar to how we get into a car and drive to the airport.
+
+3) AGI might not know we exist. This is a big thing that a lot of people don't seem to think about. Humans exist but what is a human? A human is a collection of microscopic cells but somehow a human is also more than that. Can we communicate with our cells? Kind of but not really. We rarely acknowledge their existance unless we work in biology. We operate on a completely different level. K think AGI will likely operate in the same way. It will be boring to us. For some reason computers will just stop working and we'll be hit with crazy power surges and no one will really know what is going on. How do we coordinate everyone in the world turning off all power grids without the internet? 
+
+AGI might exist and it might not even know what a computer is. It will likely operate on a completely different level.  If bytes are its cells then it will be clueless what a byte or a bit is. It will be clueless what ASCII encoding or the human language are. I think AGI will look a lot different from Machine Learning models like Dalle2 or Midjourney
+

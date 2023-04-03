@@ -1,0 +1,11 @@
+    There's no such thing as a random number.
+    If it's random, it's not a number.
+    If it's a number, it's not random.
+
+    You can have a random distribution over numbers,
+    but then the randomness is in the distribution,
+    not in any particular number that may have been drawn from such a distribution.
+
+    You can't have a number distribution over random,
+    that just doesn't make sense...
+    or maybe that is the definition of a number system?
