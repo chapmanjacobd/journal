@@ -1,0 +1,5 @@
+game difficulty based on:
+
+greed (total number of items in your inventory)
+
+the 7 deadly sins that you have committed. (each time you kill someone the game gets exponentially more difficult)
