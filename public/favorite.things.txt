@@ -1,54 +1,54 @@
--   Art
-    -   Cinematography
-        -   Photography
-    -   Music
-        -   Overtures
-        -   Turntablism
-    -   Design
-        -   Street art
--   Public space
-    -   space & place theory
-        -   time, nostalgia, memories
-        -   Obscure media & locations
-        -   flight
-        -   architecture
-            -   lighthouses, windmills
-    -   Maps, GIS
-        -   South-up map orientation
-    -   Tragedy of the commons
-        -   Open media, copyright theory
-        -   Life before private property and property rights
-            -   trees, mountains
-            -   privacy, freedom
--   Neurology, Psychology
-    -   Sensation, Perception, Cognition+Memory
-    -   being alone, observing, editing
--   Bioinformatics (it's sexy)
--   Video editing
-    -   Dance theory
--   trying new things
-    -   love
-        -   weaknesses
-    -   Identity and how people define themselves
-        -   normalcy
-        -   YouTube
-    -   Stories
-        -   Film, TV, Anime
-    -   quantitative progression
-    -   Mixed-media/cross-curricular things
-    -   Asia's obsession with cowboys
--   Technology
-    -   Computers
-    -   Isomorphic keyboards
--   Research
-    -   Preservation of Knowledge
-    -   FTL communication and the EPR paradox
-    -   Condensed-matter physics
-    -   sleep & sleep science
--   pizza
--   organization & data
-    -   solutions, questions
-    -   Statistics
--   chemical & electrical engineering
 
+-   architecture
+-   Art
+-   Asia's obsession with cowboys
+-   being alone, observing, editing
+-   Bioinformatics (it's sexy)
+-   chemical & electrical engineering
+-   Cinematography
+-   Computers
+-   Condensed-matter physics
+-   Dance theory
+-   Design
+-   Film, TV, Anime
+-   flight
+-   FTL communication and the EPR paradox
+-   Identity and how people define themselves
+-   Isomorphic keyboards
+-   Life before private property and property rights
+-   lighthouses, windmills
+-   love
+-   Maps, GIS
+-   Mixed-media/cross-curricular things
+-   Music
+-   Neurology, Psychology
+-   normalcy
+-   Obscure media & locations
+-   Open media, copyright theory
+-   organization & data
+-   Overtures
+-   Photography
+-   pizza
+-   Preservation of Knowledge
+-   privacy, freedom
+-   Public space
+-   quantitative progression
+-   Research
+-   Sensation, Perception, Cognition+Memory
+-   sleep & sleep science
+-   solutions, questions
+-   South-up map orientation
+-   space & place theory
+-   Statistics
+-   Stories
+-   Street art
+-   Technology
+-   time, nostalgia, memories
+-   Tragedy of the commons
+-   trees, mountains
+-   trying new things
+-   Turntablism
+-   Video editing
+-   weaknesses
+-   YouTube
 someday I will organize this list better.
