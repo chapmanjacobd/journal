@@ -1,9 +1,7 @@
-Official  
+
 Custom Robo Arena
-
-Rhythm Heaven
-
 Final Fantasy III
-
-Homebrew  
+Homebrew
 NitroTracker
+Official
+Rhythm Heaven
