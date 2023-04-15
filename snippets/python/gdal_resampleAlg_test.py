@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import argparse
 from pathlib import Path
 
@@ -45,13 +47,13 @@ def main():
 
     Path(args.output_folder).mkdir(parents=True, exist_ok=True)
     for mode in resample_modes:
-        output_path = Path(args.output_folder / Path(args.input_path).stem + '_' + mode + '.tif')
+        output_path = Path(args.output_folder) / Path(Path(args.input_path).stem + '_' + mode + '.tif')
         warp_options = gdal.WarpOptions(
             resampleAlg=mode,
             xRes=args.multiply * pixel_width,
             yRes=args.multiply * pixel_height,
         )
-        gdal.Warp(bytes(output_path), ds, options=warp_options)
+        gdal.Warp(str(output_path), ds, options=warp_options)
 
 
 if __name__ == '__main__':
