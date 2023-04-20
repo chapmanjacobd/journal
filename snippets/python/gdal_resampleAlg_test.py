@@ -10,6 +10,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Apply various GDAL warp resample algorithms to a raster file.')
     parser.add_argument('input_path', help='the input raster file')
     parser.add_argument('output_folder')
+    parser.add_argument('-tr')
     parser.add_argument('--x-divide', '-x', type=float, default=2)
     parser.add_argument('--y-divide', '-y', type=float, default=2)
     return parser.parse_args()
@@ -51,8 +52,8 @@ def main():
         output_path = Path(args.output_folder) / Path(Path(args.input_path).stem + '_' + mode + '.tif')
         warp_options = gdal.WarpOptions(
             resampleAlg=mode,
-            xRes=pixel_width / args.x_divide,
-            yRes=pixel_height / args.y_divide,
+            xRes=args.tr or (pixel_width / args.x_divide),
+            yRes=args.tr or (pixel_height / args.y_divide),
         )
         gdal.Warp(str(output_path), ds, options=warp_options)
 
