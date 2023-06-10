@@ -2,6 +2,8 @@
 
 https://github.com/rethinkpriorities/squigglepy
 
+https://anosql.readthedocs.io/en/latest/
+
 https://github.com/dolthub/dolt
 
 https://github.com/alirezamika/autoscraper
