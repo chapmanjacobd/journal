@@ -1,10 +1,14 @@
 # Tools to try
 
+git worktree add
+
 https://github.com/rethinkpriorities/squigglepy
 
 https://anosql.readthedocs.io/en/latest/
 
 https://github.com/dolthub/dolt
+
+https://github.com/chriskiehl/Gooey
 
 https://github.com/alirezamika/autoscraper
 

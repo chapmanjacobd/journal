@@ -1,6 +1,7 @@
 Beneath a Steel Sky
 Borderlands
 Chzo Mythos
+Disco Elysium
 Fallout
 Fez
 Gemini Rue
@@ -10,4 +11,3 @@ Papers Plz
 Rollercoaster Tycoon
 Star Wars XWING
 To the Moon
-Disco Elysium
