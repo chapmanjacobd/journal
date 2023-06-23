@@ -8,6 +8,8 @@ https://anosql.readthedocs.io/en/latest/
 
 https://github.com/dolthub/dolt
 
+https://github.com/NotYourDadsMath/txt2dub
+
 https://github.com/chriskiehl/Gooey
 
 https://github.com/alirezamika/autoscraper
