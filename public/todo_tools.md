@@ -10,6 +10,11 @@ https://github.com/dolthub/dolt
 
 https://github.com/NotYourDadsMath/txt2dub
 
+https://petl.readthedocs.io/en/stable/transform.html
+https://petl.readthedocs.io/en/stable/util.html
+
+PostgresML
+
 https://github.com/chriskiehl/Gooey
 
 https://github.com/alirezamika/autoscraper
