@@ -1,0 +1,3 @@
+We need something like this: https://github.com/babybuddy/babybuddy
+but for all humans, adults too. Something that does not require thinking about or manually inputting anything.
+If you buy groceries online, there is some mechanism of keeping track of what you eat but the signal is very weak. You don't know which item caused food poisoning.
