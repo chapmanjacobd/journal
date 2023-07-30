@@ -52,3 +52,18 @@
 
 > The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it
 > Mark Weiser https://news.ycombinator.com/item?id=29115653
+
+> As you get older, you will increasingly fear losing power, and you will become bitter, defensive, and angry about change. Curiosity, acceptance, and exposure to new people can help with this. But, man are you ever going to get weird about people with purple hair who are not afraid of you.
+> Related: almost no one has ever actually been afraid of you.
+> Relatedly related: the only people who were ever actually afraid of you were the handful of people who loved you and desperately wanted you to love them back.
+> For chrissakes, get a new kitchen sponge already.
+> https://github.com/merlinmann/wisdom/blob/master/wisdom.md
+
+> Safety is an emergent property of systems; it does not reside in a person, device or
+department of an organization or system. Safety cannot be purchased or manufactured; it
+is not a feature that is separate from the other components of the system. This means that
+safety cannot be manipulated like a feedstock or raw material. The state of safety in any
+system is always dynamic; continuous systemic change insures that hazard and its
+management are constantly changing.
+> Dr. Richard Cook
+> https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf

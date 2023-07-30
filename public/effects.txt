@@ -1,0 +1,6 @@
+https://en.wikipedia.org/wiki/Lindy_effect
+https://en.wikipedia.org/wiki/Preferential_attachment
+https://en.wikipedia.org/wiki/Assortative_mixing
+https://en.wikipedia.org/wiki/Assortativity#Structural_disassortativity
+https://en.wikipedia.org/wiki/Structural_cut-off
+https://en.wikipedia.org/wiki/Link-centric_preferential_attachment#Examples
