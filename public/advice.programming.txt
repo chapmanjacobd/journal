@@ -52,3 +52,4 @@ The filesystem is global state and people are able to use it every day with few 
 
 I don't really understand why programmers care so much about closures or the separation between public and private methods. I totally understand why closures are necessary to exist in JavaScript and similar languages--but there are also other languages which do a few small things differently so that closures are not as necessary. Encapsulation is very confusing for new programmers and it makes life unnecessarily difficult. If you don't want me to access your objects then just send a blob to my browser. (this kills the programmer)
 
+Good code comments start with "because"
