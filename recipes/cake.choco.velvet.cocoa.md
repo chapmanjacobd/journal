@@ -1,11 +1,11 @@
-Velvet Cocoa Cake
+# Velvet Cocoa Cake
 
     Prep time: 15 minutes
     Cook time: 40 minutes
     Total time: 55 minutes
     Makes one loaf cake
 
-Ingredients
+## Ingredients
 
     1 cup flour
     ¾ cup sugar
@@ -17,7 +17,7 @@ Ingredients
     One egg
     1 cup sour milk (or milk with a tablespoon of lemon juice)
 
-Instructions
+## Instructions
 
     Preheat oven to 350°F, and lightly grease a loaf pan.
     Mix together sugar, oil, and chocolate powder until smooth. Then, add the egg and incorporate completely.
