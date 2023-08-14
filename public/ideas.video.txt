@@ -1,4 +1,0 @@
-    o = obscure
-    h = humor
-    f = format
-    v = visual idea
