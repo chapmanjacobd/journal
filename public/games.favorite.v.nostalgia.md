@@ -1,1 +1,0 @@
-Pitfall: The Mayan Adventure

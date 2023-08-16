@@ -1,6 +1,0 @@
-    Faces+Vertices-Edges
-
-    2D Shapes = 1
-    3D Solids = 2
-    -- Torus  = 0?
-    4D Hypersolids = ???

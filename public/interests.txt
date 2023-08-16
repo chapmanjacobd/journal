@@ -1,3 +1,0 @@
-Multi-Criteria Decision Making
-Spatial Analysis
-GIS Data Engineering

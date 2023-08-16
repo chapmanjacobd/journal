@@ -1,3 +1,0 @@
-There should be a firefox/chrome addon which makes links you see but don't click on less visible (you've already chosen not to click them) so that new links become more visible and you can scroll through pages faster.
-
-

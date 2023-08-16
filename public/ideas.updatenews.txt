@@ -1,1 +1,0 @@
-it's a news site of only news that was reported on other sites that has a final conclusion. Like it would only have one article about the election, one article about a firefox zeroday being patched, etcetc
