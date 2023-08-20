@@ -1,0 +1,1 @@
+you can set up a KDE Window rule for Kitty to always be lowest, always maximized, and always not minimizable. Also enable the KWin Alt-Tab+Task Bar syncer addon so it doesn't show up when you do alt-tab

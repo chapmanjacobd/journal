@@ -1,0 +1,3 @@
+if you know it's the SDDM login screen then it has already booted up--way past the BIOS at that point. You need to press ctrl-alt-delete or hold down the power button so the computer is off. Then in the few seconds when the computer is turning on try pressing any of these buttons to see if something shows up on the screen: Esc, F2, F9, F10, F11, F12, or Del. Those are the most common keys to interrupt the default BIOS boot process. It's slightly different on every computer model. This is the BIOS/UEFI.
+
+The order is BIOS -> GRUB -> Linux kernel -> Userspace (SDDM Login, Gnomeshell, Plasmashell, etc)

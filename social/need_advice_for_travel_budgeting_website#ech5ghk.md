@@ -1,0 +1,1 @@
+That's why I focus on a very simple consumer bundle to measure cost of living differences. Not only do people spend money on different things but some people buy way more stuff when they go to lower cost of living cities. If anything you should be pretty safe looking at the cost as the minimum possible expense unless you do things like couch surfing, etc

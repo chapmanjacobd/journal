@@ -1,0 +1,1 @@
+yeah rstudio is probably the most comfortable. try switching the location of the panels if it's not working for you. in my system I have it similar to vscode with the editor window large and on the right

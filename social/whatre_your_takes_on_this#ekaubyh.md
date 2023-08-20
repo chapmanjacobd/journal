@@ -1,0 +1,1 @@
+Also you'll notice that the kid instinctively reaches out to grab the pencil before he realizes that the pencil landed the way that he wanted it to. The kid probably spent hours or even days trying to do this. 

@@ -1,0 +1,1 @@
+I've never heard someone recommend Gentoo lol.... well maybe like 20 years ago but that was more in the context of learning linux to become deeply familiar low-level aspects of it rather than day-to-day use. I think learning day-to-day linux like Fedora, Fish Shell, KDE is more powerful because you start learning to use the command line more and more

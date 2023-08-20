@@ -1,0 +1,1 @@
+I target 576p but 128 cbr Opus because my eyesight is bad but my ears are good. I figure that AI up-scaling will only get faster and maybe someday someone will make an realtime upscaler lua script for mpv and I could start using that if I really cared and if the content was unavailable elsewhere

@@ -1,0 +1,1 @@
+Yeah I tried setting up Airsonic and Mopidy about a year ago but playing to chromecast [didn't work very well](https://old.reddit.com/r/airsonic/comments/lf9301/google_home_assistant/) so that actually kicked me off into working on this

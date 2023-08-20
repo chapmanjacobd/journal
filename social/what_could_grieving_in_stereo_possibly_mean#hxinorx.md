@@ -1,0 +1,1 @@
+I take the next line to mean that something about his mood is preventing him from feeling resolved through grief (music). "The stereo sounds strange": he is troubled by something and music all sounds fake and artificial compared to the thing which provoked his Little "Dark Age"

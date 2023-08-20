@@ -1,0 +1,1 @@
+yeah... that's a good point. I have done [some stuff](https://gist.github.com/chapmanjacobd/f65797ac957243873fd154f14bd53224) with loopback devices and btrfs in the past so it should not be difficult for me to do some experiments that way. Thanks!

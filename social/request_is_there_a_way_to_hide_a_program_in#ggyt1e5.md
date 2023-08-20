@@ -1,0 +1,1 @@
+just install the program to a folder in the C:/ drive and manually go to the location. you can delete the start menu shortcuts. also with windows 10 it might actually still cache the location of the program depending on Cortana's settings

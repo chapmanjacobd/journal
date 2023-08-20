@@ -1,0 +1,1 @@
+hmmmm maybe it was a driver or something which wasn't activated until I logged out and back in? or maybe my Firefox profile which was copied over from previous Fedora installs got out of date with the latest defaults 😕

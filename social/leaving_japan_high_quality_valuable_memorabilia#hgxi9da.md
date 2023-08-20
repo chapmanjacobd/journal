@@ -1,0 +1,1 @@
+on Amazon there is a hot and cold bidet which doesn't require electricity for $50. sure it doesn't have a dryer but paired with a Google Mini or Echo Dot it is like 90% as good as a Japanese toilet and a lot easier to install

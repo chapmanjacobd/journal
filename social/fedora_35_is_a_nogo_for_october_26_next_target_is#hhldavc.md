@@ -1,0 +1,1 @@
+I am honestly blown away at how quickly Wayland was polished. I tried it less than two years ago and it had quite a few things which forced me to switch back to X11 but today Wayland works great with almost no additional configuration needed just a few Firefox env vars needed to be set in my configuration

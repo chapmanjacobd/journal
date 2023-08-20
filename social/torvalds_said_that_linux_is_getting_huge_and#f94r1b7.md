@@ -1,0 +1,3 @@
+I think the kernel is not that much more bloated today than it was 5 years ago. 
+
+If you need something slimmer there are a lot of other options...

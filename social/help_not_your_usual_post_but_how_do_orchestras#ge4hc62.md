@@ -1,0 +1,1 @@
+I would say public release is super unlikely but often if the movies have 5.1 surround sound then different channels miiiight contain more vocal elements vs background music so that is a good place to start

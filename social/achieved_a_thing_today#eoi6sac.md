@@ -1,0 +1,1 @@
+aa... I thought it said "You're THE top photographer" and I was like, wow someone really took the time to code that but then I realized that they probably just have a generalized format that applies to all the Google products and then I read more of the comments and yeah now I realize that it says "a" not "the"

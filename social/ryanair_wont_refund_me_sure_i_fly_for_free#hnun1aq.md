@@ -1,0 +1,1 @@
+The crazy thing is that even for how shitty Ryanair is they still refund money. In the US as a poor college student I thought a normal airline would refund money when cancelling a flight, nothing in the cancel flight dialogue suggested otherwise but when I clicked cancel there was no money returned

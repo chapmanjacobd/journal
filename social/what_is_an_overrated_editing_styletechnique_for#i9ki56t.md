@@ -1,0 +1,1 @@
+There is a fine line between storytelling devices and creative mistakes. The edit should be invisible. Anything which demands attention is a bad edit. Creative or stylistic for the sake of creating ouvre is overrated and too common in architecture. Editing should be foremost functional and resilient

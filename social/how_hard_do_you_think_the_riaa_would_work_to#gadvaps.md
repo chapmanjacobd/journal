@@ -1,0 +1,1 @@
+Companies have a lot to lose if scraping is legitimated. RIAA will likely lose and so they will probably drop the case after some of on concessions are made. They benefit from the ambiguity even if they don't realize it

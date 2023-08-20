@@ -1,0 +1,1 @@
+You could also try i3 + KDE but it depends on how you define lightweight. For sure RAM usage is much less with other minimal WM but i3+KDE *feels* lightweight even though it can take quite a bit of RAM

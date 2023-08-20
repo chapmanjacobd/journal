@@ -1,0 +1,1 @@
+you should send this survey to subreddits like Marvel or Hollywood-centric type of subreddits or Netflix. you aren't going to get the right sample of data by asking the people who already only watch foreign movies

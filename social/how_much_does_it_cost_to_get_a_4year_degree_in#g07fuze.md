@@ -1,0 +1,1 @@
+it's definitely possible if you don't limit your options to Tokyo. Finding housing is tough in JP but some universities offer really cheap housing for students like $100 per month or less. I don't know all the details but look outside of the big cities and you'll absolutely find something if you look hard enough

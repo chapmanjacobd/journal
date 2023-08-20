@@ -1,0 +1,1 @@
+with a budget of 11.000 CAD for 20 days it's probably doable. just move a few things around. it sounds like OP has a strong aversion to driving. Not everyone needs to be American Solo Superstar Numero Uno

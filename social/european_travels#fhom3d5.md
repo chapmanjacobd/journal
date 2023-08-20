@@ -1,0 +1,1 @@
+What are your favorite cities that you went to? I like going to cafes and restaurants that aren't too expensive and walking around the city. If you only went to Europe for a few months which cities would you return to?

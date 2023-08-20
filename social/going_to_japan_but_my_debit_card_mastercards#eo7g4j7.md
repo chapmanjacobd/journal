@@ -1,0 +1,1 @@
+you'll be fine with just the chip but if you only have one account I think that's pretty stupid. you can sign up for a Charles Schwab account and the benefit is that there is no charge for currency conversion and they reimburse ATM fees

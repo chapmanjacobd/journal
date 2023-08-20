@@ -1,0 +1,1 @@
+I would put the vertical monitor on a standing desk (you can get a small one for less than $100 no need to get something that goes up and down) so you could get some variation instead of sitting down all day

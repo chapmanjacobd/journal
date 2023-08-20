@@ -1,0 +1,1 @@
+Not enough people recommend Fedora here but I've found it to be more stable than Ubuntu over the years. The default drivers are often better. You will have to set up gaming and non-free repos yourself though

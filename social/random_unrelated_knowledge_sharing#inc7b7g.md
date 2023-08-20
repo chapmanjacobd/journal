@@ -1,0 +1,1 @@
+I made a program where you can watch random videos. They could be from youtube or any website that yt-dlp supports. It only runs in the CLI but I use it every day. https://github.com/chapmanjacobd/lb/

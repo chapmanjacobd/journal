@@ -1,0 +1,1 @@
+yeah there are lots of systems like that for CRM, internal, and even other uses (think Domino's Pizza tracker). There are lots but you could still make something. The market may be saturated but a lot of companies don't market very well so you'll succeed if you play your cards right
