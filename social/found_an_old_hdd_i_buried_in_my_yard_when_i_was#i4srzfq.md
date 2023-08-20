@@ -1,0 +1,1 @@
+people might use automated tools like testdisk, but if you have sensitive or important data it's helpful to try to recover that thing specifically first before doing a full drive scan. Automated tools might pass over your Bitcoin wallet if they weren't programmed to look for the specific file format that you had, etc

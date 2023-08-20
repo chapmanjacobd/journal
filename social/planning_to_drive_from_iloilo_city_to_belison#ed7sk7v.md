@@ -1,0 +1,1 @@
+It seems like there is just one main road as far as I can remember. Once you get out of the city the traffic isn't that bad. It's kind of a long drive. Stop in Hamtic and eat some malunggay pandesal for me

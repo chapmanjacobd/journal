@@ -1,0 +1,1 @@
+I would recommend learning python or R + some package to work with Excel files. It's honestly way easier than trying to understand the weird way to speak VBA. BUT! If you have existing VBA scripts that you need to work with then it might be better to learn VBA

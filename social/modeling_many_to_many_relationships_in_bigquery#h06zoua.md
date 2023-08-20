@@ -1,0 +1,1 @@
+To be honest I don't think BQ is a good fit for this type of data unless you have a lot of it and you can make nested records work but something like postgres might be better: transactions and lower latency

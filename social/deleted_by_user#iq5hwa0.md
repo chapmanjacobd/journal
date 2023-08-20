@@ -1,0 +1,1 @@
+Well statistically if you only have one or two flights you are not likely to lose a bag. If you have more than ten flights then maybe look into airtags--and have a backup solution for the situation where you do miss your bag. Pack in your carry-on one days worth of clothes, toothbrush, the bare minimum to help you feel okay while you track down your bag, for example

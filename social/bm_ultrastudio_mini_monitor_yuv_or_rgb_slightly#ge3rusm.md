@@ -1,0 +1,1 @@
+I'd put everything back to factory defaults and rerun calibration. YUV will likely be fine. I don't think it matters much... but maybe you calibrated while something was set to rec709 and it made things off? I'm no colorist, just an IT guy trying to help

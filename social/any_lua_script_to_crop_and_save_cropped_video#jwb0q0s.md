@@ -1,0 +1,1 @@
+I'm also interested in this. [Auto-crop](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autocrop.lua) works extremely well and it would be convenient to export the resulting video for other purposes

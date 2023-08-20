@@ -1,0 +1,3 @@
+one reason why I'm glad to use an rpm based distro lol...
+
+https://unix.stackexchange.com/questions/79050/can-i-rollback-an-apt-get-upgrade-if-something-goes-wrong

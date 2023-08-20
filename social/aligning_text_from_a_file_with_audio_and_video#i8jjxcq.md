@@ -1,0 +1,1 @@
+you could run ffmpeg and trim off all the start and end silence using level detection, render a file for each text, audio, and video, then add the pacing silence back in programmatically with ffmpeg-python or moviepy

@@ -1,0 +1,3 @@
+Impractical tech
+
+Worthless innovation

@@ -1,0 +1,1 @@
+Yes... I remember being very annoyed when KDE first started doing this but I don't remember exactly when. I wonder if it was a bug introduced some time in the last 3 years. At first I thought it was because I used KDE+i3 then switched to Kwin but even after a clean install it happens

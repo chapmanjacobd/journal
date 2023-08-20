@@ -1,0 +1,24 @@
+
+<blockquote>
+<p>I really need that library tabs thing</p>
+</blockquote>
+<p>It's part of <a href="https://github.com/chapmanjacobd/library">xk library</a></p>
+<pre><code>pip install xklb
+</code></pre>
+<blockquote>
+<p>I have too many tabs</p>
+</blockquote>
+<p><code>library tabs</code> doesn't set out to solve this problem specifically. I think most of my tabs have been one-off tabs. So for me the problem of too many tabs is solved by keeping a plain text file and saving URLs to there instead of opening 30+ tabs.</p>
+<p>But <code>library clustersort</code> can help move similar tabs closer together (by sorting lines of text). The benefit of this is less information fatigue and it makes it faster for me to close redundant tabs</p>
+<blockquote>
+<p>you just find a nice image, or a funny website, or just a cool article</p>
+</blockquote>
+<p>If it's an image I would save the image. I recommend creating a shallow <a href="https://johnnydecimal.com/">folder system</a> (ie. Fewer than 10 or 20 folders and don't make subfolders but instead rename the files by <a href="https://photography.tutsplus.com/articles/using-a-controlled-vocabulary-to-organize-digital-photographs--cms-23344">controlled vocabulary</a>).</p>
+<p>There's no guarantee that the image will still be accessable on the same URL after 5 years. To prove the point: I have a list of 25 million imgur URLs from 2008 to now and over 70% of them are 404 already.</p>
+<p>The same is true for text articles or websites. Link rot <a href="https://en.wikipedia.org/wiki/Lindy_effect">probably follows a power law</a>. To save websites there are many tools like SingleFile or <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/wclone.fish">wget</a>. But if you want to make a curated archive of text I would copy and paste text into markdown. The setup doesn't need to be complicated and the simple solutions are the easiest to keep using over decades and they transfer easily from old to new computer systems.</p>
+<p>If you save locally then you can use many different software for rediscovering the media (image or text, or...). If you want to enjoy a random image every five years you can use Unix or PowerShell tools. But some of the core code in Library is written for different ways of sorting and consuming media:</p>
+<p><code>library fsadd</code> will scan your filesystem (extracting metadata with various tools like ffmpeg, ExifTool, textract) and create a SQLITE database which can then be used with various other CLI commands to help organize and consume large collections of media.</p>
+<p>One of those subcommands is <code>library view</code> which can be used with an image collection database created by <code>library fsadd --image</code>. Likewise <code>library read</code> and <code>library fsadd --text</code>. Note that I haven't really tested both these options very heavily. I mostly consume video and audio (<code>library watch</code>, <code>library listen</code>). So open a ticket if things go wrong (the URL for opening a ticket is shown if you just type <code>library</code>).</p>
+<p><code>library tabs</code> could be used for local media (or if it doesn't work, open a ticket) but the main problem is that your number of "<a href="http://exhibits.usu.edu/exhibits/show/jenna/memories">core memories</a>" could be bigger than you have time for in a single day of history reflection. For example, if you have 10,000 memes you want to remember every five years you would be required to open 5 images every day for the code to work.</p>
+<p>I guess that doesn't seem like too many actually so it could work. My main point is that <code>library tabs</code> is written for required repetition and the default Library mechanism (used in <code>library watch</code>, etc) is a mechanism that assumes endless media and it will only show you something you saw before after you've consumed everything (unless you do something like <code>library view -w 'play_count&gt;=1'</code>). I recommend using <code>library view</code> and adding that where clause when you want to visit the past. It's more flexible</p>
+

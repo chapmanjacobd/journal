@@ -1,0 +1,1 @@
+slower pace, more interesting cities nearby (not just nara or osaka), slightly cheaper. if the course is something that really interests you, smaller class sizes will allow you to develop better connections with the faculty, etc

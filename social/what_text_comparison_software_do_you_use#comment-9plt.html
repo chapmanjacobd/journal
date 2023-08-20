@@ -1,0 +1,60 @@
+
+<p>If the lines of the CSV are not sorted you could try sorting on a column then use something like <code>kdiff3</code> for diffing.</p>
+<p><code>xsv sort</code> will sort lexicographically</p>
+<p>It sounds like your CSVs are not too different but in the case that your CSVs are a real mess without much similarity you could try sorting with a tool I wrote which will sort the lines based on the term similarity of all the columns:</p>
+<pre><code>pip install xklb
+lb clustersort 1.csv 1_sorted.csv
+</code></pre>
+<p>As for merging:</p>
+<p>If you just need to concatenate the CSVs use <code>xsv cat</code></p>
+<p>Otherwise, if you can convert your CSVs to SQLITE with <code>sqlite-utils</code>...</p>
+<p>ie.</p>
+<pre><code>pip install sqlite-utils
+sqlite-utils insert --alter --csv --detect-types 1.db tablename 1.csv
+</code></pre>
+<p>then you can merge the SQLITE files together based on a specific column:</p>
+<pre><code>lb mergedbs --pk id --upsert combined.db 1.db 2.db 3.db
+</code></pre>
+<pre><code>lb mergedbs -h
+usage: library merge-dbs DEST_DB SOURCE_DB ... [--only-target-columns] [--only-new-rows] [--upsert] [--pk PK ...] [--table TABLE ...]
+
+    Merge-DBs will insert new rows from source dbs to target db, table by table. If primary key(s) are provided,
+    and there is an existing row with the same PK, the default action is to delete the existing row and insert the new row
+    replacing all existing fields.
+
+    Upsert mode will update matching PK rows such that if a source row has a NULL field and
+    the destination row has a value then the value will be preserved instead of changed to the source row's NULL value.
+
+    Ignore mode (--only-new-rows) will insert only rows which don't already exist in the destination db
+
+    Test first by using temp databases as the destination db.
+    Try out different modes / flags until you are satisfied with the behavior of the program
+
+        library merge-dbs --pk path (mktemp --suffix .db) tv.db movies.db
+
+    Merge database data and tables
+
+        library merge-dbs --upsert --pk path video.db tv.db movies.db
+        library merge-dbs --only-target-columns --only-new-rows --table media,playlists --pk path --skip-column id audio-fts.db audio.db
+
+        library merge-dbs --pk id --only-tables subreddits reddit/81_New_Music.db audio.db
+        library merge-dbs --only-new-rows --pk subreddit,path --only-tables reddit_posts reddit/81_New_Music.db audio.db -v
+
+positional arguments:
+  database
+  source_dbs
+
+options:
+  -h, --help            show this help message and exit
+  --primary-keys PRIMARY_KEYS, --pk PRIMARY_KEYS
+                        Comma separated primary keys
+  --business-keys BUSINESS_KEYS, --bk BUSINESS_KEYS
+                        Comma separated business keys
+  --upsert
+  --ignore, --only-new-rows
+  --only-tables ONLY_TABLES, -t ONLY_TABLES
+                        Comma separated specific table(s)
+  --only-target-columns
+  --skip-columns SKIP_COLUMNS
+</code></pre>
+

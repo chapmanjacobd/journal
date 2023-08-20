@@ -1,0 +1,1 @@
+it'll be better to use external SSD but even in that case if your laptop has internal NVMe it will be significantly faster to keep in inside the laptop. faster than external normal SSD. Programs benefit the most from high speed and low latency. I would keep the programs on your laptop, in a separate partition if you feel the need for organization

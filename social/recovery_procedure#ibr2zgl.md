@@ -1,0 +1,1 @@
+if you have data you want to backup you might want to create a LiveCD USB. I don't know if the WebFAI thing has that feature. You can download Fedora or Ubuntu on Windows or Mac and they have installers to guide you if you have a spare, empty USB drive (not the same one you'd want to backup to (, but you could also upload your files to cloud services if you only have one USB)

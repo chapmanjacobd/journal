@@ -1,0 +1,1 @@
+but if you only needed result once then it might take longer if you explicitly build and store an index before you need it. SQLITE will build most of the indexes it needs on the fly if they don't exist

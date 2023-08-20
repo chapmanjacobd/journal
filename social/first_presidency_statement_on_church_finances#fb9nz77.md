@@ -1,0 +1,1 @@
+I don't know of any kidnappers that wait for financial statements to be released before they decide who to kidnap. They can believe the church is rich with or without knowing how much previous victims were paid out, if any.

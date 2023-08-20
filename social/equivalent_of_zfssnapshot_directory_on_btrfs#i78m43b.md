@@ -1,0 +1,1 @@
+You can put btrfs snapshot "folders" anywhere, even inside the same subvolume as the snapshot; or inside of other (non-read-only) snapshots. Most edge-cases are ironed out... but the rule of doing weird things is try not to do too many weird things at once.

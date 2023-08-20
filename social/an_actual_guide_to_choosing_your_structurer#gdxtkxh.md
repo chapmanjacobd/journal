@@ -1,0 +1,1 @@
+this is great! I wish I had this when I first started out. Hopefully people won't feel like they know everything too quickly after seeing this though. The last thing we need is people who don't know what a ribbofluxer is to melt their destabilizer

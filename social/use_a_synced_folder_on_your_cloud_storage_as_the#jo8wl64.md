@@ -1,0 +1,1 @@
+Honestly I sync my downloads folder _because_ I move the files somewhere else and I sync those folders as well. But I use syncthing so it usually is syncing locally. Moving a file organizes my file system across all computers and my phone

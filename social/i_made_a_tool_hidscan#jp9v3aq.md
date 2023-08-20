@@ -1,0 +1,1 @@
+Many, if not most, motherboards have more than one USB controller. Usually the back panel and the USB headers are separate controllers. Also, I don't imagine USB C ports use the same controller as a bunch of USB 2/3 headers but maybe it is possible

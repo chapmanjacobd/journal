@@ -1,0 +1,1 @@
+I've been to the UK and Paris before with my family but never solo trip. I like less touristy places. I plan to go to Lyon (but maybe that place is pretty touristy also lol). I will copy your text and look at it as I plan. Yeah I think baltics area will be really nice. Let me know if you have any more suggestions 😊 did you visit Bosnia and Herzegovina?

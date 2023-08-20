@@ -1,0 +1,1 @@
+not skills just stoopid

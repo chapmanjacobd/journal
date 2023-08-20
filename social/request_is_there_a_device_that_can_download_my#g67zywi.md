@@ -1,0 +1,1 @@
+It should be possible to build something like this but you'd only be able to access the websites that you visited before. It's called a web cache. One program is squid. But it doesn't really work with https sites because the data is encrypted in transit. Only HTTP sites. That's why most people just download the text directly or youtube-dl, etc

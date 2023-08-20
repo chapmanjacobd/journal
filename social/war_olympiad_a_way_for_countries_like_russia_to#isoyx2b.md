@@ -1,0 +1,1 @@
+Wars are usually asymmetric. You have a few thousand people who _REALLY_ want something and a few million or more who really don't want to give up what they spent their whole life building or inherited from many generations of ancestors.

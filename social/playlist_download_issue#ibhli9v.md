@@ -1,0 +1,1 @@
+there are options in the manual to do x number of download or extractor retries but if it got 403 then even if you retry 10,000 times it probably isn't going to change unless you wait a while or change IP

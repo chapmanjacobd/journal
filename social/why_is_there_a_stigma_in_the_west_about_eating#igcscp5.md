@@ -1,0 +1,1 @@
+There is a stigma in korea. I went to a restaurant and they saw I was alone by myself and they wouldn't let me enter and they said I needed at least two people to eat. I've never had that happen in the US

@@ -1,0 +1,46 @@
+
+<p>I don't use bookmarks at all but I feel very organized.</p>
+<blockquote>
+<p>I'm open to other software that could be used for this purpose</p>
+</blockquote>
+<p>You might consider finding specific software for different types of websites that you are interested in.</p>
+<ul>
+<li>For e-mail, IRC/slack, or work tabs I leave those perpetually open as pinned tabs</li>
+<li>For video websites like YouTube I download new videos automatically then decide later whether to keep or delete them</li>
+<li>For news websites you might consider doing something similar with an RSS reader specifically rather than something that also can manage a concept of bookmarks</li>
+<li>For websites that don't offer RSS, you could consider using a specific tool to monitor visual or text changes (eg. huginn, urlwatch, changedetection.io, ... there are many desktop native open source options)</li>
+<li>For research / PDFs I second the recommendation of Mendeley / Zotero. Calibre could also work for non-research long-form reading.</li>
+</ul>
+<p>Personally, I don't use RSS except to interface with content downloading tools like yt-dlp. For websites that I want to visit on a regular schedule (eg. daily tildes.net) I wrote a script which uses a simple SQLITE database to keep track of tabs to open per day:</p>
+<p><a href="https://github.com/chapmanjacobd/library#tabs">library tabs</a> is a way to organize your visits to URLs that you want to remember every once in a while.</p>
+<p>The main benefit of tabs is that you can have a large amount of tabs saved (say 500 monthly tabs) and only the smallest amount of tabs to satisfy that goal (500/30) tabs will open each day. 17 tabs per day seems manageable--500 all at once does not.</p>
+<p>The use-case of tabs are websites that you know are going to change: subreddits, games, or tools that you want to use for a few minutes daily, weekly, monthly, quarterly, or yearly.</p>
+<ol>
+<li>Add your websites</li>
+</ol>
+<pre><code>library tabsadd tabs.db --frequency monthly --category fun \
+    https://old.reddit.com/r/Showerthoughts/top/?sort=top&amp;t=month \
+    https://old.reddit.com/r/RedditDayOf/top/?sort=top&amp;t=month
+</code></pre>
+<ol start="2">
+<li>Add library tabs to cron</li>
+</ol>
+<p>library tabs is meant to run once per day. Here is how you would configure it with crontab:</p>
+<pre><code>45 9 * * * DISPLAY=:0 library tabs /home/my/tabs.db
+</code></pre>
+<p>edit:</p>
+<p>I said I don't use bookmarks but that is somewhat untrue: I <strong>do</strong> <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/savetabs.fish">save URLs</a> which I either have not started reading or don't have the time to open (ie. I encounter a list of URLs which seem like high quality recommendations).</p>
+<p>I have a line-delimited file for unread tabs and I copy and paste tabs there. I automate that 7 tabs are opened from that file. It is working well so far and I'm on track to reach tab zero in about ten years.</p>
+<p>To batch similar reads together I have another script which has this line to sort the URLs by text similarity every month (this also helps to group Wayback machine URLs and their original URLs close together):</p>
+<pre><code>sort --unique ~/mc/tabs | library clustersort | sponge ~/mc/tabs
+</code></pre>
+<p>I also have two specific files for <a href="https://unli.xyz/music.txt">music</a> and <a href="https://unli.xyz/cinema.txt">movie</a> recommendations which I treat in a similar way.</p>
+<p>edit2:<br/>
+Here are some links that might be relevant to you but I haven't used them. They are tangentially interesting to me but I have not found a need to investigate them enough to start using them:</p>
+<ul>
+<li><a href="https://github.com/jarun/Buku">https://github.com/jarun/Buku</a></li>
+<li><a href="https://github.com/ArchiveBox/ArchiveBox">https://github.com/ArchiveBox/ArchiveBox</a></li>
+<li><a href="https://github.com/dosyago/DiskerNet">https://github.com/dosyago/DiskerNet</a></li>
+<li><a href="https://github.com/awesome-selfhosted/awesome-selfhosted#bookmarks-and-link-sharing">https://github.com/awesome-selfhosted/awesome-selfhosted#bookmarks-and-link-sharing</a></li>
+</ul>
+

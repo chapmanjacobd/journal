@@ -1,0 +1,1 @@
+It seems like there has recently been a lot of abandoned nsfw subreddits recently. I didn't realize that "banned for unmoderated" subreddits could be re-instated. I'd like to start with swedengonewild and a few more in the future

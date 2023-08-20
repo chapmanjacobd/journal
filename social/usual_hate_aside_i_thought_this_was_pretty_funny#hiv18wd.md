@@ -1,0 +1,1 @@
+I know it's a joke but it would be super awkward if Zuckerberg actually wasn't human and the only reason we can't see it is because we are subconsciously recognizing that he is a lizard so we never build up the stamina to realize it

@@ -1,0 +1,1 @@
+Right but I always had to run in X11 mode because there were so many edge cases and weird bugs that it felt like something at least a decade away from working well. From my perspective as an enduser with a fairly customized setup Wayland now behaves exactly like X11 did but I assume the internals are more secure

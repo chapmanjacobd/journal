@@ -1,0 +1,3 @@
+Arcosanti is very much what you make of it. During the summer it can be extremely hot. I wouldn't say it is a "comfortable" nor a very large place but if you treat the experience like a pilgrimage it can be a good experience.
+
+Arcosanti doesn't exactly scratch the Sable itch--though there are few Sable-like places in the world. it is a nice place to unplug, listen to the wind, write down thoughts and feelings. I would still recommend it as a place to visit but keep your expectations low and prepare for your visit (book a room and/or tour, do some research to get context, go on Google Street View to see the area).

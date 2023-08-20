@@ -1,0 +1,3 @@
+good idea but how do you relay that message to yourself over 2000 years??
+
+makes me think of long-time nuclear waste warning messages... maybe I spend my whole life moving rocks to spell out my name on the mountain side but then my parents don't name me that name because it is the weird mountainside name ...

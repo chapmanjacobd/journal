@@ -1,0 +1,1 @@
+no just one volume. To be more clear I'm talking about 4 disks in btrfs RAID1 configuration. The unofficial btrfs space calculator makes a distinction with the word "regions" but I don't think the terminology is official

@@ -1,0 +1,1 @@
+A low maintenance alternative is privacy film. Full sunshine with the privacy of closed blinds. If sunlight isn't your thing why have the window in the first place? Maybe another alternative are blackout curtains
