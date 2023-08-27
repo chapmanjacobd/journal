@@ -1,0 +1,12 @@
+
+<p>On Windows I really like ACDSee. It's super intuitive and lightning fast.</p>
+<p><a href="https://youtu.be/4IZ3X1cmtrA?t=28">Different modes</a></p>
+<p><a href="https://youtu.be/tHfk1gBqFfM">Choosing photos</a></p>
+<p><a href="https://youtu.be/yZYQao1oh7M">Applying edits across photos</a></p>
+<p>On Linux you could use feh or darktable (filemanager mode and <a href="https://youtu.be/XxCRYZpUM5I?t=1038">culling mode</a>)</p>
+<p><a href="https://www.youtube.com/watch?v=UQ1iPyh-ny8">https://www.youtube.com/watch?v=UQ1iPyh-ny8</a></p>
+<p>With feh you can bind number keys to move files:</p>
+<pre><code>feh -q -F --hide-pointer --sort filename --on-last-slide resume --action1 "trash-put '%f'" --action2 "mv '%f' ./keep/"  --action3 "mv '%f' ../95_Memes/" --action5 "mv '%f' ../52_Receipts/" -G --auto-zoom --zoom max --draw-tinted --image-bg black --scale-down -D -3 .
+</code></pre>
+<p>With feh it will automatically move to the next image after pressing an action. Pro: if moving to another disk the file copy/move will happen while you are browsing files so you don't have to wait afterwards for things to copy around. Con: if you make a mistake you have to fix it outside of feh</p>
+
