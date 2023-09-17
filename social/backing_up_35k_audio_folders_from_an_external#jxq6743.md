@@ -1,0 +1,1 @@
+On Windows this is the way. Although, given it is a USB drive I wonder how much of a difference `/MT` would make.  You want to minimize contention for IO if the limiting factor is seek time. Maybe a low multithread value would be best like 2 or 4

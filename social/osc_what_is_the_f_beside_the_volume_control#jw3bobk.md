@@ -1,4 +1,4 @@
-Press F (X) to Pay Respects. just kidding. looks like it might be this:
+looks like it might be this:
 
 > player: better handling of **forced-only subtitles** and a toggle in the OSC
 
