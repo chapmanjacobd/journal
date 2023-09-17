@@ -1,0 +1,3 @@
+I also struggle with social anxiety and interviews. My problem is that I'd either be too excited and make the people feel uncomfortable or I wouldn't be excited enough and make the people feel uncomfortable. Maybe it would help to re-frame the goals of the interaction/interview. For example, plan something you are excited to do after the interview so you can look forward to it, like lunch or dinner or walking around. In my case I feel like I do better when I don't prepare at all and I just focus on the thing that happens after the interview.
+
+I watched this last night and it is not 100% related but maybe it is helpful https://www.youtube.com/watch?v=_v1dGdvzZUo
