@@ -1,5 +1,7 @@
 # Tools to try
 
+https://github.com/JasonKessler/scattertext
+
 https://zarr.readthedocs.io/en/stable/
 
 https://github.com/rethinkpriorities/squigglepy
