@@ -23,3 +23,15 @@ Here's something else that I noticed recently:
 
 
 Pending uncorrectable sectors will show up in scrub but not in device stats
+
+edit:
+
+you can also check the smartd service:
+
+    $ journalctl --no-hostname --reverse -u smartd
+    ...
+    Sep 14 20:55:06 smartd[1282]: Device: /dev/sdj [SAT], 1 Currently unreadable (pending) sectors (changed -2)
+    Sep 14 20:25:06 smartd[1282]: Device: /dev/sdj [SAT], 3 Currently unreadable (pending) sectors
+    ...
+    Sep 11 06:55:06 smartd[1282]: Device: /dev/sdj [SAT], 3 Currently unreadable (pending) sectors (changed +2)
+    Sep 11 06:25:07 smartd[1282]: Device: /dev/sdj [SAT], 1 Currently unreadable (pending) sectors
