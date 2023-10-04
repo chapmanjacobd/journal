@@ -1,25 +1,3 @@
-Experienced data engineer, spatial analyst, and linux systems admin. Strong information technology professional with a background in anthropology.
+I'm fascinated with the text/icon ABC and 123. Maybe I watched Sesame Street too many times as a kid, but it seems really significant. It's simple, but profound. It means we, as a group of unique individuals, are able to communicate over a universally understood medium.
 
-Available for consulting:
-https://www.moonlightwork.com/app/users/9511/profile
-
-Competencies:
-
-- Database design, SQL query optimization, PL/SQL
-- Extract/Load, Transform (ETL / Data Pipelines)
-- Process mapping / automation
-- Functional Programming
-- Bayesian Statistics, Principal Component Analysis
-- Spreadsheets, Excel
-- Batch processing, high-performance computing (HPC)
-
-Tools:
-
-- Defensive design, poka-yoke, pareto charts
-- Python: geopandas, rasterio, seaborn, ipdb
-- R: data.table, reshape2, caret, qualityTools (Six Sigma)
-- PostgreSQL / PostGIS, GDAL, QGIS, OpenStreetMap
-- dbt, GCP, BigQuery, rsync, GNU Parallel
-- CentOS, Fedora, openSUSE
-
-I enjoy building CLI tools to help teams work faster.
+Art is really important to me. Life is boring without it. I strongly believe that the process is as beautiful and more important than the finished product. Technology is a byproduct of applied art and education. Life is really, truly, beautiful and hopefully technology does not ruin it for us.
