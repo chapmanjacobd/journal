@@ -2,6 +2,8 @@
 
 https://github.com/JasonKessler/scattertext
 
+https://github.com/mckinsey/vizro
+
 https://zarr.readthedocs.io/en/stable/
 
 https://github.com/rethinkpriorities/squigglepy
