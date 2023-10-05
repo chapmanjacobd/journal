@@ -1,0 +1,1 @@
+Yes. I've done this a few times with dbt and it has always been straightforward. You can write create views (or tables, materialized views) with the anomalies and then add some tests for if they are >0 rows in the views.

@@ -1,0 +1,1 @@
+Knowing the science and having experience to know when a result doesn't seem correct is vastly more important than knowing programming by heart. If it helps you be more productive, even if it makes my job redundant, I'm all for it.

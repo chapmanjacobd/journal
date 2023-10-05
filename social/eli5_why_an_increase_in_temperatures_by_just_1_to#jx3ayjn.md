@@ -1,0 +1,3 @@
+It is really annoying that scientists will say something which is accurate and understood within their field and then journalists will not translate what they say to be something which normal people will understand. They will just add context instead of misquoting people or pushing their synthesis up into the upper paragraphs of an article.
+
+1degC is **global** increase so you need to think about all the air and material around the planet. The Earth is really, really big with many uninhabited places. Even if 1degC seems like a marginal number on a local fall day the difference between local and global is not really comparable.
