@@ -2,6 +2,6 @@
 
 stream of consciousness thoughts
 
-caveat lector
-much of this early childhood
-do not judge too harshly
+    caveat lector
+    much of this early childhood
+    do not judge too harshly
