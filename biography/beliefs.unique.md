@@ -1,5 +1,7 @@
 # Beliefs that I believe make me unique
 
+Ever since I was young I have been fascinated with light. My older brother said it was one of the first words I spoke out loud. He said I would often reach out my arms toward the source of a light and I would just stare at it, meditating. This fascination of light led me to an early hobby of photography.
+
 Incrementalism is key. When getting a big project batch it up and tackle it in a 10-items-per-day sort of way. I think everyone understands this but few take the time to try to implement it to the extreme. I believe that everything which can be made incremental should be. For example:
 
 - Creating a custom interface for browsing social media so that you can close it for two weeks then you could open it up again picking up right from where you left off. Most people seem satisfied to skip out on the past two weeks and/or they use news to catch up on the latest happenings so that they won't feel awkward when someone asks them for their opinion beside some bubbler at a water fountain convention. But I feel like this is a mistake. There is more serendipity in being late. If you read the old news when everyone else isn't then it is possible you have more context or a different frame of mind and you discover something that few people have. Discontinuity and non-linearity is almost a pre-requisite for divergent thinking.
