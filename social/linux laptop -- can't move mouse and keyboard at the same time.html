@@ -1,0 +1,88 @@
+<html><body>https://kotobago.substack.com/p/linux-laptop-cant-move-mouse-and<br>linux laptop -- can't move mouse and keyboard at the same time<br>subtitle: how to fix<br>author: Jacob Chapman<br>time_created: 1574985600<br>text: <div class="body markup" dir="auto">
+ <p>
+  <a href="https://youtu.be/aT0nYSzM_Yo" rel="nofollow ugc noopener">
+   music
+  </a>
+ </p>
+ <p>
+  You can fix this by identifying which mouse / trackpad you have:
+ </p>
+ <pre><code>~ $ xinput
+⎡ Virtual core pointer                          id=2    [master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+⎜   ↳ ETPS/2 Elantech Touchpad                  id=10   [slave  pointer  (2)]
+⎣ Virtual core keyboard                         id=3    [master keyboard (2)]
+    ↳ Virtual core XTEST keyboard               id=5    [slave  keyboard (3)]
+    ↳ Power Button                              id=6    [slave  keyboard (3)]
+    ↳ Video Bus                                 id=7    [slave  keyboard (3)]
+    ↳ Power Button                              id=8    [slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard              id=9    [slave  keyboard (3)]
+    ↳ MSI WMI hotkeys                           id=11   [slave  keyboard (3)]
+</code></pre>
+ <p>
+  Then query the features of your trackpad:
+ </p>
+ <pre><code>~/M/New $ xinput --list-props 10
+Device 'ETPS/2 Elantech Touchpad':
+        Device Enabled (165):   1
+        Coordinate Transformation Matrix (167): 1.000000, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000, 0.000000, 1.000000
+        libinput Tapping Enabled (300): 1
+        libinput Tapping Enabled Default (301): 0
+        libinput Tapping Drag Enabled (302):    1
+        libinput Tapping Drag Enabled Default (303):    1
+        libinput Tapping Drag Lock Enabled (304):       0
+        libinput Tapping Drag Lock Enabled Default (305):       0
+        libinput Tapping Button Mapping Enabled (306):  1, 0
+        libinput Tapping Button Mapping Default (307):  1, 0
+        libinput Natural Scrolling Enabled (308):       0
+        libinput Natural Scrolling Enabled Default (309):       0
+        libinput Disable While Typing Enabled (310):    0
+        libinput Disable While Typing Enabled Default (311):    1
+        libinput Scroll Methods Available (312):        1, 1, 0
+        libinput Scroll Method Enabled (313):   1, 0, 0
+        libinput Scroll Method Enabled Default (314):   1, 0, 0
+        libinput Click Methods Available (315): 1, 1
+        libinput Click Method Enabled (316):    1, 0
+        libinput Click Method Enabled Default (317):    1, 0
+        libinput Middle Emulation Enabled (318):        0
+        libinput Middle Emulation Enabled Default (319):        0
+        libinput Accel Speed (320):     0.297521
+        libinput Accel Speed Default (321):     0.000000
+        libinput Left Handed Enabled (322):     0
+        libinput Left Handed Enabled Default (323):     0
+        libinput Send Events Modes Available (285):     1, 1
+        libinput Send Events Mode Enabled (286):        0, 0
+        libinput Send Events Mode Enabled Default (287):        0, 0
+        Device Node (288):      "/dev/input/event4"
+        Device Product ID (289):        2, 14
+        libinput Drag Lock Buttons (324):       &lt;no items&gt;
+        libinput Horizontal Scroll Enabled (325):       1</code></pre>
+ <p>
+  Pro-tip: You can use autocomplete with Fish shell
+ </p>
+ <pre><code>~/M/New $ xinput list-props 
+2         (Virtual core pointer)  7                     (Video Bus)
+3        (Virtual core keyboard)  8                  (Power Button)
+4   (Virtual core XTEST pointer)  9  (AT Translated Set 2 keyboard)
+5  (Virtual core XTEST keyboard)  10     (ETPS/2 Elantech Touchpad)
+6                 (Power Button)  11              (MSI WMI hotkeys)</code></pre>
+ <p>
+  Then just disable the automatic input blocking:
+ </p>
+ <p>
+  For example:
+ </p>
+ <pre><code>xinput --set-prop 10 310 0</code></pre>
+ <p>
+ </p>
+ <p>
+  Life-tip:
+ </p>
+ <p>
+  computers don't need to learn language to understand human processes.
+ </p>
+ <p>
+  teaching computers how to listen to voice commands (NLP) is kind of a one-trick pony.
+ </p>
+</div>
+<br>id: 24<br></body></html>

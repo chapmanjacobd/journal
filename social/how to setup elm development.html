@@ -1,0 +1,96 @@
+<html><body>https://kotobago.substack.com/p/how-to-setup-elm-development<br>how to setup elm development<br>subtitle: lightweight create-elm-app<br>author: Jacob Chapman<br>time_created: 1576713600<br>text: <div class="body markup" dir="auto">
+ <p>
+  Usually projects start small and grow from there. A good project structure is to make a new folder for your project then put all the stuff in there.
+ </p>
+ <p>
+  <span>
+   You don’t need Create Elm App. You just need
+  </span>
+  <a href="https://github.com/elm/compiler/blob/master/hints/init.md" rel="nofollow ugc noopener">
+   <code>
+    elm init
+   </code>
+  </a>
+ </p>
+ <p>
+  Run `elm init` inside your new project folder then create an html file like this:
+ </p>
+ <pre><code><code>&lt;html&gt; 
+&lt;head&gt; 
+&lt;script type="text/javascript" src="static/elm.js"&gt;&lt;/script&gt;
+&lt;/head&gt; 
+&lt;body&gt;   
+&lt;main&gt;&lt;/main&gt;   
+&lt;script&gt;var app = Elm.Main.init({ node: document.querySelector('main') })&lt;/script&gt; 
+&lt;/body&gt; 
+&lt;/html&gt; </code></code></pre>
+ <p>
+  use this command for development:
+ </p>
+ <pre><code>elm-live src/Main.elm -- --output=static/elm.js --debug</code></pre>
+ <p>
+  use this makefile for production builds:
+ </p>
+ <pre><code>build:        
+mkdir -p ./build        
+cp -r index.html assets static build/        
+elm make --output=build/elm.js  --optimize src/Main.elm        
+uglifyjs build/elm.js \            --compress 'pure_funcs="F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9",pure_getters,keep_fargs=false,unsafe_comps,unsafe' \            | uglifyjs --mangle --output=build/elm.min.js        
+mv build/elm.min.js build/static/elm.js</code></pre>
+ <p>
+ </p>
+ <p>
+  folder looks like this:
+ </p>
+ <p>
+  <code>
+   ├── assets
+  </code>
+ </p>
+ <p>
+  <code>
+   │   ├── css
+  </code>
+ </p>
+ <p>
+  <code>
+   ├── src
+  </code>
+ </p>
+ <p>
+  <code>
+   │   ├── Main.elm
+  </code>
+ </p>
+ <p>
+  <code>
+   ├── Makefile
+  </code>
+ </p>
+ <p>
+  <code>
+   ├── index.html
+  </code>
+ </p>
+ <p>
+  <code>
+   ├── static
+  </code>
+ </p>
+ <p>
+  <code>
+   └── build
+  </code>
+ </p>
+ <p>
+  <code>
+   │   ├── assets
+  </code>
+ </p>
+ <p>
+  <code>
+   │   └── static
+  </code>
+ </p>
+</div>
+<br>id: 20<br></body></html>
