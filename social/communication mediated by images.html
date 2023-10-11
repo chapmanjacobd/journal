@@ -1,0 +1,65 @@
+<html><body>https://kotobago.substack.com/p/communication-mediated-by-images<br>communication mediated by images<br>subtitle: a system for generating soviet montage<br>author: Jacob Chapman<br>time_created: 1589673600<br>text: <div class="body markup" dir="auto">
+ <p>
+  <span>
+   my
+  </span>
+  <a href="https://gist.github.com/chapmanjacobd/7b6849c68dc78eb7679c7c639c64b9ae" rel="nofollow ugc noopener">
+   experiments with ffmpeg
+  </a>
+  <span>
+   were rather satisfactory. I created a program which would assemble random-ish selections from audio files (it would not be difficult to add video too but I wanted to start a large collection of sample media and that is easiest with simple audio for now). Here is what it sounds like:
+  </span>
+ </p>
+ <div class="soundcloud-wrap" data-attrs='{"url":"https://api.soundcloud.com/tracks/816743623","title":"out-may-9-2020 by jakscoproductions","description":"","thumbnail_url":"https://soundcloud.com/images/fb_placeholder.png","author_name":"jakscoproductions","author_url":"https://soundcloud.com/jakscoproductions","targetUrl":""}' data-component-name="SoundcloudToDOM">
+  <iframe allowfullscreen="true" frameborder="0" gesture="media" scrolling="no" src="https://w.soundcloud.com/player/?auto_play=false&amp;buying=false&amp;liking=false&amp;download=false&amp;sharing=false&amp;show_artwork=true&amp;show_comments=false&amp;show_playcount=false&amp;show_user=true&amp;hide_related=true&amp;visual=false&amp;start_track=0&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F816743623">
+  </iframe>
+ </div>
+ <p>
+  I think the same principles could be used for images. We could translate written stories and present them in a logical order (like cave paintings or documentary photography) to create a visual story.
+ </p>
+ <p>
+  I think what I’d like to do ultamitely is to create a streaming version of this so I could create basically an infinite story or AI-generated.
+ </p>
+ <div class="youtube-wrap" data-attrs='{"videoId":"j4Ph02gzqmY","startTime":null,"endTime":null}' data-component-name="Youtube2ToDOM" id="youtube2-j4Ph02gzqmY">
+  <div class="youtube-inner">
+   <iframe allow="autoplay; fullscreen" allowautoplay="true" allowfullscreen="true" frameborder="0" gesture="media" height="409" loading="lazy" src="https://www.youtube-nocookie.com/embed/j4Ph02gzqmY?rel=0&amp;autoplay=0&amp;showinfo=0&amp;enablejsapi=0" width="728">
+   </iframe>
+  </div>
+ </div>
+ <p>
+  so the goal is to create a function where as an output of the phrase “a duck ate some bread” I would get a list of images which would convey that idea.
+ </p>
+ <p>
+  maybe the output would look something like this: [‘duck.png’, ‘verb:ate’, ‘bread.png’]
+ </p>
+ <a class="image-link image2" data-component-name="Image2ToDOM" href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg" target="_blank">
+  <div class="image2-inset">
+   <picture>
+    <source sizes="100vw" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 1456w" type="image/webp"/>
+    <img alt="" class="sizing-normal" data-attrs='{"src":"https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/c642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":1455,"width":1456,"resizeWidth":230,"bytes":607221,"alt":null,"title":null,"type":"image/jpeg","href":null,"belowTheFold":false,"topImage":true,"internalRedirect":null}' fetchpriority="high" height="229.84203296703296" sizes="100vw" src="images/c642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc642cc97-703d-42f6-83ad-6e78dbbb4682_1920x1919.jpeg 1456w" width="230"/>
+   </picture>
+   <div>
+   </div>
+  </div>
+ </a>
+ <a class="image-link image2" data-component-name="Image2ToDOM" href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png" target="_blank">
+  <div class="image2-inset">
+   <picture>
+    <source sizes="100vw" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 1456w" type="image/webp"/>
+    <img alt="" class="sizing-normal" data-attrs='{"src":"https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":1035,"width":1456,"resizeWidth":244,"bytes":1927675,"alt":null,"title":null,"type":"image/png","href":null,"belowTheFold":false,"topImage":false,"internalRedirect":null}' height="173.4478021978022" sizes="100vw" src="images/5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5394b45a-7e68-4382-9954-03ee4af1fd50_1500x1066.png 1456w" width="244"/>
+   </picture>
+   <div>
+   </div>
+  </div>
+ </a>
+ <p>
+  and then I could use ffmpeg to make animations from the verbs or something.
+ </p>
+ <p>
+  and then I could create an AI which would generate simple stories and feed that in to the animation source-material function and then output that onto the screen.
+ </p>
+ <p>
+  I appreciate any ideas that you have. It is actually very simple to make something like this. Should only take a few hours once I sit down to do it. The hard part would be making it stream endlessly I think
+ </p>
+</div>
+<br>id: 6<br></body></html>

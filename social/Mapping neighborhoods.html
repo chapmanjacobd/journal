@@ -1,0 +1,247 @@
+<html><body>https://kotobago.substack.com/p/mapping-neighborhoods<br>Mapping neighborhoods<br>subtitle: How to use R, QGIS, GRASS GIS, and PostGIS to identify neighborhoods and build polygon shapefiles<br>author: Jacob Chapman<br>time_created: 1558051200<br>text: <div class="body markup" dir="auto">
+ <p>
+  <span>
+   While reading
+  </span>
+  <em>
+   The Image of the City
+  </em>
+  <span>
+   , I realized that neighborhoods are really just streets. If streets have the same name within a similar location then for most purposes this should be accurate enough to create a voronoi diagram. I will show you how I’ve done this.
+  </span>
+ </p>
+ <h2 class="header-with-anchor-widget">
+  Get data
+  <div class="header-anchor-widget offset-top" id="§get-data">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/60063/get-data">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h2>
+ <p>
+  <span>
+   First, you will need lots of addresses. Luckily there is a
+  </span>
+  <a href="http://results.openaddresses.io/" rel="nofollow ugc noopener">
+   database that is open and free
+  </a>
+  <span>
+   and it has half a billion addresses. That’s not all of them but it is a good starting point.
+  </span>
+ </p>
+ <p>
+  <span>
+   We will then use R to do some data processing. You can use R with the open source version of
+  </span>
+  <a href="https://www.rstudio.com/products/rstudio/" rel="nofollow ugc noopener">
+   RStudio
+  </a>
+  <span>
+   . You don’t have to do it this way but it is a nice little development environment which has some convenient features.
+  </span>
+ </p>
+ <p>
+  You’ll start out with a file that looks like the grey dots in this picture:
+ </p>
+ <a class="image-link is-viewable-img image2" data-component-name="Image2ToDOM" href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png" target="_blank">
+  <div class="image2-inset">
+   <picture>
+    <source sizes="100vw" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 1456w" type="image/webp"/>
+    <img alt="" class="sizing-normal" data-attrs='{"src":"https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":581,"width":857,"resizeWidth":null,"bytes":null,"alt":null,"title":null,"type":"image/png","href":null,"belowTheFold":false,"topImage":true,"internalRedirect":null}' fetchpriority="high" height="581" sizes="100vw" src="images/1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1f956389-56f5-4eb1-ab3e-84efbdd900e8_857x581.png 1456w" width="857"/>
+   </picture>
+   <div class="image-link-expand">
+    <svg class="lucide lucide-maximize2" fill="none" height="16" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+     <polyline points="15 3 21 3 21 9">
+     </polyline>
+     <polyline points="9 21 3 21 3 15">
+     </polyline>
+     <line x1="21" x2="14" y1="3" y2="10">
+     </line>
+     <line x1="3" x2="10" y1="21" y2="14">
+     </line>
+    </svg>
+   </div>
+  </div>
+ </a>
+ <p>
+  (Tongyeong, South Gyeongsang Province)
+ </p>
+ <h2 class="header-with-anchor-widget">
+  Normalize data using R
+  <div class="header-anchor-widget offset-top" id="§normalize-data-using-r">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/60063/normalize-data-using-r">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h2>
+ <p>
+  In this step we’ll be extracting the data from the grey dots into the red dots of the previous picture.
+ </p>
+ <p>
+  Note that the OpenAddress data is not all the same so for each country you’ll need to adjust your “.R” script to get the right city/district/region column.
+ </p>
+ <p>
+  <span>
+   This is the code that I used to process the
+  </span>
+  <a href="https://github.com/chapmanjacobd/openaddress-processing/blob/master/kr.R" rel="nofollow ugc noopener">
+   South Korea
+  </a>
+  <span>
+   data. I was going to just paste the code directly here but the font on this website looks horrible so I will use github.
+  </span>
+ </p>
+ <p>
+  After you run the code you’ll end with a file that looks like this:
+ </p>
+ <p>
+  <code>
+   village,district,region,LON,LAT,prefecture
+  </code>
+ </p>
+ <p>
+  <code>
+   금송로,가람동,세종특별자치시,127.248634525,36.4670784,1.csv
+  </code>
+ </p>
+ <p>
+  <span>
+   So they are still just points but the magic of running
+  </span>
+  <code>
+   aggregate()
+  </code>
+  <span>
+   on latitude and longitude is that they are now the mean locations of all addresses along that road. So it should put the neighborhood points near the center of all the interesting things that are happening within that neighborhood.
+  </span>
+ </p>
+ <h2 class="header-with-anchor-widget">
+  Generate voronoi
+  <div class="header-anchor-widget offset-top" id="§generate-voronoi">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/60063/generate-voronoi">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h2>
+ <p>
+  We then use the voronoi function in QGIS or GRASS GIS to turn all those points into polygons. Both are freely available on all platforms. After running the algorithm you should end up with something that looks like this:
+ </p>
+ <a class="image-link is-viewable-img image2" data-component-name="Image2ToDOM" href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png" target="_blank">
+  <div class="image2-inset">
+   <picture>
+    <source sizes="100vw" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 1456w" type="image/webp"/>
+    <img alt="" class="sizing-normal" data-attrs='{"src":"https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/071795fe-2139-4396-9b28-4696518631bd_801x597.png","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":597,"width":801,"resizeWidth":null,"bytes":null,"alt":null,"title":null,"type":"image/png","href":null,"belowTheFold":true,"topImage":false,"internalRedirect":null}' height="597" loading="lazy" sizes="100vw" src="images/071795fe-2139-4396-9b28-4696518631bd_801x597.png" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F071795fe-2139-4396-9b28-4696518631bd_801x597.png 1456w" width="801"/>
+   </picture>
+   <div class="image-link-expand">
+    <svg class="lucide lucide-maximize2" fill="none" height="16" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+     <polyline points="15 3 21 3 21 9">
+     </polyline>
+     <polyline points="9 21 3 21 3 15">
+     </polyline>
+     <line x1="21" x2="14" y1="3" y2="10">
+     </line>
+     <line x1="3" x2="10" y1="21" y2="14">
+     </line>
+    </svg>
+   </div>
+  </div>
+ </a>
+ <h2 class="header-with-anchor-widget">
+  Clip boundaries
+  <div class="header-anchor-widget offset-top" id="§clip-boundaries">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/60063/clip-boundaries">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h2>
+ <p>
+  To get it to be even more accurate then you’ll want to clip the generated voronoi with a shapefile of the administrative boundary for the country or region that you are looking at. Then you’ll end up with something like this:
+ </p>
+ <a class="image-link is-viewable-img image2" data-component-name="Image2ToDOM" href="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png" target="_blank">
+  <div class="image2-inset">
+   <picture>
+    <source sizes="100vw" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 1456w" type="image/webp"/>
+    <img alt="" class="sizing-normal" data-attrs='{"src":"https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/b0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png","srcNoWatermark":null,"fullscreen":null,"imageSize":null,"height":600,"width":800,"resizeWidth":null,"bytes":null,"alt":null,"title":null,"type":"image/png","href":null,"belowTheFold":true,"topImage":false,"internalRedirect":null}' height="600" loading="lazy" sizes="100vw" src="images/b0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png" srcset="https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb0a1317f-a3e9-459a-98cb-e32dee89a007_800x600.png 1456w" width="800"/>
+   </picture>
+   <div class="image-link-expand">
+    <svg class="lucide lucide-maximize2" fill="none" height="16" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+     <polyline points="15 3 21 3 21 9">
+     </polyline>
+     <polyline points="9 21 3 21 3 15">
+     </polyline>
+     <line x1="21" x2="14" y1="3" y2="10">
+     </line>
+     <line x1="3" x2="10" y1="21" y2="14">
+     </line>
+    </svg>
+   </div>
+  </div>
+ </a>
+ <h2 class="header-with-anchor-widget">
+  United States
+  <div class="header-anchor-widget offset-top" id="§united-states">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/60063/united-states">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h2>
+ <p>
+  For processing United States data the process had to change a little bit because it was the data was in a different format and there was more of it. I changed it so that it will process individual files first and then group them together. Originally I was processing and grouping them within the same script.
+ </p>
+ <p>
+  <span>
+   After running the
+  </span>
+  <a href="https://github.com/chapmanjacobd/openaddress-processing/blob/master/us1.R" rel="nofollow ugc noopener">
+   first script
+  </a>
+  <span>
+   then move all the files that start with ‘p.’ into a folder named ‘pfiles’ and run the
+  </span>
+  <a href="https://github.com/chapmanjacobd/openaddress-processing/blob/master/us2.R" rel="nofollow ugc noopener">
+   second script
+  </a>
+  <span>
+   . I still haven’t been able to create the voronoi for all the points in the US though because there are so many and I gave up after 12 hours of running the algorithm on my laptop. I’ll get around to it one of these days though.
+  </span>
+ </p>
+ <p>
+  You can also do the same things within Oracle Spatial and Graph, ArcGIS, and PostGIS. It’s fundamentally similar and you should have no problems translating the above to those programs.
+ </p>
+</div>
+<br>id: 25<br></body></html>

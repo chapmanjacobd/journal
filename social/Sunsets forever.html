@@ -1,0 +1,182 @@
+<html><body>https://kotobago.substack.com/p/sunsets-forever<br>Sunsets forever<br>subtitle: How to make a website in 60 mins<br>author: Jacob Chapman<br>time_created: 1609027200<br>text: <div class="body markup" dir="auto">
+ <p>
+  So it was thursday night and I was snarfing the web as usual and I came across an interesting github repo: dantaeyoung’s continuous-sunset. A 2018 vintage. truly exceptional. ripened perfectly. OK so I’m digging through these files and eventually I surmise the premise of the website: you go to the website during any time and it will show you a live video of a sunset somewhere in the world. I think it’s a cool idea and one that I could implement in a few hours. It didn’t look like dantaeyoung made very much progress. It looks like he is tackling the problem a little too precisely.
+ </p>
+ <p>
+  <span>
+   Sunsets are big things. The pattern is simple: every 24 hours sun goes down. Sure it changes with the seasons but I think for the first iteration of this I will choose to not
+  </span>
+  <a href="https://github.com/chapmanjacobd/continuous-sunset/blob/master/app/noaa_suncalc.js" rel="nofollow ugc noopener">
+   calculate the exact azimuth
+  </a>
+  <span>
+   of the sun. Sunsets last about 40 mins. So we only need about 24/(40/60) = 35 locations for an MVP website. Will 35 be enough? Maybe. We don’t want the sun to actually set—then it wouldn’t be
+  </span>
+  <em>
+   eternal
+  </em>
+  <span>
+   sunset. We are trying to create limbo here. For the MVP I will consider it a success if the sun doesn’t set but we might see the sun be too high in the sky to be considered “sunset mode” by
+  </span>
+  <a href="https://youtu.be/zVEgOiB7Bo8?t=2850" rel="nofollow ugc noopener">
+   victorian-era
+  </a>
+  <span>
+   scholars.
+  </span>
+ </p>
+ <h2 class="header-with-anchor-widget">
+  Let’s build!
+  <div class="header-anchor-widget offset-top" id="§lets-build">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/13902909/lets-build">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h2>
+ <p>
+  Despite what you have been taught, the first step of building is planning. Any time spent planning will generally give you 5x reduction of building time.
+ </p>
+ <p>
+  To make sure we are getting the right data we should first think about what kind of data we would need to make this website then we should think about how we should structure this data (data types).
+ </p>
+ <h3 class="header-with-anchor-widget">
+  What data do we need?
+  <div class="header-anchor-widget offset-top" id="§what-data-do-we-need">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/13902909/what-data-do-we-need">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h3>
+ <p>
+  The answer might not seem simple to you. I think this skill comes with practice. For this project I think we will be fine using only two pieces of data: 1) the current UTC time 2) a list of videos streams to play
+ </p>
+ <p>
+  Streaming video used to be a royal pain in the butt; YouTube changed that.
+ </p>
+ <h3 class="header-with-anchor-widget">
+  How should we store this data?
+  <div class="header-anchor-widget offset-top" id="§how-should-we-store-this-data">
+   <div class="header-anchor-widget-button-container">
+    <div class="header-anchor-widget-button" href="https://kotobago.substack.com/i/13902909/how-should-we-store-this-data">
+     <svg class="header-anchor-widget-icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71">
+      </path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71">
+      </path>
+     </svg>
+    </div>
+   </div>
+  </div>
+ </h3>
+ <p>
+  For later iterations it would be nice too add some variation to the site. 400 locations would not be too much work to add. We won’t do that right now—good heavens, no! But planning ahead will allow us to easily add features in the future. So we need some kind of list. If we had a big list then what we could do is just filter out which ones don’t have a sunset at the current time and then choose randomly from that subset.
+ </p>
+ <p>
+  <span>
+   For the big list I think an array of objects would be an appropriate choice. For an MVP with only 35 locations we could probably get by with only a string array of youtube links but it would probably be nice to include some metadata about each city like the pre-calculated sunset start and sunset end times (using SunCalc or Wolfram Alpha). We can also include the geospatial coordinates of the city so that if we find that we need to calculate the azimuth in a later version all the data will already be there for us. All of this city data is already in
+  </span>
+  <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-populated-places/" rel="nofollow ugc noopener">
+   this very high quality dataset
+  </a>
+  <span>
+   so we just need to figure out how to convert it into array of objects format for our website.
+  </span>
+ </p>
+ <p>
+  How do we open this file? The files inside might seem daunting at first but we don’t even need to unzip it. Just download QGIS and drag-drop the file into a new project.
+ </p>
+ <p>
+  Okay so we need some way to subset this data to choose 35 good locations  that are near the equator so that we don’t have to account for the  Earth’s wobble in our MVP.
+ </p>
+ <p>
+  For now I’m just going to choose Vector-&gt;Research-&gt;Select Random within Extent, Select Extent on Canvas: I’m limiting it to near the equator so the sunrise and sunset is not too wonky, number of points: 35, minimum distance between points: 8 (because we want to have enough coverage of Earth to have the sun set all the time!). This will create a bunch of random points within a square.
+ </p>
+ <p>
+  Then I’m going to run Distance to nearest Hub which will calculate the closest random point for every city.
+ </p>
+ <p>
+  <span>
+   Next we will save it into a GeoJSON file and only save the
+  </span>
+  <em>
+   name
+  </em>
+  <span>
+   ,
+  </span>
+  <em>
+   iso_a2
+  </em>
+  <span>
+   ,
+  </span>
+  <em>
+   latitude
+  </em>
+  <span>
+   ,
+  </span>
+  <em>
+   longitude
+  </em>
+  <span>
+   ,
+  </span>
+  <em>
+   ne_id
+  </em>
+  <span>
+   , and
+  </span>
+  <em>
+   HubName
+  </em>
+  <span>
+   (the nearest random point). Because it is GeoJSON we actually don’t need to keep the latitude and longitude attributes since those are saved in the file already.
+  </span>
+ </p>
+ <p>
+  GeoJSON has a slightly different structure than our initial design plan but it is probably a better format for this kind of data anyway.
+ </p>
+ <p>
+  Now we should select only one city for each HubName. And we may as well choose the city closest to the equator for each HubName. Unfortunetly, it looks like Distance to nearest Hub is not doing quite what we want here since there are only 22 results. What we really needed was a One-to-One spatial join but Hub is doing One-to-Many. Ohh I think what we should have used was NNJoin but for now we’ll just work with this and we can update the data in the next iteration of our website (after Series A funding of our sunset website).
+ </p>
+ <p>
+  <span>
+   So I think the logical way to do this would be to create a list of ne_id and the sunrise start and end. Then filter out the list of all places to only include cities where sunset has started and choose the one where the time between now and sunsetEnd is maximized. Then we will check every five minutes to see if it should switch YouTube links. (For the “swap out the video” part I’m not sure exactly how to do that but I remember
+  </span>
+  <a href="http://astronaut.io" rel="nofollow ugc noopener">
+   astronaut.io
+  </a>
+  <span>
+   having a similar style of video swapping.)
+  </span>
+ </p>
+ <p>
+  Since we aren’t likely to compare across days I think using minutes in the day to compare times will be okay…
+ </p>
+ <p>
+  Looking at actual sunsets; maybe my initial reaction was a little niave. Sunsets can be short. Maybe 4~20 mins is a better estimate. Also, looking at a cloudy sunset is a bit anti-climactic. I think we might also need to use a weather API and choose the location which has the clearest skies from our list of available live sunsets.
+ </p>
+ <p>
+  Maybe for an MVP we can just have a link to a youtube search of city live streams which should have a live sunset. Originally I was only planning a simple Alpine.js website but I think we may need to use the YouTube API in future iterations. To keep costs under control we will probably need a backend server so I’m going to set up Elixir LiveView to host our MVP. That will allow us to easily add features like automated YouTube searching for our little website.
+ </p>
+ <p>
+  edit: this post was never finished because it turns out there aren’t as many live video feeds around the world as I thought
+ </p>
+</div>
+<br>id: 40<br></body></html>
