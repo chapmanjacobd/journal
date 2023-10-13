@@ -49,3 +49,4 @@ https://databaseci.com/docs/migra/quickstart
 
 record terminal output: script output.txt
 sqlite-vss
+https://github.com/testcontainers/testcontainers-python
