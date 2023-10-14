@@ -1,0 +1,42 @@
+
+<p>I just added an Exploratory Data Analysis (EDA) subcommand to my desktop productivity tool</p>
+<pre><code>pip install xklb
+library eda my.csv fancy.parquet pickle.pkl excel.xls jason.json html_tables.html etc.nc
+</code></pre>
+<p><a href="https://github.com/chapmanjacobd/library/commit/1622affba03ef6acad737b0d63b2291dd5d91ac7">https://github.com/chapmanjacobd/library/commit/1622affba03ef6acad737b0d63b2291dd5d91ac7</a></p>
+<p>Ideally, it is able to read any file that pandas supports (there are some I know I still haven't added yet) but it works with most things. Spits out summary statistics (in Markdown!) like this:</p>
+<pre><code>## tests/data/test.csv:0
+### Shape
+(2, 4)
+
+### Sample of rows
+|    |   Unnamed: 0 |   A |   B |   C |
+|----|--------------|-----|-----|-----|
+|  0 |            0 |   1 |   3 |   5 |
+|  1 |            1 |   2 |   4 |   6 |
+
+### Summary statistics
+|       |   Unnamed: 0 |        A |        B |        C |
+|-------|--------------|----------|----------|----------|
+| count |     2        | 2        | 2        | 2        |
+| mean  |     0.5      | 1.5      | 3.5      | 5.5      |
+| std   |     0.707107 | 0.707107 | 0.707107 | 0.707107 |
+| min   |     0        | 1        | 3        | 5        |
+| 25%   |     0.25     | 1.25     | 3.25     | 5.25     |
+| 50%   |     0.5      | 1.5      | 3.5      | 5.5      |
+| 75%   |     0.75     | 1.75     | 3.75     | 5.75     |
+| max   |     1        | 2        | 4        | 6        |
+
+### Pandas columns with 'converted' dtypes
+| column     | original_dtype   | converted_dtype   |
+|------------|------------------|-------------------|
+| Unnamed: 0 | int64            | Int64             |
+| A          | int64            | Int64             |
+| B          | int64            | Int64             |
+| C          | int64            | Int64             |
+
+### Missing values
+0 NaNs (0.0%)
+</code></pre>
+<p>Let me know if anyone has any ideas for other interesting stats I could pull out</p>
+
