@@ -1,0 +1,59 @@
+
+<p>Oh for sure! <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/copyq/copyq.conf">I use it too</a>. The above list is Android-specific.</p>
+<p>For Termux I keep track of things that I've installed and use here:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/phone/blob/main/.github/apt_installed">apt_installed</a></li>
+<li><a href="https://github.com/chapmanjacobd/phone/blob/main/.github/pip_installed">pip_installed</a></li>
+</ul>
+<p>On Linux I've played around with a lot of different desktop environments but I've settled on this:</p>
+<ul>
+<li>
+<p>kitty -- <a href="https://sw.kovidgoyal.net/kitty/">https://sw.kovidgoyal.net/kitty/</a></p>
+</li>
+<li>
+<p>KDE</p>
+</li>
+<li>
+<p>trash-cli -- <a href="https://github.com/andreafrancia/trash-cli/">https://github.com/andreafrancia/trash-cli/</a></p>
+</li>
+<li>
+<p>unar -- <a href="https://theunarchiver.com/command-line">https://theunarchiver.com/command-line</a></p>
+</li>
+<li>
+<p>cb -- <a href="https://github.com/niedzielski/cb">https://github.com/niedzielski/cb</a></p>
+<p><a href="https://old.reddit.com/r/fishshell/comments/1655b4e/cb_clipboard_tool/">https://old.reddit.com/r/fishshell/comments/1655b4e/cb_clipboard_tool/</a></p>
+</li>
+<li>
+<p>xsv, sqlite-utils, ffprobe, ffmpeg, osmium, gdalwarp, ogr2ogr...</p>
+</li>
+<li>
+<p>fish shell -- <a href="https://fishshell.com/">https://fishshell.com/</a></p>
+</li>
+</ul>
+<p>I write a lot of fish functions because the built-ins <code>funcsave</code> and <code>funced</code> make editing the system really fast--perhaps a bit like Alan Kay's smalltalk system. I even expanded on the OOBE by creating my own <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/funcmv.fish">funcmv</a> to rename functions, <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/funccp.fish">funccp</a> to duplicate functions, and <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/funcdel.fish">funcdel</a> to delete functions.</p>
+<p>I also blaspheme some POSIX elders by rewriting some slight modifications to core commands like the <code>mv</code> command sometimes makes things move to places that I don't want. I like the behavior of blob store tools so I changed it to be like this. By creating a new folder for the parent it prevents <code>mv</code> from renaming the file in cases where the desired behavior is ambiguous:</p>
+<pre><code>function mv
+    set parent (path dirname "$argv[-1]")
+    if not path extension $argv[-1] &gt;/dev/null; and not test -e "$parent"
+        mkdir -p "$parent"
+    end
+    command mv $argv
+end
+</code></pre>
+<p>I keep track of useful programs in a similar way to on my phone, using functions like these</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/pipinstall.fish">pipinstall</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/pipuninstall.fish">pipuninstall</a></li>
+</ul>
+<p>which write to these files:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.github/cargo_installed">cargo_installed</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.github/dnf_installed">dnf_installed</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.github/pip_installed">pip_installed</a></li>
+</ul>
+<p>and I handle my <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/abbreviations">shell abbreviations</a> in a similar way:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/abbrsave.fish">abbrsave</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/abbrdel.fish">abbrdel</a></li>
+</ul>
+
