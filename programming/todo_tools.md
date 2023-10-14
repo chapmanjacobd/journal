@@ -50,3 +50,5 @@ https://databaseci.com/docs/migra/quickstart
 sqlite-vss
 
 https://github.com/testcontainers/testcontainers-python
+
+pandas.json_normalize
