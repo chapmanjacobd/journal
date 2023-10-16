@@ -1,0 +1,1 @@
+maybe it would switch between 666 bps and 666 GiB/s for an average speed of 6.66 MiB/s as the data comes from different parts of the nine circles of Hell, as described in the Dante's Inferno zone bit recording addendum
