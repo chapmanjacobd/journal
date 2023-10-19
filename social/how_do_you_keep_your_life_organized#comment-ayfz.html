@@ -1,0 +1,28 @@
+
+<p>yeah whenever I find an interesting YouTube channel that I want to follow I just run something like this:</p>
+<pre><code>library tubeadd ./video.db https://www.youtube.com/@oddballvq/videos
+</code></pre>
+<p>(The same command is used to create a new database or to append to an existing one.)</p>
+<p>And then to play videos from YouTube (if your local media player supports it, <code>mpv</code> does):</p>
+<pre><code>library watch ./video.db
+</code></pre>
+<p>And if you just want to listen:</p>
+<pre><code>library listen ./video.db
+</code></pre>
+<p>If you want to download locally to the ~/Videos/ folder</p>
+<pre><code>library download ./video.db --prefix ~/Videos/
+</code></pre>
+<p>If you want to watch the local videos after downloading:</p>
+<pre><code>library watch ./video.db
+</code></pre>
+<p>It is the same command and it will prioritize playing videos that have been downloaded over videos that have not been downloaded. But to explicitly only watch local videos you can do this:</p>
+<pre><code>library watch ./video.db --local-only
+</code></pre>
+<p>To update playlists you can run</p>
+<pre><code>library tubeupdate ./video.db
+</code></pre>
+<p>And it will go through all the saved playlists. I run this once per day via <code>cron</code>. It will delay checking playlists for which videos have not been uploaded to since it last checked (it will wait twice as long each time, up to one year; and it will check more frequently if a playlist has a new video).</p>
+<p>If you want to ignore the smart update behavior you can force updating:</p>
+<pre><code>library tubeupdate ./video.db --force
+</code></pre>
+

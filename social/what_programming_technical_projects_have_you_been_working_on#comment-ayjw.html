@@ -1,0 +1,31 @@
+
+<p>Yesterday, I wrote a program to help me filter down a big page of links via including and excluding link text and plain text between links.</p>
+<p>Beautifulsoup does all the legwork. But it was still fun to figure out:</p>
+<pre><code>def get_elements_forward(start, end):
+    elements = []
+    current = start.next_sibling
+    while current and current != end:
+        elements.append(current)
+        current = current.next_sibling
+    return elements
+
+def extract_nearby_text(a_element):
+    prev_a = a_element.find_previous("a")
+    next_a = a_element.find_next("a")
+
+    before = ""
+    if prev_a:
+        before = " ".join(s.get_text(strip=True) for s in get_elements_forward(prev_a, a_element))
+
+    after = ""
+    if next_a:
+        after = " ".join(s.get_text(strip=True) for s in get_elements_forward(a_element, next_a))
+
+    return before, after
+</code></pre>
+<p>One of the cool things is that it works on HTML fragments too so I can just copy some Rich Text and then run the CLI:</p>
+<pre><code>pip install xklb
+library links --local-html &lt;(xclip -selection clipboard -t text/html) --after-exclude paranormal spooky horror podcast
+</code></pre>
+<p>And then it will print the list of links that don't have any of those words in plain text to the right of them before the next link in the HTML fragment/page</p>
+
