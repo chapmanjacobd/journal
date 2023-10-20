@@ -1,0 +1,9 @@
+
+<p>As far as I know, both those snippets should be the same in all languages.</p>
+<p>For example in JavaScript:</p>
+<pre><code>const utf8Encoder = new TextEncoder(); 
+utf8Encoder.encode('…').length === utf8Encoder.encode('...').length;
+utf8Encoder.encode('🤦🏼‍♂️').length === 17;
+</code></pre>
+<p>This and the above is counting bytes length not string length</p>
+
