@@ -18,17 +18,14 @@ Most of these tabs are one-off tabs which I’ve curated by encountering links i
 
 Other tabs are recurring, for example these random redirect URLs like:
 
-Wikipedia Random - https://en.wikipedia.org/wiki/Special:Random
+- Wikipedia Random - https://en.wikipedia.org/wiki/Special:Random
+- Early web search engine - https://wiby.me/surprise/
+- Random subreddit - https://old.reddit.com/r/random/
+- Random post - https://old.reddit.com/random/
 
-Early web search engine - https://wiby.me/surprise/
+I keep track of recurring tabs via library tabs. Think "automatic bookmarks"--I keep track of websites that I want to revisit and every day the computer will automatically open the smallest number of them within the constraints that have been set. This helps me to be organized and productive. It helps put some structure to my unemployed days. I don't need to have the stress of finding a new job 24/7. I just wait for different job sites which I've set to pop up every couple days.
 
-Random subreddit - https://old.reddit.com/r/random/
-
-Random post - https://old.reddit.com/random/
-
-I keep track of recurring tabs via library tabs.
-
-Viewing these random pages affords me some additional spontaneity that I would not have otherwise. The nature of randomness provides some bias towards the unpopular and the unknown.
+Viewing these random pages affords me some additional spontaneity that I would not have otherwise. The nature of randomness provides some bias towards the unpopular and the unknown. Bias towards the long tail.
 
 Most knowledge in this long-tail of obscure online content is useless outside of its original context and point in history. However, there are likely many combinations and contexts that this information has never been explored in before. By juxtaposing these forgotten fragments in new ways, it's possible that new knowledge could emerge from these unexplored territory.
 
