@@ -39,9 +39,12 @@ While randomness can help, I've found it doesn't necessarily lead to groundbreak
 
 To try and get out of the algorithmic rut, I've been utilizing tools that let me browse and organize content without necessarily engaging with it directly. For example, I scrape video metadata from across the web using xk media library (https://github.com/chapmanjacobd/library) which lets me rediscover and sort through old media without having to download anything. It's an easy way to expand beyond my core feeds and regain some control over what I consume. While metadata isn't as informative as watching the actual videos, it at least gives me visibility into a wider universe of content.
 
-I've created a few web pages to increase arbitrary idea generation. A compound word particle accelerator if you will: https://unli.xyz/proliferation/
+I've created a few web pages to increase arbitrary idea generation. A compound word particle accelerator if you will:
 
-I visit that page every day and even after a few months I still haven't seen anything really new. I see some weird combinations but after thinking for a bit I realize "oh that already exists!" or "somewhere that's a medical billing code..."
+- https://unli.xyz/proliferation/
+- https://unli.xyz/proliferation/matrix.html
+
+I visit that page every day and even after a few months I still haven't seen anything really new. I see some weird combinations but after thinking for a bit I realize "oh that already exists!" or "somewhere that's a medical billing code...". Recently, I added a matrix generator which creates a 6x3 table of random words from different wordbanks. There are more combinations on each page and it's easier to scan through or skip over some combinations because there is an element of redundancy. I'm starting to see more novel combinations now. Things I hadn't thought about before: an alpenhorn slave, a pool coliseum, minty cable, and handsome facts.
 
 Context
 
