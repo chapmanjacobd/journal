@@ -1,5 +1,7 @@
 # Tools to try
 
+https://github.com/chdb-io/chdb
+
 https://github.com/xataio/pgroll
 
 https://github.com/JasonKessler/scattertext
