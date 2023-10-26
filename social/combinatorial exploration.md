@@ -1,6 +1,4 @@
-# combinatorial exploration
-
-## what are the catalysts of new genres or new categories of ideas?
+# combinatorial exploration, part 2
 
 Hello friends,
 
@@ -37,7 +35,7 @@ Including randomness has value but I think we can do better than chance by joini
 
 While randomness can help, I've found it doesn't necessarily lead to groundbreaking new ideas, even after months of effort. So in my quest to find sources of true originality, I've been experimenting with different ways to actively generate novel concepts and directions, beyond relying on chance encounters.
 
-To try and get out of the algorithmic rut, I've been utilizing tools that let me browse and organize content without necessarily engaging with it directly. For example, I scrape video metadata from across the web using xk media library (https://github.com/chapmanjacobd/library) which lets me rediscover and sort through old media without having to download anything. It's an easy way to expand beyond my core feeds and regain some control over what I consume. While metadata isn't as informative as watching the actual videos, it at least gives me visibility into a wider universe of content.
+To try and get out of the algorithmic rut, I've been utilizing tools that let me browse and organize content without necessarily engaging with it directly. For example, I scrape video metadata from across the web using xk media library (https://github.com/chapmanjacobd/library) which lets me rediscover and sort through old media without having to download anything. It's an easy way to expand beyond my core feeds and regain some control over what I consume. While metadata isn't as informative as watching the actual videos, it at least gives me visibility into a [wider universe of content](https://www.youtube.com/watch?v=p02WKbar-qg).
 
 I've created a few web pages to increase arbitrary idea generation. A compound word particle accelerator if you will:
 
@@ -46,23 +44,12 @@ I've created a few web pages to increase arbitrary idea generation. A compound w
 
 I visit that page every day and even after a few months I still haven't seen anything really new. I see some weird combinations but after thinking for a bit I realize "oh that already exists!" or "somewhere that's a medical billing code...". Recently, I added a matrix generator which creates a 6x3 table of random words from different wordbanks. There are more combinations on each page and it's easier to scan through or skip over some combinations because there is an element of redundancy. I'm starting to see more novel combinations now. Things I hadn't thought about before: an alpenhorn slave, a pool coliseum, minty cable, and handsome facts.
 
-Context
-
-Everything is a Remix
-
-If you're a writer you really have to force yourself to write every day. Some people write better at 4am, some people write better at 3am. Creation is always some form of re-production: extraction from source material, re-orientation, and integration (re-contextualization optional!) into the output material.
-
-But is it possible to create something truly new? Is cyberpunk (a media genre of high-tech, and low-life) new? It might seem obvious that cyberpunk didn’t exist 10,000 years ago but perhaps it mostly existed by then, on the very edges of human imagination.
-
-I imagine if cyberpunk was invented 10,000 years ago it would seem very “Amish” to us, but we may be able to recognize Blade Runner as a continuation of that category of story. I don’t want to downplay the struggle of authors to create new genres, but many people seem to agree that Stonehenge seems very cyberpunk.
-
-Scientific fields are usually born from analysis that is deeply flawed. After the initial misundersanding which creates the field (or you might call it a leap of faith) science usually progresses incrementally towards the right direction. For example, economics was born out of faulty assumptions and so it led to imperfect models about the world but it still helped establish scientific or at least more quantitative thinking into business and adjacent fields.
-
-We can’t create something from scratch—but we can mine away at the edges of meaning to create new understanding. New synthesis.
+Scientific fields are usually born from analysis that is deeply flawed. After the initial misunderstanding which creates the field (or you might call it a leap of faith) science usually progresses incrementally towards the right direction. For example, economics was [born out of faulty assumptions](https://www.scientificamerican.com/article/the-economist-has-no-clothes/) but it still helped to establish the scientific method more firmly into business and adjacent fields.
 
 Going for Breakthrough
 
-invention is essentially a process of recombinant searchhttps://sloanreview.mit.edu/article/breakthroughs-and-the-long-tail-of-innovation/
+> invention is essentially a process of recombinant search
+> https://sloanreview.mit.edu/article/breakthroughs-and-the-long-tail-of-innovation/
 
 Breakthrough innovations are rare and essentially unpredictable, but they follow a predictable distribution: most inventions are useless, some are moderately valuable, and only a very small number are high-impact breakthroughs.
 
@@ -72,10 +59,6 @@ There is an inverse relationship between average innovation value and the distan
 
 A good search process switches between modes of divergence (creating options) and convergence (selecting and recombining options).
 
-Creative projects which reproduce the established norms (innovations which already have a market) are more likely to be successful. Creating a new market or a new appetite in people is much more difficult and is usually not worth the effort.
-
-However, if you have the resources to define and curate a new genre, you can have a monopoly on that genre for at least 5~10 years. The risk is in whether or not your genre is palatable enough for people and whether the market exists or is elastic enough to exist. See the consecrated avant-garde.
-
 It's kind of amazing to think that the safety bicycle (1885) and the motor-carriage (1886) were only invented one year apart. It would be interesting to imagine how American cities would be different if bicycles were invented say five hundred years prior. It is astonishing because the safety bicycle is mechanically simple while the motor-carriage is mechanically complex and presupposes the creation of gasoline and the internal combustion engine.
 
 Why wasn’t the safety bicycle invented two thousand years prior, perhaps in ancient Greece or Rome? It seems like it would have been feasible. The existence of gears, combined with the metalworking knowledge of those civilizations, means that the key ingredients were in place that early for someone to put together the idea of a two-wheeled vehicle transmitting power through gears and chains to the wheels.
@@ -84,126 +67,6 @@ Well, I guess ancient cities were planned around pedestrian traffic and Rome had
 
 Finding the idea that actually works amidst the sea of very similar ideas that don't work requires staying curious long enough to encounter the fine-grained detail of reality and humble enough to recognize and learn from each failure.
 
-drawing bicycles
+[drawing bicycles](https://link.springer.com/content/pdf/10.3758/BF03195929.pdf)
 
-It makes me wonder, what things will we take thousands of years to imagine which are well within our grasp today? Why don’t we dream and imagine more?
-
-Recently, I asked Claude (an “A.I.”) to continue this list with as many items as it can:
-
-work
-
-play
-
-And the A.I. said:
-
-sleep
-
-eat
-
-exercise
-
-read
-
-write
-
-learn
-
-create
-
-explore
-
-travel
-
-relax
-
-meditate
-
-reflect
-
-connect
-
-appreciate
-
-imagine
-
-dream
-
-hope
-
-inspire
-
-lead
-
-follow
-
-teach
-
-care
-
-share
-
-give
-
-receive
-
-laugh
-
-cry
-
-listen
-
-observe
-
-understand
-
-question
-
-grow
-
-change
-
-forgive
-
-thank
-
-serve
-
-volunteer
-
-contribute
-
-advocate
-
-vote
-
-participate
-
-organize
-
-perform
-
-compete
-
-cooperate
-
-empathize
-
-love
-
-And then I asked, “is this an exhaustive list?”
-
-No, this is not an exhaustive list. There are many more activities, verbs, and aspects of life that could be added. Here are some additional thoughts:
-
-The list focuses mainly on common day-to-day activities, emotions, and interpersonal actions. Many other possibilities exist related to hobbies, skills, careers, creativity, adventure, activism, spirituality, and more.
-
-Even for the categories included, there are countless more specific examples that could be listed for each one (types of exercise, sports, games, art forms, ways to learn, etc).
-
-New activities are constantly being invented, discovered, and created as culture evolves over time. So no static list could ever be fully exhaustive.
-
-Experiences are highly subjective, so each person would likely want to add their own personalized activities that reflect their interests, values, and how they find meaning.
-
-Ultimately, life is extremely broad, varied, and open-ended. While this list captures some of the common human experiences, an exhaustive accounting of "things to do in life" would be constantly expanding and updating over a lifetime. The possibilities are limited only by our imagination and willingness to explore.
-
-So in summary, while this list provides a thoughtful starting sample, it represents only a fraction of the nearly limitless activities and modes of experience that make up a life fully lived. There will always be more that could be added to such a list.
-
-If the A.I. is right, what new everyday activities will people do in the near future? In the distant future? It could be profitable to brainstorm. Be the first to imagine these things.
+Certainly, we have enough human experience given the current population and growing age. We can afford to diversify: https://utopiaordystopia.com/2013/01/
