@@ -2,6 +2,10 @@
 
 Hello friends,
 
+p2: tabs
+
+Why bookmarks are bad
+
 I wanted to share how I've set up some intricate systems for consuming content. I've got my browser automated to open certain websites and feeds at specific times each day. It's kinda wild but it helps me speed up my news reading and mash up different info into new ideas.
 
 I'll also click on random wiki pages, old search engines, random subreddits - anything to counter the biases of the almighty algorithm. Even with all these tools though, I've been feeling like there's nothing actually new under the sun. Just remixes of remixes.
