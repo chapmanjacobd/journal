@@ -56,3 +56,4 @@ sqlite-vss
 https://github.com/testcontainers/testcontainers-python
 
 pandas.json_normalize
+https://github.com/terrastruct/d2
