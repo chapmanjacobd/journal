@@ -10,6 +10,36 @@
 
 I feel like this is bad design only because I didn't understand it until recently even after using Linux for over ten years.
 
+tl;dr: what is the right way?
+
+Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
+
+I think `mv` should be limited to tasks which don't change inodes. `cp` should probably give a warning similar to `mv` but I am 52+ years too late to provide my _deep_ and _useful_ insight /s.
+
+`rsync`, despite doing different things based on trailing slash on `src` parameters, is more consistent from an operator perspective.
+
+Put another way, limited to the below examples, these are the equivalent:
+
+Nested one subfolder (three/one/one):
+
+    $ mv one three/one
+    $ cp -r one/ three/one
+    $ rsync -auh --remove-source-files one three/one
+
+Combined subfolder (three/one):
+
+    $ cp -r one three
+    $ mv one/* three/one
+    $ rsync -auh --remove-source-files one three
+    $ rclone move one three/one
+
+Merged dest (three):
+
+    $ rclone move one three
+    $ rsync -auh --remove-source-files one/ three  # trailing slash actually matters here, for the src args
+
+I thought trailing slash mattered more, but it actually only matters in one instance.
+
 Setup:
 
     $ mkdir one three three/one
@@ -319,33 +349,3 @@ And this:
             └── 9
 
     4 directories, 10 files
-
-So--what is the right way?
-
-Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
-
-I think `mv` should be limited to tasks which don't change inodes. `cp` should probably give a warning similar to `mv` but I am 52+ years too late to provide my _deep_ and _useful_ insight /s.
-
-`rsync`, despite doing different things based on trailing slash on `src` parameters, is more consistent from an operator perspective.
-
-Put another way, limited to the above examples, these are the equivalent:
-
-Nested one subfolder (three/one/one):
-
-    $ mv one three/one
-    $ cp -r one/ three/one
-    $ rsync -auh --remove-source-files one three/one
-
-Combined subfolder (three/one):
-
-    $ cp -r one three
-    $ mv one/* three/one
-    $ rsync -auh --remove-source-files one three
-    $ rclone move one three/one
-
-Merged dest (three):
-
-    $ rclone move one three
-    $ rsync -auh --remove-source-files one/ three  # trailing slash actually matters here, for the src args
-
-I thought trailing slash mattered more, but it actually only matters in one instance.
