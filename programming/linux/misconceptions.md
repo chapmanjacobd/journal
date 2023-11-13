@@ -14,7 +14,7 @@ tl;dr: what is the right way?
 
 Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
 
-I think `mv` should be limited to tasks which don't change inodes. `cp` should probably give a warning similar to `mv` but I am 52+ years too late to provide my _deep_ and _useful_ insight /s.
+I think `mv` should be limited to tasks which don't change inodes. `cp` should probably error out similar to `mv` but I am 52+ years too late to provide my _deep_ and _useful_ insight /s.
 
 `rsync`, despite doing different things based on trailing slash on `src` parameters, is more consistent from an operator perspective.
 
