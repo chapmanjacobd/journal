@@ -23,7 +23,7 @@ Put another way, limited to the below examples, these are the equivalent:
 Nested one subfolder (destination three/one/one):
 
     $ mv one three/one
-    $ cp -r one/ three/one && rm -rf one
+    $ cp -r one three/one && rm -rf one
     $ rsync -auh --remove-source-files one three/one
 
 Merged subfolder (destination three/one):
