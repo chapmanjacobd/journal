@@ -20,23 +20,29 @@ I think `mv` should be limited to tasks which don't change inodes. `cp` should p
 
 Put another way, limited to the below examples, these are the equivalent:
 
-Nested one subfolder (destination three/one/one):
+Nested one subfolder (actual destination `three/one/one`):
 
-    $ mv one three/one
-    $ cp -r one three/one && rm -rf one
-    $ rsync -auh --remove-source-files one three/one
+| Full Command                                     | Source Parameter | Destination Parameter |
+| ------------------------------------------------ | ---------------- | --------------------- |
+| `mv one three/one`                               | `one`            | `three/one`           |
+| `cp -r one three/one && rm -rf one`              | `one`            | `three/one`           |
+| `rsync -auh --remove-source-files one three/one` | `one`            | `three/one`           |
 
-Merged subfolder (destination three/one):
+Merged subfolder (actual destination `three/one`):
 
-    $ cp -r one three && rm -rf one
-    $ mv one/* three/one
-    $ rsync -auh --remove-source-files one three
-    $ rclone move one three/one
+| Full Command                                 | Source Parameter | Destination Parameter |
+| -------------------------------------------- | ---------------- | --------------------- |
+| `mv one/* three/one`                         | `one/*`          | `three/one`           |
+| `cp -r one three && rm -rf one`              | `one`            | `three`               |
+| `rsync -auh --remove-source-files one three` | `one`            | `three`               |
+| `rclone move one three/one`                  | `one`            | `three/one`           |
 
-Merged destination (destination three):
+Merged destination (actual destination `three`):
 
-    $ rclone move one three
-    $ rsync -auh --remove-source-files one/ three  # trailing slash actually matters here, for the src args
+| Full Command                                  | Source Parameter | Destination Parameter |
+| --------------------------------------------- | ---------------- | --------------------- |
+| `rclone move one three`                       | `one`            | `three`               |
+| `rsync -auh --remove-source-files one/ three` | `one/`           | `three`               |
 
 I thought trailing slash mattered more, but it actually only matters in the above rsync "merged destination" instance.
 
