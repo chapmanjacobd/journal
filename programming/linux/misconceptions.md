@@ -34,10 +34,15 @@ Setup:
 
     4 directories, 11 files
 
-This will error, which is good. I'd rather see an error if my command was ambiguous.
+If a subdirectory with the same name exists, how will `mv` behave?
 
     $ mv one three
+    $ mv one/ three   # equivalent
+    $ mv one three/   # equivalent
+    $ mv one/ three/  # equivalent
     mv: cannot move 'one' to 'three/one': Directory not empty
+
+This will error, which is good. I'd rather see an error if my command was ambiguous.
 
 All of these will be the same:
 
