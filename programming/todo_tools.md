@@ -58,3 +58,4 @@ https://github.com/testcontainers/testcontainers-python
 pandas.json_normalize
 https://github.com/terrastruct/d2
 https://github.com/tycho-kirchner/shournal
+https://docs.elementary-data.com/quickstart
