@@ -8,7 +8,7 @@
 
 ## mv src vs mv src/
 
-I feel like this is bad design only because I didn't understand it until recently even after using Linux for over ten years.
+I feel like this is bad design if only because I didn't understand it until recently even after using Linux for over ten years.
 
 tl;dr: what is the right way?
 
