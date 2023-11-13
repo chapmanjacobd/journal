@@ -27,6 +27,7 @@ Nested one subfolder (actual destination `three/one/one`):
 | `mv one three/one`                               | `one`            | `three/one`           |
 | `cp -r one three/one && rm -rf one`              | `one`            | `three/one`           |
 | `rsync -auh --remove-source-files one three/one` | `one`            | `three/one`           |
+| `rclone move one three/one/one`                  | `one`            | `three/one/one`       |
 
 Merged subfolder (actual destination `three/one`):
 
@@ -41,10 +42,12 @@ Merged destination (actual destination `three`):
 
 | Full Command                                  | Source Parameter | Destination Parameter |
 | --------------------------------------------- | ---------------- | --------------------- |
-| `rclone move one three`                       | `one`            | `three`               |
 | `rsync -auh --remove-source-files one/ three` | `one/`           | `three`               |
+| `rclone move one three`                       | `one`            | `three`               |
 
 I thought trailing slash mattered more, but it actually only matters in the above rsync "merged destination" instance.
+
+Out of all of these, I think rclone provides the least surprising result.
 
 Setup:
 
