@@ -20,25 +20,25 @@ I think `mv` should be limited to tasks which don't change inodes. `cp` should p
 
 Put another way, limited to the below examples, these are the equivalent:
 
-Nested one subfolder (three/one/one):
+Nested one subfolder (destination three/one/one):
 
     $ mv one three/one
     $ cp -r one/ three/one
     $ rsync -auh --remove-source-files one three/one
 
-Combined subfolder (three/one):
+Merged subfolder (destination three/one):
 
     $ cp -r one three
     $ mv one/* three/one
     $ rsync -auh --remove-source-files one three
     $ rclone move one three/one
 
-Merged dest (three):
+Merged destination (destination three):
 
     $ rclone move one three
     $ rsync -auh --remove-source-files one/ three  # trailing slash actually matters here, for the src args
 
-I thought trailing slash mattered more, but it actually only matters in one instance.
+I thought trailing slash mattered more, but it actually only matters in the above rsync "merged destination" instance.
 
 Setup:
 
