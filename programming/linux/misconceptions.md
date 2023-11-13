@@ -291,6 +291,8 @@ These all result in:
 
     4 directories, 11 files
 
+And this:
+
     $ rclone move one/ three/one/
     $ tree
     .
@@ -309,3 +311,5 @@ These all result in:
             └── 9
 
     4 directories, 10 files
+
+So--what is the right way? Well... it depends what you want to do. The program can't read your mind so I hope you read the manual~ _^evil witch shriek^_
