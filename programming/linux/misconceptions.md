@@ -23,12 +23,12 @@ Put another way, limited to the below examples, these are the equivalent:
 Nested one subfolder (destination three/one/one):
 
     $ mv one three/one
-    $ cp -r one/ three/one
+    $ cp -r one/ three/one && rm -rf one
     $ rsync -auh --remove-source-files one three/one
 
 Merged subfolder (destination three/one):
 
-    $ cp -r one three
+    $ cp -r one three && rm -rf one
     $ mv one/* three/one
     $ rsync -auh --remove-source-files one three
     $ rclone move one three/one
