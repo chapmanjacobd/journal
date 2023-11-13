@@ -10,6 +10,8 @@
 
 I feel like this is bad design only because I didn't understand it until recently even after using Linux for over ten years.
 
+Setup:
+
     $ mkdir one three three/one
     $ touch one/(seq 1 5) three/one/(seq 5 10)
 
