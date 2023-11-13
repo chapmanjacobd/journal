@@ -201,7 +201,8 @@ This is a little nuanced but more intuitive after you learn the small pattern
 These two will both result in the same structure (only the slash on the source folder matters):
 
     $ rsync -auh --remove-source-files one three
-    $ rsync -auh --remove-source-files one three/
+    $ rsync -auh --remove-source-files one three/      # equivalent
+    $ rsync -auh --remove-source-files one/ three/one  # equivalent
     $ tree
     .
     ├── one
@@ -224,8 +225,7 @@ The slash on the source folder means that the source and destination should be m
 These are all the same:
 
     $ rsync -auh --remove-source-files one/ three
-    $ rsync -auh --remove-source-files one/ three/
-    $ rsync -auh --remove-source-files one/ three/one/
+    $ rsync -auh --remove-source-files one/ three/  # equivalent
     $ tree
     .
     ├── one
@@ -247,7 +247,8 @@ These are all the same:
 
 The only way to get a nested one/one/ folder is to do this:
 
-    $ rsync -auh --remove-source-files one three/one/
+    $ rsync -auh --remove-source-files one three/one
+    $ rsync -auh --remove-source-files one three/one/  # equivalent
     $ tree
     .
     ├── one
@@ -317,4 +318,30 @@ And this:
 
     4 directories, 10 files
 
-So--what is the right way? Well... it depends what you want to do. The program can't read your mind so I hope you read the manual~ _^evil witch shriek^_
+So--what is the right way?
+
+Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
+
+I think `mv` should be limited to tasks which don't change inodes. `cp` should probably give a warning similar to `mv` but I am 52+ years too late to provide my _deep_ and _useful_ insight /s.
+
+`rsync`, despite doing different things based on trailing slash on `src` parameters, is more consistent from an operator perspective.
+
+Put another way, limited to the above examples, these are the equivalent:
+
+Nested one subfolder (three/one/one):
+
+    $ mv one three/one
+    $ cp -r one/ three/one
+    $ rsync -auh --remove-source-files one three/one
+
+Combined subfolder (three/one):
+
+    $ cp -r one three
+    $ mv one/* three/one
+    $ rsync -auh --remove-source-files one three
+    $ rclone move one/ three/one/
+
+Merged dest (three)
+
+    $ rclone move one three
+    $ rsync -auh --remove-source-files one/ three
