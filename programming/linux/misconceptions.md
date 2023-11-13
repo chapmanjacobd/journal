@@ -299,6 +299,9 @@ These all result in:
 
 And this:
 
+    $ rclone move one three/one
+    $ rclone move one/ three/one
+    $ rclone move one three/one/
     $ rclone move one/ three/one/
     $ tree
     .
@@ -339,9 +342,11 @@ Combined subfolder (three/one):
     $ cp -r one three
     $ mv one/* three/one
     $ rsync -auh --remove-source-files one three
-    $ rclone move one/ three/one/
+    $ rclone move one three/one
 
-Merged dest (three)
+Merged dest (three):
 
     $ rclone move one three
-    $ rsync -auh --remove-source-files one/ three
+    $ rsync -auh --remove-source-files one/ three  # trailing slash actually matters here, for the src args
+
+I thought trailing slash mattered more, but it actually only matters in one instance.
