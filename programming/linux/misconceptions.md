@@ -222,7 +222,6 @@ These two will both result in the same structure (only the slash on the source f
     4 directories, 10 files
 
 The slash on the source folder means that the source and destination should be merged rather than a subdirectory.
-These are all the same:
 
     $ rsync -auh --remove-source-files one/ three
     $ rsync -auh --remove-source-files one/ three/  # equivalent
