@@ -27,7 +27,8 @@ Nested one subfolder (actual destination `three/one/one`):
 | `mv one three/one`                               | `one`            | `three/one`           |
 | `cp -r one three/one && rm -rf one`              | `one`            | `three/one`           |
 | `rsync -auh --remove-source-files one three/one` | `one`            | `three/one`           |
-| `rclone move one three/one/one`                  | `one`            | `three/one/one`       |
+| `rclone move -q --no-traverse one three/one/one` | `one`            | `three/one/one`       |
+| `library relmv one three/one` \*                 | `one`            | `three/one`           |
 
 Merged subfolder (actual destination `three/one`):
 
@@ -36,18 +37,27 @@ Merged subfolder (actual destination `three/one`):
 | `mv one/* three/one`                         | `one/*`          | `three/one`           |
 | `cp -r one three && rm -rf one`              | `one`            | `three`               |
 | `rsync -auh --remove-source-files one three` | `one`            | `three`               |
-| `rclone move one three/one`                  | `one`            | `three/one`           |
+| `rclone move -q --no-traverse one three/one` | `one`            | `three/one`           |
+| `library relmv one three` \*                 | `one`            | `three`               |
 
 Merged destination (actual destination `three`):
 
 | Full Command                                  | Source Parameter | Destination Parameter |
 | --------------------------------------------- | ---------------- | --------------------- |
+| `mv one/* three`                              | `one/*`          | `three`               |
+| `cp -r one/* three && rm -rf one`             | `one/*`          | `three`               |
 | `rsync -auh --remove-source-files one/ three` | `one/`           | `three`               |
-| `rclone move one three`                       | `one`            | `three`               |
+| `rclone move -q --no-traverse one three`      | `one`            | `three`               |
+| `library relmv one three` \*\*                | `one`            | `three`               |
 
-I thought trailing slash mattered more, but it actually only matters in the above rsync "merged destination" instance.
+I thought trailing slash mattered more, but it actually only matters in the "merged destination" instance.
 
-Out of all of these, I think rclone provides the least surprising result.
+Out of all of these, I think rclone provides the least surprising result. But rclone is a lot slower than `mv` in many scenarios and it should be noted that you can't rename files with `rclone` or `lb relmv` like you can with `mv`.
+
+`library relmv` is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With [lb relmv](https://github.com/chapmanjacobd/library) it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible.
+
+\* if no destination path parents are also named "one"
+\*\* if any destination path parent is also named "one"
 
 Setup:
 
