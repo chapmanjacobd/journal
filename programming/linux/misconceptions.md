@@ -54,10 +54,11 @@ I thought trailing slash mattered more, but it actually only matters in the "mer
 
 Out of all of these, I think rclone provides the least surprising result. But rclone is a lot slower than `mv` in many scenarios and it should be noted that you can't rename files with `rclone` or `lb relmv` like you can with `mv`.
 
-`library relmv` is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With [lb relmv](https://github.com/chapmanjacobd/library) it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible.
-
 \* if no destination path parents are also named "one"
+
 \*\* if any destination path parent is also named "one"
+
+`library relmv` is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With [lb relmv](https://github.com/chapmanjacobd/library) it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible.
 
 Setup:
 
