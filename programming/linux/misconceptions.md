@@ -14,12 +14,6 @@ tl;dr: what is the right way?
 
 Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
 
-I think `mv` should be limited to tasks which don't change inodes. `cp` should probably error out similar to `mv` but I am 52 years and 10 days too late to provide my _deep_ and _useful_ insight /s.
-
-`rsync`, despite doing different things based on trailing slash on `src` parameters, is more consistent from an operator perspective.
-
-Put another way, limited to the below examples, these are the equivalent:
-
 When the destination doesn't exist:
 
 | Full Command                                | Source Parameter | Actual Destination | Result                                         |
@@ -90,6 +84,10 @@ Nested subfolder in existing subfolder (`three/one/one`):
 | `library relmv one three/one` \*                 | `one`            | `three/one`           |
 
 I thought trailing slash mattered more, but it actually only matters in the "merged destination" instance.
+
+I think `mv` should be limited to tasks which don't change inodes. `cp` should probably error out similar to `mv` but I am 52 years and 10 days too late to provide my _deep_ and _useful_ insight /s.
+
+`rsync`, despite doing different things based on trailing slash on `src` parameters, is more consistent from an operator perspective.
 
 Out of all of these, I think rclone provides the least surprising result. But rclone is a lot slower than `mv` in many scenarios and it should be noted that you can't rename files with `rclone` or `lb relmv` like you can with `mv`.
 
