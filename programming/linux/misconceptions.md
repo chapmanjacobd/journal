@@ -93,7 +93,7 @@ Nested subfolder in existing subfolder (`three/one/one`):
 | `rclone move -q --no-traverse one three/one/one` | `one`            | `three/one/one`       |
 | `library relmv one three/one` \*                 | `one`            | `three/one`           | 🤔🤔     |
 
-I thought trailing slash mattered more, but it actually only matters in the "merged destination" instance.
+I thought trailing slash mattered more, but it actually only matters with rsync (and BSD `cp` and `mv`) and even then only the src argument(s).
 
 I think `mv` should be limited to tasks which don't change inodes. `cp` should probably error out similar to `mv` but I am 52 years and 10 days too late to provide my _deep_ and _useful_ insight /s.
 
