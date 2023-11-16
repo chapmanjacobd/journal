@@ -20,17 +20,56 @@ I think `mv` should be limited to tasks which don't change inodes. `cp` should p
 
 Put another way, limited to the below examples, these are the equivalent:
 
-Nested one subfolder (actual destination `three/one/one`):
+When the destination doesn't exist:
 
-| Full Command                                     | Source Parameter | Destination Parameter |
-| ------------------------------------------------ | ---------------- | --------------------- |
-| `mv one three/one`                               | `one`            | `three/one`           |
-| `cp -r one three/one && rm -rf one`              | `one`            | `three/one`           |
-| `rsync -auh --remove-source-files one three/one` | `one`            | `three/one`           |
-| `rclone move -q --no-traverse one three/one/one` | `one`            | `three/one/one`       |
-| `library relmv one three/one` \*                 | `one`            | `three/one`           |
+| Full Command                                | Source Parameter | Actual Destination | Result                                         |
+| ------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------- |
+| `mv one two`                                | `one`            | `two`              | folder rename, same inode                      |
+| `mv one/* two`                              | `one/*`          | x                  | Error: target 'two': No such file or directory |
+| `rclone move -q --no-traverse one two`      | `one`            | `two`              | folder rename, same inode                      |
+| `cp -r one two && rm -rf one`               | `one`            | `two`              | new folder                                     |
+| `cp -r one/. two && rm -rf one`             | `one/.`          | `two`              | new folder                                     |
+| `cp -r one/* two && rm -rf one`             | `one/*`          | x                  | Error: target 'two': No such file or directory |
+| `rsync -auh --remove-source-files one/ two` | `one/`           | `two`              | new folder                                     |
+| `rsync -auh --remove-source-files one two`  | `one`            | `two/one`          | new folder, subfolder with new inode           |
+| `library relmv one two`                     | `one`            | `two/one`          | new folder, subfolder with same inode          |
 
-Merged subfolder (actual destination `three/one`):
+When the destination is an empty folder:
+
+| Full Command                                | Source Parameter | Actual Destination | Result                                   |
+| ------------------------------------------- | ---------------- | ------------------ | ---------------------------------------- |
+| `mv one two`                                | `one`            | `two/one`          | folder rename, subfolder with same inode |
+| `mv one/* two`                              | `one/*`          | `two`              | files moved, same inodes                 |
+| `rclone move -q --no-traverse one two`      | `one`            | `two`              | files moved, same inodes                 |
+| `cp -r one two && rm -rf one`               | `one`            | `two/one`          | new subfolder                            |
+| `cp -r one/. two && rm -rf one`             | `one/.`          | `two`              |                                          |
+| `cp -r one/* two && rm -rf one`             | `one/*`          | `two`              |                                          |
+| `rsync -auh --remove-source-files one/ two` | `one/`           | `two`              |                                          |
+| `rsync -auh --remove-source-files one two`  | `one`            | `two/one`          | new subfolder                            |
+| `library relmv one two`                     | `one`            | `two/one`          | folder rename, subfolder with same inode |
+
+When the destination has a subfolder with the same name:
+
+Errors:
+
+| Full Command     | Source Parameter | Destination Parameter | Result                                                        |
+| ---------------- | ---------------- | --------------------- | ------------------------------------------------------------- |
+| `mv one three`   | `one`            | `three`               | mv: cannot move 'one' to 'three/one': Directory not empty     |
+| `mv one/. three` | `one/.`          | `three`               | mv: cannot move 'one/.' to 'three/.': Device or resource busy |
+
+I guess `src/.` in GNU `mv` isn't implemented? I haven't ever seen it work but it seems like it should be a thing. I guess it means something very specific that is not applicable to every-day situations.
+
+Merged in destination (`three`):
+
+| Full Command                                  | Source Parameter   | Destination Parameter |
+| --------------------------------------------- | ------------------ | --------------------- |
+| `mv one/* three`                              | `one/*`            | `three`               |
+| `cp -r one/. three && rm -rf one`             | `one/.` or `one/*` | `three`               |
+| `rsync -auh --remove-source-files one/ three` | `one/`             | `three`               |
+| `rclone move -q --no-traverse one three`      | `one`              | `three`               |
+| `library relmv one three` \*\*                | `one`              | `three`               |
+
+Merged in destination subfolder (`three/one`):
 
 | Full Command                                 | Source Parameter | Destination Parameter |
 | -------------------------------------------- | ---------------- | --------------------- |
@@ -40,15 +79,15 @@ Merged subfolder (actual destination `three/one`):
 | `rclone move -q --no-traverse one three/one` | `one`            | `three/one`           |
 | `library relmv one three` \*                 | `one`            | `three`               |
 
-Merged destination (actual destination `three`):
+Nested subfolder in existing subfolder (`three/one/one`):
 
-| Full Command                                  | Source Parameter | Destination Parameter |
-| --------------------------------------------- | ---------------- | --------------------- |
-| `mv one/* three`                              | `one/*`          | `three`               |
-| `cp -r one/* three && rm -rf one`             | `one/*`          | `three`               |
-| `rsync -auh --remove-source-files one/ three` | `one/`           | `three`               |
-| `rclone move -q --no-traverse one three`      | `one`            | `three`               |
-| `library relmv one three` \*\*                | `one`            | `three`               |
+| Full Command                                     | Source Parameter | Destination Parameter |
+| ------------------------------------------------ | ---------------- | --------------------- |
+| `mv one three/one`                               | `one`            | `three/one`           |
+| `cp -r one three/one && rm -rf one`              | `one`            | `three/one`           |
+| `rsync -auh --remove-source-files one three/one` | `one`            | `three/one`           |
+| `rclone move -q --no-traverse one three/one/one` | `one`            | `three/one/one`       |
+| `library relmv one three/one` \*                 | `one`            | `three/one`           |
 
 I thought trailing slash mattered more, but it actually only matters in the "merged destination" instance.
 
