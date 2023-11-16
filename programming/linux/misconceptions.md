@@ -16,14 +16,14 @@ Well... it depends what you want to do. The program can't read your mind so I ho
 
 When the destination doesn't exist:
 
-| Full Command                                | Source Parameter | Actual Destination | Result                                         |
-| ------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------- |
+| Full Command                                | Source Parameter | Actual Destination | Result                                         | Surprise |
+| ------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------- | -------- |
 | `mv one two`                                | `one`            | `two`              | folder rename, same inode                      |
-| `mv one/* two`                              | `one/*`          | x                  | Error: target 'two': No such file or directory |
+| `mv one/* two`                              | `one/*`          | x                  | Error: target 'two': No such file or directory | 🤔       |
 | `cp -r one two && rm -rf one`               | `one` or `one/.` | `two`              | new folder                                     |
-| `cp -r one/* two && rm -rf one`             | `one/*`          | x                  | Error: target 'two': No such file or directory |
+| `cp -r one/* two && rm -rf one`             | `one/*`          | x                  | Error: target 'two': No such file or directory | 🤔       |
 | `rsync -auh --remove-source-files one/ two` | `one/`           | `two`              | new folder                                     |
-| `rsync -auh --remove-source-files one two`  | `one`            | `two/one`          | new folder, subfolder with new inode           |
+| `rsync -auh --remove-source-files one two`  | `one`            | `two/one`          | new folder, subfolder with new inode           | 🤔       |
 | `rclone move -q --no-traverse one two`      | `one`            | `two`              | folder rename, same inode                      |
 | `library relmv one two`                     | `one`            | `two/one`          | new folder, subfolder with same inode          |
 
