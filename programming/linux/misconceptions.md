@@ -31,7 +31,7 @@ When the destination doesn't exist:
 
 The errors are a bit surprising to me because it seems reasonable that the program would make its own new directories. `cp` already does anyway if you only specify exactly one src argument. I also prefer the way blob storage tools work where you can move files many nested levels deep without creating a bunch of folders first.
 
-`rsync`, [following BSD](https://wiki.archlinux.org/title/rsync#Trailing_slash_caveat) `cp`, will copy files directly inside of the destination folder (no subfolder) if the source argument has a trailing slash. I guess that means that the behavior of NOT having a trailing slash is also different. GNU `cp` will simply copy the files from within the source folder to the destination folder (similar to `mv`) but `rsync`, at least, will _always_ create a subfolder.
+`rsync`, [following BSD](https://wiki.archlinux.org/title/rsync#Trailing_slash_caveat) `cp`, will copy files directly inside of the destination folder (no subfolder) if the source argument has a trailing slash. I guess that means that the behavior of NOT having a trailing slash is also different. GNU `cp` will simply copy the files from within the source folder to the destination folder (similar to `mv`) but `rsync`, at least, will _always_ create a subfolder for each source argument which does NOT have a trailing slash.
 
 When the destination is an empty folder:
 
