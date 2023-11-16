@@ -20,27 +20,25 @@ When the destination doesn't exist:
 | ------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------- |
 | `mv one two`                                | `one`            | `two`              | folder rename, same inode                      |
 | `mv one/* two`                              | `one/*`          | x                  | Error: target 'two': No such file or directory |
-| `rclone move -q --no-traverse one two`      | `one`            | `two`              | folder rename, same inode                      |
-| `cp -r one two && rm -rf one`               | `one`            | `two`              | new folder                                     |
-| `cp -r one/. two && rm -rf one`             | `one/.`          | `two`              | new folder                                     |
+| `cp -r one two && rm -rf one`               | `one` or `one/.` | `two`              | new folder                                     |
 | `cp -r one/* two && rm -rf one`             | `one/*`          | x                  | Error: target 'two': No such file or directory |
 | `rsync -auh --remove-source-files one/ two` | `one/`           | `two`              | new folder                                     |
 | `rsync -auh --remove-source-files one two`  | `one`            | `two/one`          | new folder, subfolder with new inode           |
+| `rclone move -q --no-traverse one two`      | `one`            | `two`              | folder rename, same inode                      |
 | `library relmv one two`                     | `one`            | `two/one`          | new folder, subfolder with same inode          |
 
 When the destination is an empty folder:
 
-| Full Command                                | Source Parameter | Actual Destination | Result                                   |
-| ------------------------------------------- | ---------------- | ------------------ | ---------------------------------------- |
-| `mv one two`                                | `one`            | `two/one`          | folder rename, subfolder with same inode |
-| `mv one/* two`                              | `one/*`          | `two`              | files moved, same inodes                 |
-| `rclone move -q --no-traverse one two`      | `one`            | `two`              | files moved, same inodes                 |
-| `cp -r one two && rm -rf one`               | `one`            | `two/one`          | new subfolder                            |
-| `cp -r one/. two && rm -rf one`             | `one/.`          | `two`              |                                          |
-| `cp -r one/* two && rm -rf one`             | `one/*`          | `two`              |                                          |
-| `rsync -auh --remove-source-files one/ two` | `one/`           | `two`              |                                          |
-| `rsync -auh --remove-source-files one two`  | `one`            | `two/one`          | new subfolder                            |
-| `library relmv one two`                     | `one`            | `two/one`          | folder rename, subfolder with same inode |
+| Full Command                                | Source Parameter   | Actual Destination | Result                                   |
+| ------------------------------------------- | ------------------ | ------------------ | ---------------------------------------- |
+| `mv one two`                                | `one`              | `two/one`          | folder rename, subfolder with same inode |
+| `mv one/* two`                              | `one/*`            | `two`              | files moved, same inodes                 |
+| `cp -r one two && rm -rf one`               | `one`              | `two/one`          | new subfolder                            |
+| `cp -r one/. two && rm -rf one`             | `one/.` or `one/*` | `two`              |                                          |
+| `rsync -auh --remove-source-files one/ two` | `one/`             | `two`              |                                          |
+| `rsync -auh --remove-source-files one two`  | `one`              | `two/one`          | new subfolder                            |
+| `rclone move -q --no-traverse one two`      | `one`              | `two`              | files moved, same inodes                 |
+| `library relmv one two`                     | `one`              | `two/one`          | folder rename, subfolder with same inode |
 
 When the destination has a subfolder with the same name:
 
