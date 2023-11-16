@@ -72,13 +72,11 @@ Merged in destination, Merged in destination subfolder, Nested subfolder in exis
 | `rsync -auh --remove-source-files one/ three`    | `one/`             | `three`         | `three`         |
 | `rclone move -q --no-traverse one three`         | `one`              | `three`         | `three`         |
 | `library relmv one three` \*\*                   | `one`              | `three`         | `three`         | 🤔       |
-| --------------------------------------------     | -------            | -----------     | -----------     | -------- |
 | `mv one/* three/one`                             | `one/*`            | `three/one`     | `three/one`     |
 | `cp -r one three && rm -rf one`                  | `one`              | `three`         | `three/one`     | 🤔🤔🤔   |
 | `rsync -auh --remove-source-files one three`     | `one`              | `three`         | `three/one`     | 🤔🤔     |
 | `rclone move -q --no-traverse one three/one`     | `one`              | `three/one`     | `three/one`     |
 | `library relmv one three` \*                     | `one`              | `three`         | `three/one`     |
-| ------------------------------------------------ | -----              | --------------- | --------------- | -------- |
 | `mv one three/one`                               | `one`              | `three/one`     | `three/one/one` | 🤔🤔🤔🤔 |
 | `cp -r one three/one && rm -rf one`              | `one`              | `three/one`     | `three/one/one` | 🤔🤔🤔🤔 |
 | `rsync -auh --remove-source-files one three/one` | `one`              | `three/one`     | `three/one/one` | 🤔🤔🤔   |
