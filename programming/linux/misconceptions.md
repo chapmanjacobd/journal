@@ -14,7 +14,7 @@ tl;dr: what is the right way?
 
 Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
 
-When the destination doesn't exist:
+### When the destination doesn't exist:
 
 | Full Command                                | src              | dest      | actual dest | Result                                | Surprise |
 | ------------------------------------------- | ---------------- | --------- | ----------- | ------------------------------------- | -------- |
@@ -33,7 +33,7 @@ The errors are a bit surprising to me because it seems reasonable that the progr
 
 `rsync`, [following BSD](https://wiki.archlinux.org/title/rsync#Trailing_slash_caveat) `cp`, will copy files directly inside of the destination folder (no subfolder) if the source argument has a trailing slash. I guess that means that the behavior of NOT having a trailing slash is also different. GNU `cp` will simply copy the files from within the source folder to the destination folder (similar to `mv`) but `rsync`, at least, will _always_ create a subfolder for each source argument which does NOT have a trailing slash.
 
-When the destination is an empty folder:
+### When the destination is an empty folder:
 
 | Full Command                                | src                | dest      | actual dest | Result                                   | Surprise |
 | ------------------------------------------- | ------------------ | --------- | ----------- | ---------------------------------------- | -------- |
@@ -50,9 +50,9 @@ When the destination is an empty folder:
 
 It's confusing that `cp` and `mv` with the same arguments will do different things just because an (empty) folder exists. And it seems kinda weird that two different destinations: `mv one two` and `mv one two/one` both lead to the same actual destination: `two/one`.
 
-When the destination has a subfolder with the same name:
+### When the destination has a subfolder with the same name:
 
-Errors:
+#### Errors:
 
 | Full Command     | src     | dest    | actual dest | Result                                                        | Surprise |
 | ---------------- | ------- | ------- | ----------- | ------------------------------------------------------------- | -------- |
@@ -63,7 +63,7 @@ It is a bit annoying that `mv` doesn't know how to merge folders.
 
 And I guess `src/.` in GNU `mv` isn't implemented? I haven't ever seen it work but it seems like it should be a thing--especially because it is a thing in GNU `cp`.
 
-Merged in destination, Merged in destination subfolder, Nested subfolder in existing subfolder:
+#### Merged in destination, Merged in destination subfolder, Nested subfolder in existing subfolder:
 
 | Full Command                                     | src                | dest            | actual dest     | Surprise |
 | ------------------------------------------------ | ------------------ | --------------- | --------------- | -------- |
