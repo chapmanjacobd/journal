@@ -52,36 +52,29 @@ It's confusing that `cp` and `mv` with the same arguments will do different thin
 
 ### When the destination has a subfolder with the same name:
 
-#### Errors:
-
-| Full Command     | src     | dest    | actual dest | Result                                                        | Surprise |
-| ---------------- | ------- | ------- | ----------- | ------------------------------------------------------------- | -------- |
-| `mv one three`   | `one`   | `three` | X           | mv: cannot move 'one' to 'three/one': Directory not empty     | 🤔🤔     |
-| `mv one/. three` | `one/.` | `three` | X           | mv: cannot move 'one/.' to 'three/.': Device or resource busy | 🤔🤔🤔   |
+| Full Command                                     | src                | dest            | actual dest                          | Surprise |
+| ------------------------------------------------ | ------------------ | --------------- | ------------------------------------ | -------- |
+| `mv one three`                                   | `one`              | `three`         | cannot move: Directory not empty     | 🤔🤔     |
+| `mv one/. three`                                 | `one/.`            | `three`         | cannot move: Device or resource busy | 🤔🤔🤔   |
+| `mv one/* three`                                 | `one/*`            | `three`         | `three`                              |          |
+| `mv one/* three/one`                             | `one/*`            | `three/one`     | `three/one`                          |          |
+| `mv one three/one`                               | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔🤔🤔 |
+| `cp -r one/. three && rm -rf one`                | `one/.` or `one/*` | `three`         | `three`                              |          |
+| `cp -r one three && rm -rf one`                  | `one`              | `three`         | `three/one`                          | 🤔🤔🤔   |
+| `cp -r one three/one && rm -rf one`              | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔🤔🤔 |
+| `rsync -auh --remove-source-files one/ three`    | `one/`             | `three`         | `three`                              |          |
+| `rsync -auh --remove-source-files one three`     | `one`              | `three`         | `three/one`                          | 🤔🤔     |
+| `rsync -auh --remove-source-files one three/one` | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔🤔   |
+| `rclone move -q --no-traverse one three`         | `one`              | `three`         | `three`                              |          |
+| `rclone move -q --no-traverse one three/one`     | `one`              | `three/one`     | `three/one`                          |          |
+| `rclone move -q --no-traverse one three/one/one` | `one`              | `three/one/one` | `three/one/one`                      |          |
+| `library relmv one three` \*\*                   | `one`              | `three`         | `three`                              | 🤔       |
+| `library relmv one three` \*                     | `one`              | `three`         | `three/one`                          |          |
+| `library relmv one three/one` \*                 | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔     |
 
 It is a bit annoying that `mv` doesn't know how to merge folders.
 
 And I guess `src/.` in GNU `mv` isn't implemented? I haven't ever seen it work but it seems like it should be a thing--especially because it is a thing in GNU `cp`.
-
-#### Merged in destination, Merged in destination subfolder, Nested subfolder in existing subfolder:
-
-| Full Command                                     | src                | dest            | actual dest     | Surprise |
-| ------------------------------------------------ | ------------------ | --------------- | --------------- | -------- |
-| `mv one/* three`                                 | `one/*`            | `three`         | `three`         |          |
-| `mv one/* three/one`                             | `one/*`            | `three/one`     | `three/one`     |          |
-| `mv one three/one`                               | `one`              | `three/one`     | `three/one/one` | 🤔🤔🤔🤔 |
-| `cp -r one/. three && rm -rf one`                | `one/.` or `one/*` | `three`         | `three`         |          |
-| `cp -r one three && rm -rf one`                  | `one`              | `three`         | `three/one`     | 🤔🤔🤔   |
-| `cp -r one three/one && rm -rf one`              | `one`              | `three/one`     | `three/one/one` | 🤔🤔🤔🤔 |
-| `rsync -auh --remove-source-files one/ three`    | `one/`             | `three`         | `three`         |          |
-| `rsync -auh --remove-source-files one three`     | `one`              | `three`         | `three/one`     | 🤔🤔     |
-| `rsync -auh --remove-source-files one three/one` | `one`              | `three/one`     | `three/one/one` | 🤔🤔🤔   |
-| `rclone move -q --no-traverse one three`         | `one`              | `three`         | `three`         |          |
-| `rclone move -q --no-traverse one three/one`     | `one`              | `three/one`     | `three/one`     |          |
-| `rclone move -q --no-traverse one three/one/one` | `one`              | `three/one/one` | `three/one/one` |          |
-| `library relmv one three` \*\*                   | `one`              | `three`         | `three`         | 🤔       |
-| `library relmv one three` \*                     | `one`              | `three`         | `three/one`     |          |
-| `library relmv one three/one` \*                 | `one`              | `three/one`     | `three/one/one` | 🤔🤔     |
 
 I thought trailing slash mattered more, but it actually only matters with rsync (and BSD `cp` and `mv`) and even then only the src argument(s).
 
