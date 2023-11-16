@@ -16,18 +16,18 @@ Well... it depends what you want to do. The program can't read your mind so I ho
 
 ### When the destination doesn't exist:
 
-| Full Command                                | src              | dest      | actual dest | Result                                | Surprise |
-| ------------------------------------------- | ---------------- | --------- | ----------- | ------------------------------------- | -------- |
-| `mv one two`                                | `one`            | `two`     | `two`       | folder rename, same inode             |
-| `mv one two/one`                            | `one`            | `two/one` | X           | cannot move ...: ENOENT               | 🤔       |
-| `mv one/* two`                              | `one/*`          | `two`     | x           | Error: target: ENOENT                 | 🤔🤔     |
-| `cp -r one two && rm -rf one`               | `one` or `one/.` | `two`     | `two`       | new folder                            |
-| `cp -r one two/one && rm -rf one`           | `one`            | `two/one` | X           | Error cannot create directory ...     | 🤔       |
-| `cp -r one/* two && rm -rf one`             | `one/*`          | `two`     | x           | Error: target: ENOENT                 | 🤔🤔     |
-| `rsync -auh --remove-source-files one/ two` | `one/`           | `two`     | `two`       | new folder                            |
-| `rsync -auh --remove-source-files one two`  | `one`            | `two`     | `two/one`   | new folder, subfolder with new inode  | 🤔🤔     |
-| `rclone move -q --no-traverse one two`      | `one`            | `two`     | `two`       | folder rename, same inode             |
-| `library relmv one two`                     | `one`            | `two`     | `two/one`   | new folder, subfolder with same inode |
+| Full Command                                | src              | dest      | actual dest                           | Surprise |
+| ------------------------------------------- | ---------------- | --------- | ------------------------------------- | -------- |
+| `mv one two`                                | `one`            | `two`     | `two` (preserved inode)               |
+| `mv one two/one`                            | `one`            | `two/one` | Error: cannot move ...: ENOENT        | 🤔       |
+| `mv one/* two`                              | `one/*`          | `two`     | Error: target: ENOENT                 | 🤔🤔     |
+| `cp -r one two && rm -rf one`               | `one` or `one/.` | `two`     | `two`                                 |
+| `cp -r one two/one && rm -rf one`           | `one`            | `two/one` | Error cannot create directory ...     | 🤔       |
+| `cp -r one/* two && rm -rf one`             | `one/*`          | `two`     | Error: target: ENOENT                 | 🤔🤔     |
+| `rsync -auh --remove-source-files one/ two` | `one/`           | `two`     | `two`                                 |
+| `rsync -auh --remove-source-files one two`  | `one`            | `two`     | `two/one` (subfolder new inode)       | 🤔🤔     |
+| `rclone move -q --no-traverse one two`      | `one`            | `two`     | `two` (preserved inode)               |
+| `library relmv one two`                     | `one`            | `two`     | `two/one` (subfolder preserved inode) |
 
 The errors are a bit surprising to me because it seems reasonable that the program would make its own new directories. `cp` already does anyway if you only specify exactly one src argument. I also prefer the way blob storage tools work where you can move files many nested levels deep without creating a bunch of folders first.
 
@@ -35,42 +35,42 @@ The errors are a bit surprising to me because it seems reasonable that the progr
 
 ### When the destination is an empty folder:
 
-| Full Command                                | src                | dest      | actual dest | Result                                   | Surprise |
-| ------------------------------------------- | ------------------ | --------- | ----------- | ---------------------------------------- | -------- |
-| `mv one two`                                | `one`              | `two`     | `two/one`   | folder rename, subfolder with same inode | 🤔🤔🤔   |
-| `mv one two/one`                            | `one`              | `two/one` | `two/one`   | folder rename, subfolder with same inode |          |
-| `mv one/* two`                              | `one/*`            | `two`     | `two`       | files moved, same inodes                 |
-| `cp -r one two && rm -rf one`               | `one`              | `two`     | `two/one`   | new subfolder                            | 🤔🤔🤔   |
-| `cp -r one two/one && rm -rf one`           | `one`              | `two/one` | `two/one`   | new subfolder                            |          |
-| `cp -r one/. two && rm -rf one`             | `one/.` or `one/*` | `two`     | `two`       |                                          |
-| `rsync -auh --remove-source-files one/ two` | `one/`             | `two`     | `two`       |                                          |
-| `rsync -auh --remove-source-files one two`  | `one`              | `two`     | `two/one`   | new subfolder                            | 🤔🤔     |
-| `rclone move -q --no-traverse one two`      | `one`              | `two`     | `two`       | files moved, same inodes                 |
-| `library relmv one two`                     | `one`              | `two`     | `two/one`   | folder rename, subfolder with same inode |
+| Full Command                                | src                | dest      | actual dest                           | Surprise |
+| ------------------------------------------- | ------------------ | --------- | ------------------------------------- | -------- |
+| `mv one two`                                | `one`              | `two`     | `two/one` (subfolder preserved inode) | 🤔🤔🤔   |
+| `mv one two/one`                            | `one`              | `two/one` | `two/one` (subfolder preserved inode) |          |
+| `mv one/* two`                              | `one/*`            | `two`     | `two` (files moved, preserved inodes) |
+| `cp -r one two && rm -rf one`               | `one`              | `two`     | `two/one`                             | 🤔🤔🤔   |
+| `cp -r one two/one && rm -rf one`           | `one`              | `two/one` | `two/one`                             |          |
+| `cp -r one/. two && rm -rf one`             | `one/.` or `one/*` | `two`     | `two`                                 |
+| `rsync -auh --remove-source-files one/ two` | `one/`             | `two`     | `two`                                 |
+| `rsync -auh --remove-source-files one two`  | `one`              | `two`     | `two/one`                             | 🤔🤔     |
+| `rclone move -q --no-traverse one two`      | `one`              | `two`     | `two` (files moved, preserved inodes) |
+| `library relmv one two`                     | `one`              | `two`     | `two/one` (subfolder preserved inode) |
 
 It's confusing that `cp` and `mv` with the same arguments will do different things just because an (empty) folder exists. And it seems kinda weird that two different destinations: `mv one two` and `mv one two/one` both lead to the same actual destination: `two/one`.
 
 ### When the destination has a subfolder with the same name:
 
-| Full Command                                     | src                | dest            | actual dest                          | Surprise |
-| ------------------------------------------------ | ------------------ | --------------- | ------------------------------------ | -------- |
-| `mv one three`                                   | `one`              | `three`         | cannot move: Directory not empty     | 🤔🤔     |
-| `mv one/. three`                                 | `one/.`            | `three`         | cannot move: Device or resource busy | 🤔🤔🤔   |
-| `mv one/* three`                                 | `one/*`            | `three`         | `three`                              |          |
-| `mv one/* three/one`                             | `one/*`            | `three/one`     | `three/one`                          |          |
-| `mv one three/one`                               | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔🤔🤔 |
-| `cp -r one/. three && rm -rf one`                | `one/.` or `one/*` | `three`         | `three`                              |          |
-| `cp -r one three && rm -rf one`                  | `one`              | `three`         | `three/one`                          | 🤔🤔🤔   |
-| `cp -r one three/one && rm -rf one`              | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔🤔🤔 |
-| `rsync -auh --remove-source-files one/ three`    | `one/`             | `three`         | `three`                              |          |
-| `rsync -auh --remove-source-files one three`     | `one`              | `three`         | `three/one`                          | 🤔🤔     |
-| `rsync -auh --remove-source-files one three/one` | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔🤔   |
-| `rclone move -q --no-traverse one three`         | `one`              | `three`         | `three`                              |          |
-| `rclone move -q --no-traverse one three/one`     | `one`              | `three/one`     | `three/one`                          |          |
-| `rclone move -q --no-traverse one three/one/one` | `one`              | `three/one/one` | `three/one/one`                      |          |
-| `library relmv one three` \*\*                   | `one`              | `three`         | `three`                              | 🤔       |
-| `library relmv one three` \*                     | `one`              | `three`         | `three/one`                          |          |
-| `library relmv one three/one` \*                 | `one`              | `three/one`     | `three/one/one`                      | 🤔🤔     |
+| Full Command                                     | src                | dest            | actual dest                                 | Surprise |
+| ------------------------------------------------ | ------------------ | --------------- | ------------------------------------------- | -------- |
+| `mv one three`                                   | `one`              | `three`         | Error: cannot move: Directory not empty     | 🤔🤔     |
+| `mv one/. three`                                 | `one/.`            | `three`         | Error: cannot move: Device or resource busy | 🤔🤔🤔   |
+| `mv one/* three`                                 | `one/*`            | `three`         | `three`                                     |          |
+| `mv one/* three/one`                             | `one/*`            | `three/one`     | `three/one`                                 |          |
+| `mv one three/one`                               | `one`              | `three/one`     | `three/one/one`                             | 🤔🤔🤔🤔 |
+| `cp -r one/. three && rm -rf one`                | `one/.` or `one/*` | `three`         | `three`                                     |          |
+| `cp -r one three && rm -rf one`                  | `one`              | `three`         | `three/one`                                 | 🤔🤔🤔   |
+| `cp -r one three/one && rm -rf one`              | `one`              | `three/one`     | `three/one/one`                             | 🤔🤔🤔🤔 |
+| `rsync -auh --remove-source-files one/ three`    | `one/`             | `three`         | `three`                                     |          |
+| `rsync -auh --remove-source-files one three`     | `one`              | `three`         | `three/one`                                 | 🤔🤔     |
+| `rsync -auh --remove-source-files one three/one` | `one`              | `three/one`     | `three/one/one`                             | 🤔🤔🤔   |
+| `rclone move -q --no-traverse one three`         | `one`              | `three`         | `three`                                     |          |
+| `rclone move -q --no-traverse one three/one`     | `one`              | `three/one`     | `three/one`                                 |          |
+| `rclone move -q --no-traverse one three/one/one` | `one`              | `three/one/one` | `three/one/one`                             |          |
+| `library relmv one three` \*\*                   | `one`              | `three`         | `three`                                     | 🤔       |
+| `library relmv one three` \*                     | `one`              | `three`         | `three/one`                                 |          |
+| `library relmv one three/one` \*                 | `one`              | `three/one`     | `three/one/one`                             | 🤔🤔     |
 
 It is a bit annoying that `mv` doesn't know how to merge folders.
 
