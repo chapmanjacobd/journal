@@ -1,0 +1,127 @@
+
+<p>Thanks for this comment!</p>
+<p>I wasn't aware that rsync will always create a subfolder if there is no trailing slash. That helps me understand it a bit more.</p>
+<p>You inspired me to do some more experiments and add this to the document:</p>
+<p>When the destination doesn't exist:</p>
+<table>
+<thead>
+<tr>
+<th>Full Command</th>
+<th>Source Parameter</th>
+<th>Actual Destination</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mv one two</code></td>
+<td><code>one</code></td>
+<td><code>two</code></td>
+<td>folder rename, same inode</td>
+</tr>
+<tr>
+<td><code>mv one/* two</code></td>
+<td><code>one/*</code></td>
+<td>x</td>
+<td>Error: target 'two': No such file or directory</td>
+</tr>
+<tr>
+<td><code>rclone move -q --no-traverse one two</code></td>
+<td><code>one</code></td>
+<td><code>two</code></td>
+<td>folder rename, same inode</td>
+</tr>
+<tr>
+<td><code>cp -r one two &amp;&amp; rm -rf one</code></td>
+<td><code>one</code></td>
+<td><code>two</code></td>
+<td>new folder</td>
+</tr>
+<tr>
+<td><code>cp -r one/. two &amp;&amp; rm -rf one</code></td>
+<td><code>one/.</code></td>
+<td><code>two</code></td>
+<td>new folder</td>
+</tr>
+<tr>
+<td><code>cp -r one/* two &amp;&amp; rm -rf one</code></td>
+<td><code>one/*</code></td>
+<td>x</td>
+<td>Error: target 'two': No such file or directory</td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one/ two</code></td>
+<td><code>one/</code></td>
+<td><code>two</code></td>
+<td>new folder</td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one two</code></td>
+<td><code>one</code></td>
+<td><code>two/one</code></td>
+<td>new folder, subfolder with new inode</td>
+</tr>
+</tbody>
+</table>
+<p>When the destination is an empty folder:</p>
+<table>
+<thead>
+<tr>
+<th>Full Command</th>
+<th>Source Parameter</th>
+<th>Actual Destination</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mv one two</code></td>
+<td><code>one</code></td>
+<td><code>two/one</code></td>
+<td>folder rename, subfolder with same inode</td>
+</tr>
+<tr>
+<td><code>mv one/* two</code></td>
+<td><code>one/*</code></td>
+<td><code>two</code></td>
+<td>files moved, same inodes</td>
+</tr>
+<tr>
+<td><code>rclone move -q --no-traverse one two</code></td>
+<td><code>one</code></td>
+<td><code>two</code></td>
+<td>files moved, same inodes</td>
+</tr>
+<tr>
+<td><code>cp -r one two &amp;&amp; rm -rf one</code></td>
+<td><code>one</code></td>
+<td><code>two/one</code></td>
+<td>new subfolder</td>
+</tr>
+<tr>
+<td><code>cp -r one/. two &amp;&amp; rm -rf one</code></td>
+<td><code>one/.</code></td>
+<td><code>two</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cp -r one/* two &amp;&amp; rm -rf one</code></td>
+<td><code>one/*</code></td>
+<td><code>two</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one/ two</code></td>
+<td><code>one/</code></td>
+<td><code>two</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one two</code></td>
+<td><code>one</code></td>
+<td><code>two/one</code></td>
+<td>new subfolder</td>
+</tr>
+</tbody>
+</table>
+
