@@ -1,0 +1,102 @@
+
+<p>I spent an hour or so figuring out how different programs merge folders/subfolders with the same name. I did this by <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/snapshot_restore.fish">resetting</a> the <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/snapshot.fish">folder</a> before running each command.</p>
+<p>Here are the results:</p>
+<p>Nested subfolder (actual destination <code>three/one/one</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Full Command</th>
+<th>Source Parameter</th>
+<th>Destination Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mv one three/one</code></td>
+<td><code>one</code></td>
+<td><code>three/one</code></td>
+</tr>
+<tr>
+<td><code>cp -r one three/one &amp;&amp; rm -rf one</code></td>
+<td><code>one</code></td>
+<td><code>three/one</code></td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one three/one</code></td>
+<td><code>one</code></td>
+<td><code>three/one</code></td>
+</tr>
+<tr>
+<td><code>rclone move -q --no-traverse one three/one/one</code></td>
+<td><code>one</code></td>
+<td><code>three/one/one</code></td>
+</tr>
+</tbody>
+</table>
+<p>Merged subfolder (actual destination <code>three/one</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Full Command</th>
+<th>Source Parameter</th>
+<th>Destination Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mv one/* three/one</code></td>
+<td><code>one/*</code></td>
+<td><code>three/one</code></td>
+</tr>
+<tr>
+<td><code>cp -r one three &amp;&amp; rm -rf one</code></td>
+<td><code>one</code></td>
+<td><code>three</code></td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one three</code></td>
+<td><code>one</code></td>
+<td><code>three</code></td>
+</tr>
+<tr>
+<td><code>rclone move -q --no-traverse one three/one</code></td>
+<td><code>one</code></td>
+<td><code>three/one</code></td>
+</tr>
+</tbody>
+</table>
+<p>Merged destination (actual destination <code>three</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Full Command</th>
+<th>Source Parameter</th>
+<th>Destination Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mv one/* three</code></td>
+<td><code>one/*</code></td>
+<td><code>three</code></td>
+</tr>
+<tr>
+<td><code>cp -r one/* three &amp;&amp; rm -rf one</code></td>
+<td><code>one/*</code></td>
+<td><code>three</code></td>
+</tr>
+<tr>
+<td><code>rsync -auh --remove-source-files one/ three</code></td>
+<td><code>one/</code></td>
+<td><code>three</code></td>
+</tr>
+<tr>
+<td><code>rclone move -q --no-traverse one three</code></td>
+<td><code>one</code></td>
+<td><code>three</code></td>
+</tr>
+</tbody>
+</table>
+<p>I thought trailing slash mattered more, but it actually only matters in the "merged destination" instance.</p>
+<p>Out of all of these, I think rclone provides the least surprising result (the actual destination is the specified destination)--but rclone is a lot slower than <code>mv</code> in many scenarios and it should be noted that you can't rename files with <code>rclone</code> like you can with <code>mv</code>.</p>
+
