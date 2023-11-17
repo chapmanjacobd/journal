@@ -1,0 +1,12 @@
+
+<p>Yes, the tool needs to automatically make tables. There are two different conflicting ideals going on in my head:</p>
+<ol>
+<li>
+<p>If possible, try to get a construct a name from one or more of: (the endpoint that the response came from, the original object key that the array was a value for, etc). The benefit of this is mostly readability but also query comprehension.</p>
+</li>
+<li>
+<p>Choose generic names so the longest, widest table will become t1, second table t2, etc. The benefit of this is that you won't need to look at the database before running a query. But also more queries might be transferable across different sites. I'm trying to remember how ogr2ogr does it because it does a similar thing.</p>
+</li>
+</ol>
+<p>I might need to do a bit of both, or hide option 1 behind a flag.</p>
+
