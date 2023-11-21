@@ -1,0 +1,1 @@
+One thing you may want to keep in mind is that in most cases, SQLite will only use a single index for each table in the FROM clause of a query. I imagine it will be faster to keep the MVTs separate. But it might not make a big difference whether they are separate tables or separate files.

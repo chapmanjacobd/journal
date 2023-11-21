@@ -1,0 +1,1 @@
+Vientiane, Laos. Some things are relatively expensive, some things are relatively cheap. Very weird city but also lovely. I would go back but not to save money. Sometimes a lower quality of life can make your life more balanced.
