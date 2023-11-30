@@ -1,7 +1,5 @@
 # Tools to try
 
-https://github.com/quatrope/scikit-criteria
-
 https://github.com/chdb-io/chdb
 
 https://github.com/xataio/pgroll
@@ -55,8 +53,6 @@ sqlite-vss
 
 https://github.com/testcontainers/testcontainers-python
 
-pandas.json_normalize
 https://github.com/terrastruct/d2
 https://github.com/tycho-kirchner/shournal
 https://docs.elementary-data.com/quickstart
-https://github.com/jamesmcm/vopono
