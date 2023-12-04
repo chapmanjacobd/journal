@@ -1,0 +1,103 @@
+
+<p>Sure, here is <a href="https://github.com/chapmanjacobd/library/commit/bbb048febe9aac848374227a922872f043a9f674#diff-0820365ed263a10d72b744c9782858f03d2400bbc36a7edbc86ad2c4de6a3bc1">the relevant code</a>. I don't use natsort with SQLITE indexes directly but I use natsort after fetching some data.</p>
+<p>The previous function get_ordinal_media would also query the database for more data. This is useful when using <code>--random</code> which will initially only select a random subset of the table based on rowid. Last night, I replicated the fetching functionality of get_ordinal_media in the get_sibling_media function.</p>
+<p>So now I can do <code>library watch --random --fetch-siblings each</code> and it will get a random list of files and then get the first result from each parent path substring search. There are probably better ways of doing this, like with a correlated subquery but it feels more flexible as-is.</p>
+<p>Here is the relevant documentation:</p>
+<p>Play media in order (similarly named episodes):</p>
+<ul>
+<li>library watch --play-in-order</li>
+<li>library watch -O    # equivalent</li>
+</ul>
+<p>The default sort value is 'natural_ps' which means media will be sorted by parent path<br/>
+and then stem in a natural way (using the integer values within the path). But there are many other options:</p>
+<p>Options:</p>
+<ul>
+<li>reverse: reverse the sort order</li>
+<li>compat: treat characters like '⑦' as '7'</li>
+</ul>
+<p>Algorithms:</p>
+<ul>
+<li>natural: parse numbers as integers</li>
+<li>os: sort similar to the OS File Explorer sorts. To improve non-alphanumeric sorting on Mac OS X and Linux it is necessary to install pyicu (perhaps via python3-icu -- <a href="https://gitlab.pyicu.org/main/pyicu#installing-pyicu">https://gitlab.pyicu.org/main/pyicu#installing-pyicu</a>)</li>
+<li>path: use natsort "path" algorithm (<a href="https://natsort.readthedocs.io/en/stable/api.html#the-ns-enum">https://natsort.readthedocs.io/en/stable/api.html#the-ns-enum</a>)</li>
+<li>human: use system locale</li>
+<li>ignorecase: treat all case as equal</li>
+<li>lowercase: sort lowercase first</li>
+<li>signed: sort with an understanding of negative numbers</li>
+<li>python: sort like default python</li>
+</ul>
+<p>Values:</p>
+<ul>
+<li>path</li>
+<li>parent</li>
+<li>stem</li>
+<li>title (or any other column value)</li>
+<li>ps: parent, stem</li>
+<li>pts: parent, title, stem</li>
+</ul>
+<p>Use this format: algorithm, value, algorithm_value, or option_algorithm_value.<br/>
+For example:</p>
+<ul>
+<li>
+<p>library watch -O human</p>
+</li>
+<li>
+<p>library watch -O title</p>
+</li>
+<li>
+<p>library watch -O human_title</p>
+</li>
+<li>
+<p>library watch -O reverse_compat_human_title</p>
+</li>
+<li>
+<p>library watch -O path       # path algorithm and parent, stem values (path_ps)</p>
+</li>
+<li>
+<p>library watch -O path_path  # path algorithm and path values</p>
+</li>
+</ul>
+<p>Also, if you are using --random you need to fetch sibling media to play the media in order:</p>
+<ul>
+<li>library watch --random --fetch-siblings always -O</li>
+<li>library watch --random --fetch-siblings if-audiobook -O</li>
+</ul>
+<p>If searching by a specific subpath it may be preferable to just sort by path instead</p>
+<ul>
+<li>
+<p>library watch d/planet.earth.2024/ -u path</p>
+</li>
+<li>
+<p>library watch --related  # Similar to -O but uses fts to find similar content</p>
+</li>
+<li>
+<p>library watch -R         # equivalent</p>
+</li>
+<li>
+<p>library watch -RR        # above, plus ignores most filters</p>
+</li>
+<li>
+<p>library watch --cluster  # cluster-sort to put similar-named paths closer together</p>
+</li>
+<li>
+<p>library watch -C         # equivalent</p>
+</li>
+<li>
+<p>library watch --big-dirs # Recommended to use with --duration or --depth filters; see <code>lb big-dirs -h</code> for more info</p>
+</li>
+<li>
+<p>library watch -B         # equivalent</p>
+</li>
+</ul>
+<p>All of these options can be used together but it will be a bit slow and the results might be mid-tier<br/>
+as multiple different algorithms create a muddied signal (too many cooks in the kitchen):</p>
+<ul>
+<li>library watch -RRCO</li>
+</ul>
+<p>You can even sort the items within each cluster by auto-MCDA ~LOL~</p>
+<ul>
+<li>library watch -B --sort-by 'mcda median_size,-deleted'</li>
+<li>library watch -C --sort-by 'mcda median_size,-deleted'</li>
+</ul>
+<p><a href="https://github.com/chapmanjacobd/library#media-database-subcommands">https://github.com/chapmanjacobd/library#media-database-subcommands</a></p>
+
