@@ -56,3 +56,4 @@ https://github.com/testcontainers/testcontainers-python
 https://github.com/terrastruct/d2
 https://github.com/tycho-kirchner/shournal
 https://docs.elementary-data.com/quickstart
+https://eric-ide.python-projects.org/
