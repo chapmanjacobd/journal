@@ -1,0 +1,4 @@
+- Permanent storage `/mnt`
+- Network shares `/srv`
+- sshfs `~/.mnt`
+- USB `udisksctl mount -b /dev/sdX1`

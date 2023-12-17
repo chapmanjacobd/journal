@@ -1,0 +1,1 @@
+Maybe Londra reprogrammed the tallneck to be part of the volcano experience so his followers had to walk across an invisible bridge like Indiana Jones and the tallneck would appear to bridge the gap--or maybe a holographic tallneck
