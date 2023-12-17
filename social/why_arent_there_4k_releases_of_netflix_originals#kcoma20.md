@@ -1,0 +1,1 @@
+I think by "digit by digit" they mean that a specific pixel on a specific row/column of a specific frame will have the brightness/saturation shifted very slightly, or maybe not a single pixel but a group of 8-connected pixels so that it is a reliable watermark even if passed through a convolution filter
