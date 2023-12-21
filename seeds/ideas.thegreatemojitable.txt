@@ -1,0 +1,33 @@
+    the great emoji table
+
+    monkey
+    banana
+    yellow / brown
+    arms
+    Android
+
+    human
+    apple
+    red / sand
+    legs
+    Android
+
+    spider
+    dragonfruit
+    black / violet
+    trains
+    iPhone
+
+    cats
+    cantaloupe
+    grey / teal
+    house
+    iPhone
+
+    dogs
+    mangos
+    orange / brown
+    cars
+    Android
+
+    etc
