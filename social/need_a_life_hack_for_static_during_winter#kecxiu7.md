@@ -1,0 +1,1 @@
+One thing that helps a lot is to have a metal water bottle and then put your whole hand around it and use the bottom of it to touch grounded objects. By increasing the surface area you can still hear the shock but not feel it
