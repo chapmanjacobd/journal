@@ -1,0 +1,18 @@
+#ssh oci curl -s ifconfig.me/ip
+
+#cat ~/.ssh/id_ed25519.pub
+
+sudo dnf install -y dnf-automatic kitty-terminfo
+sudo systemctl enable --now dnf-automatic-install.timer
+#wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+#sudo bash openvpn-install.sh
+
+echo fs.file-max = 500000 | sudo tee /etc/sysctl.conf
+sudo sysctl -p
+
+sudo tee /etc/security/limits.conf <<EOF
+*         hard    nofile      500000
+*         soft    nofile      500000
+root      hard    nofile      500000
+root      soft    nofile      500000
+EOF

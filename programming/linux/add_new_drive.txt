@@ -1,0 +1,59 @@
+# Seagate
+
+check serial number https://www.seagate.com/support/warranty-and-replacements/
+
+cd bin/SeaChestUtilities/Non-RAID/
+sudo ./SeaChest_SMART_x86_64-redhat-linux -d /dev/sdX --conveyanceDST
+watch sudo ./SeaChest_SMART_x86_64-redhat-linux -d /dev/sdX --progress dst
+
+sudo ./SeaChest_GenericTests_x86_64-redhat-linux -d /dev/sdX --twoMinuteGeneric
+
+sudo ./SeaChest_Firmware_x86_64-redhat-linux -d /dev/sdX --fwdlInfo
+
+sudo ./SeaChest_Basics_x86_64-redhat-linux -d /dev/sdX --smartCheck
+sudo ./SeaChest_Info_x86_64-redhat-linux -d /dev/sdX --deviceStatistics
+sudo ./SeaChest_Basics_x86_64-redhat-linux -d /dev/sdX --smartAttributes analyzed
+
+sudo ./SeaChest_Format_x86_64-redhat-linux -d /dev/sdX --seagateQuickFormat --setSectorSize 4096
+sudo ./SeaChest_Configure_x86_64-redhat-linux -d /dev/sdX --lowCurrentSpinup low
+
+sudo ./SeaChest_Configure_x86_64-redhat-linux -d /dev/sdX --puisFeature enable
+
+
+# Western Digital UltraStar
+
+check serial number https://support-eu.wd.com/app/warrantystatusweb
+
+sudo wdckit show
+
+sudo wdckit selftest /dev/sdX -s
+sudo wdckit selftest /dev/sdX -p
+
+sudo wdckit getsmart /dev/sdX
+
+sudo wdckit format -b 4096 --fastformat /dev/sdX
+
+# All
+
+sudo smartctl -l scterc /dev/sdX
+sudo smartctl -l scterc,100,100 /dev/sdX
+
+sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --showEPCSettings
+
+sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --idle_b 7200000
+sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --EPCfeature enable
+sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --setAPMLevel 220
+
+## make an unformatted partition, GPT partition table
+
+sudo sgdisk -n 0:0:0 --align-end -t 0:8300 /dev/sdX
+
+sudo mkfs.btrfs -m dup -d single --csum xxhash /dev/sdX1 -L d8
+
+fstab
+
+sudo mkdir /mnt/d1 /mnt/d2 /mnt/d3 /mnt/d4
+sudo chown xk:xk /mnt/d1 /mnt/d2 /mnt/d3 /mnt/d4
+
+sudo mount -a
+sudo mergerfs.ctl -m /mnt/d info
