@@ -1,0 +1,126 @@
+                     KDiskMark (2.3.0): https://github.com/JonMagon/KDiskMark
+                 Flexible I/O Tester (fio-3.26): https://github.com/axboe/fio
+-----------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential 1 MiB (Q= 1, T= 1):  1043.359 MB/s [   1018.9 IOPS] <   979.71 us>
+    Random 4 KiB (Q= 1, T= 1):    46.985 MB/s [  11746.5 IOPS] <    83.55 us>
+
+[Write]
+Sequential 1 MiB (Q= 1, T= 1):   390.531 MB/s [    381.4 IOPS] <  2252.41 us>
+    Random 4 KiB (Q= 1, T= 1):    68.784 MB/s [  17196.1 IOPS] <    52.48 us>
+
+Profile: Real World Performance
+   Test: 1 GiB (x5) [Interval: 5 sec]
+   Date: 2022-03-05 14:30:37
+     OS: fedora 35 [linux 5.16.11-200.fc35.x86_64]
+
+970 Plus
+
+                     KDiskMark (2.3.0): https://github.com/JonMagon/KDiskMark
+                 Flexible I/O Tester (fio-3.26): https://github.com/axboe/fio
+-----------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential 1 MiB (Q= 1, T= 1):   537.731 MB/s [    525.1 IOPS] <  1903.24 us>
+    Random 4 KiB (Q= 1, T= 1):    36.657 MB/s [   9164.4 IOPS] <   108.59 us>
+
+[Write]
+Sequential 1 MiB (Q= 1, T= 1):   371.440 MB/s [    362.7 IOPS] <   649.11 us>
+    Random 4 KiB (Q= 1, T= 1):   114.184 MB/s [  28546.1 IOPS] <    23.72 us>
+
+Profile: Real World Performance
+   Test: 1 GiB (x5) [Interval: 5 sec]
+   Date: 2022-03-05 14:53:34
+     OS: fedora 35 [linux 5.16.11-200.fc35.x86_64]
+
+Sandisk SSD
+
+                     KDiskMark (2.3.0): https://github.com/JonMagon/KDiskMark
+                 Flexible I/O Tester (fio-3.26): https://github.com/axboe/fio
+-----------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential 1 MiB (Q= 1, T= 1):   192.435 MB/s [    187.9 IOPS] <  5318.37 us>
+    Random 4 KiB (Q= 1, T= 1):     0.725 MB/s [    181.4 IOPS] <  5508.10 us>
+
+[Write]
+Sequential 1 MiB (Q= 1, T= 1):   174.559 MB/s [    170.5 IOPS] <   626.15 us>
+    Random 4 KiB (Q= 1, T= 1):    33.027 MB/s [   8256.8 IOPS] <    24.24 us>
+
+Profile: Real World Performance
+   Test: 1 GiB (x5) [Interval: 5 sec]
+   Date: 2022-03-05 14:43:56
+     OS: fedora 35 [linux 5.16.11-200.fc35.x86_64]
+
+USB
+
+                     KDiskMark (2.3.0): https://github.com/JonMagon/KDiskMark
+                 Flexible I/O Tester (fio-3.26): https://github.com/axboe/fio
+-----------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential 1 MiB (Q= 1, T= 1):   154.152 MB/s [    150.5 IOPS] <  6636.31 us>
+    Random 4 KiB (Q= 1, T= 1):     0.676 MB/s [    169.2 IOPS] <  5904.49 us>
+
+[Write]
+Sequential 1 MiB (Q= 1, T= 1):   131.994 MB/s [    128.9 IOPS] <  6958.35 us>
+    Random 4 KiB (Q= 1, T= 1):     2.906 MB/s [    726.6 IOPS] <  1277.15 us>
+
+Profile: Real World Performance
+   Test: 1 GiB (x5) [Interval: 5 sec]
+   Date: 2022-03-05 14:46:30
+     OS: fedora 35 [linux 5.16.11-200.fc35.x86_64]
+
+Hitachi RAID1
+
+
+                     KDiskMark (2.3.0): https://github.com/JonMagon/KDiskMark
+                 Flexible I/O Tester (fio-3.29): https://github.com/axboe/fio
+-----------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential 1 MiB (Q= 1, T= 1):   200.049 MB/s [    195.4 IOPS] <  5116.91 us>
+    Random 4 KiB (Q= 1, T= 1):     0.793 MB/s [    198.4 IOPS] <  5038.05 us>
+
+[Write]
+Sequential 1 MiB (Q= 1, T= 1):    42.442 MB/s [     41.4 IOPS] < 22325.07 us>
+    Random 4 KiB (Q= 1, T= 1):     9.090 MB/s [   2272.6 IOPS] <   383.22 us>
+
+Profile: Real World Performance
+   Test: 1 GiB (x5) [Interval: 5 sec]
+   Date: 2022-03-15 20:26:05
+     OS: opensuse-tumbleweed 20220314 [linux 5.16.14-1-default]
+
+mdadm RAID1 + btrfs RAID1
+
+                     KDiskMark (2.3.0): https://github.com/JonMagon/KDiskMark
+                 Flexible I/O Tester (fio-3.29): https://github.com/axboe/fio
+-----------------------------------------------------------------------------
+* MB/s = 1,000,000 bytes/s [SATA/600 = 600,000,000 bytes/s]
+* KB = 1000 bytes, KiB = 1024 bytes
+
+[Read]
+Sequential 1 MiB (Q= 1, T= 1):   187.090 MB/s [    182.7 IOPS] <  5471.04 us>
+    Random 4 KiB (Q= 1, T= 1):     0.271 MB/s [     67.9 IOPS] < 14726.48 us>
+
+[Write]
+Sequential 1 MiB (Q= 1, T= 1):    45.114 MB/s [     44.1 IOPS] < 19644.19 us>
+    Random 4 KiB (Q= 1, T= 1):     4.784 MB/s [   1196.1 IOPS] <   681.62 us>
+
+Profile: Real World Performance
+   Test: 1 GiB (x5) [Interval: 5 sec]
+   Date: 2022-03-17 17:06:10
+     OS: opensuse-tumbleweed 20220314 [linux 5.16.14-1-default]
+
+mdadm RAID1 + btrfs RAID0
