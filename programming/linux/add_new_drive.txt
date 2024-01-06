@@ -44,6 +44,8 @@ sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --idle_b 7200000
 sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --EPCfeature enable
 sudo ./SeaChest_PowerControl_x86_64-redhat-linux -d /dev/sdX --setAPMLevel 220
 
+# destructive !! badblocks -b 4096 -c 2048 -wsv -o blah.badblocks /dev/disk/by-id/ata-blah -p 3 -t 0x00 -t 0xaa -t 0x55
+
 ## make an unformatted partition, GPT partition table
 
 sudo sgdisk -n 0:0:0 --align-end -t 0:8300 /dev/sdX
