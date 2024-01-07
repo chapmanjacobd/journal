@@ -2,7 +2,8 @@
 
 check serial number https://www.seagate.com/support/warranty-and-replacements/
 
-cd bin/SeaChestUtilities/Non-RAID/
+lsdev
+cd .local/bin/SeaChestUtilities/Non-RAID/
 sudo ./SeaChest_SMART_x86_64-redhat-linux -d /dev/sdX --conveyanceDST
 watch sudo ./SeaChest_SMART_x86_64-redhat-linux -d /dev/sdX --progress dst
 
