@@ -1,0 +1,4 @@
+
+<p>Offline dedup makes a lot more sense for large files than online dedup. Just run new files against the existing hashes: <a href="https://github.com/martinpitt/fatrace">https://github.com/martinpitt/fatrace</a></p>
+<p>If all your files are big it might make sense to do a fast hash by reading partial data like <a href="https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/sample_hash.py">sample_hash.py</a> (when you get a hash match you could then switch to full hash like <a href="https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/sample_compare.py#L21">sample_compare.py#L21</a>)</p>
+
