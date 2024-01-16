@@ -56,6 +56,7 @@ Well... it depends what you want to do. The program can't read your mind so I ho
 | `rsync -auh --remove-source-files one/ two` | `one/`           | `two`     | `two`                                 |
 | `rsync -auh --remove-source-files one two`  | `one`            | `two`     | `two/one` (subfolder new inode)       | 🤔🤔     |
 | `rclone move -q --no-traverse one two`      | `one`            | `two`     | `two` (preserved inode)               |
+| `rclone move -q --no-traverse one two/one`  | `one`            | `two/one`     | `two/one` (preserved inode)       |
 | `library relmv one two`                     | `one`            | `two`     | `two/one` (subfolder preserved inode) |
 
 The errors are a bit surprising to me because it seems reasonable that the program would make its own new directories. `cp` already does anyway if you only specify exactly one src argument. I also prefer the way blob storage tools work where you can move files many nested levels deep without creating a bunch of folders first.
@@ -117,7 +118,7 @@ Out of all of these, I think rclone provides the least surprising result. But rc
 
 \*\* if any destination path parent is also named "one"
 
-[library](https://github.com/chapmanjacobd/library) [relmv](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/relmv.py) is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With `library relmv` it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible.
+[library](https://github.com/chapmanjacobd/library) [relmv](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/relmv.py) is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With `library relmv` it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible. [library] [merge-folders](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/merge_folders.py) follows rclone move but it only works on single filesystems. The only real benefit compared to rclone is that it supports multiple sources and shows a count of conflicts per source.
 
 Setup:
 
