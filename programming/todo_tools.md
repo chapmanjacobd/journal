@@ -1,3 +1,4 @@
+https://nodejs.org/en/guides/debugging-getting-started
 https://marketplace.visualstudio.com/items?itemName=skybrian.bot-typist
 https://github.com/gosom/google-maps-scraper
 # Tools to try
