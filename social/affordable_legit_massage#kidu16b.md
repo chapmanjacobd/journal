@@ -1,0 +1,1 @@
+If you buy "in bulk" (ie. 16 or more sessions in advance, you can give the tickets to other people to use) there are sometimes some discounts offered during certain times of the year close to that price at some good legit massage places in Mongkok

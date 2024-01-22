@@ -1,0 +1,4 @@
+- Krusader > Dolphin
+- KDE > Gnome
+- rclone move > mv [because of this](https://github.com/chapmanjacobd/journal/blob/main/programming/linux/misconceptions.md#mv-src-vs-mv-src) but I still use rsync and mv a lot of the time
+- kitty > tmux (although they solve different things and I use both daily)
