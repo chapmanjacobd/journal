@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from prettytable import PrettyTable
 from scipy.special import expit  # this is the sigmoid function
-from scipy.stats import norm, lognorm
+from scipy.stats import lognorm, norm
 from sklearn.preprocessing import RobustScaler
 
 
@@ -289,9 +289,7 @@ def split_data(data: np.ndarray, train_percentage: float = 0.8):
 This module incorporates util functions for graphs.
 """
 from pathlib import Path
-
-from deprecated import deprecated
-from typing import List, Union, Tuple, Dict, Callable, Set
+from typing import Callable, Dict, List, Set, Tuple, Union
 
 import networkx as nx
 import numpy
@@ -299,7 +297,7 @@ import numpy as np
 import pandas as pd
 import pydot as pydot
 import pydotplus
-from networkx import Graph, DiGraph
+from deprecated import deprecated
 from pyground.file_utils import file_exists
 
 AnyGraph = Union[nx.Graph, nx.DiGraph]
@@ -394,11 +392,6 @@ def build_graph(list_nodes: List, matrix: np.ndarray, threshold=0.05, zero_diag=
     return graph
 
 
-@deprecated(version="0.2.34", reason="Use graph_print_edges()")
-def print_graph_edges(graph: nx.Graph):
-    graph_print_edges(graph)
-
-
 def graph_print_edges(graph: nx.Graph):
     """
     Pretty print the nodes of a graph, with weights
@@ -434,6 +427,11 @@ def graph_print_edges(graph: nx.Graph):
             print(("{:" + str(mx) + "s} –– {:" + str(mx) + "s} {:+.4f}").format(edge[0], edge[1], edge[2]))
         else:
             print(("{:" + str(mx) + "s} –– {:" + str(mx) + "s}").format(edge[0], edge[1]))
+
+
+@deprecated(version="0.2.34", reason="Use graph_print_edges()")
+def print_graph_edges(graph: nx.Graph):
+    graph_print_edges(graph)
 
 
 def graph_to_adjacency(graph: AnyGraph, weight_label: str = "weight") -> numpy.ndarray:
@@ -749,21 +747,24 @@ def graph_biconnections(g) -> Set[Tuple[str, str]]:
     return biconnections
 
 
-import string
 import random
+import string
+from typing import List
 
-import graphviz
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import pydot
 import pydotplus
-
 from IPython.display import Image, display
 from pydot import Dot
-from typing import List
+from pyground.graph_utils import AnyGraph, graph_to_adjacency
 
-from pyground.graph_utils import graph_to_adjacency, AnyGraph
+
+def plot_dot(dot_object: pydot.Dot, **kwargs) -> None:
+    """Displays a DOT object in the notebook"""
+    image = Image(dot_object.create_png(), **kwargs)
+    display(image)
 
 
 def dot_graph(
@@ -888,12 +889,6 @@ def dot_graphs(
     plt.show()
 
 
-def plot_dot(dot_object: pydot.Dot, **kwargs) -> None:
-    """Displays a DOT object in the notebook"""
-    image = Image(dot_object.create_png(), **kwargs)
-    display(image)
-
-
 def plot_graph(graph: nx.DiGraph) -> None:
     """Plot a graph using default Matplotlib methods"""
     pos = nx.circular_layout(graph, scale=20)
@@ -999,10 +994,9 @@ def plot_adjacency(g: nx.Graph, ax=None):
 
 import errno
 import glob
-import json
 import os
 import pickle
-from os.path import dirname, realpath, join
+from os.path import dirname, join, realpath
 from pathlib import Path
 
 import joblib
@@ -1259,12 +1253,13 @@ def load_experiment(obj_name: str, folder: str):
         return pickle.load(h)
 
 
-import numpy as np
-from matplotlib import pyplot as plt, gridspec
-import seaborn as sns
 import warnings
 
+import numpy as np
 import scipy.stats as stats
+import seaborn as sns
+from matplotlib import gridspec
+from matplotlib import pyplot as plt
 
 
 def plot_distribution(values: np.ndarray, perc=None, perc_pos=0, th=None, **kwargs):

@@ -30,6 +30,7 @@ UPGRADES = {
     # add new versions here
 }
 
+
 def migrate_to_latest_version(db):
     """Perform database schema updates incrementally"""
 

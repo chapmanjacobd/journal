@@ -1,7 +1,8 @@
 import argparse
-import os
 from pathlib import Path
+
 from osgeo import ogr
+
 
 def abs_coordinates(geometry):
     if isinstance(geometry, ogr.Geometry):
@@ -12,6 +13,7 @@ def abs_coordinates(geometry):
             for point in ring:
                 x, y = point.GetX(), point.GetY()
                 point.SetPoint(0, abs(x), abs(y))
+
 
 def process_geometry_file(input_file, output_file):
     ds = ogr.OpenShared(input_file)
@@ -43,6 +45,7 @@ def process_geometry_file(input_file, output_file):
     del out_ds
 
     print("RADICAL LONGITUDINAL DUDE:", output_file)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process geometry file to abs(longitude)")

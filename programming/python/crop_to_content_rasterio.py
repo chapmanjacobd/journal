@@ -2,8 +2,10 @@
 
 import argparse
 import os
-import rasterio
+
 import numpy as np
+import rasterio
+
 
 def clip_edges(src_path, dst_path):
     with rasterio.open(src_path) as src:
@@ -18,24 +20,20 @@ def clip_edges(src_path, dst_path):
         cols = np.where(np.any(data != nodata, axis=0))[0]
 
         # Clip the data array to the valid rows and columns
-        clipped_data = data[rows.min():rows.max()+1, cols.min():cols.max()+1]
+        clipped_data = data[rows.min() : rows.max() + 1, cols.min() : cols.max() + 1]
 
         # Compute the new affine transformation matrix for the clipped data
         transform = src.transform
         xoff = transform[2] + cols.min() * transform[0]
         yoff = transform[5] + rows.min() * transform[4]
-        new_transform = rasterio.Affine(transform[0], transform[1], xoff,
-                                        transform[3], transform[4], yoff)
+        new_transform = rasterio.Affine(transform[0], transform[1], xoff, transform[3], transform[4], yoff)
 
         # Write the clipped data to a new raster file
         kwargs = src.meta
-        kwargs.update({
-            'width': clipped_data.shape[1],
-            'height': clipped_data.shape[0],
-            'transform': new_transform
-        })
+        kwargs.update({'width': clipped_data.shape[1], 'height': clipped_data.shape[0], 'transform': new_transform})
         with rasterio.open(dst_path, 'w', **kwargs) as dst:
             dst.write(clipped_data, 1)
+
 
 def main():
     parser = argparse.ArgumentParser(description='Clip raster images by removing edges with no valid data')
@@ -50,6 +48,7 @@ def main():
     for src_path in args.input_files:
         dst_path = os.path.join(args.output_dir, os.path.basename(src_path))
         clip_edges(src_path, dst_path)
+
 
 if __name__ == '__main__':
     main()

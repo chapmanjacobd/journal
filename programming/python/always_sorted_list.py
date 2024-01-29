@@ -1,4 +1,3 @@
-
 """Always sorted list
 
 Use add() instead of append() or insert().
@@ -26,10 +25,6 @@ class SortedList(list):
         if pos < len(self) and self[pos] == v:
             return pos
         return -1
-
-    # 'list' interface
-    def __contains__(self, v):
-        return self._find(v) >= 0
 
     def remove(self, v):
         pos = self._find(v)
@@ -59,6 +54,10 @@ class SortedList(list):
                 break
             count += 1
         return count
+
+    # 'list' interface
+    def __contains__(self, v):
+        return self._find(v) >= 0
 
 
 def assert_raises(exc_type, func, *args, **kwargs):

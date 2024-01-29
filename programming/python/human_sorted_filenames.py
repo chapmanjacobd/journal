@@ -34,12 +34,7 @@ def extract_ints(line):
 
 
 def collate_strs(tup):
-    return tuple(
-        (type, part)
-        if type == 0
-        else (type, locale.strxfrm(part.rstrip("\x00")))
-        for type, part in tup
-    )
+    return tuple((type, part) if type == 0 else (type, locale.strxfrm(part.rstrip("\x00"))) for type, part in tup)
 
 
 def file_key(path):

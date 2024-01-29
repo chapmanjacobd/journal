@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import argparse
+
 import numpy as np
 from osgeo import gdal
 
