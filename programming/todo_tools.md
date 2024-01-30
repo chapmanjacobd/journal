@@ -61,3 +61,4 @@ https://github.com/tycho-kirchner/shournal
 https://docs.elementary-data.com/quickstart
 https://eric-ide.python-projects.org/
 https://github.com/autodistill/autodistill
+https://github.com/lovasoa/SQLpage
