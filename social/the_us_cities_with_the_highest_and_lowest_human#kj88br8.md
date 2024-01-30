@@ -1,0 +1,1 @@
+If it is not population-weighted then it is _still_ biased by population even if they filter out cities without data or some other criteria. They choose the top 100 populous cities but the top 10 cities are still going to have more cases than the bottom 10 cities
