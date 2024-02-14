@@ -1,4 +1,4 @@
-https://github.com/pymupdf/PyMuPDF-Utilities/blob/master/examples/extract-images/extract-from-pages.py
+https://github.com/Layout-Parser/layout-parser
 https://github.com/pymupdf/PyMuPDF-Utilities/blob/master/examples/extract-images/extract-from-pages.py
 https://nodejs.org/en/guides/debugging-getting-started
 https://marketplace.visualstudio.com/items?itemName=skybrian.bot-typist
