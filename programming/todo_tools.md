@@ -1,3 +1,4 @@
+https://github.com/valeriansaliou/sonic
 https://wcedmisten.fyi/post/keyboard-shortcuts-userscripts/
 https://github.com/Layout-Parser/layout-parser
 https://github.com/pymupdf/PyMuPDF-Utilities/blob/master/examples/extract-images/extract-from-pages.py
