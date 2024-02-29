@@ -1,0 +1,1 @@
+there was a pipeline that was scraping all the indicators from a website (thousands of pages; the script took 25 hours to run) and saving to object storage as one file per indicator but downstream all the pipelines just read one specific indicator. Tens of gigabytes wasted when the actual data needed was only a couple hundred kilobytes and a couple of seconds to retrieve it
