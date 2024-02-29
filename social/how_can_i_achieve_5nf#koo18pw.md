@@ -1,0 +1,1 @@
+> Three is thy count, and the number of the counting shall be three. Four shalt thou not count, neither count thou two, excepting that thou then proceed to three. Five is right out. Once the number three, being the third form of the number, be reached, then deploy thou thy Holy Database Schema of Normalization towards thy data mess, who, being naughty in My sight, shall snuff it.

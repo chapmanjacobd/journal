@@ -1,0 +1,1 @@
+    rmlint --merge-folders
