@@ -1,0 +1,1 @@
+It's storage economics. You can have more redundant copies for the same price with hard disks. This scales with the number of disks and filesystem partitions (2+ disks treated as one partition) / file fragments (storing fragments across disks; see AWS S3 internals) that you have.
