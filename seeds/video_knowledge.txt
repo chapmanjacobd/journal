@@ -12,6 +12,7 @@ Recommended By
 Reason for Exclusion
 Popularity
 Number of Videos
+Importance
 
 https://en.m.wikipedia.org/wiki/List_of_academic_fields
 https://www.statcan.gc.ca/en/subjects/standard/cip/2021/index
