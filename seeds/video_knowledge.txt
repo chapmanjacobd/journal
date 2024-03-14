@@ -9,6 +9,9 @@ Target Audience Specialization
 Topic
 Language
 Recommended By
+Reason for Exclusion
+Popularity
+Number of Videos
 
 https://en.m.wikipedia.org/wiki/List_of_academic_fields
 https://www.statcan.gc.ca/en/subjects/standard/cip/2021/index
