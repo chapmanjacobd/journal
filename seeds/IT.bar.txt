@@ -1,0 +1,9 @@
+Cocktail bar where all the drinks are IT themed
+
+- Data Loss
+- PC LOAD LETTER
+- USB reset
+- Printer on fire
+- HTTP 418 (Hyper Text Coffee Pot Control Protocol)
+- IoT Malware
+- invalid ioctl
