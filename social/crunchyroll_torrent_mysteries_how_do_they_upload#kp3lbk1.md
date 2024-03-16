@@ -1,0 +1,1 @@
+yeah I wouldn't describe 100Mbps as speedy necessarily--not sure why you assume they have it. There are a lot of people (in absolute numbers not relative percent of global human population) that have access to 1~10 Gigabit internet access and they could be using multiple connections and combining the segments after the fact

@@ -2,8 +2,9 @@ import functools
 
 
 def as_async(fn):
-    from concurrent.futures import ThreadPoolExecutor
     import asyncio
+    from concurrent.futures import ThreadPoolExecutor
+
     pool = ThreadPoolExecutor()
 
     @functools.wraps(fn)

@@ -1,0 +1,1 @@
+I wrote something that can read in the diffs and run through the results automatically or manually via `mpv` (it works on images too): https://old.reddit.com/r/DataHoarder/comments/1907qbg/video_quality_advice/kgnauh0/?context=3

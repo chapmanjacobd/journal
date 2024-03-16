@@ -1,0 +1,1 @@
+Each character has their own color. The objects they own are slightly tinted to express ownership. One character has objects which are tinted different colors. He is the thief.

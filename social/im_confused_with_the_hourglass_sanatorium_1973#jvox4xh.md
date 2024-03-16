@@ -21,7 +21,7 @@ Books and birds are not just books and birds but they mean something else. I don
 
 There is definitely conflict between memories of the past and uncertainty of the future. Anxiety about events being too large to fit into space-time. Anxiety about the quality of time (spending a life working for other people; "Do we get fully valuable and credible time [at the sanitorium]? No. We get time used up by people. It's frayed and full of holes: vomited, secondhand time..."). The film itself is cyclical with the main character arriving and departing from the same place. I don't think it is a mistake that the drink which Jozef tries to drink is the same color as the fruit preserve (but this is a small, unimportant detail).
 
-There are definitely some scenes, events which have no place in time, which may loosely reproduce some short story but don't really move the main plot forward. They are there for narration, continuity, and to move the theme of the film forward. Perhaps everything between the two crawling under the bed scenes and between the crawling under the dinning table to when the honeymoon boat is launched and the gun is fired: 
+There are definitely some scenes, events which have no place in time, which may loosely reproduce some short story but don't really move the main plot forward. They are there for narration, continuity, and to move the _theme_ of the film forward. Perhaps everything between the two crawling under the bed scenes and between the crawling under the dinning table to when the honeymoon boat is launched and the gun is fired: 
 
 - Jakub: "Ignorabimus"
 - Military uniform guy: "Are you Jozef, Jakub's son?"

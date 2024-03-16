@@ -1,0 +1,1 @@
+It depends which question you are trying to answer in your study. Environmental Psychology or Behavioral Psychology tools might help you form more quantitative and comparable results but if you don't have a specific question something like ethnography would help you gather open-ended qualitative data to help you form other research questions later

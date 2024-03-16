@@ -1,3 +1,9 @@
+https://github.com/valeriansaliou/sonic
+https://wcedmisten.fyi/post/keyboard-shortcuts-userscripts/
+https://github.com/Layout-Parser/layout-parser
+https://github.com/pymupdf/PyMuPDF-Utilities/blob/master/examples/extract-images/extract-from-pages.py
+https://github.com/bruin-data/ingestr
+https://nodejs.org/en/guides/debugging-getting-started
 https://marketplace.visualstudio.com/items?itemName=skybrian.bot-typist
 https://github.com/gosom/google-maps-scraper
 # Tools to try
@@ -59,3 +65,5 @@ https://github.com/terrastruct/d2
 https://github.com/tycho-kirchner/shournal
 https://docs.elementary-data.com/quickstart
 https://eric-ide.python-projects.org/
+https://github.com/autodistill/autodistill
+https://github.com/lovasoa/SQLpage

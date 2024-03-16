@@ -5,26 +5,18 @@
 import argparse
 import math
 import os
-from pathlib import Path
 import sys
+from pathlib import Path
 
 import numpy as np
 from osgeo import gdal
-from PIL import Image, ImageDraw,ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Compare a list of rasters and output an 8-bit RGB image"
-    )
-    parser.add_argument(
-        "input_folder",
-        help="Path to folder containing input rasters"
-    )
-    parser.add_argument(
-        "output_file",
-        help="Path to output file (should end in .jpg)"
-    )
+    parser = argparse.ArgumentParser(description="Compare a list of rasters and output an 8-bit RGB image")
+    parser.add_argument("input_folder", help="Path to folder containing input rasters")
+    parser.add_argument("output_file", help="Path to output file (should end in .jpg)")
     parser.add_argument(
         "--image-size",
         type=int,
@@ -37,10 +29,13 @@ def parse_args():
     )
     args = parser.parse_args()
 
-    num_rasters = len([
-        entry.name for entry in os.scandir(args.input_folder)
-        if entry.is_file() and entry.name.endswith((".tif", ".tiff"))
-    ])
+    num_rasters = len(
+        [
+            entry.name
+            for entry in os.scandir(args.input_folder)
+            if entry.is_file() and entry.name.endswith((".tif", ".tiff"))
+        ]
+    )
     min_image_size = int(math.ceil(math.sqrt(num_rasters))) * 128
     args.image_size = max(args.image_size, min_image_size)
 
@@ -54,6 +49,7 @@ def read_raster(raster_path):
         sys.exit(1)
     return np.array(raster.GetRasterBand(1).ReadAsArray())
 
+
 def main():
     args = parse_args()
     input_folder = args.input_folder
@@ -61,9 +57,7 @@ def main():
     image_size = args.image_size
 
     raster_paths = [
-        entry.path
-        for entry in os.scandir(input_folder)
-        if entry.is_file() and entry.name.endswith((".tif", ".tiff"))
+        entry.path for entry in os.scandir(input_folder) if entry.is_file() and entry.name.endswith((".tif", ".tiff"))
     ]
 
     # Get information about all rasters

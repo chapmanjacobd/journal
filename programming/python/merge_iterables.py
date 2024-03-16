@@ -22,6 +22,7 @@
 # ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 
+
 def merge_iterables(*iterables, key=lambda x: x):
     """Take multiple sorted iterables and create a single sorted iterator.
 
@@ -33,6 +34,7 @@ def merge_iterables(*iterables, key=lambda x: x):
     Optional `key` param is a callable to get the sort key from an element,
     like the `key` param of `min` or `sorted` builtins.
     """
+
     def keyfunc(kv):
         return key(kv[1])
 
@@ -56,7 +58,7 @@ def merge_iterables(*iterables, key=lambda x: x):
 
 def test_merge():
     expected = [1.0, 1, 1.5, 2, 3, 25, 100]
-    assert list(merge_iterables([1.0,2,25], [1,1.5,3], [100], [])) == expected
+    assert list(merge_iterables([1.0, 2, 25], [1, 1.5, 3], [100], [])) == expected
 
 
 def test_stable():

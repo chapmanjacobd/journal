@@ -1,0 +1,4 @@
+- add: `tee -a cart.txt`
+- remove: `grep -vFx "$product" cart.txt | sponge cart.txt`
+- list: `cat cart.txt`
+- checkout: `mv cart.txt horse.txt; touch cart.txt`

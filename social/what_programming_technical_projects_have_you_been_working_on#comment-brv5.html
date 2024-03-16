@@ -1,0 +1,20 @@
+
+<p>I made two things over the past few days:</p>
+<p><a href="https://github.com/chapmanjacobd/library#links-add">linksdb</a>: This one combines a few different tools that I made before so this only took a couple hours once all the pieces were in place. This tool helps save new links from generic paged websites and stops pagination after 10 pages of no new links. All the magic numbers that it uses are configurable via CLI flags.</p>
+<p><a href="https://github.com/chapmanjacobd/library#extract-text">extract-text</a>: This one is pretty simple. Just remove non-text stuff from HTML. At first it was a bit tricky because I wanted to iterate over HTML in a flat way but that is not really possible... However, after some exploration I was able to get beautifulsoup to do roughly what I wanted:</p>
+<pre><code>    for descendant in item.descendants:
+        if isinstance(descendant, NavigableString):
+            parent = descendant.find_parent()
+            parent_name = parent.name if parent else None
+
+            if parent_name == "a":
+                if not args.skip_links:
+                    yield un_paragraph(descendant)
+            else:
+                yield un_paragraph(descendant)
+</code></pre>
+<p>This allowed me to select and copy a bunch of reddit threads and then cluster similar movie suggestions together:</p>
+<pre><code>lb extract-text --skip-links --local-file (cb -t text/html | psub) \
+   | lb cs --groups | jq -r '.[] | .grouped_paths | "\n" + join("\n")'
+</code></pre>
+

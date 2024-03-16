@@ -6,6 +6,35 @@
 
 `VARIABLE=` is not equivalent to an `unset VARIABLE`
 
+## file size
+
+Different tools often report [different numbers](https://unix.stackexchange.com/questions/120311/why-are-there-so-many-different-ways-to-measure-disk-usage) for file size.
+
+In this table I compare results of different commands with a sparse file and with a normal file:
+
+    truncate -s500K test_sparse
+    fallocate -l 500K test
+
+| Command                                   | test_sparse | test   | Surprise | Reason                                                              |
+| ----------------------------------------- | ----------- | ------ | -------- | ------------------------------------------------------------------- |
+| `du $file`                                | 0           | 500    | 🤔       | du prints size occupied on disk                                     |
+| `du --human-readable $file`               | 0           | 500K   | 🤔🤔     | du prints in kilobytes by default and doesn't show units            |
+| `du --block-size 1 $file`                 | 0           | 512000 |          |                                                                     |
+| `du --bytes $file`                        | 512000      | 512000 | 🤔🤔🤔   | du implicitly switches to apparent-size when using --bytes shortcut |
+| `du --apparent-size --block-size 1 $file` | 512000      | 512000 |          |                                                                     |
+| `python os.stat().st_blocks`              | 0           | 1000   | 🤔       | python uses 512 block-size for everything                           |
+
+In this table I compare two similar files but one is slightly corrupted:
+
+| Command                                       | file1                                    | file2                                    |
+| --------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| `filefrag -v` / `os.stat().st_size` / `du -b` | 3151562045 (769425 blocks, 4151 extents) | 3151562045 (769425 blocks, 5618 extents) |
+| `btrfs fi du --raw` / `du --block-size=1`     | 3151433728                               | 3151564800                               |
+| `os.stat().st_blocks * 512`                   | 3151433728                               | 3151564800                               |
+| `os.stat().st_blocks`                         | 6155144                                  | 6155400                                  |
+| `du`                                          | 3077572                                  | 3077700                                  |
+| `du --block-size=4096`                        | 769393                                   | 769425                                   |
+
 ## mv src vs mv src/
 
 I feel like this is bad design if only because I didn't understand it until recently even after using Linux for over ten years.
@@ -27,6 +56,7 @@ Well... it depends what you want to do. The program can't read your mind so I ho
 | `rsync -auh --remove-source-files one/ two` | `one/`           | `two`     | `two`                                 |
 | `rsync -auh --remove-source-files one two`  | `one`            | `two`     | `two/one` (subfolder new inode)       | 🤔🤔     |
 | `rclone move -q --no-traverse one two`      | `one`            | `two`     | `two` (preserved inode)               |
+| `rclone move -q --no-traverse one two/one`  | `one`            | `two/one`     | `two/one` (preserved inode)       |
 | `library relmv one two`                     | `one`            | `two`     | `two/one` (subfolder preserved inode) |
 
 The errors are a bit surprising to me because it seems reasonable that the program would make its own new directories. `cp` already does anyway if you only specify exactly one src argument. I also prefer the way blob storage tools work where you can move files many nested levels deep without creating a bunch of folders first.
@@ -88,7 +118,7 @@ Out of all of these, I think rclone provides the least surprising result. But rc
 
 \*\* if any destination path parent is also named "one"
 
-[library](https://github.com/chapmanjacobd/library) [relmv](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/relmv.py) is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With `library relmv` it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible.
+[library](https://github.com/chapmanjacobd/library) [relmv](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/relmv.py) is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With `library relmv` it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible. [library] [merge-folders](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/merge_folders.py) follows rclone move but it only works on single filesystems. The only real benefit compared to rclone is that it supports multiple sources and shows a count of conflicts per source.
 
 Setup:
 

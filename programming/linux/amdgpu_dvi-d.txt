@@ -1,0 +1,353 @@
+I'm trying to get HDMI audio to work on Fedora 35. The TV is connected to my RX 570 via the DVI-D port and a DVI to HDMI adapter. Audio works on Windows 10 with the only configuration of selecting it as the audio device.
+
+```
+~ 🃆 xrandr --output DVI-D-0 --set audio on
+X Error of failed request:  BadName (named color or font does not exist)
+  Major opcode of failed request:  140 (RANDR)
+  Minor opcode of failed request:  11 (RRQueryOutputProperty)
+  Serial number of failed request:  45
+  Current serial number in output stream:  45
+~ [1] 🃇 sudo lspci -nn | grep Audio
+00:1f.3 Audio device [0403]: Intel Corporation Comet Lake PCH cAVS [8086:06c8]
+01:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere HDMI Audio [Radeon RX 470/480 / 570/580/590] [1002:aaf0]
+~ 🌎 aplay -L
+null
+    Discard all samples (playback) or generate zero samples (capture)
+pipewire
+    PipeWire Sound Server
+default
+    Default ALSA Output (currently PipeWire Media Server)
+sysdefault:CARD=PCH
+    HDA Intel PCH, ALCS1200A Analog
+    Default Audio Device
+front:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    Front output / input
+surround21:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    2.1 Surround output to Front and Subwoofer speakers
+surround40:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    4.0 Surround output to Front and Rear speakers
+surround41:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    4.1 Surround output to Front, Rear and Subwoofer speakers
+surround50:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    5.0 Surround output to Front, Center and Rear speakers
+surround51:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    5.1 Surround output to Front, Center, Rear and Subwoofer speakers
+surround71:CARD=PCH,DEV=0
+    HDA Intel PCH, ALCS1200A Analog
+    7.1 Surround output to Front, Center, Side, Rear and Woofer speakers
+hdmi:CARD=HDMI,DEV=0
+    HDA ATI HDMI, HDMI 0
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=1
+    HDA ATI HDMI, HDMI 1
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=2
+    HDA ATI HDMI, HDMI 2
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=3
+    HDA ATI HDMI, HDMI 3
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=4
+    HDA ATI HDMI, HDMI 4
+    HDMI Audio Output
+hdmi:CARD=HDMI,DEV=5
+    HDA ATI HDMI, HDMI 5
+    HDMI Audio Output
+
+~ 🃏 amixer -c1
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',3
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',4
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',5
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+
+~ 🃄 amdgpu-install --usecase=multimedia
+Last metadata expiration check: 0:54:08 ago on Sat Mar 12 19:14:52 2022.
+No match for argument: amdgpu-lib
+No match for argument: amdgpu-dkms
+Error: Unable to find a match: amdgpu-lib amdgpu-dkms
+```
+
+When I select my Intel normal audio then I get this;
+
+```sh
+~ [1] 🌛 pactl list short sinks
+43	alsa_output.pci-0000_01_00.1.pro-output-3	PipeWire	s32le 8ch 48000Hz	SUSPENDED
+44	alsa_output.pci-0000_01_00.1.pro-output-7	PipeWire	s32le 8ch 48000Hz	SUSPENDED
+45	alsa_output.pci-0000_01_00.1.pro-output-8	PipeWire	s32le 8ch 48000Hz	SUSPENDED
+46	alsa_output.pci-0000_01_00.1.pro-output-9	PipeWire	s32le 8ch 48000Hz	SUSPENDED
+47	alsa_output.pci-0000_01_00.1.pro-output-10	PipeWire	s32le 8ch 48000Hz	SUSPENDED
+48	alsa_output.pci-0000_01_00.1.pro-output-11	PipeWire	s32le 8ch 48000Hz	SUSPENDED
+630	alsa_output.pci-0000_00_1f.3.pro-output-0	PipeWire	s32le 2ch 48000Hz	RUNNING
+```
+
+When I select the first HDMI audio then I see this;
+
+```
+~ 🃃 pactl list short sinks
+43	alsa_output.pci-0000_01_00.1.pro-output-3	PipeWire	s32le 8ch 48000Hz	RUNNING
+44	alsa_output.pci-0000_01_00.1.pro-output-7	PipeWire	s32le 8ch 48000Hz	(null)
+45	alsa_output.pci-0000_01_00.1.pro-output-8	PipeWire	s32le 8ch 48000Hz	IDLE
+46	alsa_output.pci-0000_01_00.1.pro-output-9	PipeWire	s32le 8ch 48000Hz	IDLE
+47	alsa_output.pci-0000_01_00.1.pro-output-10	PipeWire	s32le 8ch 48000Hz	IDLE
+48	alsa_output.pci-0000_01_00.1.pro-output-11	PipeWire	s32le 8ch 48000Hz	IDLE
+630	alsa_output.pci-0000_00_1f.3.pro-output-0	PipeWire	s32le 2ch 48000Hz	IDLE
+```
+
+When I select the second HDMI audio then I see this;
+
+```
+~ 🌱 pactl list short sinks
+43	alsa_output.pci-0000_01_00.1.pro-output-3	PipeWire	s32le 8ch 48000Hz	IDLE
+44	alsa_output.pci-0000_01_00.1.pro-output-7	PipeWire	s32le 8ch 48000Hz	(null)
+45	alsa_output.pci-0000_01_00.1.pro-output-8	PipeWire	s32le 8ch 48000Hz	IDLE
+46	alsa_output.pci-0000_01_00.1.pro-output-9	PipeWire	s32le 8ch 48000Hz	IDLE
+47	alsa_output.pci-0000_01_00.1.pro-output-10	PipeWire	s32le 8ch 48000Hz	IDLE
+48	alsa_output.pci-0000_01_00.1.pro-output-11	PipeWire	s32le 8ch 48000Hz	IDLE
+630	alsa_output.pci-0000_00_1f.3.pro-output-0	PipeWire	s32le 2ch 48000Hz	IDLE
+```
+
+```
+~ 🌯 echo $XDG_SESSION_TYPE
+x11
+```
+
+I uninstalled `xorg-x11-drv-amdgpu` since it does not seem to do much and I haven't noticed any behavior being different.
+
+
+Maybe I can try the amdgpu-pro driver to see if that fixes it (since there is a lot of information on the internet about Display Core not being included by default in Fedora)
+https://old.reddit.com/r/Fedora/comments/ha7ebz/attempt_at_amdgpupro_drivers/
+
+I tried this but I don't hear anything
+
+```
+for i in (seq 0 11); speaker-test -c2 -l2 -Dplughw:1,$i;end
+```
+
+I tried playing music loud and it works when I select the Intel Audio out but I don't hear anything when I try any of the HDMI audio outs.
+
+```
+~ 🌟 cat /proc/asound/cards
+ 0 [PCH            ]: HDA-Intel - HDA Intel PCH
+                      HDA Intel PCH at 0x89430000 irq 156
+ 1 [HDMI           ]: HDA-Intel - HDA ATI HDMI
+                      HDA ATI HDMI at 0x89360000 irq 157
+```
+
+
+
+```
+~ 🃉 cat /proc/asound/HDMI/*
+Codec: ATI R6xx HDMI
+Address: 0
+AFG Function Id: 0x1 (unsol 0)
+Vendor Id: 0x1002aa01
+Subsystem Id: 0x00aa0100
+Revision Id: 0x100700
+No Modem Function Group found
+Default PCM:
+    rates [0x70]: 32000 44100 48000
+    bits [0x2]: 16
+    formats [0x1]: PCM
+Default Amp-In caps: N/A
+Default Amp-Out caps: N/A
+State of AFG node 0x01:
+  Power states:  D0 D3 CLKSTOP EPSS
+  Power: setting=D0, actual=D0, Clock-stop-OK
+GPIO: io=0, o=0, i=0, unsolicited=0, wake=0
+...
+~ 🌏 cat /proc/asound/HDMI/eld\#0.*
+monitor_present		0
+eld_valid		0
+monitor_present		0
+eld_valid		0
+monitor_present		0
+eld_valid		0
+monitor_present		0
+eld_valid		0
+monitor_present		0
+eld_valid		0
+monitor_present		0
+eld_valid		0
+```
+
+Interesting... Looks like no monitor is detected? But I'm typing on the TV monitor right now. :/ huh...
+
+
+```
+~ 🍞 sudo ddcutil detect
+Invalid display
+   I2C bus:  /dev/i2c-4
+   EDID synopsis:
+      Mfg id:               HEC
+      Model:                HISENSE
+      Product code:         48
+      Serial number:
+      Binary serial number: 1 (0x00000001)
+      Manufacture year:     2019,  Week: 12
+   DDC communication failed
+```
+
+
+
+```
+~ 🌛 sudo ddcutil environment
+The following tests probe the runtime environment using multiple overlapping methods.
+
+*** Basic System Information ***
+
+ddcutil version: 1.2.0
+
+/proc/version:
+   Linux version 5.16.12-200.fc35.x86_64 (mockbuild@bkernel01.iad2.fedoraproject.org) (gcc (GCC) 11.2.1 20220127 (Red Hat 11.2.1-9), GNU ld version 2.37-10.fc35) #1 SMP PREEMPT Wed Mar 2 19:06:17 UTC 2022
+
+Architecture:     x86_64
+Distributor id:   Fedora
+Release:          35
+Found a known architecture
+
+/proc/cmdline:
+   BOOT_IMAGE=(hd0,msdos1)/vmlinuz-5.16.12-200.fc35.x86_64 root=UUID=071803bd-1e01-4d19-a8ff-eded9b53508b ro rootflags=subvol=root rd.luks.uuid=luks-36490a89-e4ec-4be1-84f0-92c85699698b rhgb quiet resume=UUID=b1c4f91e-b3f3-4405-b458-7d935b8b1fb1 amdgpu.dc=1
+
+*** Primary Check 1: Identify video card and driver ***
+
+Obtaining card and driver information from /sys...
+Primary video controller at PCI address 0000:01:00.0 (boot_vga flag is set)
+   Device class:        x030000    VGA compatible controller
+   Vendor:              x1002      Advanced Micro Devices, Inc. [AMD/ATI]
+   Device:              x67df      Ellesmere [Radeon RX 470/480/570/570X/580/580X/590]
+   Subvendor/Subdevice: 1849/5026  ASRock Incorporation
+   Driver name:         amdgpu
+   Driver version:      Unable to determine
+   I2C device:          i2c-3      name: AMDGPU DM i2c hw bus 3
+   I2C device:          i2c-1      name: AMDGPU DM i2c hw bus 1
+   I2C device:          i2c-4      name: AMDGPU DM i2c hw bus 4
+   I2C device:          i2c-2      name: AMDGPU DM i2c hw bus 2
+   I2C device:          i2c-0      name: AMDGPU DM i2c hw bus 0
+
+*** Primary Check 2: Check that /dev/i2c-* exist and writable ***
+
+Current user: root (0)
+
+Checking /dev/i2c-* devices...
+
+Devices /dev/i2c-* must exist and the logged on user must have read/write permission for those devices (or at least those devices associated
+with monitors).
+
+Typically, this access is enabled by:
+  - setting the group for /dev/i2c-* to i2c
+  - setting group RW permissions for /dev/i2c-*
+  - making the current user a member of group i2c
+
+Alternatively, this can be enabled by just giving everyone RW permission
+The following tests probe for these conditions.
+
+Checking for /dev/i2c-* devices...
+   crw-------. 1 root root 89, 0 Mar 12 20:46 /dev/i2c-0
+   crw-------. 1 root root 89, 1 Mar 12 20:46 /dev/i2c-1
+   crw-------. 1 root root 89, 2 Mar 12 20:46 /dev/i2c-2
+   crw-------. 1 root root 89, 3 Mar 12 20:46 /dev/i2c-3
+   crw-------. 1 root root 89, 4 Mar 12 20:46 /dev/i2c-4
+   crw-------. 1 root root 89, 5 Mar 12 20:46 /dev/i2c-5
+   crw-------. 1 root root 89, 6 Mar 12 20:46 /dev/i2c-6
+   crw-------. 1 root root 89, 7 Mar 12 20:46 /dev/i2c-7
+   crw-------. 1 root root 89, 8 Mar 12 20:46 /dev/i2c-8
+
+Current user (root) has RW access to all /dev/i2c-* devices.
+
+*** Primary Check 3: Check that module i2c_dev is loaded ***
+
+Checking for driver i2c_dev...
+   sysfs reports module i2c_dev is NOT loaded.
+   Module i2c_dev is NOT built into the kernel
+   Loadable i2c-dev module found
+   Module i2c_dev is NOT loaded
+
+Check that kernel module i2c_dev is being loaded by examining files where this would be specified...
+   grep: /etc/modules: No such file or directory
+   grep: /etc/modules-load.d/*conf: No such file or directory
+   grep: /run/modules-load.d/*conf: No such file or directory
+   /usr/lib/modules-load.d/i2c-tools.conf:i2c-dev
+
+Check for any references to i2c_dev in /etc/modprobe.d ...
+   grep: /run/modprobe.d/*conf: No such file or directory
+
+*** Primary Check 4: Driver specific checks ***
+
+Performing driver specific checks...
+No driver specific checks apply.
+
+*** Additional probes ***
+
+Examining /sys/bus/i2c/devices...
+   /sys/bus/i2c/devices/i2c-0/name:   AMDGPU DM i2c hw bus 0
+   /sys/bus/i2c/devices/i2c-1/name:   AMDGPU DM i2c hw bus 1
+   /sys/bus/i2c/devices/i2c-2/name:   AMDGPU DM i2c hw bus 2
+   /sys/bus/i2c/devices/i2c-3/name:   AMDGPU DM i2c hw bus 3
+   /sys/bus/i2c/devices/i2c-4/name:   AMDGPU DM i2c hw bus 4
+   /sys/bus/i2c/devices/i2c-5/name:   AMDGPU DM aux hw bus 0
+   /sys/bus/i2c/devices/i2c-6/name:   AMDGPU DM aux hw bus 1
+   /sys/bus/i2c/devices/i2c-7/name:   AMDGPU DM aux hw bus 2
+   /sys/bus/i2c/devices/i2c-8/name:   SMBus I801 adapter at efa0
+   /sys/bus/i2c/devices/8-0036/name:  dummy
+   /sys/bus/i2c/devices/8-0037/name:  dummy
+   /sys/bus/i2c/devices/8-0050/name:  ee1004
+   /sys/bus/i2c/devices/8-0052/name:  ee1004
+
+Env_Accumulator:
+   architecture:                  x86_64
+   distributor_id                 Fedora
+   Drivers detected:              amdgpu
+   /dev/i2c device numbers:       0 1 2 3 4 5 6 7 8
+   sysfs_i2c_devices_exist:       true
+   /sys/bus/i2c device numbers:   0 1 2 3 4 5 6 7 8
+   dev_i2c_devices_required:      true
+   module_i2c_dev_needed:         true
+   module_i2c_dev_builtin:        false
+   loadable_i2c_dev_exists:       true
+   i2c_dev_loaded_or_builtin:     false
+   group_i2c_checked:             true
+   group_i2c_exists:              false
+   dev_i2c_common_group_name:     root
+   all_dev_i2c_has_group_i2c:     false
+   any_dev_i2c_has_group_i2c:     false
+   all_dev_i2c_is_group_rw:       true
+   any_dev_i2c_is_group_rw:       false
+   cur_uname:                     root
+   cur_uid:                       0
+   cur_user_in_group_i2c:         false
+   cur_user_any_devi2c_rw:        true
+   cur_user_all_devi2c_rw:        true
+
+Configuration suggestions:
+   Current user has RW access to all /dev/i2c-N devices.
+   Skipping further group and permission checks.
+```
+
+I tried `amdgpu.dc=0` and `amdgpu.audio=1`, dracut and reboot; `amdgpu.dc=1` and `amdgpu.audio=1`, etc.
+
