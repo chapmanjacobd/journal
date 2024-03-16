@@ -5,6 +5,7 @@ https://m.youtube.com/channel/UCkdnY2hNC0sdlVXPtWuNQ8g
 https://m.youtube.com/@TheAtlantic/videos
 
 https://www.wbur.org/onpoint/2024/03/07/elements-of-energy-mining-for-a-green-future
+https://radio.montezpress.com/#/
 
 Target Audience Age
 Target Audience Specialization
@@ -20,3 +21,7 @@ Recommended By
 https://en.m.wikipedia.org/wiki/List_of_academic_fields
 https://www.statcan.gc.ca/en/subjects/standard/cip/2021/index
 
+text to parse
+reddit teacher, professor subreddits
+https://rss.feedspot.com/science_teacher_rss_feeds/
+https://rss.feedspot.com/stem_rss_feeds/
