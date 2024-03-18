@@ -1,0 +1,1 @@
+I'm not sure how you are parsing the javascript, but I wrote something to extract Shadow DOM HTML which might be useful: https://github.com/chapmanjacobd/library/blob/fc5cb5651fe2d1a3624ac85e21491cc9f3ceed5f/xklb/utils/web.py#L526
