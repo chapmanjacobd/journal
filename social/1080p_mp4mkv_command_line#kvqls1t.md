@@ -1,0 +1,1 @@
+`-S` is superior to `-f` in this case because a video will still download even if there is no 1080p source available. You can even use `-S res:~1080` to prioritize sources that match as close as possible to 1080p if 1080 is not available
