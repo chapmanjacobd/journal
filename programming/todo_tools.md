@@ -1,3 +1,4 @@
+https://github.com/manga-download/hakuneko
 https://github.com/valeriansaliou/sonic
 https://wcedmisten.fyi/post/keyboard-shortcuts-userscripts/
 https://github.com/Layout-Parser/layout-parser
@@ -37,6 +38,7 @@ https://github.com/alirezamika/autoscraper
 
 https://thume.ca/2020/04/18/telefork-forking-a-process-onto-a-different-computer/
 https://github.com/Overv/outrun#outrun
+https://github.com/intoli/exodus
 
 https://github.com/wangyu-/tinyfecVPN
 
