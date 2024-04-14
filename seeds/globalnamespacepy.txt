@@ -1,0 +1,1 @@
+globalnamespace py package to scan function names and search in github, print frequency of use in project, world, and namealikes, search function name, diff function body
