@@ -1,0 +1,15 @@
+
+<blockquote>
+<p>within a website <em>such as</em></p>
+</blockquote>
+<p>The website you linked to loads additional pages as HTML. I wrote something with seleniumwire that can do this if the data loads with JSON. It is a bit experimental and the results might be spread across a lot of different tables but it works.</p>
+<pre><code>pip install xklb
+lb siteadd output.db --scroll $URL
+</code></pre>
+<p>For HTML you might be able to use <a href="https://github.com/benibela/xidel?tab=readme-ov-file">xidel</a> to extract the content that you want.</p>
+<p>For kicks, <a href="https://github.com/chapmanjacobd/library/commit/a55c03598958ef9bf975689035ac9d50b114b4e8#diff-41009bec0e6a2914e8f97e82696acfb907121cd6b0db5875fe732d8cf9c29ba8">I tried adding the same functionality for HTML</a>, but I get a lot of this:</p>
+<blockquote>
+<p>xml.parsers.expat.ExpatError: not well-formed (invalid token): line 19, column 24</p>
+</blockquote>
+<p>which I'm not very surprised by. HTML is difficult for programs to parse. I'm sure it might work for <em>some</em> websites but certainly not the German phonebook site.</p>
+
