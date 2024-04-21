@@ -1,0 +1,103 @@
+
+<p>yeah HTML is not very strict about how information is stored because it is mostly a visual document format. Parsing unstructured data intelligently is difficult.</p>
+<p>Loading infinite pages is comparatively easy to implement and works pretty much universally across all websites. I've never encountered a website where my auto-scrolling code didn't work.</p>
+<p>I <a href="https://github.com/chapmanjacobd/library/commit/ad2128a161b90109ebb7cdd650f2c8e96e22bb3c#diff-41009bec0e6a2914e8f97e82696acfb907121cd6b0db5875fe732d8cf9c29ba8R102-R192">spent some time</a> over the past couple days to look into this more and I was able to get data out but because HTML is so unstructured the data is not very interesting:</p>
+<pre><code>lb siteadd output.db --scroll --extract-html $URL -vvv
+</code></pre>
+<p><code>-vvv</code> will show the browser window so you can see what is going on. You can remove it to hide the automated browser.</p>
+<p>In output.db (this is just the first five rows of two tables from the first page):</p>
+<h3>body_div_main_div_div_div_div_div (46 rows)</h3>
+<table>
+<thead>
+<tr>
+<th>title</th>
+<th>a_href</th>
+<th>span_text</th>
+<th>a_title</th>
+<th>a_text</th>
+<th>text</th>
+<th>span</th>
+<th>i_text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deutschkurse bei der Universität München e.V.</td>
+<td><a href="https://adresse.dastelefonbuch.de/M%C3%BCnchen/1-Universit%C3%A4ten-Deutschkurse-bei-der-Universit%C3%A4t-M%C3%BCnchen-e-V-M%C3%BCnchen-Agnesstr.html">https://adresse.dastelefonbuch.de/M%C3%BCnchen/1-Universit%C3%A4ten-Deutschkurse-bei-der-Universit%C3%A4t-M%C3%BCnchen-e-V-M%C3%BCnchen-Agnesstr.html</a></td>
+<td>Deutschkurse bei der Universität München e.V.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>#</td>
+<td></td>
+<td>Agnesstr. 27, 80798 München, Schwabing-West</td>
+<td>,, , Schwabing-West</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.dastelefonbuch.de/service/free-call/Deutschkurse%20bei%20der%20Universit%C3%A4t%20M%C3%BCnchen%20e.V./089%202%2044%2010%2049-0/1126/0099?freeCallCmd=3038393234343130343930404034383564396166633863666235653635386635623766363865363334616339613333346630643639&amp;service=pre">https://www.dastelefonbuch.de/service/free-call/Deutschkurse%20bei%20der%20Universit%C3%A4t%20M%C3%BCnchen%20e.V./089%202%2044%2010%2049-0/1126/0099?freeCallCmd=3038393234343130343930404034383564396166633863666235653635386635623766363865363334616339613333346630643639&amp;service=pre</a></td>
+<td>...</td>
+<td>Gratis anrufen</td>
+<td>Gratis anrufen</td>
+<td>49-0</td>
+<td>{"text": "089 2 44 10", "span": {"text": "..."}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.dkfa.de">http://www.dkfa.de</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.dkfa.de">www.dkfa.de</a></td>
+<td></td>
+<td></td>
+<td>Homepage</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Branche: Universitäten, Sprachschulen</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>body_div_main_div_div_div_div_div_a_span (30 rows)</h3>
+<table>
+<thead>
+<tr>
+<th>text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agnesstr. 27</td>
+</tr>
+<tr>
+<td>80798</td>
+</tr>
+<tr>
+<td>München</td>
+</tr>
+<tr>
+<td>Ettensberger Str. 1</td>
+</tr>
+<tr>
+<td>87544</td>
+</tr>
+</tbody>
+</table>
+<p>So my tool is probably not useful for the German phonebook website but it might work okay on another site. It depends how they structure their HTML.</p>
+<p>But maybe if you know SQL my tool will make HTML parsing more accessible to you and you might be able to make use of this data after some additional transformations...</p>
+
