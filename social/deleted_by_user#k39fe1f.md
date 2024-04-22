@@ -1,0 +1,1 @@
+Make a list of everything that's possible to learn, sort by frequency of duplicate suggestions, then have a simple goal of learning one thing per day and trying to incorporate it into your workflows or decide that you don't actually need it

@@ -1,0 +1,1 @@
+What types of queries do you plan on doing with the data? It might make sense to stream/batch it from the data provider and keep only the bare minimum aggregation and metadata that you need. You might find you need a lot less than 1TiB cache/resultset space
