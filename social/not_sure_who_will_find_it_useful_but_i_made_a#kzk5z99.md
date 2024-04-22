@@ -1,0 +1,1 @@
+It's interesting that you mention [RFC 7946](https://datatracker.ietf.org/doc/html/rfc7946#section-11.2) because OGR will truncate to seven decimals when using `ogr2ogr -f GeoJSON -lco RFC7946=YES`. I wonder how much more space is saved by removing the 2 additional digits
