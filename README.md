@@ -3,5 +3,5 @@
 stream of consciousness thoughts
 
     caveat lector
-    much of this early childhood
-    do not judge too harshly
+    from my early childhood to now
+    judge only with zeitgeist
