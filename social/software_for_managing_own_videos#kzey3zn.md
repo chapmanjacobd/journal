@@ -5,7 +5,7 @@ If you are handy with the command line I wrote a tool that might help. I use mul
 
 This will read in all the video files from the folder into a sqlite database which you can reuse with various commands, such as:
 
-    lb watch 2003.db --multiple-playback 4 --sort time_created desc \
+    lb watch 2003.db --multiple-playback 4 --sort time_created desc --loop -i \
          --cmd5 'mv {} ./2003/aunt_selma/' \
          --cmd6 'mv {} ./2003/uncle_tonk/'
 
