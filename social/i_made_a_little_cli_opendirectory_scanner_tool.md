@@ -14,7 +14,7 @@ You can use it like this:
 
 After scanning you can download like this:
 
-    library download open_dir.db --fs --prefix ~/d/dump/video/ --relative -v
+    library download open_dir.db --fs --prefix ~/d/dump/video/ -v
 
 Or stream directly to `mpv`:
 
