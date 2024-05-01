@@ -1,0 +1,10 @@
+
+<p>I tried this script a couple days ago and it mostly works:</p>
+<p><a href="https://github.com/PythonOpenProjects/Zeitgeist/">https://github.com/PythonOpenProjects/Zeitgeist/</a></p>
+<p>It is very minimalist. Just a word cloud basically. But I think it is somewhat calming compared to information dense Associated Press.</p>
+<p>It mostly uses <a href="https://news.un.org/">https://news.un.org/</a> so probably a lot more slow-moving than AP--but you could probably swap out some of those RSS feeds if you like the general idea</p>
+<p>If you are a fan of the shell, you could likely curl an RSS feed and pipe to <code>sort | uniq -c | sort -g</code>. Actually I just tried this and it works too, and it is pretty much the same idea:</p>
+<pre><code>pip install xklb
+lb text https://apnews.com/world-news.rss | lb nouns | sort | uniq -c | sort -g
+</code></pre>
+
