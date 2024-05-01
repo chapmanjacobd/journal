@@ -1,3 +1,4 @@
+https://github.com/r-lib/slider#readme
 https://github.com/manga-download/hakuneko
 https://github.com/valeriansaliou/sonic
 https://wcedmisten.fyi/post/keyboard-shortcuts-userscripts/
