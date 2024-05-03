@@ -76,3 +76,5 @@ management are constantly changing.
 > And we don't need much to find that fulfillment, because the deepest fulfillment tends to come from helping others. Whether it's raising good kids, shoveling your neighbor's driveway, becoming a doctor, whatever - all of these can be fulfilling and none require much at all.
 > R3qn65 https://tildes.net/~talk/19bs/besides_money_if_the_was_the_case_what_might_prevent_you_from_have_a_fulfilling_life#comment-a5om
 
+> Everything I ever saw, heard, or read about about the Iraq War suggested to me this pattern: "Your objective, soldier, is to die. As we understand it, the sacrifice of war is not about achieving a goal through force, but giving lives to the blood god. We sacrifice enough lives, we Win. While you're there, to pass the time, you'll get to kill anyone you see, attack innocent animals, whatever you like, but the important part is that you don't come home. If you come home, you will be redeployed again and again until you don't. If you are injured but alive, you have screwed up your mission in the worst way and we will be punish you for it."
+> https://ceruleanst.livejournal.com/192049.html
