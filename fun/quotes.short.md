@@ -84,3 +84,7 @@ Dr. Richard Cook
 > stat rosa pristina nomine, nomina nuda tenemus (the beauty of the past, now disappeared, we hold only the name)
 
 Umberto Eco
+
+> when I have everything I can want in life there's nothing left to do except make life better for other people, and the future
+
+Jessica Joy Kerr
