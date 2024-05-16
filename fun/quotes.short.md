@@ -92,3 +92,8 @@ Jessica Joy Kerr
 > Two key ingredients in scientific revolutions, then, are noticing problems and taking them seriously. Kuhn assumed scientists do both of those things naturally, and maybe that was true in 1962. But it doesn’t have to be. As fields formalize, they can get very good at ignoring and suppressing problems, delaying revolutions indefinitely.
 
 https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find
+
+> It's not the variance that gets you, it's the correlation." In my experience, "fat tail" risks are really about incorrect modeling of correlation.
+
+Joseph Kaptur
+
