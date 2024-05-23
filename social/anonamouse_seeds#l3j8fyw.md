@@ -1,0 +1,1 @@
+Sort by leech can help but on MAM it doesn't really matter. Just download stuff that you want and keep seeding for a long time. Eventually you'll reach 1.0 actual ratio. Being connectable (Port Forwarding) helps

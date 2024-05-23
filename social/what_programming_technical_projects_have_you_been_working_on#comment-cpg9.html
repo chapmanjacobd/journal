@@ -1,0 +1,23 @@
+
+<p>I prefer argparse but never really liked how argparse prints the help menu. It feels very cluttered with overlapping text: <a href="https://stackoverflow.com/a/52606755/697964">example here</a>.</p>
+<p>One of the things I did in the past week is create my own <a href="https://gist.github.com/chapmanjacobd/d6fca950b0ce2f7d0fa8ecf098b47a01">CustomHelpFormatter</a> which prints arguments and their help text as two distinct columns. The most interesting part is here:</p>
+<pre><code>def format_two_columns(text1, text2, width1=30, width2=70, left_gutter=2, middle_gutter=2, right_gutter=3):
+    terminal_width = min(consts.TERMINAL_SIZE.columns, 100) - (left_gutter + middle_gutter + right_gutter)
+    if text2:
+        width1 = int(terminal_width * (width1 / (width1 + width2)))
+        width2 = int(terminal_width * (width2 / (width1 + width2)))
+    else:
+        width1 = terminal_width
+
+    wrapped_text1 = textwrap.wrap(text1, width=width1)
+    wrapped_text2 = textwrap.wrap(text2, width=width2)
+
+    formatted_lines = [
+        f"{' ' * left_gutter}{line1:&lt;{width1}}{' ' * middle_gutter}{line2:&lt;{width2}}{' ' * right_gutter}".rstrip()
+        for line1, line2 in zip_longest(wrapped_text1, wrapped_text2, fillvalue="")
+    ]
+
+    return "\n".join(formatted_lines) + "\n"
+</code></pre>
+<p>the design is very human...</p>
+
