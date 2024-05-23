@@ -1,0 +1,41 @@
+
+<p>If it's something that I feel is (my abstract notion of) knowledge then I save it here: <a href="https://github.com/chapmanjacobd/journal/blob/main/lists/knowledge.list">knowledge.list</a>. Usually things only go there if I think about it more than once or if I've referenced it before in conversation</p>
+<p>If it's something I want to tinker with in the future then I save it here: <a href="https://raw.githubusercontent.com/chapmanjacobd/journal/main/programming/todo_tools.md">todo_tools</a></p>
+<p>I have the same repo on my phone too so I can add stuff (via Termux), even offline and sync it later but usually I just use SSH. I have the same fish function on both too:</p>
+<pre><code>function knowledge
+    for l in $argv
+        echo $l | sed 's|\.m\.|.|' &gt;&gt;~/j/lists/knowledge.list
+    end
+    sorted ~/j/lists/knowledge.list
+end
+
+function sorted
+    if isatty stdin
+        sort --unique --stable --ignore-case $argv | sponge $argv
+    else
+        cat - | string trim | sort --unique --stable --ignore-case
+    end
+end
+</code></pre>
+<p>Beyond those two categories I haven't felt a need to store lists of things aside from normal data hoarding activities.</p>
+<p>It has been pretty useful to save my internet comments so that I can search them and reference them later:</p>
+<pre><code>~/j/social/
+library tildes ~/d/library/datasets/social/tildes.db xk3 --cookies ~/.local/cookies-tildes-net.txt
+for title in (sqlite --no-headers --raw-lines ~/d/library/datasets/social/tildes.db 'select path from media' | sed 's|.*\(/\)||' | strip)
+    sqlite --no-headers --raw-lines ~/d/library/datasets/social/tildes.db "select text from media where path like '%$title'" &gt;$title.html
+end
+
+~/d/library/datasets/social/
+reddit-user-to-sqlite user BuonaparteII
+
+~/j/social/
+for title in (sqlite --no-headers --raw-lines ~/d/library/datasets/social/reddit.db 'select permalink from comments' | sed 's|.*\/comments\/[^\/]*\/\(.*\)/.*|\1|' | tr / '#')
+    set comment_id (string split '#' -f2 $title)
+    sqlite --no-headers --raw-lines ~/d/library/datasets/social/reddit.db "select text from comments where permalink like '%$comment_id%'" &gt;$title.md
+end
+for title in (sqlite --no-headers --raw-lines ~/d/library/datasets/social/reddit.db 'select permalink from posts' | sed 's|.*\/comments\/[^\/]*\/\(.*\)/.*|\1|')
+    sqlite --no-headers --raw-lines ~/d/library/datasets/social/reddit.db "select text from posts where permalink like '%$title%' order by timestamp desc limit 1" &gt;$title.md
+end
+lb mergedbs --pk id ~/d/library/datasets/social/BuonaparteII.db ~/d/library/datasets/social/reddit.db
+</code></pre>
+

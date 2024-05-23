@@ -1,0 +1,1 @@
+It uses the location from the `$PATH` but you can make it explicit if you want to use a special ffmpeg version or if you don't know how to add something to the path. If you've installed ffmpeg using a system tool, likely it added it to the PATH already

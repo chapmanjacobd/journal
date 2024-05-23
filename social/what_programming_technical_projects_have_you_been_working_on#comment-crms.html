@@ -1,0 +1,20 @@
+
+<p>I've also been doing more testing this week. Wrote something to fail my CI when I don't have tests for a specific file:</p>
+<pre><code>unique_modules = list(set(s.rsplit(".", 1)[0] for s in modules.keys()))  # chop off function names
+
+def get_test_name(s):
+    path = s.replace("xklb.", "tests.", 1).replace(".", "/")
+    parent, name = os.path.split(path)
+    path = os.path.join(parent, "test_" + name + ".py")
+    return path
+
+@pytest.mark.parametrize("path", [get_test_name(s) for s in unique_modules])
+def test_pytest_files_exist(path):
+    Path(path).touch(exist_ok=True)
+    assert os.path.getsize(path) &gt; 0, f"Pytest file {path} is empty."
+</code></pre>
+<p>Last month I wrote this: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/cptree.py">cptree.py</a> to try and solve the problem:</p>
+<pre><code>cptree.py xklb/ tests/ -v --simulate --ext py --file-prefix test_ | grep -v '__'
+</code></pre>
+<p>And while it created the test files, it didn't give me the motivation to actually write tests so now I have to actually fill in the empty files. Maybe I'll switch to actual code coverage in a few years...</p>
+

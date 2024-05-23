@@ -1,0 +1,1 @@
+I don't think this actually changes which formats are available. This seems to be part of the double-sided whack-a-mole by trying many different user-agents/configurations and comparing the responses.
