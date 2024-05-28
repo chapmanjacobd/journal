@@ -43,7 +43,7 @@ tl;dr: what is the right way?
 
 Well... it depends what you want to do. The program can't read your mind so I hope you read the manual well 🎃🏚️🎃
 
-### When the destination doesn't exist:
+### When the destination doesn't exist
 
 | Full Command                                | src              | dest      | actual dest                           | Surprise |
 | ------------------------------------------- | ---------------- | --------- | ------------------------------------- | -------- |
@@ -63,7 +63,7 @@ The errors are a bit surprising to me because it seems reasonable that the progr
 
 `rsync`, [following BSD](https://wiki.archlinux.org/title/rsync#Trailing_slash_caveat) `cp`, will copy files directly inside of the destination folder (no subfolder) if the source argument has a trailing slash. I guess that means that the behavior of NOT having a trailing slash is also different. GNU `cp` will simply copy the files from within the source folder to the destination folder (similar to `mv`) but `rsync`, at least, will _always_ create a subfolder for each source argument which does NOT have a trailing slash.
 
-### When the destination is an empty folder:
+### When the destination is an empty folder
 
 | Full Command                                | src                | dest      | actual dest                           | Surprise |
 | ------------------------------------------- | ------------------ | --------- | ------------------------------------- | -------- |
@@ -80,7 +80,7 @@ The errors are a bit surprising to me because it seems reasonable that the progr
 
 It's confusing that `cp` and `mv` with the same arguments will do different things just because an (empty) folder exists. And it seems kinda weird that two different destinations: `mv one two` and `mv one two/one` both lead to the same actual destination: `two/one`.
 
-### When the destination has a subfolder with the same name:
+### When the destination has a subfolder with the same name
 
 | Full Command                                     | src                | dest            | actual dest                                 | Surprise |
 | ------------------------------------------------ | ------------------ | --------------- | ------------------------------------------- | -------- |
@@ -243,11 +243,11 @@ Just in case you are interested, these are different but justly so:
 
 To use `mv`, the normal solution here is to do this:
 
-    $ mv one/* three/one
+    mv one/* three/one
 
 But this skips hidden files so you actually have to do this:
 
-    $ mv one/* one/.* three/one
+    mv one/* one/.* three/one
 
 But your shell might abort early if you _don't_ have hidden files:
 
@@ -380,10 +380,10 @@ The only way to get a nested one/one/ folder is to do this:
 
 ### rclone src vs rclone src/
 
-    $ rclone move one three
-    $ rclone move one three/
-    $ rclone move one/ three
-    $ rclone move one/ three/
+    rclone move one three
+    rclone move one three/
+    rclone move one/ three
+    rclone move one/ three/
 
 These all result in:
 
