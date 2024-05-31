@@ -1,0 +1,3 @@
+An alternative to deleting: encode to AV1, AVIF, and Opus. It will probably be more blurry but at least you'll have it rather than not... 
+
+Imagemagick `convert` is quite a bit better than `ffmpeg` for converting images to AVIF and it works with transparent images too. Here's a [script](https://github.com/chapmanjacobd/library/blob/main/xklb/mediafiles/process_image.py) for batch resizing/converting. (nb. it will delete source images unless they are smaller than the AVIF output)

@@ -1,0 +1,1 @@
+You can set syncthing to be Send Only on the main computer and Receive Only on the "backup" computer. Decentralized sync really is the way to go here and syncthing is a lot easier to use than other tools
