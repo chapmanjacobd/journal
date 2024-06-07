@@ -1,0 +1,10 @@
+
+<p>It's kind of dumb, but <a href="https://github.com/chapmanjacobd/journal/blob/main/programming/linux/misconceptions.md#mv-src-vs-mv-src">I'm not very satisfied</a> with the behavior of GNU cp and mv. So I made my own:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/library/blob/main/xklb/folders/merge_mv.py">https://github.com/chapmanjacobd/library/blob/main/xklb/folders/merge_mv.py</a></li>
+<li><a href="https://github.com/chapmanjacobd/library/blob/main/tests/folders/test_merge_mv.py">https://github.com/chapmanjacobd/library/blob/main/tests/folders/test_merge_mv.py</a></li>
+</ul>
+<p>The actual code is pretty boring but the tests file is interesting to read because you can see how different options affect the location of destination files.</p>
+<p>To be honest, I wasn't really planning on making it, but after writing the mergerfs-cp command it was really simple to copy most of the logic. I still use normal <code>mv</code> most of the time, but writing it helped me catch a few bugs in the mergerfs-cp subcommand too. But the other benefit is that now Windows and Linux users can use BSD's confusing? <a href="https://wiki.archlinux.org/title/rsync#Trailing_slash_caveat">trailing slash</a> behavior when copying or moving folders/files.... <a href="https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/The-cp-R-command-works-differently-on-Mac-OS-X-than-on-Linux.html">Mac OS already has BSD style</a></p>
+<p>Maybe next week I'll add parallelism. I think it should not be too difficult because everything is file-driven rather than "folder"-driven.</p>
+
