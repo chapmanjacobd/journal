@@ -1,0 +1,1 @@
+If you're comfortable with CLIs you might like to compare this with something I made. It can find [big folders](https://github.com/chapmanjacobd/library?tab=readme-ov-file#find-large-folders) with small numbers of files and [similar folders](https://github.com/chapmanjacobd/library?tab=readme-ov-file#similar-folders).

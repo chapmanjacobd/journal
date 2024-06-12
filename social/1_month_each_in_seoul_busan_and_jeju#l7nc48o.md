@@ -1,0 +1,1 @@
+I would also recommend at least a week or two in Suncheon and Gyeongju. Lots of really interesting stuff to see, especially if you like hiking or flaneur-ing. Also, Yeosu is near Suncheon and it has a nice vibe different from other Korean cities--could be a day trip or a couple days
