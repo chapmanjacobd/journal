@@ -1,0 +1,1 @@
+I also agree `fish_add_path` is a bit confusing for new users, especially combined with the global/universal system. It's easier to modify PATH directly and check if it did what you want by opening a new console and running `echo $PATH`, etc

@@ -1,0 +1,1 @@
+I think it's easiest to find a project that you are interested in and add tests to functionality that you care about. There are many OSS projects where tests are lacking compared to feature development
