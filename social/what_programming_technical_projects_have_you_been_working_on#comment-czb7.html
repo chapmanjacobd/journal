@@ -1,0 +1,5 @@
+
+<p>As part of my <code>mv</code> yak-shaving I added <a href="https://github.com/chapmanjacobd/library/commit/9db68dbf87571381b47cf25f34f1c87c9d3aa1dd#diff-eff42a1f4d9c8af9d7b3d98f8c27dc6f2c11cffe5512eb73f28f46e8923f3132">more granular flags</a> for controlling what happens when a file is trying to overwrite a folder and when a folder is trying to overwrite a file.</p>
+<p>Seeing this Tildes thread motivated me to <a href="https://github.com/chapmanjacobd/library/commit/7a38b110d848d4b6e4267cebd8455f132db10991">try adding multi-threading</a> again but 3 of the ~80 tests still fail when doing that so not enabling that for now... but I was pleased to see that file operation order no longer seems to matter so now it can start immediately rather than needing to first fully scan each source folder...</p>
+<p>edit: when I leave the clobbering part a single thread then the moving part multi-thread then all the tests pass. I think that will have to do for now</p>
+
