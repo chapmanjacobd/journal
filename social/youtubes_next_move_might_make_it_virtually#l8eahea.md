@@ -1,0 +1,3 @@
+I agree that the original comment is completely unfounded. I've never seen a GPU-encoder that performs on the same level as optimized CPU-encoders. I highly doubt that YouTube uses any GPUs in their video ingestion pipeline today and I doubt there would be any reason for them to change that unless GPUs became cheaper than CPUs.
+
+For server-side ads I agree there really is no reason for them to mess around with the existing formats. They can accomplish the same goal by sending an ad segment when a videoid segment is requested with the same adverse side effects that would happen if they created a new ad+videoid concat segment
