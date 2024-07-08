@@ -1,0 +1,1 @@
+Usually cheap international flights will be from larger airports at the edges of the country like ORD, FLL, LAX. It's usually cheaper if you manage the connections yourself rather than rely on codeshares, etc. But if the price is similar, going through a single airline will give you more protection, ie. if your first flight is delayed or cancelled
