@@ -97,3 +97,7 @@ https://www.experimental-history.com/p/ideas-arent-getting-harder-to-find
 
 Joseph Kaptur
 
+> A web browser is an application that retrieves documents over a network, and renders them on a computer screen.
+> To think of a web browser as more than that is insanity.
+
+Nathan Lineback
