@@ -1,0 +1,30 @@
+
+<p>That should definitely be possible if you can find a <a href="https://huggingface.co/microsoft/Florence-2-large/discussions/21">llamafile or GGUF version of Florence2</a>...</p>
+<p>llamafile is easy to support and likely the most future-proof</p>
+<p>You can run a GGUF file with this:</p>
+<pre><code>wget https://github.com/Mozilla-Ocho/llamafile/releases/download/0.8.9/llamafile-0.8.9
+chmod +x ~/Downloads/llamafile-0.8.9
+mv ~/Downloads/llamafile-0.8.9 ~/.local/bin/llamafile  # move it somewhere in your $PATH
+
+pip install xklb
+library llm-map --model ~/Downloads/llava-v1.5-7b-Q4_K.gguf --image-model ~/Downloads/llava-v1.5-7b-mmproj-Q4_0.gguf --prompt 'what do you see?' ~/Downloads/comp_*.jpg
+Saved results to llm_map_what do you see.csv
+</code></pre>
+<p>This is the CSV that is generated:</p>
+<pre><code>845 376s lb:/ (main|✔) 🌟 cat llm_map_what\ do\ you\ see.csv
+path,output
+/home/xk/Downloads/comp_a.jpg,"The image displays a collection of different drawings and paintings, all of which feature various scenes related to mountains and the ocean. These pictures vary in size and style, providing an interesting visual experience. Some of the images portray landscapes with mountains and trees, while others showcase the ocean and its surroundings. Overall, this compilation of artwork highlights the beauty of both nature and the artists' ability to capture and convey these captivating scenes."
+/home/xk/Downloads/comp_b.jpg,"The image is a book that features several different scenes of landscapes, including trees, hills, and water. The book also showcases the various letters of the alphabet, with each letter representing a different scene. For instance, the letter S displays a picture of a lake, while the letter O displays a picture of a mountain. Overall, the book is a creative and educational way to present the alphabet, incorporating both art and language.
+ The image is a collection of black and white drawings or cartoons, possibly a comic strip or a series of illustrations. The drawings are arranged in a grid-like pattern, with each image taking up a square or rectangle section. The drawings vary in size and complexity, showcasing different subjects, such as people, animals, and trees.
+
+Some of the images include a person in a chair, a person walking on a field, and a group of people in a boat. There is also a large tree among the images. The overall composition of the drawings creates a visually engaging and diverse collection."
+/home/xk/Downloads/comp_c.jpg,"The image is a picture of a book, possibly a book of illustrations, with a focus on trees. The book is open to a page, and several trees are visible throughout the illustrations. The trees appear in various sizes and shapes, showing different perspectives and angles, providing a diverse representation of the subject matter. The scene captures the beauty and detail of the trees within the illustrations.
+ The image is a collection of drawings, possibly depicting different types of lines or objects. There are 11 individual drawings, each showcasing different subjects and styles. Some of the subjects include a triangle, a cross, a circle, a square, and a letter. The drawings are presented in a square format, showcasing the variety of subjects and their arrangement within the collection.
+ The image features a collection of 15 drawings of boats on water, arranged in a grid pattern. Each drawing captures a unique perspective and composition, showcasing different types of boats and water scenes. The artwork is likely a study of various elements of boat designs and the beauty of being on the water. The arrangement of these drawings is visually appealing and captures the essence of the subject matter."
+/home/xk/Downloads/comp_d.jpg,"The image is an open book with numerous artwork drawings of different sizes and shapes, showcasing various artistic interpretations of the letter ""S."" The drawings are spread across the pages, with some closer to the edges and others in the center of the page. There are at least 14 drawings of the letter ""S"" in different forms, providing a diverse collection of interpretations of the letter. The drawings are displayed in a visually engaging manner, likely for an art project or art exhibition.
+ This is a collection of pictures or illustrations, possibly an old book or a comic book, showcasing various themes and subjects. The images include a mix of landscapes, people, and trees. There are also a couple of scenes with the number ""27"" written, which could be related to a specific theme or chapter within the collection. The illustrations vary in size and design, giving the collection a diverse and artistic appearance. Overall, the images display a range of different subjects and artistic styles.
+ The image features an assortment of scenes and artwork displayed on a page. There are various drawings and paintings, including boats, sailing, and an island. The collection consists of 14 different images, each showcasing different artistic perspectives and styles. Some of the images depict a rock in the ocean, while others showcase sailboats, landscapes, and a group of people on a ship. The collection presents a diverse range of artwork, capturing different moods and emotions.
+ The image features a page from a book, showcasing several illustrations of picturesque scenes, including landscapes, mountains, and other intricate artworks. The images are accompanied by a variety of descriptions, likely providing further context or information about each depicted scene. The artwork within the book appears to be drawn in black and white, adding to the nostalgic charm of the composition."
+</code></pre>
+<p>Some images take 20s while others take 100s or more. Not sure why there is such a big difference. The speed also depends on the prompt. You can limit the number of tokens it generates with <code>--custom-args='-n 20'</code>  (20 words)</p>
+

@@ -1,0 +1,18 @@
+
+<p>I put together a <a href="https://github.com/chapmanjacobd/library/commit/ee2aec76665f7a78ecd89d6c105e922f47864b31#diff-abb771a45e7462956ab301029395dc1b905fa2c2b7c40759777ddada9211941f">little script</a> to help run LLMs over multiple files.</p>
+<p>It's all offline. No API keys needed. So far I've used it to suggest names for PDFs with poor names:</p>
+<pre><code>library llm-map  --rename --text ./gemma2.llamafile ~/Downloads/*.pdf
+
+cat llm_map_renames.csv
+Path,Output
+/home/xk/Downloads/booka.pdf,/home/xk/Downloads/Mining_Massive_Datasets.pdf
+...
+</code></pre>
+<p>This model works well but it is 20GB and takes about 20s per file:</p>
+<pre><code>wget https://huggingface.co/jartine/gemma-2-27b-it-llamafile/resolve/main/gemma-2-27b-it.Q6_K.llamafile
+chmod +x gemma-2-27b-it.Q6_K.llamafile
+./gemma-2-27b-it.Q6_K.llamafile
+</code></pre>
+<p><a href="https://huggingface.co/wave-on-discord/gemini-nano/discussions/4">Gemini Nano</a> might be another interesting one to play with</p>
+<p>I'm curious what other use-cases people could have with something like this? The only other thing I can think of right now I can only think of text summarization</p>
+
