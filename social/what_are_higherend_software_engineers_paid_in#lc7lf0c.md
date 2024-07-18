@@ -1,0 +1,1 @@
+Even finding a job for one tenth of $450,000 USD (ie. ~$27k hkd 13-month salary) is pretty difficult. I've been looking since January, have right of abode, 6 years SWE experience, and haven't had a single interview.

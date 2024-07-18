@@ -1,0 +1,17 @@
+
+<p>I can recommend browsing <a href="https://www.reddit.com/r/datacurator/">/r/datacurator</a>/ there are some good ideas there</p>
+<p><a href="https://old.reddit.com/r/datacurator/top/?sort=top&amp;t=year">https://old.reddit.com/r/datacurator/top/?sort=top&amp;t=year</a></p>
+<p>I also highly recommend reading all the pages on the <a href="https://johnnydecimal.com/">https://johnnydecimal.com/</a> site. It helped me to start thinking more seriously about organization. It has a lot of good principles but I see a lot of people use it like a stepping stone to something simpler and more personal.</p>
+<blockquote>
+<p>since I plan to jump to linux with a clean slate</p>
+</blockquote>
+<p>I've used Linux for about ten years. I can describe what seems to work well for me. All of my data is stored outside of my home folder. This is true for my main PC, my laptop, and phone. Syncthing connects everything together almost seamlessly.</p>
+<p>I have five top-level folders: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/mktree.py">https://github.com/chapmanjacobd/computer/blob/main/bin/mktree.py</a></p>
+<pre><code>tasks = ['sync', 'dump', 'check', 'library', 'archive']
+</code></pre>
+<p>(sync is syncthing)</p>
+<p>Within each of these task folders are duplicates of the same named nested folders. This might seem like overkill but it makes it really easy to add new stuff without it cluttering things that are well known and named well. You might think of it like hot-storage/cold-storage because it kind of is. I could easily put the archive folders on a tape device.</p>
+<p>If you don't plan on having automatic scripts to move files between <code>dump</code> and <code>check</code> then you don't need one of them...</p>
+<p>I recommend looking into <a href="https://github.com/sharkdp/fd">fd-find</a> and <a href="https://github.com/chapmanjacobd/library">xklb</a>*. If you have specific examples of situations that you think might be better solved by a tool I might be able to suggest one.</p>
+<p>* disclaimer: I'm an author of it</p>
+
