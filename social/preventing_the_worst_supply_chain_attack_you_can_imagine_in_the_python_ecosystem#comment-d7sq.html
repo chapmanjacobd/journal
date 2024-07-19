@@ -1,0 +1,17 @@
+
+<blockquote>
+<p>virtually impossible to prevent</p>
+</blockquote>
+<p>I don't know <em>exactly</em> how the individual here accidentally added the pyc file to the docker image but I imagine it was an interactive session and then a <code>docker commit</code>.</p>
+<p>I can think of three strategies that would have prevented this:</p>
+<ol>
+<li>Have a pre-commit script that deletes all *.pyc files in the container and then runs <code>python -m compileall .</code></li>
+<li>Use <code>ENV PYTHONDONTWRITEBYTECODE=1</code> <a href="https://docs.python.org/3/using/cmdline.html#cmdoption-B">https://docs.python.org/3/using/cmdline.html#cmdoption-B</a></li>
+<li>Use <code>.dockerignore</code> and only build docker images from dockerfiles. Never use interactive sessions.</li>
+</ol>
+<p>Looks like someone foresaw this... kind of:</p>
+<blockquote>
+<p>Most likely that you don't even need to think about it, but cache files can contain some sort of sensitive information. Due to the current implementation, in .pyc files presented an absolute path to the actual files. There are situations when you don't want to share such information.<br/>
+<a href="https://stackoverflow.com/questions/59684674/should-i-add-pythons-pyc-files-to-dockerignore">https://stackoverflow.com/questions/59684674/should-i-add-pythons-pyc-files-to-dockerignore</a></p>
+</blockquote>
+
