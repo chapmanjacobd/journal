@@ -101,3 +101,9 @@ Joseph Kaptur
 > To think of a web browser as more than that is insanity.
 
 Nathan Lineback
+
+> The process of conjecture and criticism leads to progress only when criticisms are not evaded in pseudo-scientific ways. What distinguishes science is not just that its theories are, directly or indirectly, falsifiable but also that its procedures are not ad hoc. 
+> That requires that an amendment to a theory that removes an inconsistency identified by criticism is acceptable only if it solves some problem in addition to the problem of removing the inconsistency.
+
+Danny Frederick
+
