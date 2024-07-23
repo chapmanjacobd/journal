@@ -1,0 +1,10 @@
+
+<p>For CPython specifically, I think the trust required is similar in scope to trust in the Linux kernel. Linux is many more millions of lines of code <em>but</em> there are also more people reading it.</p>
+<p>It's pretty easy to build <a href="https://devguide.python.org/getting-started/setup-building/">CPython from source</a> but imho it makes sense to trust the version of python that comes with your OS package manager because I think it's more likely than not that at least one additional person, the package maintainer, has read through some of the code changes.</p>
+<p>Using pyenv or <a href="https://www.python.org/ftp/">https://www.python.org/ftp/</a> directly is risky if you suspect that the build system was compromised.</p>
+<blockquote>
+<p>caught and fixed quickly (which luckily happened in this case)</p>
+</blockquote>
+<p>15 months is quick...?</p>
+<p>edit: I took a look at the cpython repo. It looks like Ee Durbin only made two commits within the relevant timeframe: <code>1829a3c9a3712b6a68a3a449e4a08787c73da51d</code> and <code>e1a90ec75cd0f5cab21b467a73404081eaa1077f</code>. Both commits seem pretty innocuous</p>
+
