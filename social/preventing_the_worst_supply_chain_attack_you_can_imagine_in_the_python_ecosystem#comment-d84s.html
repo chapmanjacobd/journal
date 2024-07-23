@@ -1,0 +1,8 @@
+
+<blockquote>
+<p>absolutely zero steps a company that uses Python could do to prevent themselves from being affected</p>
+</blockquote>
+<p>I'm not sure <em>absolutely zero</em> is quite true. Self-hosted PyPI is pretty common in enterprise environments.</p>
+<p>But sure, there could be backdoors in CPython right now. They would at least be auditable--it's not quite as bad as <em>Reflections on Trusting Trust</em>. It might be worse if PyPI the service was compromised because they could send malicious code to only specific people and no one would know... but PyPI itself is just code so it is auditable too.</p>
+<p>The token in the article was in the wild from between 2023-03-03 and 2024-06-28... <a href="https://blog.pypi.org/posts/2024-07-08-incident-report-leaked-admin-personal-access-token/">15 months</a>. I don't think it's beyond reason to assume that at least some nation state actors knew about it.</p>
+
