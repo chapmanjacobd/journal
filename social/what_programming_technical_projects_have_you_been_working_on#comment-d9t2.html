@@ -1,0 +1,18 @@
+
+<p>One thing I've discovered this week is how to use beautifulsoup a bit better. Before I was using tag.next_sibling in a lot of places but this can skip a lot of text content. For my situation, extracting text between links (capturing link text in a different step), it only makes sense to use tag.next_sibling once when looking forward in the document and to use tag.next_element everywhere else:</p>
+<pre><code>tags = soup.find_all(delimit_fn)
+
+for i, tag in enumerate(tags):
+    after_text = []
+
+    current_tag = tag.next_sibling
+    while current_tag and (i == len(tags) - 1 or current_tag != tags[i + 1]):  # end tag or until next tag
+        if isinstance(current_tag, bs4.NavigableString):
+            text = strings.un_paragraph(current_tag.get_text()).strip()
+            if text and text not in after_text:
+                after_text.append(text)
+        current_tag = current_tag.next_element
+
+    tag.after_text = "\n".join(after_text).strip()
+</code></pre>
+
