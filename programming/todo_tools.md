@@ -1,3 +1,4 @@
+moar vs ov modern pager
 https://github.com/nektos/act
 https://github.com/mhagger/git-imerge
 https://marginaleffects.com/vignettes/comparisons.html
