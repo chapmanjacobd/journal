@@ -1,0 +1,46 @@
+import pandas as pd
+import folium
+from folium.plugins import TimestampedGeoJson
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from datetime import datetime
+import os
+
+# Step 1: Data Preparation
+# Assume you have a CSV file named 'mtr_stations.csv' with columns: Station, OpeningDate, Latitude, Longitude
+
+# Step 2: Data Loading
+data = pd.read_csv('mtr_stations.csv')
+data['OpeningDate'] = pd.to_datetime(data['OpeningDate'])
+
+# Step 3: Map Initialization
+map_center = [data['Latitude'].mean(), data['Longitude'].mean()]
+m = folium.Map(location=map_center, zoom_start=12)
+
+# Step 4: Time-Lapse Generation
+dates = data['OpeningDate'].unique()
+dates.sort()
+
+frames = []
+
+for date in dates:
+    m.markers = []
+    for idx, row in data[data['OpeningDate'] <= date].iterrows():
+        folium.Marker([row['Latitude'], row['Longitude']], popup=row['Station']).add_to(m)
+
+    # Save the map as an image
+    img_path = f'frames/frame_{date.strftime("%Y%m%d")}.png'
+    m.save(img_path)
+    frames.append(plt.imread(img_path))
+
+fig, ax = plt.subplots()
+
+def update(frame):
+    ax.imshow(frame)
+    ax.axis('off')
+
+ani = FuncAnimation(fig, update, frames=frames, repeat=False)
+
+ani.save('mtr_stations_time_lapse.gif', writer='pillow', fps=1)
+
+plt.show()
