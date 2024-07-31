@@ -1,2 +1,5 @@
 git worktree add
 https://chir.ag/projects/tip-of-my-tongue/
+https://github.com/hydrargyrum/attic/blob/master/no-utf8-bom/no-utf8-bom
+https://github.com/hydrargyrum/attic/blob/master/ascetic/ascetic
+
