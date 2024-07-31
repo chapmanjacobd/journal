@@ -2,4 +2,8 @@ git worktree add
 https://chir.ag/projects/tip-of-my-tongue/
 https://github.com/hydrargyrum/attic/blob/master/no-utf8-bom/no-utf8-bom
 https://github.com/hydrargyrum/attic/blob/master/ascetic/ascetic
+https://github.com/lark-parser/lark/blob/master/examples/fruitflies.py
+https://github.com/lark-parser/lark/blob/master/examples/calc.py
+https://github.com/hydrargyrum/attic/blob/master/replace-cased-names/replace-cased-names
+https://github.com/hydrargyrum/attic/blob/master/zeropipe/zeropipe
 
