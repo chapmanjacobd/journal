@@ -1,0 +1,1 @@
+wonder how long Google will keep supporting chromecast given how they released news articles a couple days ago saying [they are stopping the product line](https://www.theverge.com/2024/8/6/24214471/google-chromecast-line-discontinued).

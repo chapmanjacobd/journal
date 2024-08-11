@@ -1,0 +1,1 @@
+Linux Mint isn't a WM. The three standard Linux Mint desktop environments for mint are cinnamon, mate and xfce. But those aren't Window Managers necessarily either. I would try searching "settings" in your desktop environment or install KDE
