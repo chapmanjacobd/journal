@@ -83,3 +83,7 @@ management are constantly changing.
 
 > Everything I ever saw, heard, or read about about the Iraq War suggested to me this pattern: "Your objective, soldier, is to die. As we understand it, the sacrifice of war is not about achieving a goal through force, but giving lives to the blood god. We sacrifice enough lives, we Win. While you're there, to pass the time, you'll get to kill anyone you see, attack innocent animals, whatever you like, but the important part is that you don't come home. If you come home, you will be redeployed again and again until you don't. If you are injured but alive, you have screwed up your mission in the worst way and we will be punish you for it."
 > https://ceruleanst.livejournal.com/192049.html
+
+> Things like "easier to maintain" are vibes not metrics.
+> You need to have specific goals and metrics for things like speed, cost, security, or test coverage. Then you can do some POCs on parts of it to show whether improvements are possible and worth the effort.
+> https://old.reddit.com/r/ExperiencedDevs/comments/1ewzlxn/have_you_ever_regretted_a_major_refactor_or/
