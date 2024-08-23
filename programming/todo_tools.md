@@ -1,3 +1,5 @@
+https://github.com/electric-sql/pglite
+https://github.com/lovasoa/SQLpage
 https://github.com/bayasdev/envycontrol
 https://github.com/tylertreat/comcast
 https://github.com/tomakehurst/saboteur
