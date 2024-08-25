@@ -1,0 +1,31 @@
+
+<blockquote>
+<p>AutoHotKey</p>
+</blockquote>
+<p>yep. AutoHotKey is a true gem. I recently converted a script to evdev and it is a lot more verbose:</p>
+<pre><code>RButton::Send {RButton}
+  RButton &amp; MButton::
+    Send, ^w
+    Sleep, 200
+    return
+  RButton &amp; WheelUp::
+    Send, {PGUP}
+    Sleep, 10
+    return
+  RButton &amp; WheelDown::
+    Send, {PGDN}
+    Sleep, 10
+    return
+return
+</code></pre>
+<p>evdev version: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/wheel.py">https://github.com/chapmanjacobd/computer/blob/main/bin/wheel.py</a></p>
+<p>13 vs: 81 lines...</p>
+<p>These are based on evdev so I think they could handle more advanced remapping:</p>
+<ul>
+<li><a href="https://github.com/gvalkov/pyzmo">https://github.com/gvalkov/pyzmo</a></li>
+<li><a href="https://github.com/moses-palmer/pynput">https://github.com/moses-palmer/pynput</a></li>
+<li><a href="https://github.com/acro5piano/wayremap">https://github.com/acro5piano/wayremap</a></li>
+<li><a href="https://github.com/joshgoebel/keyszer">https://github.com/joshgoebel/keyszer</a></li>
+</ul>
+<p>Unfortunately, all of these programs require root access which is probably one of the big reasons that there isn't an equivalent to AutoHotKey on Linux. Doing anything interesting requires working around X, Wayland, etc but on Windows it seems like non-Admin users still have quite a bit of low-level hardware access</p>
+
