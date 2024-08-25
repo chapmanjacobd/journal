@@ -1,3 +1,5 @@
+https://github.com/gvalkov/pyzmo
+https://github.com/ReimuNotMoe/ydotool
 https://github.com/electric-sql/pglite
 https://github.com/lovasoa/SQLpage
 https://github.com/bayasdev/envycontrol
