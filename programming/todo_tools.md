@@ -1,3 +1,5 @@
+https://github.com/pipefunc/pipefunc
+https://github.com/dagworks-inc/hamilton
 https://github.com/gvalkov/pyzmo
 https://github.com/ReimuNotMoe/ydotool
 https://github.com/electric-sql/pglite
