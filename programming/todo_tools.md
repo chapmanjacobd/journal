@@ -1,3 +1,4 @@
+autoexpect
 https://github.com/pipefunc/pipefunc
 https://github.com/dagworks-inc/hamilton
 https://github.com/gvalkov/pyzmo
