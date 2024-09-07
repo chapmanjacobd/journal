@@ -1,0 +1,51 @@
+
+<h2>cb</h2>
+<p>I can't recommend <code>cb</code> enough:</p>
+<p><a href="https://github.com/niedzielski/cb">https://github.com/niedzielski/cb</a></p>
+<p>It's a pretty simple concept: "if stdout" but allows you to write pipelines like this:</p>
+<pre><code>$ cb | sort | cb
+</code></pre>
+<p>which would sort the contents of your clipboard and put it back in your clipboard. It totally bust my brain when I first saw it.</p>
+<p>I wrote a similar thing <a href="https://github.com/niedzielski/cb/issues/8">but for images</a>. I don't use it very often but it is handy for checking clipboard screenshots before pasting them into a website.</p>
+<p><code>moreutils</code> is also interesting to checkout. One of the commands in that package is <code>sponge</code> which let's you do a similar thing to the above and buffer output for files.</p>
+<h2>freerdp</h2>
+<p>Recently I was having trouble with nomachine on HiDPI displays and I discovered <code>freerdp</code> which I hadn't prior heard of before. The screen is much clearer now:</p>
+<p>On server:</p>
+<pre><code>sudo dnf install freerdp-server freerdp-shadow-cli
+</code></pre>
+<p>On client:</p>
+<pre><code>sudo dnf install freerdp-client
+
+ssh pc -L 35589:localhost:35589 freerdp-shadow-cli -auth /port:35589 /bind-address:127.0.0.1
+
+expect -c '
+set timeout -1
+spawn xfreerdp -authentication +auto-reconnect /network:auto -audio -decorations /v:127.0.0.1:35589 /smart-sizing /workarea /bpp:16 /rfx /gdi:hw /gfx:AVC420,rfx
+expect "Domain:"
+send "\r"
+expect "Password:"
+send "\r"
+expect eof
+'
+</code></pre>
+<h2>Quickemu</h2>
+<p>handy for spinning up Windows when you need it:</p>
+<pre><code>git clone --filter=blob:none https://github.com/wimpysworld/quickemu
+quickget windows 11
+./quickemu --vm windows-11.conf --display spice
+</code></pre>
+<h2>systemd</h2>
+<p>Some people like <a href="https://github.com/Nukesor/pueue">https://github.com/Nukesor/pueue</a> but I like systemd. For temporary commands I want to run (download jobs, etc) I put them in text files and they run...</p>
+<p>This is a work-in-progress but I'm enjoying it a lot so far:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/systemd/user/jobs.service">.config/systemd/user/jobs.service</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/fish/functions/eval-dir.fish">.config/fish/functions/eval-dir.fish</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/fish/functions/eval-file.fish">.config/fish/functions/eval-file.fish</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/fish/functions/jo.fish">.config/fish/functions/jo.fish</a></li>
+</ul>
+<p>And of course I put my whole home folder in git:</p>
+<ul>
+<li>Computer: <a href="https://github.com/chapmanjacobd/computer/">https://github.com/chapmanjacobd/computer/</a></li>
+<li>Phone: <a href="https://github.com/chapmanjacobd/phone/">https://github.com/chapmanjacobd/phone/</a></li>
+</ul>
+

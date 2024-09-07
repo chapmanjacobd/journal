@@ -1,0 +1,14 @@
+
+<p>This week I added some timezone flags for my <code>dateutil</code> wrapper CLI program. It was a bit harder than I expected because my tests were failing when changing the system timezone. I tried using <code>freezegun</code> but it wasn't covering all the system timezone callpoints. <a href="https://github.com/chapmanjacobd/library/commit/3b83acc0846266aedf896343a69ed8477bddab2a">In the end</a> I decided to only write tests for the explicit timezone parts and skip testing the localtime parts for now. But I also discovered the <code>pytest-regressions</code> plugin which made it easy to write a bunch of data regression tests without having to copy and paste failing values with correct ones over and over:</p>
+<pre><code>@pytest.mark.parametrize("p", [["1970-01-01 00:00:01"], ["--from-unix", "1"]])
+@pytest.mark.parametrize("fz", [["-fz", "America/New_York"], ["-fz", "America/Chicago"]])
+@pytest.mark.parametrize("tz", [["-tz", "America/New_York"], ["-tz", "America/Chicago"]])
+@pytest.mark.parametrize("s", [[], ["-d"], ["-t"]])
+@pytest.mark.parametrize("f", [[], ["-TZ"]])
+def test_lb_timestamps_tz_utc(data_regression, p, fz, tz, s, f, capsys):
+    lb(["timestamps"] + p + fz + tz + s + f)
+    captured = capsys.readouterr().out.strip()
+    data_regression.check(captured)
+</code></pre>
+<p>The <code>data_regression</code> fixture will create a test output file that should be committed to the repo. It takes in a dict by default but luckily strings also work. You can use <code>--force-regen</code> as in <code>pytest tests/text/test_timestamps.py --force-regen</code>  to replace the failing test data with the new output data, otherwise it will keep failing until you fix the code.</p>
+
