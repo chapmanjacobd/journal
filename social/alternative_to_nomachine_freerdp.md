@@ -1,6 +1,6 @@
 I see NoMachine mentioned a lot on reddit, and while I have used it for years (along with X2Go), I hadn't heard of FreeRDP before. I accidentally stumbled into it via an online man page.
 
-I was having trouble recently with NoMachine on HiDPI displays. If you have the same issue, give it a go. 
+I was having trouble recently with NoMachine on HiDPI displays in Fedora 40. If you have the same issue, give it a go. 
 
 The packages on Fedora are `freerdp` for the client and `freerdp-server` for the server.
 

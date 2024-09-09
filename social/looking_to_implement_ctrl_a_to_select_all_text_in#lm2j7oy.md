@@ -1,0 +1,1 @@
+Yeah the benefit of setting ctrl+a to passthrough in kitty and configuring the desired behavior in your shell is that you'll be able to configure each other program as well (ie. your text editor, etc)

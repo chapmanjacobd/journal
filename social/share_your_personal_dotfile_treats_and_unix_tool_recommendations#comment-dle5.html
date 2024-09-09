@@ -1,13 +1,23 @@
 
 <h2>cb</h2>
-<p>I can't recommend <code>cb</code> enough:</p>
+<p>I can't recommend <code>cb</code> enough!</p>
 <p><a href="https://github.com/niedzielski/cb">https://github.com/niedzielski/cb</a></p>
-<p>It's a pretty simple concept: "if stdout" but allows you to write pipelines like this:</p>
+<p>It's a pretty simple concept: run different things depending on whether stdin is connected to a terminal which allows you to write a pipeline like this:</p>
 <pre><code>$ cb | sort | cb
 </code></pre>
-<p>which would sort the contents of your clipboard and put it back in your clipboard. It totally bust my brain when I first saw it.</p>
+<p>This sorts the contents of your clipboard and then puts it back to your clipboard. It totally bust my brain when I first saw it.</p>
 <p>I wrote a similar thing <a href="https://github.com/niedzielski/cb/issues/8">but for images</a>. I don't use it very often but it is handy for checking clipboard screenshots before pasting them into a website.</p>
 <p><code>moreutils</code> is also interesting to checkout. One of the commands in that package is <code>sponge</code> which let's you do a similar thing to the above and buffer output for files.</p>
+<h2>htop</h2>
+<p>I've been using <code>htop</code> for about ten years but I never took the time to configure it until last weekend! The defaults are pretty good but htop can do a lot more than showing you which process is hogging all your RAM!!</p>
+<ul>
+<li><code>t</code> will display a process tree</li>
+<li><code>s</code> will run <code>strace</code> on the highlighted process</li>
+<li><code>l</code> (lowercase L) will show all open files for the highlighted process (using <code>lsof</code>)</li>
+<li>You can add RBYTES WBYTES columns to view how much data each process has read or written to disk. This information is in <code>/proc/$pid/io</code> but sometimes it is useful to see it across all processes</li>
+<li>You can highlight programs which have been replaced on disk (like if they were updated and need to be restarted)</li>
+<li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/htop/htoprc">.config/htop/htoprc</a></li>
+</ul>
 <h2>freerdp</h2>
 <p>Recently I was having trouble with nomachine on HiDPI displays and I discovered <code>freerdp</code> which I hadn't prior heard of before. The screen is much clearer now:</p>
 <p>On server:</p>
@@ -43,6 +53,10 @@ quickget windows 11
 <li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/fish/functions/eval-file.fish">.config/fish/functions/eval-file.fish</a></li>
 <li><a href="https://github.com/chapmanjacobd/computer/tree/main/.config/fish/functions/jo.fish">.config/fish/functions/jo.fish</a></li>
 </ul>
+<h2>progress</h2>
+<p>You can use <code>progress</code> to track a bunch of ffmpeg jobs</p>
+<pre><code>progress -wc ffmpeg
+</code></pre>
 <p>And of course I put my whole home folder in git:</p>
 <ul>
 <li>Computer: <a href="https://github.com/chapmanjacobd/computer/">https://github.com/chapmanjacobd/computer/</a></li>
