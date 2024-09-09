@@ -1,0 +1,1 @@
+I think 20 is a good balance between quality and size. Higher values like 35 will be smaller outputs but lower quality. If you have an ideal file size that you are targeting you could add both crf and b:v. `-b:v 1M` seems pretty common when searching github but they're probably just copying the example on ffmpeg's trac wiki

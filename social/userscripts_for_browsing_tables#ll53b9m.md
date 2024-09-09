@@ -1,0 +1,1 @@
+When searching on various private trackers I often see the same things over and over and this helps me know what rows are new that I haven't seen since the last time the page was loaded and across similar searches
