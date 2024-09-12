@@ -1,0 +1,8 @@
+
+<blockquote>
+<p>even just the lack of my .ssh/config file on remote machines breaks my muscle memory</p>
+</blockquote>
+<p>I use syncthing to synchronize <code>.config</code> and <code>.local</code> between machines that I own, and git to synchronize other folders including <a href="https://github.com/chapmanjacobd/computer/blob/main/.ssh/config">.ssh/config</a>.</p>
+<p>For .ssh/config specifically, I think it is possible to use SSH Agent Forwarding. Does that not include hostnames? I haven't used it often but I would be surprised if it didn't include config like that</p>
+<p>But for docker containers and other servers I generally just type everything in my shell and then prepend <code>ssh -t $server_name</code> at the beginning. Even when running interactive programs like <code>top</code> or <code>sudoedit</code> I'll take advantage of <code>ControlMaster</code> shared sockets but I don't rely too much on the remote shell... Sometimes it is a little more tedious but this way I'll always have the command history.</p>
+
