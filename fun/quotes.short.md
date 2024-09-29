@@ -110,3 +110,7 @@ Danny Frederick
 > The right way to do this is to continually refactor the monolith until the break up is clean and makes sense. And then do it. But if you can’t refactor the monolith to be clean and well done, you have less than zero hope for the distributed architecture.
 
 ATotalCassegrain
+
+> Favors granted soon become rights demanded
+
+mentor of BobT21
