@@ -1,0 +1,1 @@
+They will just "hire" everyone as contractors. Might not be all that bad though... people will then be able to have more control over how they work and what hours they work lest they be classified by the government as employees

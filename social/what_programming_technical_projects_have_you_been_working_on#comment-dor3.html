@@ -1,0 +1,6 @@
+
+<p>This week I created an alternative to my cluster-sort program:</p>
+<p><a href="https://github.com/chapmanjacobd/library/blob/main/xklb/text/regex_sort.py"><em>Regex-sort</em></a> is 97.3% faster than cluster-sort (185s vs 5s for 50k lines).</p>
+<p>It doesn't do <em>exactly</em> the same thing as clustersort but the speedup is in the right ballpark that I was aiming for with certain workflows in mind. The code could definitely be more optimized but I think it is in a good enough place for now.</p>
+<p>I'm in the process of adding wordllama as an optional dependency to clustersort. It's twice as slow as TF-IDF but the results are often better.</p>
+
