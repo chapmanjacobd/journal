@@ -1,1 +1,2 @@
-text-only website -- ahh I think someone did this before: https://no-ht.ml/ and https://secretgeek.github.io/html_wysiwyg/html.html
+- text-only website -- ahh I think someone did this before: https://no-ht.ml/ and https://secretgeek.github.io/html_wysiwyg/html.html
+- local-first social media; no "global" news--but maybe a way to browse different neighborhoods
