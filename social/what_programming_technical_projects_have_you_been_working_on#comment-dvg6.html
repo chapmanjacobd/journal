@@ -1,0 +1,20 @@
+
+<p>Taking some inspiration from Spanish writer and watchmaking enthusiast <a href="https://nikkhokkho.sourceforge.io/?page=FileOptimizer">Javier Gutiérrez Chamorro</a>, the past couple days I added a small wrapper script around a couple of my existing FFmpeg and ImageMagick wrapper scripts. This will skip files that are unlikely to be reduced much more and it starts with files with the most bloat first:</p>
+<pre><code>$ pip install xklb
+$ library fsadd --video video.db ~/Videos/
+$ library shrink --invalid --no-valid video.db --delete-unplayable
+media_key    current_size    future_size    savings    processing_time
+-----------  --------------  -------------  ---------  -----------------------
+Video: ts    65.2 GiB        37.3 GiB       28.0 GiB   2 days and 14 hours
+Video: vob   59.3 GiB        33.9 GiB       25.4 GiB   2 days and 8 hours
+Video: m2ts  13.2 GiB        7.6 GiB        5.7 GiB    12 hours and 32 minutes
+Video: mp4   4.9 GiB         2.8 GiB        2.1 GiB    4 hours and 37 minutes
+Video: mkv   29.3 MiB        16.7 MiB       12.6 MiB   4 minutes and 6 seconds
+Video: dat   1.5 MiB         879.9 KiB      659.9 KiB  6 seconds
+
+Estimated processing time: 5 days and 15 hours
+Estimated savings: 61.2 GiB
+Proceed? [y/n] (n): 
+</code></pre>
+<p>And I plan to add support for a few more things like turning table data into Zstd compressed Parquet, image heavy PDFs into AVIF, and text PDFs into ePUB (or maybe markdown+extracted image AVIF)</p>
+
