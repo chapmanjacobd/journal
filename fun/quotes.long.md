@@ -87,3 +87,8 @@ management are constantly changing.
 > Things like "easier to maintain" are vibes not metrics.
 > You need to have specific goals and metrics for things like speed, cost, security, or test coverage. Then you can do some POCs on parts of it to show whether improvements are possible and worth the effort.
 > https://old.reddit.com/r/ExperiencedDevs/comments/1ewzlxn/have_you_ever_regretted_a_major_refactor_or/
+
+> One thing that is tricky for stakeholders to appreciate is how the scientific method can't prove a negative. If you mention it they'll pause and think about it and say it makes sense, but the implications of the fact are a bit remote from their experience. So they can get confused when faced with the fact that our work ending in not in a negative or positive result but just "inconclusive".
+> They often try to push to get some kind of partial result they can use, something "directional" perhaps, or permission to rule out the existence of an effect. But inconclusive means exactly that, we just don't have the information to come to a conclusion. We get almost nothing.
+> For people who've done research before, this is just part of the process. But in the eyes of a stakeholder, do it often enough and it's a sign of failure and wasted effort. The only consolation prize is that we might have better data policies and collection methods to show for it thanks to all the issues we uncovered along the way.
+> Randy Au

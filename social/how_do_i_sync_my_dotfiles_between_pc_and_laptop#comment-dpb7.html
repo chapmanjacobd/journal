@@ -1,0 +1,14 @@
+
+<p>You can use both Git and Syncthing concurrently. I guess my main reason for using both is that I've been adding my home folder to Git very slowly over time--one file or folder per day. But Syncthing is also good at syncing things that I don't want in Git. Syncthing is not so good at resolving file sync conflicts, merging line-specific changes but Git is good at that.</p>
+<p>They have different ignorefiles. I don't sync my whole home folder in syncthing, only <code>.local</code> and <code>.config</code>:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.gitignore">.gitignore</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/.stignored">.config/.stignored</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.local/.stignored">.local/.stignored</a></li>
+</ul>
+<p>I symlink ./.stignore so that syncthing will also sync the ignore files</p>
+<p><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/.stignored">https://github.com/chapmanjacobd/computer/blob/main/.config/.stignored</a></p>
+<p>I run this script every time I switch computers: <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/clean_home.fish">clean_home</a> usually via:</p>
+<pre><code>ssh PC -t tmux new-session -A -s phone "'fish -c clean_home; exec fish'"
+</code></pre>
+

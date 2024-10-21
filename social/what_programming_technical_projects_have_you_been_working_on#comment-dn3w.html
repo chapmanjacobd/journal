@@ -1,0 +1,18 @@
+
+<p>Over the past couple days I made a partial rust port of <em>clustersort</em> (one of the subcommands in xklb):</p>
+<p><a href="https://github.com/chapmanjacobd/clustersort">https://github.com/chapmanjacobd/clustersort</a></p>
+<p>Rust is pretty easy to get started. The packaging and publishing experience is miles better than Python.</p>
+<p>Unfortunately, my port is about 3x slower than the python version. The slowness comes from the KMeans clustering. sklearn uses BLAS but linfa said their code was performing <a href="https://github.com/rust-ml/linfa/issues/228#issuecomment-1312403303">"nearly as fast as"</a> the BLAS implementation so they removed it to make the implementation simpler :/</p>
+<p>Linfa has opt-in BLAS for pre-processing and it is about 8% faster... but that is only for the pre-processing part :/</p>
+<p>It <em>might</em> be because I'm using a sparse array in the python version (spmatrix) but it looks like the rust library wants me to implement it on my own (sprs?).</p>
+<p>After running <code>cargo flamegraph</code> it seems like the kmeans code is spending a lot of the time running <code>ndarray::zip::Zip</code></p>
+<p>It looks like there is a <a href="https://github.com/seijikun/kmean-rs/">SIMD implementation of kmeans</a> so that might be interesting to play around with as well</p>
+<p>The most annoying parts of writing the code was that ndarray v0.16 seems to be incompatible with linfa 0.7 or something. I keep getting errors like:</p>
+<pre><code>mismatched types
+`ArrayBase&lt;OwnedRepr&lt;f64&gt;, Dim&lt;...&gt;&gt;` and `ArrayBase&lt;OwnedRepr&lt;f64&gt;, Dim&lt;...&gt;&gt;` 
+have similar names, but are actually distinct types
+perhaps two different versions of crate `ndarray` are being used
+</code></pre>
+<p>Things would compile fine and then they wouldn't. <code>cargo install --locked</code> was working and then it suddenly had errors like above. I don't really get why it is being flaky. I didn't change Cargo.toml but I guess <code>Cargo.lock</code> decided to suddenly update?? Makes me appreciate duck typing.</p>
+<p>But while investigating the source of slowness in rust I got some ideas for how I could change the Python version so back to Python for now~~ :)</p>
+

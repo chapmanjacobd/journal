@@ -1,3 +1,4 @@
+https://github.com/c-o-pr/ddrescue-helper
 https://github.com/XiphosResearch/netelf
 https://old.reddit.com/r/btrfs/comments/15b4p1c/did_my_file_system_get_corrupted_is_there_a_way/jtrjheu/
 autoexpect
