@@ -1,0 +1,1 @@
+On KDE, the widget commonly used is "System Resource Monitor" which lets you choose different sensors like RAM, HDD, CPU activity, battery life, etc and different charts like line chart, pie chart, bar chart, etc
