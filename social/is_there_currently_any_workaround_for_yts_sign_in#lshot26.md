@@ -5,4 +5,6 @@ I'm pretty sure I'm banned. Can't play videos if I'm signed in anywhere but if I
 
 So far it's only affected my YouTube account but it's totally possible that I've been marked with the black spot just like Muppet Treasure Island
 
+edit: it looks like I'm unbanned now. I guess it was about two months
+
 Now I know to choose vimeo for any heimlich maneuver videos
