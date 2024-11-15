@@ -1,0 +1,9 @@
+
+<p>ahh yeah... I switch between different monitor setups (and freerdp / NoMachine) throughout the day and I frequently need to restart plasma:</p>
+<pre><code>function restartplasma
+    bash -c 'kquitapp6 plasmashell || killall plasmashell; systemd-run --user kstart plasmashell'
+    systemd-run --user kwin_x11 --replace
+end
+</code></pre>
+<p>A bit annoying but other than that Linux pretty much stays out of the way and lets me be productive~!</p>
+
