@@ -1,0 +1,4 @@
+
+<p>Aside from <code>MX</code>, you'll need to copy the <code>SPF</code>, <code>DKIM</code>, and <code>DMARC</code> records. As long as both nameservers are serving the same content then there will be no downtime when switching to the new nameservers.</p>
+<p>One thing to note: eg. if you are sending mail from a server like self-hosted wordpress, and you are migrating that to a new server you'll want to switch that over in the <code>SPF</code> record. This might show up as an <code>ip4:169.254.0.0</code> or something like that, if <code>169.254.0.0</code> is the old server IP address then replace that with the new IP address.</p>
+
