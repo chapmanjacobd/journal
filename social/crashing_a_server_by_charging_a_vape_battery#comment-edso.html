@@ -1,0 +1,57 @@
+
+<p>Bear.Rootz sounds like a rootkit lol...</p>
+<p>I have a really long &gt;15m USB cable and the past couple days it has been pretty flaky but I don't get any of the issues you mentioned. I can still SSH in and run dmesg:</p>
+<pre><code>kern  :err   : [Dec17 11:40] usb 1-4-port1: disabled by hub (EMI?), re-enabling...
+kern  :err   : [  +0.059393] usb 1-6-port1: disabled by hub (EMI?), re-enabling...
+kern  :warn  : [  +0.009705] usb 1-4.1: Device not responding to setup address.
+kern  :warn  : [  +0.208603] usb 1-4.1: Device not responding to setup address.
+kern  :err   : [  +0.206995] usb 1-4.1: device not accepting address 26, error -71
+kern  :err   : [  +0.000477] usb 1-4-port4: disabled by hub (EMI?), re-enabling...
+kern  :err   : [  +0.111037] usb 1-6-port2: disabled by hub (EMI?), re-enabling...
+kern  :err   : [Dec17 12:48] usb 1-8.4.4.1: device descriptor read/all, error -71
+kern  :err   : [  +0.015326] usbhid 1-8.4.4.1:1.0: can't add hid device: -71
+kern  :err   : [  +0.000233] usbhid 1-8.4.4.1:1.0: probe with driver usbhid failed with error -71
+kern  :err   : [  +0.006351] usbhid 1-8.4.4.1:1.1: can't add hid device: -71
+kern  :err   : [  +0.000036] usbhid 1-8.4.4.1:1.1: probe with driver usbhid failed with error -71
+kern  :err   : [  +0.004344] usbhid 1-8.4.4.1:1.2: can't add hid device: -71
+kern  :err   : [  +0.003029] usbhid 1-8.4.4.1:1.2: probe with driver usbhid failed with error -71
+kern  :err   : [Dec17 13:03] hub 1-8:1.0: hub_ext_port_status failed (err = -71)
+kern  :err   : [  +0.208016] hub 1-8:1.0: hub_ext_port_status failed (err = -71)
+kern  :err   : [  +0.000138] usb 1-8-port4: cannot reset (err = -71)
+kern  :err   : [  +0.000125] usb 1-8-port4: cannot reset (err = -71)
+kern  :err   : [  +0.000127] usb 1-8-port4: cannot reset (err = -71)
+kern  :err   : [  +0.000001] usb 1-8-port4: Cannot enable. Maybe the USB cable is bad?
+kern  :err   : [  +0.000132] usb 1-8-port4: cannot disable (err = -71)
+</code></pre>
+<p>When I run this usb_reset script then everything works again for another 10 minutes:</p>
+<pre><code>#!/bin/bash
+
+if [[ $EUID != 0 ]] ; then
+  echo This must be run as root!
+  exit 1
+fi
+
+for xhci in /sys/bus/pci/drivers/?hci_hcd ; do
+
+  if ! cd $xhci ; then
+    echo Weird error. Failed to change directory to $xhci
+    exit 1
+  fi
+
+  echo Resetting devices from $xhci...
+
+  for i in ????:??:??.? ; do
+    echo -n "$i" &gt; unbind
+    echo -n "$i" &gt; bind
+  done
+done
+</code></pre>
+<p>But it sounds like your USB issues are lower level... probably interrupt or power!? related</p>
+<p>edit: potentially interesting links:</p>
+<ul>
+<li><a href="https://askubuntu.com/questions/1290450/usb-bug-which-locks-the-kernel#">https://askubuntu.com/questions/1290450/usb-bug-which-locks-the-kernel#</a></li>
+<li><a href="https://linuxmusicians.com/viewtopic.php?t=10385">https://linuxmusicians.com/viewtopic.php?t=10385</a></li>
+<li><a href="https://stackoverflow.com/a/40586456/697964">https://stackoverflow.com/a/40586456/697964</a></li>
+</ul>
+<p>None of those will likely help solve your problem but they were interesting to read</p>
+
