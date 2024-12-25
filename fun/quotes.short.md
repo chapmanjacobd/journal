@@ -114,3 +114,8 @@ ATotalCassegrain
 > Favors granted soon become rights demanded
 
 mentor of BobT21
+
+> It is difficult to get anybody to understand something, when their salary depends on them not understanding it
+
+Upton Sinclair
+
