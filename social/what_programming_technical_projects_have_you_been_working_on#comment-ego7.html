@@ -1,0 +1,29 @@
+
+<p>I added support for other eBay marketplaces in my disk prices program: <a href="https://unli.xyz/diskprices/at/">Austria</a>, <a href="https://unli.xyz/diskprices/au/">Australia</a>, <a href="https://unli.xyz/diskprices/be/">Belgium</a>, <a href="https://unli.xyz/diskprices/ca/">Canada</a>, <a href="https://unli.xyz/diskprices/ch/">Switzerland</a>, <a href="https://unli.xyz/diskprices/de/">Germany</a>, <a href="https://unli.xyz/diskprices/es/">Spain</a>, <a href="https://unli.xyz/diskprices/fr/">France</a>, <a href="https://unli.xyz/diskprices/gb/">Great Britain</a>, <a href="https://unli.xyz/diskprices/hk/">Hong Kong</a>, <a href="https://unli.xyz/diskprices/ie/">Ireland</a>, <a href="https://unli.xyz/diskprices/it/">Italy</a>, <a href="https://unli.xyz/diskprices/nl/">Netherlands</a>, <a href="https://unli.xyz/diskprices/pl/">Poland</a>, <a href="https://unli.xyz/diskprices/sg/">Singapore</a>, <a href="https://unli.xyz/diskprices/us/">United States</a>. Typing out this message made me realize there was a bug in my link extracting function that I use everywhere so <a href="https://github.com/chapmanjacobd/library/commit/a776d285d688ccf131ec9478234dd976f7058188">I fixed that</a> (unrelated to the website).</p>
+<p>I've added a lot of small features and bugfixes to the site over the past week. One of the most interesting parts is probably the way that I represent currencies in the different region pages. At first I was customizing everything with a special DataTable render function which required me to pass in data about the way that each currency should be formatted--not just the currency symbol but also the different way that Belgium writes the <code>€</code> before the amount and France writes it after--though both use <code>,</code> instead of <code>.</code>. And the Swiss use <code>'</code> to separate groups of thousands instead of <code>,</code> but <code>.</code> for cents.</p>
+<pre><code>$.fn.dataTable.render.number(',', '.', 2, '$')
+</code></pre>
+<p>All of that information starts to become a bit tedious... but I was making good progress and almost done when I realized that the browser really does a better job at this:</p>
+<p>Enter <strong>Intl.NumberFormat</strong>!</p>
+<p>I basically replaced all of that complicated code with this:</p>
+<pre><code>const _fmt_currency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format
+
+function fmt_currency(data, type, row) {
+    if (type === 'display') {
+        return _fmt_currency(data);
+    }
+    return data;
+}
+</code></pre>
+<p>By replacing the currency code for the different pages, it all works inside the browser. A lot easier and more accurate.</p>
+<p>Another thing that I realized that I could do to make things more localized is that instead of doing this (for the number of seller reviews, which is often in the thousands):</p>
+<pre><code>$.fn.dataTable.render.number(',') 
+</code></pre>
+<p>With DataTables.js I can just leave the preset blank and it uses the browser's locale:</p>
+<pre><code>$.fn.dataTable.render.number()
+</code></pre>
+<p>To test this I opened a browser like this:</p>
+<pre><code>LANGUAGE=fr chromium-browser
+</code></pre>
+<p>Neat!</p>
+
