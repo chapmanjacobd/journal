@@ -26,4 +26,14 @@ However, PhotoPrism's documentation is a lot more well-written than LibrePhotos-
 
 The only other complaint that I have at this point is that LibrePhotos requires docker-compose--although the happy path is well-trod and things _just work_. If anything, infrastructure seems the most robust for LibrePhotos because more of the moving parts seem to be separated cleanly (by HTTP). So my complaint here is really just a complaint against YAML: 127.0.0.1:3000:80 is not the same as "127.0.0.1:3000:80".
 
-Metadata space used
+## Metadata space used
+
+PhotoPrism makes 8 JPEG thumbnails with different crop/aspect ratio: center, left, right, fit, etc. This can add up but mostly in terms of file counts.
+
+LibrePhotos generates 3 WebP thumbnails for each original: big, square, and square_small. In theory, these should be smaller in file size; however, the thumbnail size was about 3x the size of my original photos: 58 GiB in my case.
+
+LibrePhotos also dumps all the photos into the same folder which is a big no-no. To contrast, PhotoPrism puts the thumbnails in three nested folders based on the first three chars of the hash used for the filename of the thumbnail. Damselfly retains the path of the original photos relative to the `/pictures` folder.
+
+Damselfly generates, or at least saves, only one thumbnail per photo, as JPEG. Damselfly has the smallest cache so I would say that it won this round!
+
+##
