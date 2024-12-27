@@ -1,3 +1,5 @@
+I don't fully agree with all of these but many of the statements are thought-provoking.
+
 > Some memories can stab at your heart ay any unexpected moment, like a wooden splinter under your fingernail. Yellow stamens and green stalks like years past;
 > Hearts hold fruitless cries of regret. Every person's heart is an island, trapped by water, sequestered from the world (July 9 2022)
 >
@@ -92,3 +94,7 @@ management are constantly changing.
 > They often try to push to get some kind of partial result they can use, something "directional" perhaps, or permission to rule out the existence of an effect. But inconclusive means exactly that, we just don't have the information to come to a conclusion. We get almost nothing.
 > For people who've done research before, this is just part of the process. But in the eyes of a stakeholder, do it often enough and it's a sign of failure and wasted effort. The only consolation prize is that we might have better data policies and collection methods to show for it thanks to all the issues we uncovered along the way.
 > Randy Au
+
+> Conservatives see the society as dysfunctional, immoral and nonsensical or impossible to understand and their ideology offers them hope for change: we'll revert society to the way it was and be happy again. But this is obviously impossible: they could only approach it by completely eradicating the progressives, so they'll never be happy and it'll be easy to distract them from more important issues by feeding them hate against their enemies.
+> Western hyperprogressives, for different reasons, see the society as dysfunctional, immoral and cruel, especially towards various minorities. As with the conservatives' grievances, there is truth in that. Their ideology offers them a different hope for change: we'll transform this backwards society, teach it to accept previously opressed identities and create a world where everyone has their basic needs met, including respect and acceptance. But doing this in a relatively short time, if ever, and by policing the rest of the society, is impossible, and the only way to do it would be by completely eradicating the conservatives. Same as above, that is never going to happen, so this ideology too has to lead to some level of constant and unsolvable unhappiness and frustration.
+> V17
