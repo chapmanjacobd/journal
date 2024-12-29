@@ -36,4 +36,12 @@ LibrePhotos also dumps all the photos into the same folder which is a big no-no.
 
 Damselfly generates, or at least saves, only one thumbnail per photo, as JPEG. Damselfly has the smallest cache so I would say that it won this round!
 
-##
+## Metadata extraction and features
+
+PhotoPrism automatic object detection labeling is not very good but better than nothing. Face clustering is great but face _detection_ is terrible.
+
+LibrePhotos has much better face detection! It found 10x as many faces than PhotoPrism. It also has a really neat Face Clusters scatter plot. But LibrePhotos didn't use EXIF or file modified date when indexing the photos :/
+
+Damselfly has more advanced filtering options like the ability to see photos that don't have faces, portrait or landscape orientation, etc. The LibrePhotos interface is a bit cleaner but Damselfly has more core functionality.
+
+Right now, I'd only recommend Damselfly.

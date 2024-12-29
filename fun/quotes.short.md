@@ -119,3 +119,7 @@ mentor of BobT21
 
 Upton Sinclair
 
+> One thing kids like is to be tricked. For instance, I was going to take my little nephew to Disneyland, but instead I drove him to an old burned-out warehouse. "Oh, no," I said. "Disneyland burned down." He cried and cried, but I think that deep down, he thought it was a pretty good joke. I started to drive over to the real Disneyland, but it was getting pretty late.
+
+Jack Handey
+
