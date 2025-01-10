@@ -1,0 +1,19 @@
+
+<p>Just to clarify how you can use private networking for those who aren't aware:</p>
+<p>Use <code>ip a</code> or <code>tailscale ip</code> to get the address of the private interface and then bind to that address instead of <code>0.0.0.0</code>. For example:</p>
+<p>Instead of</p>
+<pre><code>freerdp-shadow-cli -auth /port:35589 /bind-address:0.0.0.0
+</code></pre>
+<p>you could do:</p>
+<pre><code>freerdp-shadow-cli -auth /port:35589 /bind-address:$(tailscale ip -4)
+</code></pre>
+<p>Then you can only access that service on the same network that the bound interface is in.</p>
+<p>Also, for those that use tailscale you can add this <strong>to the bottom</strong> of your <code>~/.ssh/config</code> to use your tailscale shortnames without writing specific configuration:</p>
+<pre><code>Host localhost
+    Hostname localhost  # to prevent matching below
+
+Match originalhost="!*.*,*"
+    Hostname %h.my-tailscale-network.ts.net
+</code></pre>
+<p>Then you can just to <code>ssh pc</code> and it will connect to <code>pc.my-tailscale-network.ts.net</code>! (If you try <code>ssh another.host</code> it won't append <code>my-tailscale-network.ts.net</code> because "another.host" has a dot in it already)</p>
+

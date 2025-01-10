@@ -1,0 +1,10 @@
+
+<p>I've been a big fan of CentOS / AlmaLinux in the past--and there is still some consideration to be found there... ConfigServer Security and Firewall (CSF) is still being updated, for example.</p>
+<p>In a world where it is easy to destroy and recreate servers, this kind of system tweaking isn't nearly as important as it used to be. But vulnerabilities still exist in containers so it is good to have some kind of system to--if not automatically canary test and deploy security updates--<em>at the very least</em> have an inventory of the software that is being used across your infrastructure so that you can eventually develop some kind of system to prevent embarrassing large-scale automated exploits of known (old) vulns.</p>
+<p>You can't really <em>prevent</em> application 0days via strong security posture alone but having a well-tested deployment system can at least make the process of deploying the fix (once you have it) more painless.</p>
+<p>You likely don't need a stateful firewall like CSF. Something that makes configuration easy like FirewallD or ufw is really all you need. Just block all the ports you aren't using. There's a lot you can do at the network level to control traffic (virtual networking, out of band management, etc). Just keep things as simple as possible. Adding things to make things "more secure" (subjective) usually is a net negative and only serves to increase attack surface.</p>
+<blockquote>
+<p>LXC</p>
+</blockquote>
+<p>You might like this! <a href="https://gitlab.com/lxd_nomad/lxd_nomad">https://gitlab.com/lxd_nomad/lxd_nomad</a></p>
+
