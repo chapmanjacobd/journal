@@ -1,0 +1,52 @@
+
+<p>I've been looking into new ways to manage a few different servers that I have. Over the past year, I've really enjoyed working with immutable updates provided by <a href="https://coreos.github.io/rpm-ostree/">ostree</a> in Fedora IoT. It's the same technology that is used in Fedora Silverblue (and the other atomic desktops).</p>
+<p>One interesting technology that has come out from this is <a href="https://coreos.github.io/rpm-ostree/container/">ostree native containers</a>--which are essentially <em>bootable</em> containers. Really cool concept but in practice it is not all that needed because everyone is already used to using the Cloud--even something like Kubernetes is seemingly a lower maintenance burden than having to know some hardware details, right?* But I still think it is interesting so I've been digging into this area... I guess one of the main reasons why it is interesting to me is cost reduction. Even something like DigitalOcean's App Platform is 2x the cost of a DigitalOcean VPS and they only give you 100 GB of egress--the pricing is much more competitive if you manage your app containers on your own.</p>
+<p>A couple years ago, in an effort to make ostree native containers more universal (to eventually support debian based distributions) the project <a href="https://github.com/containers/bootc?tab=readme-ov-file#bootc">bootc</a> was created. Right now it is still a bit experimental and only supports containers which use rpm-ostree. It seems that bootc and dnf5 <a href="https://github.com/ericcurtin/dnf-bootc">will eventually</a> replace ostree native containers.</p>
+<p>The workflow for using bootc looks like this:</p>
+<ol>
+<li>Write your own base image using examples from <a href="https://gitlab.com/fedora/bootc/examples/-/tree/main/">Fedora bootc examples</a> or <a href="https://github.com/coreos/layering-examples">CoreOS OstreeNativeContainer layering examples</a></li>
+</ol>
+<p>For example:</p>
+<pre><code>FROM quay.io/fedora/fedora-bootc:41
+
+RUN dnf group install -y container-management workstation-product
+
+RUN dnf install -y bootc cloud-init \
+        rust \
+        krb5-workstation \
+        ripgrep \
+        tmux
+
+RUN systemctl set-default graphical.target &amp;&amp; bootc container lint
+</code></pre>
+<ol start="2">
+<li>Build the bootable container with <code>podman build</code> (or <code>podman -c podman-machine-default-root build</code> if you want to use podman-bootc locally)</li>
+<li>(optional) Use <code>podman-bootc run</code> if you want to test-run the created image via <code>libvirt</code></li>
+<li><code>bootc switch</code> to boot into the built OS or upload the gzip'd qcow2 disk image to something like DigitalOcean as a custom OS image</li>
+<li>Switch to rpm-ostree updates if you aren't planning on making frequent container image releases with security updates...</li>
+</ol>
+<p>For example, to enable rpm-ostree auto-updates (if you aren't planning on updating the container registry which is kind of the point of deploying via container but maybe you don't know how to use PXE like me so you are using bootc instead of just using the default, more popular, OS images or learning k8s, etc):</p>
+<pre><code>echo AutomaticUpdatePolicy=apply | sudo tee -a /etc/rpm-ostreed.conf
+sudo rpm-ostree reload
+sudo systemctl edit --force --full rpm-ostreed-automatic.timer  # change to however many hours or days
+sudo systemctl enable rpm-ostreed-automatic.timer --now
+rpm-ostree status
+</code></pre>
+<p>This last point makes it a bit obvious why bootable containers are not super useful--but switching to frequent updates is flexible enough and the tooling <em>might</em> be more comfortable than something like virt-manager, QEMU, Virtualbox, etc. <a href="https://docs.fedoraproject.org/en-US/bootc/rpm-ostree/#_rpm_ostree_installoverride_replace">More details here</a>. But if you are already used to using those technologies there is really nothing novel provided here.</p>
+<p>During container-driven updates (bootc), your <code>/var/home</code> and <code>/etc</code> is unchanged (3-way merge when <code>/home</code> or <code>/etc</code> files are changed within the container image); this is similar to existing <code>rpm-ostree</code> updates. <a href="https://docs.fedoraproject.org/en-US/bootc/filesystem/">More details here</a></p>
+<p>It's not possible to embed containers inside of bootable containers due to a limitation in the <a href="https://containers.github.io/bootc/building/guidance.html?highlight=tar#nesting-oci-containers-in-bootc-containers">OCI container tar format</a>--but you can <a href="https://docs.fedoraproject.org/en-US/bootc/running-containers/">write services</a> that will pull and start containers once the bootable container has booted.</p>
+<p>Here are a few interesting links I've been able to gather:</p>
+<ul>
+<li><a href="https://youtu.be/OGFDx25VHiI">YouTube - Desktop Fedora with Bootc</a></li>
+<li><a href="https://containers.github.io/bootc/building/guidance.html">https://containers.github.io/bootc/building/guidance.html</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/bootc/building-containers/">https://docs.fedoraproject.org/en-US/bootc/building-containers/</a></li>
+<li><a href="https://github.com/osbuild/bootc-image-builder">https://github.com/osbuild/bootc-image-builder</a></li>
+<li><a href="https://github.com/containers/podman-bootc">https://github.com/containers/podman-bootc</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/bootc/bare-metal/#_using_bootc_install">https://docs.fedoraproject.org/en-US/bootc/bare-metal/#_using_bootc_install</a></li>
+<li><a href="https://gitlab.com/fedora/bootc/examples/-/tree/main/kiosk#notable-issuesergonomics">https://gitlab.com/fedora/bootc/examples/-/tree/main/kiosk#notable-issuesergonomics</a></li>
+</ul>
+<p>* I don't think k8s is all that bad but it's definitely trying to solve too many problems at once. Something lighter-weight like Nomad (to handle bin-packing) and bootc might work really well. But you might not even need bootc and you might not even need Nomad... etc</p>
+<p>edit: I put together a more complete example of how to use it here:<br/>
+<a href="https://github.com/chapmanjacobd/computer/tree/main/.github/bootc/server">https://github.com/chapmanjacobd/computer/tree/main/.github/bootc/server</a></p>
+<p>Unfortunately, it seems like <code>bootc-image-builder</code> wants the container image in <code>/var/lib/containers/storage</code> but <code>podman-bootc run</code> wants it inside of the <code>podman-machine-default-root</code> VM so you have to build it twice ?? :/</p>
+

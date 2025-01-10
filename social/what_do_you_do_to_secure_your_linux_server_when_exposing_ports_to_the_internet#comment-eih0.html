@@ -1,0 +1,4 @@
+
+<p>The ideal seems to be having a very lightweight app containers like <a href="https://github.com/GoogleContainerTools/distroless">distroless</a>. Most apps don't depend on having ssh access for example so if you can fully isolate your dependencies then there will be <em>very few</em> container updates that need to be deployed because there simply aren't any security updates for your small number of dependencies.</p>
+<p>However--there is a big caveat in all of this... with something like "normal" security updates (via apt, dnf, etc) there is some level of due diligence that you don't get by relying merely on major/minor version tags. This due diligence can be automated through tests but having a few humans in the updates pipeline helps to smooth out anything weird like packages being renamed where the old version is still HTTP 200 but the new version with a security patch is under a different name, etc</p>
+

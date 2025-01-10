@@ -1,0 +1,11 @@
+
+<p>I'm super excited about the beta release! Thankful for the rpms <a href="https://software.opensuse.org/download/package?package=fish&amp;project=shells%3Afish%3Abeta%3A4">here</a>. Interesting work being done to <a href="https://github.com/termux/termux-packages/pull/22609">"port" to Termux</a> also in the works~</p>
+<p>It's now easier than ever to contribute back to fish shell. Compiling rust fish is really fast after the first time you run <code>cargo run</code>!</p>
+<p>I'm enjoying the new alt-left, alt-right keybindings. Also you can add this to your config.fish to duplicate the argument to the left when pressing <code>alt+,</code> (similar to the <code>alt+.</code> binding which will duplicate previous command tokens):</p>
+<pre><code>bind \e, kill-selection backward-kill-token yank yank
+</code></pre>
+<p>This (ab)uses the kill-selection killring which is used in vi mode. (If you use vi mode you might need to replace it with another killring action that you don't use often). This is <a href="https://github.com/fish-shell/fish-shell/issues/8743">kind of a hack</a> but I use it a lot! Super convenient!</p>
+<p>re <a href="https://fishshell.com/docs/4.0b1/relnotes.html">4.0b1</a>: The only weird thing I've encountered so far is "commandline: -pxc: unknown option" when using the tab completions for <code>virsh</code>. edit: I think this was due to an old fzf.fish. After updating that I'm not able to reproduce the bug</p>
+<pre><code>fish -c 'curl -sL https://git.io/fisher | source &amp;&amp; fisher install jorgebucaran/fisher patrickF1/fzf.fish jorgebucaran/autopair.fish'
+</code></pre>
+

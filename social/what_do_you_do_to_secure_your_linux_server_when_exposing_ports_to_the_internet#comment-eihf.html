@@ -1,0 +1,4 @@
+
+<p>Interesting to note: publickey SSH is immune to bruteforcing and MITM attacks (though you can end up on a honeypot if you ignore the host keys not matching warning--though that never gives them access to your server because the key exchange is not replayable... but if you use ssh-agent the honeypot can then ask ssh-agent to connect to the real server! (depending on your configuration)).</p>
+<p>But yeah, for a more targeted attack, denial of service is pretty easy via sshd. So if only for that reason keep it private network</p>
+
