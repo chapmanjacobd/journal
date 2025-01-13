@@ -123,3 +123,6 @@ Upton Sinclair
 
 Jack Handey
 
+> Consider what matters to you personally as a human being. What problem(s) in the world tug at your heart. Envision several lives, one at a time, where you've thoroughly solved each one of these problems in a separate life. How do you feel about yourself in each of these lives after achieving that end?
+
+~elight
