@@ -1,0 +1,13 @@
+https://dan.langille.org/2020/10/07/dell-r720-flashing-dell-perc-h710-mini-into-it-mode/
+https://fohdeesha.com/docs/perc.html
+https://www.dell.com/support/home/en-us/product-support/servicetag/2866QD2/drivers
+https://www.dell.com/support/home/en-us/product-support/servicetag/2866QD2/drivers
+https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker/blob/master/functions.sh
+https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker/tree/master
+https://github.com/White-Raven/PowerEdge-shutup/blob/main/guide/unraid.md
+https://github.com/White-Raven/PowerEdge-shutup/blob/main/temppull.sh
+https://github.com/White-Raven/PowerEdge-shutup/blob/main/fancontrol.sh
+https://github.com/valkjsaaa/PyPowerEdgeFan
+https://github.com/valkjsaaa/PyPowerEdgeFan/blob/main/poweredge_fan/hardware/poweredge.py
+https://github.com/valkjsaaa/PyPowerEdgeFan/blob/main/poweredge_fan/poweredge_fan.py
+https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker
