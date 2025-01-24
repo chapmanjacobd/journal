@@ -1,0 +1,23 @@
+
+<p>This week I set up my r730xd with immich and it's been busy churning ~50 million images. Had to bump up the nodejs RAM limit but other than that it seems to keep chugging along.</p>
+<p>Early in the week I wrote <a href="https://github.com/chapmanjacobd/library/blob/main/library/createdb/getty_add.py">a script</a> to download metadata from the <a href="https://data.getty.edu/museum/collection/docs/">Getty Museum</a>. They have quite a few public domain images:</p>
+<pre><code>┌──────────────────────────────────────────────────────────────┬──────────┐
+│                           license                            │ count(*) │
+├──────────────────────────────────────────────────────────────┼──────────┤
+│ https://rightsstatements.org/vocab/CNE/1.0/                  │ 2249     │
+├──────────────────────────────────────────────────────────────┼──────────┤
+│ https://rightsstatements.org/vocab/UND/1.0/                  │ 2902     │
+├──────────────────────────────────────────────────────────────┼──────────┤
+│ https://rightsstatements.org/vocab/InC-RUU/1.0/              │ 3526     │
+├──────────────────────────────────────────────────────────────┼──────────┤
+│ https://rightsstatements.org/vocab/InC/1.0/                  │ 23436    │
+├──────────────────────────────────────────────────────────────┼──────────┤
+│ https://rightsstatements.org/vocab/NoC-US/1.0/               │ 31749    │
+├──────────────────────────────────────────────────────────────┼──────────┤
+│ http://creativecommons.org/publicdomain/zero/1.0/            │ 98108    │
+└──────────────────────────────────────────────────────────────┴──────────┘
+</code></pre>
+<p>Only takes a day or so to download everything so I've added those as well to my collection...</p>
+<p>Yesterday, I wrote <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/locate_remote_mv.py">a pretty handy script</a> that helps to automate finding files on remote servers and moving them to the local host. It's a pretty bare-bones script (<code>plocate</code> is doing all the dirty work). I'll likely need to add an --exclude flag or <a href="https://github.com/nk412/pyfzf/blob/master/pyfzf/pyfzf.py">fzf-like</a> file/folder selection to filter out unwanted files (or maybe I'll just re-use this readline code: <a href="https://github.com/chapmanjacobd/library/blob/main/library/utils/devices.py#L419">1</a>, <a href="https://github.com/chapmanjacobd/library/blob/main/library/folders/move_list.py">2</a> -- I wonder if that works on Windows if people install <code>pyreadline3</code>)</p>
+<p>Another very primitive toy that I put together is a little <code>tail</code> command for SQLite: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/sqlite_tail.py">bin/sqlite_tail.py</a>. Fun! But not super useful</p>
+
