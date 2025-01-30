@@ -1,0 +1,18 @@
+
+<p>IINA is mpv for Mac OS. You can use mpv on Windows and Linux too. Unfortunately, when you restart your computer you will start over... But I think you might also need something like this, in addition: <a href="https://old.reddit.com/r/mpv/comments/10uzv3i/how_to_make_mpv_to_remember_the_last_played_file/">https://old.reddit.com/r/mpv/comments/10uzv3i/how_to_make_mpv_to_remember_the_last_played_file/</a></p>
+<p>Or just use a program that I wrote! <a href="https://github.com/chapmanjacobd/library">https://github.com/chapmanjacobd/library</a></p>
+<p>It keeps track of the number of times you watched or listened to something.</p>
+<p>First install and create the file database:</p>
+<p><a href="https://scoop.sh/">https://scoop.sh/</a></p>
+<pre><code>scoop install mpv ffmpeg python  # or use choco
+
+pip install library
+library fsadd audio.db --audio .\Music\ .\Audiobooks\
+</code></pre>
+<p>Then you can use something like:</p>
+<pre><code>library listen audio.db --where play_count=0 --fetch-siblings if-audiobook --random
+</code></pre>
+<p>That will play things in random unless the folder path has "audiobook" in the name, then it will choose the audiobook file which is next which you haven't heard before. If you'd like this behavior for all other albums too then use <code>each</code> instead of <code>if-audiobook</code>.</p>
+<p>For videos the process is essentially the same. But use --video instead of --audio and watch instead of listen. You can also add --fs to force full screen.</p>
+<p>You should exit with ctrl-c when you want to stop and mark the video as incomplete or <code>q</code> to mark the video as watched and go to the next video.</p>
+
