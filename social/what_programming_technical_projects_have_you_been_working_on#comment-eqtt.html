@@ -1,0 +1,11 @@
+
+<p>Ah yeah duckdb supports SQLite out of the box so you can actually convert from SQLite directly to parquet with something like this:</p>
+<pre><code>duckdb my_sqlite.db -c "EXPORT DATABASE 'my_sqlite.parquet' (FORMAT 'parquet', COMPRESSION 'zstd', COMPRESSION_LEVEL 5, ROW_GROUP_SIZE 50_000);"
+</code></pre>
+<p>For my use case I would read the first few bytes of a file and check if it is SQLite, if so, convert to duckdb or parquet. But the project you linked to is helpful. <a href="https://github.com/dridk/sqlite2duckdb/issues/2">It looks like</a> to go from SQLite to duckdb is around 3 lines:</p>
+<pre><code>ATTACH 'my_sqlite.db' as sqlite_db;
+ATTACH 'my_sqlite.duckdb' AS duck_db;
+COPY FROM DATABASE sqlite_db TO duck_db;
+</code></pre>
+<p>The <code>install</code> and <code>load</code> commands for built-in extensions are not actually needed (<code>autoload_known_extensions</code> and <code>autoinstall_known_extensions</code> are both <code>true</code> by default <a href="https://duckdb.org/docs/configuration/overview.html">https://duckdb.org/docs/configuration/overview.html</a>)</p>
+
