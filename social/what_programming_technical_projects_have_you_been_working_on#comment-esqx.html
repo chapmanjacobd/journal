@@ -1,0 +1,36 @@
+
+<p>Unfortunately <a href="https://duckdb.org/docs/extensions/full_text_search.html">DuckDB fts</a> doesn't have a <a href="https://github.com/duckdb/duckdb/discussions/16071">trigram tokenizer</a> which is useful for some of my programs. But this isn't a complete blocker so I'm still evaluating it.</p>
+<p>I made <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/duckdb_fts.py">a script to make searching fts</a>. It even can create an fts index for you:</p>
+<pre><code>duckdb_fts.py test.duckdb table_name --pk path col1,col2,col3 --create-index
+duckdb_fts.py test.duckdb table_name --pk path col1,col2,col3 -s search -E exclude
+</code></pre>
+<p>DuckDB has a lot of <a href="https://duckdb.org/docs/sql/dialect/friendly_sql.html">friendly syntax</a>, and I must say a very beautiful <code>EXPLAIN ANALYZE</code>, but there are still quite a few rough edges.</p>
+<p>For example:</p>
+<pre><code>SELECT
+    m.id AS id
+    , SUM(CASE WHEN h.done = 1 THEN 1 ELSE 0 END) AS play_count
+    , MIN(h.time_played) AS time_first_played
+    , MAX(h.time_played) AS time_last_played
+    , FIRST_VALUE(h.playhead) OVER (PARTITION BY h.media_id ORDER BY h.time_played DESC) AS playhead
+    -- , *  -- SQLite even lets you do this... but I concede that is a bit extreme...
+FROM media m
+JOIN history h ON h.media_id = m.id
+GROUP BY m.id;
+</code></pre>
+<p>I get this error until I add all the referenced columns to the GROUP BY:</p>
+<pre><code>Binder Error: column "playhead" must appear in the GROUP BY clause or must be part of an aggregate function.
+Either add it to the GROUP BY list, or use "ANY_VALUE(playhead)" if the exact value of "playhead" is not important.
+LINE 6:     FIRST_VALUE(h.playhead) OVER (PARTITION BY h.media_id ORDER BY h.time_played DESC) AS playhead
+</code></pre>
+<p>If I change the last line to:</p>
+<pre><code>GROUP BY m.id, h.media_id, h.time_played, h.playhead;
+</code></pre>
+<p>I get results... but this is not the same thing. I want to get the most recent playhead value, but I guess that's not possible without making it a separate CTE or subquery:</p>
+<pre><code>SELECT DISTINCT ON (media_id)
+    media_id
+    , playhead
+FROM history
+ORDER BY time_played DESC
+</code></pre>
+<p>I've also had quite a bit of trouble converting existing DBs to duckdb because some of my file paths are not UTF-8 so I end up with invalid duckdb files and partial parquet: <a href="https://github.com/duckdb/duckdb/discussions/16049">https://github.com/duckdb/duckdb/discussions/16049</a></p>
+
