@@ -52,7 +52,8 @@ sudo ./SeaChest_PowerControl -d /dev/sdX --setAPMLevel 220
 sudo sgdisk -n 0:0:0 --align-end -t 0:8300 /dev/sdX
 sudo partprobe
 
-sudo mkfs.btrfs -m dup -d single --csum xxhash /dev/sdX1 -L d8
+sudo mkfs.ext4 -T largefile -m 0 -e continue /dev/sdX1
+sudo mkfs.btrfs -m dup -d single --csum xxhash /dev/sdX1
 
 fstab
 
