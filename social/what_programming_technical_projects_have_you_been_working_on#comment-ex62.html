@@ -1,0 +1,14 @@
+
+<p>I bought two Host-Managed SMR disks recently and spent a few hours total over the past week learning new things about how they behave. zoned btrfs is definitely a life-saver in this situation but overall it's not worth learning about unless your IO workload matches what HM-SMR is good for: unchanging files. The hardware support for these types of drives is not a guarantee; eg. you can't use them in HBA pass-through.</p>
+<p>As far as I know btrfs is the only filesystem that works on this type of drive--even f2fs requires the drive to have a conventional zone to save fs metadata. These types of drives aren't <em>super</em> common to find either so I've added a filter to my <a href="https://unli.xyz/diskprices/us/">diskprices</a> site to always filter out these drives--it's just not worth it for &gt;90% of users.</p>
+<p>The biggest annoyance that I've encountered so far with these drives is that btrfs will remount into read-only mode if it runs out of metadata overhead (ENOSPC). It's hard to predict when this will happen because it is different from the normal btrfs data/metadata blocks:</p>
+<blockquote>
+<p>This process may take some time depending on other background work or amount of new data written. It is possible to hit an intermittent ENOSPC. Some devices also limit number of active zones.</p>
+<p><a href="https://btrfs.readthedocs.io/en/latest/Zoned-mode.html#zone-reclaim-garbage-collection">https://btrfs.readthedocs.io/en/latest/Zoned-mode.html#zone-reclaim-garbage-collection</a></p>
+</blockquote>
+<p>One thing that has helped eliminate this read-only remounting is that <code>mergerfs</code> has an option to <a href="https://trapexit.github.io/mergerfs/config/functions_categories_and_policies/#filtering">skip creating new files on devices</a> but still have them writable (mv, rm, etc):</p>
+<pre><code>sudo mergerfs.ctl -m /mnt/d set branches /mnt/d1=RW:/mnt/d2=NC:/mnt/d3=NC
+</code></pre>
+<p>And then I just write directly to the drives (ie. in /mnt/d2/ instead of /mnt/d/) when I have something specific to save there. I've been weening myself off mergerfs but it's still really useful in a few contexts...</p>
+<p><code>eza --git</code> causes sshfs to hang which made me think that sshfs was really slow for the longest time but now I'm using sshfs a lot more and using <code>eza --git</code> a lot less...</p>
+

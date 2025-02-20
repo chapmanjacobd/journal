@@ -109,3 +109,8 @@ management are constantly changing.
 
 > I became blind in 2009 and since then I’ve had profound experiences of what’s called the Charles Bonnet syndrome. It’s a very little-known thing that happens to thousands of people all over the world. Even my doctor never heard of it. She said, “I thought you couldn’t see.” I said, “I can’t see!” Because I’m describing these hallucinations to her. Basically, when you’re awake, or sometimes when you come out of sleeping but usually when you’re awake – and I’ve had this happen for several years now – if you’ve been sighted your whole life and you suddenly become blind in middle age, your brain continues to want that visual stimulus, so it makes its own. So what you see are people, that you don’t know, who are not transparent except if you tried to reach out and touch them. They appear to be maybe just walking through your room. You don’t know who they are, they’re smiling, they’re nice. It’s not frightening at all, except it’s unusual to say the least, especially the first time it happens. Sometimes it’s hallucinations, like a British double-decker bus appearing in your kitchen, things like that.
 > https://unseenworlds.com/blogs/linernotes/trust-in-rock-an-interview-with-blue-gene-tyranny-and-peter-gordon-by-ned-sublette
+
+> DeepSeek shows - in the same moment as the Stargate announcement - that the trade off that OpenAI & co frame as wholly necessary is actually not.
+> Wait a minute. You mean to say that we don’t need to blanket the earth with data centers and coal & gas plants to maybe arrive at a future where we can wave a magical AGI wand to make all of the consequences of that go away?
+> Yes. This is a false trade off. The case for scaling was always based more in business than science.
+> Karen Hao
