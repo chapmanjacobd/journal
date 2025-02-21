@@ -130,3 +130,7 @@ Jack Handey
 > Strongman leaders make you feel powerful, and when you feel powerful you assume an exception will be made for you.
 
 ~Fiachra
+
+> You can't live without pain. You must choose between the pain of discipline and the pain of regret.
+
+Jim Rohn
