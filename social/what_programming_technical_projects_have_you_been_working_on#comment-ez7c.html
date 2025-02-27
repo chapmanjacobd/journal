@@ -1,0 +1,8 @@
+
+<p>Yesterday I added some tests to my <a href="https://github.com/chapmanjacobd/library/commit/e97bf2aa02791172a8d9938732a9a47f4cc9c4db?diff=split&amp;w=0#diff-7f07dae63dc9d2a60b92755fdb43a6503965eb61cdfba117f8e583f6c1c9e514">rank_dataframe</a> convenience function which ties a few pandas functions together to sort dataframes by multiple columns.</p>
+<p>Previously, I was rescaling the ranks:</p>
+<pre><code>scaled_ranks = (ranks - 1) / (len(ranks.columns) - 1)
+</code></pre>
+<p>It has been a couple years and I'm not sure why wrote that. But it was causing the function to behave in unexpected ways when using descending order on all columns. So I removed that lol</p>
+<p>I also added a <a href="https://pandas.pydata.org/docs/reference/api/pandas.qcut.html">pd.qcut</a> by default so small differences between values are not over-represented. Overall, I'm pretty happy with how it works now</p>
+

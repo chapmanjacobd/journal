@@ -1,3 +1,4 @@
+https://github.com/theseus-rs/postgresql-embedded
 https://github.com/Mooncake-Labs/pg_mooncake
 https://github.com/DrewThomasson/ebook2audiobook
 https://github.com/ReimuNotMoe/ydotool
