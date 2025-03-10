@@ -26,7 +26,9 @@ Jacob Chapman simplifying the words of Antoine de Saint Exupéry
 
 Matsuo Basho
 
-> Just the fact that some geniuses were laughed at does not imply that all who are laughed at are geniuses. They laughed at Columbus, they laughed at Fulton, they laughed at the Wright brothers. But they also laughed at Bozo the Clown.Carl Sagan
+> Just the fact that some geniuses were laughed at does not imply that all who are laughed at are geniuses. They laughed at Columbus, they laughed at Fulton, they laughed at the Wright brothers. But they also laughed at Bozo the Clown.
+
+Carl Sagan
 
 > Just because she likes the same bizzaro crap you do doesn't mean she's your soul mate.
 
