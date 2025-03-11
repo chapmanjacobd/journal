@@ -128,3 +128,11 @@ management are constantly changing.
 > Yes. This is a false trade off. The case for scaling was always based more in business than science.
 >
 > Karen Hao
+
+> The naive view sees information as an attempt to represent reality. It is aware that some information doesn’t represent reality well, but it dismisses this as unfortunate cases of”misinformation” or”disinformation.” Misinformation is an honest mistake, occurring when someone tries to represent reality but gets it wrong. Disinformation is a deliberate lie, occurring when someone consciously intends to distort our view of reality.
+>
+> According to the naive view, astronomers derive”real information” from the stars, while the information that astrologers imagine to read in constellations is either”misinformation” or”disinformation.” If only people were given more information about the universe, surely they would abandon astrology altogether. But the fact is that for thousands of years astrology has had a huge impact on history, and today millions of people still check their star signs before making the most important decisions of their lives, like what to study and whom to marry. As of 2021, the global astrology market was valued at $ 12.8 billion.
+>
+> What the example of astrology illustrates is that errors, lies, fantasies, and fictions are information, too. Contrary to what the naive view of information says, information has no essential link to truth, and its role in history isn’t to represent a preexisting reality. Rather, what information does is to create new realities by tying together disparate things— whether couples or empires. Its defining feature is connection rather than representation, and information is whatever connects different points into a network. Information doesn’t necessarily inform us about things. Rather, it puts things in formation. Horoscopes put lovers in astrological formations, propaganda broadcasts put voters in political formations, and marching songs put soldiers in military formations.
+>
+> https://sameerbajaj.com/nexus/
