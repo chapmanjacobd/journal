@@ -136,3 +136,7 @@ Jack Handey
 > You can't live without pain. You must choose between the pain of discipline and the pain of regret.
 
 Jim Rohn
+
+> You can't persuade with logic what someone has believed through emotion
+
+Jonathan Swift
