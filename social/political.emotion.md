@@ -10,11 +10,13 @@ Logic is not the driving force of political ideology. If it was then it would be
 
 ### Conservatism
 
-Driving Emotions: Loyalty, Forgiveness
+Driving Emotions: Loyalty, Apathy, Forgiveness?
 
 ### Republicanism
 
-Driving Emotions: Pride, Fear
+Driving Emotions: Pride, Fear of loss of power via Conservative apathy
+
+Republicanism exists because Conservativism "needs" to go further than doing nothing to "maintain" the status quo in an dynamic political system where other moods (Liberalism, Libertarianism, Leftism, and Populism) pull the status quo away from stasis. Thus Republicanism naturally leads into Populism where the government can be butchered until the status quo is reconstructed under Liberalism and Leftism.
 
 ### Liberalism
 
@@ -26,7 +28,7 @@ Driving Emotions: Trauma, Distrust
 
 ### Leftism
 
-Driving Emotions: Sympathy, Anger
+Driving Emotions: Sympathy, Fear, Anger
 
 ### Populism
 
