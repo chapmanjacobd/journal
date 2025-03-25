@@ -6,11 +6,13 @@
 >
 > - Jonathan Swift, 1721
 
-Logic is not the driving force of political ideology. If it was then it would be a science: largely undisputed. The more that an ideology is tied to their identity, the more emotional reasons people need to unfix themselves. If you only provide logical technicalities their brain will only fight harder to shore up their worldview.
+This quote helped me get into the state of mind where I decided to map out the emotions that link with political ideologies. These words are sometimes used (and misused) by political parties. It may help to think about this like a blank canvas that you are filling in with a very fuzzy picture about the world:
 
 ### Conservatism
 
 Driving Emotions: Loyalty, Apathy, Forgiveness?
+
+In many ways the conservative mood is the preservation of the status quo. This is probably the most common / baseline political feeling for those who didn't have another dominant mood during their childhood. This could be being Democrat because your favorite parent was Democrat, etc.
 
 ### Republicanism
 
@@ -33,3 +35,7 @@ Driving Emotions: Sympathy, Fear, Anger
 ### Populism
 
 Driving Emotions: Resentment, Hope
+
+Of course, everyone experiences different emotions at some point in their life but I'm thinking in more of a overarching/archetyping social milieu dominant mood. Logic is not the driving force of political ideology. If it was then it would be a science: largely undisputed. The more that an ideology is tied to their identity, the more emotional reasons people need to unfix themselves. If you only provide logical technicalities their brain will only fight harder to shore up their worldview.
+
+More specifically, I found this article while thinking about the potentially multi-generational cycle of these emotions and thinking about what comes after populism.
