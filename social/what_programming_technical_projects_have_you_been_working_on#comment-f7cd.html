@@ -1,0 +1,9 @@
+
+<p>The past couple days I've been playing around with cookies and I made a little cookie testing site: <a href="https://unli.xyz/cookietest.html">https://unli.xyz/cookietest.html</a></p>
+<p>And I was wondering why the <code>cookieDisplay</code> wasn't showing up in Firefox but not in Chromium and it was because of my <em>I don't care about cookies</em> addon which was hiding that <code>div</code>. So that gave me a silent chuckle and only took about 30 seconds to figure out (I renamed cookieDisplay to c: that's good enough for me).</p>
+<p>This next part is more vexing... I'm trying to use the site to check that cookies are maintained across page loads:</p>
+<pre><code>python -m library.lb text --selenium --cookies-from-browser firefox https://unli.xyz/cookietest.html?cookieValue=t https://unli.xyz/cookietest.html?cookieValue=test2 https://unli.xyz/cookietest.html?cookieValue -vv # --manual
+</code></pre>
+<p><a href="https://github.com/chapmanjacobd/library/commit/d9d2488081f6844bcbf7d565d6ad40a871213985">https://github.com/chapmanjacobd/library/commit/d9d2488081f6844bcbf7d565d6ad40a871213985</a></p>
+<p>But the site is behaving differently inside of selenium and outside--it's almost like it can't read the cookie once I set it after the first page load. It's probably something simple but the solution is eluding me for the past 45 mins... I'll take a short break.</p>
+
