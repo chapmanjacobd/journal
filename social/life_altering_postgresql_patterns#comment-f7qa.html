@@ -1,0 +1,14 @@
+
+<p>Huh... TIL. I always thought postgres views are mostly transparent to the query planner but that is not always the case:</p>
+<ul>
+<li><a href="https://dba.stackexchange.com/questions/151169/are-views-harmful-for-performance-in-postgresql">https://dba.stackexchange.com/questions/151169/are-views-harmful-for-performance-in-postgresql</a></li>
+<li><a href="https://asktom.oracle.com/ords/f?p=100:11:::::P11_QUESTION_ID:9087996409290">https://asktom.oracle.com/ords/f?p=100:11:::::P11_QUESTION_ID:9087996409290</a></li>
+</ul>
+<p><a href="https://docs.getdbt.com/docs/build/materializations">dbt</a> (a common tool in the Analytics Engineering community) often favors using views:</p>
+<blockquote>
+<p>Generally start with views for your models, and only change to another materialization when you notice performance problems.</p>
+</blockquote>
+<p>But this is mostly for OLAP workflows which run a handful of times per week where the performance difference might not matter or might not immediately be obvious.</p>
+<p>The speed difference between INT4 and UUID index lookup can be over an order of magnitude in really long and wide tables. Luckily they aren't usually that bad: <a href="https://ardentperf.com/2024/02/03/uuid-benchmark-war/">https://ardentperf.com/2024/02/03/uuid-benchmark-war/</a></p>
+<p>However, I absolutely agree that UUIDs are pretty awful, even as external IDs: they aren't great for debugging as they are hard to visually compare (you might think they are the same but your glance only compared the first and last 2 chars, etc). You can't even double-click-select them because they have dashes. And users definitely prefer smaller IDs like "BOB123"</p>
+
