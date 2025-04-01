@@ -1,0 +1,5 @@
+
+<p>It's good practice to check but a lot of applications don't because the likelihood of collisions is <a href="https://stackoverflow.com/questions/62664761/probability-of-hash-collision">almost zero</a> from a probability perspective.</p>
+<p>But I would still do it if only for mental hygiene. It helps me sleep better at night. But I rarely use UUID anyways. I would give a unique name to each database and then use a sequence generator for internal keys. Then you can use db_id + row_id as a unique internal key. The db_id could be the hardware MAC address if that is guaranteed to be unique. This solves essentially the same purpose that UUID has for distributed databases. This is a surrogate key: an artificially created key that has no inherent business meaning; a system-generated identifier, such as an auto-incrementing integer or UUID.</p>
+<p>These are in contrast to "business keys": columns which have business meaning (aka natural keys) which need to be unique then you need to use that data anyway to check uniqueness. UUID does not help here.</p>
+
