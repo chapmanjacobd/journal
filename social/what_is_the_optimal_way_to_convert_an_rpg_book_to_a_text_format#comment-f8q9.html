@@ -1,0 +1,9 @@
+
+<p>LLMs have some advantages for OCR but I still prefer using traditional tools like Tesseract.</p>
+<p>I've found <code>ocrmypdf</code> to be an easy-to-use wrapper around Tesseract and calibre's <code>ebook-convert</code> to be a reliable tool for converting between formats.</p>
+<p>I put both tools together in this tool:</p>
+<pre><code>pip install library
+library process-text --no-delete-larger my_book.pdf
+</code></pre>
+<p>This will OCR if necessary and convert to open-ebook format (which is essentially an unzipped ePub)</p>
+
