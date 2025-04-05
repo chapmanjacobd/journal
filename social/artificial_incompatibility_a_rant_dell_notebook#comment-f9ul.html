@@ -1,0 +1,5 @@
+
+<p>This might seem a bit silly but make sure you're using the right CPU governor, ie., the performance <em>Power Profile</em> under the <em>Power and Battery</em> widget. I set mine up so it switches to <code>performance</code> when plugged in but <code>powersave</code> or <code>schedutil</code> when unplugged. A convenient CLI interface into this setting is <code>cpupower frequency-info</code> / <code>cpupower frequency-set</code>.</p>
+<p>I've noticed that some laptops throttle a bit when unplugged despite any kernel or usermode settings. To get the full power some laptops even require specific power adapters--accepting only <em>some</em> of the 5A 20V-able (for example) USB-C power adapters and rejecting others.</p>
+<p>But you probably got this person's buggy laptop: <a href="https://old.reddit.com/r/Dell/comments/13tr88r/cpu_speed_drops_to_0507_ghz_on_battery_power/">https://old.reddit.com/r/Dell/comments/13tr88r/cpu_speed_drops_to_0507_ghz_on_battery_power/</a></p>
+
