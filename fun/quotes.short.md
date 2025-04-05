@@ -144,3 +144,7 @@ Jonathan Swift
 > Masters of craft are true students of genre. They understand the disparate parts and how they fit together, and--most importantly--how the parts can be broken down, shuffled around and inverted in order to create something new and exciting.
 
 ~smiles134
+
+> One way to achieve superhuman intelligence in AI is to make humans dumber.
+
+~palmotea, ~card_zero
