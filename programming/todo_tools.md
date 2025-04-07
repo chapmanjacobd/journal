@@ -1,3 +1,4 @@
+https://github.com/smacke/ffsubsync https://github.com/sc0ty/subsync
 https://github.com/theseus-rs/postgresql-embedded
 https://github.com/Mooncake-Labs/pg_mooncake
 https://github.com/DrewThomasson/ebook2audiobook
