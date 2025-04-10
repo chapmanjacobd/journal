@@ -1,0 +1,12 @@
+
+<p>Yeah my tool will skip OCR if the document already has selectable text (if the file claims to be PDF/A compliant). ocrmypdf has these options as well (and my tool passes the same flags to ocrmypdf, when provided):</p>
+<pre><code>OCR options:
+  Control how OCR is applied
+
+  -f, --force-ocr       Rasterize any text or vector objects on each page, apply OCR, and save the rastered output (this rewrites the PDF)
+  -s, --skip-text       Skip OCR on any pages that already contain text, but include the page in final output; useful for PDFs that contain a mix of images, text pages,
+                        and/or previously OCRed pages
+  --redo-ocr            Attempt to detect and remove the hidden OCR layer from files that were previously OCRed with OCRmyPDF or another program. Apply OCR to text found in
+                        raster images. Existing visible text objects will not be changed. If there is no existing OCR, OCR will be added.
+</code></pre>
+
