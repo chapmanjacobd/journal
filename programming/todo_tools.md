@@ -1,3 +1,6 @@
+https://github.com/davidpdrsn/axum-live-view
+https://github.com/ogrodnek/pyview
+https://github.com/reactive-python/reactpy
 https://github.com/tokio-rs/axum/tree/main/examples
 https://github.com/smacke/ffsubsync https://github.com/sc0ty/subsync
 https://github.com/theseus-rs/postgresql-embedded
