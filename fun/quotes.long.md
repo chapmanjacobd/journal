@@ -5,7 +5,7 @@ I don't fully agree with all of these but many of the statements are thought-pro
 >
 > springdreamno.1@gmail.com
 
-> WHAT DO YOU WANT TO BE WHEN YOU GROW UP? The first person who asked me that question was my friend David Driver. We were standing outside the door of our house in Latimer Road. We were either pre-school age or in our first or second year at school. The incident stuck in my mind because the question shocked me. It had never occurred to me before that I would grow up. I had assumed that I would always be a child, that there were parents, who had always been adults, and children who would always be children. Dave knew better; but he was ten-and-a-half months older than I, despite us being in the same class at school. Every child is asked that question from time to time. The question highlights a fundamental fact about human existence or, rather, about what it is to be a person. 
+> WHAT DO YOU WANT TO BE WHEN YOU GROW UP? The first person who asked me that question was my friend David Driver. We were standing outside the door of our house in Latimer Road. We were either pre-school age or in our first or second year at school. The incident stuck in my mind because the question shocked me. It had never occurred to me before that I would grow up. I had assumed that I would always be a child, that there were parents, who had always been adults, and children who would always be children. Dave knew better; but he was ten-and-a-half months older than I, despite us being in the same class at school. Every child is asked that question from time to time. The question highlights a fundamental fact about human existence or, rather, about what it is to be a person.
 > Each person has to discover for himself what sort of life will suit him. Other persons can make more or less informed guesses about the kind of life that will suit Danny; and Danny may be grateful for some of the suggestions. But whether or not a suggested kind of life is actually suitable for Danny can only be settled by Danny himself, and only by experience. If Danny attempts to live a kind of life but hates it or cannot make a success of it, then that kind of life is not suitable for him. Each person faces the same fundamental problem: to discover, by experimentation, who he is. Some people, it seems, never try to solve that fundamental problem. Instead they accept a description of themselves that has been foisted on them by others. They live a kind of life that they have been told is right for them. That is especially so in 'closed' societies, in which everyone conforms to inherited traditions. But even in 'open' societies, in which persons have the option of choosing for themselves which sort of life to live, there are many people who do not take that option. Either under pressure from others or due to their own timidity, they just conform to some social expectation.
 >
 > Daniel Frederick
@@ -140,3 +140,27 @@ management are constantly changing.
 > There is something fundamentally immoral to presenting a narrative that people build their entire lives upon. They decide what to do with their education, how much money to give, who to marry, when to marry, how many kids to have, what professions to pursue. There’s this massive amount of decisions that you make—in a finite life. And to base that life on a narrative—when not only the narrative isn’t what it claims to be, but when the leaders know that the narrative isn’t what it claims to be, and intentionally, for as long as they could, withheld the information that would allow people to make an informed decision about how they spend their finite time and resources—is profoundly immoral.
 >
 > John Dehlin (2017, Mormon Stories podcast episode 811)
+
+> If you hold a gun and I hold a gun, we can talk about the law.
+>
+> If you hold a knife and I hold a knife, we can talk about rules.
+>
+> If you come empty-handed and I come empty-handed, we can talk about reason.
+>
+> But if you have a gun and I only have a knife, then the truth lies in your hands.
+>
+> If you have a gun and I have nothing, what you hold isn't just a weapon, it's my life.
+>
+> The concepts of laws, rules, and morality only hold meaning when they are based on equality.
+>
+> The harsh truth of this world is that when money speaks, truth goes silent.
+>
+> And when power speaks, even money takes three steps back.
+>
+> Those who create the rules are often the first to break them. Rules are chains for the weak, tools for the strong.
+>
+> In this world, anything good must be fought for.
+>
+> The masters of the game are fiercely competing for resources while only the weak sit idly, waiting to be given a share.
+>
+> The Godfather II (1974)
