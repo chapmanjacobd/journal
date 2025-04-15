@@ -148,3 +148,7 @@ Jonathan Swift
 > One way to achieve superhuman intelligence in AI is to make humans dumber.
 
 ~palmotea, ~card_zero
+
+> If a system consistently fails at its stated purpose, but people keep it around, consider that its continuity may serve hidden purposes.
+
+Scott Alexander
