@@ -164,3 +164,10 @@ management are constantly changing.
 > The masters of the game are fiercely competing for resources while only the weak sit idly, waiting to be given a share.
 >
 > The Godfather II (1974)
+
+> If I get robbed on the Metro, I'm out a few hundred dollars for my phone and wallet. If I have a minor accident in my car, I'm lucky if the repairs are only a few hundred.
+> I'm more likely to get seriously injured or killed in a car crash than because someone shot me in the train.
+> We've collectively normalize the costs and dangers of driving, but act like riding the train is entering an active war one.
+>
+> UF0_T0FU
+
