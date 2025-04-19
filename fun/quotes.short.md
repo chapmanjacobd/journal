@@ -152,3 +152,7 @@ Jonathan Swift
 > If a system consistently fails at its stated purpose, but people keep it around, consider that its continuity may serve hidden purposes.
 
 Scott Alexander
+
+> "What have you been thinking about lately?" as a useful icebreaker question
+
+~aaronsw, http://www.aaronsw.com/weblog/smalltalkq
