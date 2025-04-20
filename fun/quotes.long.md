@@ -171,3 +171,10 @@ management are constantly changing.
 >
 > UF0_T0FU
 
+> All creation is defiance, what came before was created, you must defy it to make something new, and then you must defy yourself to make something new again.
+> New does not always mean better, sometimes old things remind us that there was a different path, and there still can be again.
+> Perfection is a flaw, consistency is a limitation and professionalism is a disaster. Everything should be an adventure and adventures start where the cracks in normality begin.
+> Use your tools to make things, don't make things about your tools. Technology and the end result are in a dance, one can never lead the other too long.
+> All the best things start as jokes and anything worth saying is worth taking a long time to say.
+>
+> https://melonking.net/melon?z=/thoughts/manifesto
