@@ -169,7 +169,7 @@ management are constantly changing.
 > I'm more likely to get seriously injured or killed in a car crash than because someone shot me in the train.
 > We've collectively normalize the costs and dangers of driving, but act like riding the train is entering an active war one.
 >
-> UF0_T0FU
+> ~UF0_T0FU
 
 > All creation is defiance, what came before was created, you must defy it to make something new, and then you must defy yourself to make something new again.
 > New does not always mean better, sometimes old things remind us that there was a different path, and there still can be again.
@@ -178,3 +178,9 @@ management are constantly changing.
 > All the best things start as jokes and anything worth saying is worth taking a long time to say.
 >
 > https://melonking.net/melon?z=/thoughts/manifesto
+
+> Don’t take criticism from someone you wouldn’t go to for advice.
+>
+> Criticism from people you’d trust is super valuable. But you can cut off the mental swirl and anxiety by considering the source. If you wouldn’t seek a person out for advice, why should you trust negative remarks from them?
+>
+> ~heymerideth
