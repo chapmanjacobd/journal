@@ -156,3 +156,7 @@ Scott Alexander
 > "What have you been thinking about lately?" as a useful icebreaker question
 
 ~aaronsw, http://www.aaronsw.com/weblog/smalltalkq
+
+> America is a super cheap country, until you have to bid against another American or buy their labor
+
+~BxM11's friend
