@@ -1,0 +1,6 @@
+
+<p>I use <a href="https://github.com/sharkdp/numbat?tab=readme-ov-file">numbat</a> pretty frequently. It's kinda like a scripting version of <a href="https://qalculate.github.io/">Qalculate</a>. Here are two interesting features which are pretty unique:</p>
+<p>The whole system of physical dimensions and units is specified Numbat's standard library, which is written in the <a href="https://numbat.dev/doc/example-numbat_syntax.html">Numbat language</a> itself. It is therefore easily extensible by providing a init.nbt file. For example, a single line (<code>unit bathtub = 150 L</code>) is usually enough to add a new unit.</p>
+<p>With its static type system, Numbat already enforces correctness of your calculations on a physical dimension level. But some checks can only be made at runtime. Numbat provides an assert_eq procedure that allows you to check for exact equality using <code>assert_eq(12 ft, 1 in)</code> or approximate equality using <code>assert_eq(c, 300_000 km/s, 1% × c)</code>. This can be useful to make sure that intermediate results do not change during a restructuring of your calculation.</p>
+<p><a href="https://numbat.dev/doc/example-xkcd_2812.html">https://numbat.dev/doc/example-xkcd_2812.html</a></p>
+
