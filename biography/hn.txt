@@ -1,0 +1,6 @@
+    Location: Macomb, IL, United States
+    Remote: yes, or hybrid
+    Willing to relocate: Willing to discuss relocation
+    Technologies: Python (incl. argparse, scripting, web frameworks like Django/Flask/FastAPI), SQL, Rust, Go, Bash, Cloud Platforms (AWS, GCP, Azure), Pulumi, Terraform, Docker, Ansible, CI/CD (GitLab CI, Jenkins), Machine Learning/AI (TensorFlow, PyTorch, Scikit-learn, Hugging Face Transformers, Keras, NLTK, SpaCy, OpenCV), Data Science (NumPy, Pandas), Databases (PostgreSQL, BigQuery, Redis), Linux, Git, JavaScript (Vue, Node.js)
+    Résumé/CV: https://unli.xyz/resume.pdf
+    Email: chapmanjacobd [at] gmail
