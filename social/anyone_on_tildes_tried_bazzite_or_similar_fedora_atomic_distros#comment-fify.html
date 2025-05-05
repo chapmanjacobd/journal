@@ -1,0 +1,16 @@
+
+<p>For immutable distros there <a href="https://universal-blue.discourse.group/t/stable-atomic-variants-like-debian-centos-stream-almalinux-rockylinux/784">aren't many Debian options</a> actually... but maybe just using Debian and pretending it is immutable (eg. using Flatpak to install most things) is ideal</p>
+<p>It seems like most of the immutable development work is being done on the Fedora/Red Hat side. A big motivating factor for them is making Podman work on bare metal so it turns into a universal tool. The bits and pieces are all there with <code>bootc</code> and <code>dnf5</code> but there's a lot of redundant moving parts and I think it will take a year or two before everything is working and the current ostree immutable standard is made obsolete.</p>
+<p>There's some interesting discussion here:</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=37551474">https://news.ycombinator.com/item?id=37551474</a></li>
+<li><a href="https://old.reddit.com/r/linux/comments/15fanvv/start_recommending_immutable_operating_systems_to/">https://old.reddit.com/r/linux/comments/15fanvv/start_recommending_immutable_operating_systems_to/</a></li>
+</ul>
+<p>I use immutable distros on a couple machines. For the most part there isn't a big difference.</p>
+<p>I haven't had it save my butt yet--and it makes troubleshooting some OS problems a bit more painful. The most frequent annoyance early on is when you need to install a system tool--you can use <code>rpm-ostree install --apply-live X</code> (or <code>rpm-ostree apply-live</code> after installing) so you don't need to reboot immediately to gain access to the new program--but it still adds A LOT of overhead to what might be a very minimal install... like taking 200 seconds instead of 5.</p>
+<p>But I think they can be good if you want to force yourself to use more isolation like docker, toolbx, distrobox, <a href="https://docs.flatpak.org/en/latest/under-the-hood.html">Flatpak</a>, etc. It can help you to change the way you think about installing software... but not all in a good way.</p>
+<details><summary>Aside about isolation: </summary>
+Personally, as a user, I don't really like Flatpak that much. It makes things more complicated with dubious security and packaging benefits. It's nice to be able to run untrusted code. The browser JavaScript engines are the only ones that do this well but they are pretty much locked out of filesystem and hardware use. The Android permissions APIs are kind of a mess but I feel like the Android 11+ storage API strategy of app-specific and restricted shared storage is a nice UX pattern... but it's still imperfect...
+</details>
+<p>For users who mostly browse the web and use office software I think immutable distros can work well. It makes it harder to make permanent changes as the system is mounted as read-only. It's definitely possible to end up with a broken system even with immutable distros but with something like greenboot it should automatically rollback to the previous working state.</p>
+
