@@ -1,0 +1,12 @@
+
+<blockquote>
+<p>TRIM should be enabled automatically</p>
+</blockquote>
+<p>And if it isn't enabled, you should be able to enable it in one command:</p>
+<pre><code>sudo systemctl enable --now fstrim.timer
+</code></pre>
+<p>which will likely run something similar to this command every 10 days or so:</p>
+<pre><code>/usr/sbin/fstrim --listed-in /etc/fstab:/proc/self/mountinfo --verbose --quiet-unsupported
+</code></pre>
+<p>But it should be also noted that unless you are using a very old 3rd-party defragmentation program on Windows, they won't attempt to defragment disks. The built-in defrag program + Windows Scheduler will run TRIM. It will never defrag a non-spinning disk.</p>
+
