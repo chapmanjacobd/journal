@@ -1,0 +1,25 @@
+
+<p>Here's an example. Let's pretend we have this line in <code>/etc/fstab</code></p>
+<pre><code>user@backup:   /net/backup    fuse.sshfs  _netdev,nodev,nosuid,noatime,follow_symlinks,dirsync,ServerAliveInterval=10,reconnect,direct_io,delay_connect 0 0
+</code></pre>
+<p>The one tricky part is that the name of the mount unit has to be the same as the mount point--</p>
+<p>eg. /net/backup becomes net-backup.mount</p>
+<pre><code>$ cat .config/systemd/user/net-backup.mount
+[Unit]
+Description=SSHFS backup
+After=network-online.target
+Before=remote-fs.target
+
+[Mount]
+What=user@backup:
+Where=/net/backup
+Type=fuse.sshfs
+Options=_netdev,nodev,nosuid,noatime,follow_symlinks,dirsync,ServerAliveInterval=10,reconnect,direct_io,delay_connect
+
+[Install]
+WantedBy=default.target
+</code></pre>
+<p>Then you "install" it by doing this--same syntax as normal systemd service units:</p>
+<pre><code>systemctl --user enable --now net-backup.mount
+</code></pre>
+
