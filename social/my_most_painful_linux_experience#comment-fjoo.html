@@ -1,0 +1,10 @@
+
+<blockquote>
+<p>although it seems pretty insane that what I was doing can break everything to the level it does</p>
+</blockquote>
+<p>Yeah, the <code>fstab</code> can do that. <code>systemd</code> mounts makes things a bit less chaotic. But you can also add <code>nofail,x-systemd.automount,x-systemd.device-timeout=30</code> to an fstab mount's options to essentially do the same thing that systemd mounts do</p>
+<blockquote>
+<p>If I was lucky Plasma would reboot the whole desktop, if I was unlucky everything was completely frozen with mouse and keyboard doing nothing at all</p>
+</blockquote>
+<p>I've been saved by <code>ssh</code> in a lot of these cases. It might take a few hours to figure out how to <code>ssh</code> from your phone but it's definitely worth it! Tailscale makes the networking easy so you can ssh from across the room or across the world (if you don't want to be beholden to the company, there is also the OSS Headscale but it requires quite a bit more setup).</p>
+
