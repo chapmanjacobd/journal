@@ -1,3 +1,4 @@
+https://github.com/scylladb/scylladb
 https://github.com/cline/cline
 https://github.com/davidpdrsn/axum-live-view
 https://github.com/ogrodnek/pyview
