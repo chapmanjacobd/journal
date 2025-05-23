@@ -160,3 +160,8 @@ Scott Alexander
 > America is a super cheap country, until you have to bid against another American or buy their labor
 
 ~BxM11's friend
+
+> The present is all that there is; how you respond to it is all you can do.
+
+https://blog.uvm.edu/aivakhiv/2021/10/20/being-present-while-screaming/
+
