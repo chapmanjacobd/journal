@@ -1,0 +1,30 @@
+
+<p>I sync my home folder with git (between many machines) and syncthing (between two machines). Syncthing might work well for you because it has automatic conflict resolution and backs up what would be "lost" under git (hidden behind automatic merge conflict resolution) as a <code>*.sync-conflict.*</code> file which may be easier for you to recover.</p>
+<p>Here is something I run frequently:</p>
+<pre><code>ssh pc -t tmux new-session -A -s phone "'fish -c clean_home; exec fish'"
+</code></pre>
+<p>The <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/clean_home.fish">clean_home</a> function syncs git automatically by doing something like this:</p>
+<pre><code>git add . &amp;&amp; git pull &amp;&amp; git reset
+</code></pre>
+<p>Using this technique of staging changes, pulling, and resetting the stage eliminates a lot of handholding that git wants when it sees incoming changes modifying an unstaged file.</p>
+<p>Related files which may be important:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.gitconfig">.gitconfig</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/syncpcs.fish">syncpcs</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/wip.fish">wip</a></li>
+</ul>
+<hr/>
+<p>Here is how I use git in a "centralized" sync context (similar to rsync--though bidirectional sync works unhindered... it's just controlled by the client).</p>
+<p>It's useful for if you want to push commits directly to a web server or something like that. I don't know if it's exactly what you want but reading your title reminded me of it and some of your words make me think this might be helpful:</p>
+<p>On the "server"</p>
+<pre><code>git config receive.denyCurrentBranch updateInstead
+</code></pre>
+<p>On the "client"</p>
+<pre><code>git remote remove origin
+set user (id -un)
+git remote add server ssh://$user@unli.xyz/home/$user/github/(path basename (pwd))/
+git branch --set-upstream-to=server/main main
+git fetch
+</code></pre>
+<p>But if you work with multiple people this type of configuration <em>will</em> lead to merge conflicts on the server HEAD which is why bare repos are used for collaborative contexts 99% of the time</p>
+
