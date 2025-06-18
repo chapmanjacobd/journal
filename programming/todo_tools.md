@@ -1,3 +1,4 @@
+https://github.com/tareksander/termux-gui-python-bindings/tree/main/tutorial https://github.com/tareksander/termux-gui-python-bindings/blob/main/TUTORIAL.md
 https://github.com/scylladb/scylladb
 https://github.com/cline/cline
 https://github.com/davidpdrsn/axum-live-view
