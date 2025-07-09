@@ -1,3 +1,7 @@
+https://github.com/zhxie/mpv-config/blob/77177b697c1c19d754a2e55f9b5fc70e91fc31ca/scripts/playlistmanager.lua
+https://github.com/zhxie/mpv-config/blob/77177b697c1c19d754a2e55f9b5fc70e91fc31ca/scripts/quick-scale.lua
+https://raw.githubusercontent.com/zhxie/mpv-config/77177b697c1c19d754a2e55f9b5fc70e91fc31ca/scripts/zones.lua
+https://sr.ht/~exec64/imv/
 https://github.com/ib-api-reloaded/ib_async
 https://tailscale.com/blog/private-connections-for-github-actions
 https://github.com/tareksander/termux-gui-python-bindings/tree/main/tutorial https://github.com/tareksander/termux-gui-python-bindings/blob/main/TUTORIAL.md
