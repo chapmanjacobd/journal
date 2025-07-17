@@ -1,0 +1,6 @@
+
+<blockquote>
+<p>or should I have one role that handles all the hardening</p>
+</blockquote>
+<p>I think you could group by dependency like <code>debian-hardening</code> and include the debian specific unattended-updates, etc. Then another one for <code>systemd-hardening</code>, <code>mountpoints</code>, <code>network</code>, and then any application specific roles should be their own thing</p>
+
