@@ -1,0 +1,10 @@
+
+<p>I made a small fish shell function <a href="https://github.com/chapmanjacobd/computer/commit/c5556817ac9c00d728ad7dfec8b863d7fdd97e7a">yesterday</a> which I'd like to share:</p>
+<pre><code>function abbr_random_line -a name -a path
+    eval "function __abbr_random_line_$name; shuf -n1 $path; end"
+    abbr --add "$name" --function __abbr_random_line_$name
+end
+</code></pre>
+<p>This allows me to put a text file somewhere filled with interesting commands to run. Then I can type a short command and it will substitute the commandline with one of the lines from that file.</p>
+<p>For example, I have <code>abbr_random_line wt ~/watch</code> in my fish config. When I type <code>wt</code> and press space it will expand to a random line from the <code>~/watch</code> file.</p>
+
