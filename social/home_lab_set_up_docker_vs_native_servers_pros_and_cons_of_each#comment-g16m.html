@@ -1,0 +1,8 @@
+
+<p>It's <a href="https://stackoverflow.com/a/78928272/697964">possible</a> but <a href="https://docs.docker.com/engine/containers/multi-service_container/">heavily discouraged</a> to run multiple processes in the same docker container.</p>
+<blockquote>
+<p>It's best practice to separate areas of concern by using one service per container. That service may fork into multiple processes (for example, Apache web server starts multiple worker processes). It's ok to have multiple processes, but to get the most benefit out of Docker, avoid one container being responsible for multiple aspects of your overall application. You can connect multiple containers using user-defined networks and shared volumes.</p>
+</blockquote>
+<p>Instead of container == VPS, I would say container == service.</p>
+<p>Maybe those are similar to you but I treat long-living VPSs a lot differently than I treat cloud VMs (even though they are essentially the same thing--I would put all my services on the same VPS but with clouds like AWS/GCP I usually keep services more isolated from each other)</p>
+
