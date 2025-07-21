@@ -1,0 +1,13 @@
+
+<p>One thing that might help is <a href="https://docs.docker.com/compose/intro/features-uses/">docker compose</a>. You <a href="https://docs.docker.com/compose/gettingstarted/">define all your services</a> and start/stop them at the same time.</p>
+<p>It's a lot easier than typing in long docker commands manually. Another thing that might help is <a href="https://github.com/louislam/dockge">Dockge</a> or <a href="https://github.com/ngxson/portainer-ce-without-annoying">Portainer</a> which are GUIs for docker</p>
+<blockquote>
+<p>Nextcloud; there absolutely are nginx setup guidelines and tutorials and such, but that's all unofficial, experimental setups</p>
+</blockquote>
+<p>I would try to keep apps like this isolated as much as possible. From a webdev perspective nginx has a lot more modern and sane configuration. I would run Nextcloud in docker with the recommended software (Apache if so) and do a <a href="https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/">reverse proxy</a> with nginx, if necessary. Same with Synapse.</p>
+<blockquote>
+<p>Pros and cons of each?</p>
+</blockquote>
+<p>If you're going through the trouble of documenting all the setup commands in VCS (which you should do regardless) it's honestly not that much more work to deal with mountpoints (or docker volumes) and container networking. The main benefit is that it feels a lot more automated and it can be a bit more secure (though if you use SELinux there might be some additional head-scratching every now and then [even with podman instead of docker]).</p>
+<p>Running stuff natively, without docker, can be a bit easier (when things don't have authoritative docker images already). Things also run a <em>little</em> bit faster. If you are running a load balancer which is moving a lot of traffic I would keep that as its own machine (and also outside of docker). But with real-world application scenarios where you only have tens or hundreds of concurrent visitors per minute you're not going to notice the performance difference much.</p>
+
