@@ -1,0 +1,8 @@
+
+<blockquote>
+<p>if it relying on exploits to gain higher privileges</p>
+</blockquote>
+<p>Wine runs in admin mode by default. There's no meaningful concept of user mode. But that doesn't mean that all the hardware interfaces that the malware expects will be there.</p>
+<p>It's not <em>too</em> unlikely that there are at least a few viruses which target wine specifically due to the higher likelihood that someone who uses Linux will have access to other privileged machine(s). The malware could allow for a C&amp;C attack where someone else is pivoting through the network from Wine.</p>
+<p>And just because the EXE looks old doesn't really guarantee anything... I would imagine that it is pretty trivial to write an unsigned program that launches another program without needing to recompile the original program. Like modifying the PE Header and then add your code to the end of the EXE and after the malware code is done starting itself it returns to the start of the actual game code. It's easy to change the modified date of files, zip it up, and pretend it is from 20 years ago WinZip. This could all be automated.</p>
+
