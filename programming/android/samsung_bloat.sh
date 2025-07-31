@@ -1,6 +1,6 @@
 pm disable-user --user 0 com.samsung.android.game.gametools
 pm disable-user --user 0 com.samsung.sdm
-pm disable-user --user 0 com.sec.android.soagent
+# pm disable-user --user 0 com.sec.android.soagent  # disables updates
 pm disable-user --user 0 com.wssyncmldm
 pm uninstall -k --user 0 android.autoinstalls.config.samsung
 pm uninstall -k --user 0 com.android.dreams.phototable
