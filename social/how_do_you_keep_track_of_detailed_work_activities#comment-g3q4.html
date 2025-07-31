@@ -1,0 +1,11 @@
+
+<blockquote>
+<p>they are actually executed from is outside of my git repo and occasionally modified by others</p>
+</blockquote>
+<p>It sounds like if you had some way to synchronize their changes with git, you could have better visibility and control of rolling back changes(?)</p>
+<blockquote>
+<p>I'm generally stuck in the box of no-code platforms--this platform does not support viewing prior versions of the different components, so there's really no way to compare.</p>
+</blockquote>
+<p>I wonder if you could export as XML or something? Even binary files can sometimes be <a href="https://git-scm.com/docs/gitattributes#_performing_text_diffs_of_binary_files">transformed into a textual representation</a>... or even ask an image model to rewrite a diagram screenshot as text and then replace a text file with the output to compare changes over time in git. There might be some hallucination but I'm guessing it would be better than nothing.</p>
+<p>It can be weird too like... if your environment that is represented by the no code tool is actually a buncha machines, you could create a file for each machine and print out a few lines of basic information. Or if it is data--could you have sample data for each pipeline and save a few lines of output for each stage as their own files?</p>
+

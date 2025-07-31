@@ -1,0 +1,19 @@
+
+<p>I'm sure it is possible... <em>somehow</em> .... but it does sound like a headache and I empathize.</p>
+<blockquote>
+<p>Everything it produces is browser-based</p>
+</blockquote>
+<p>It sounds like you might be able to write a userscript to pull out some information from the webapp but it sounds like your problem is <em>beyond technology</em>. Maybe you could institute <a href="https://en.wikipedia.org/wiki/Change_management_(ITSM)">change controls</a> if you can convince management</p>
+<blockquote>
+<p>the platform's internal sql database</p>
+</blockquote>
+<p>If it's useful to copy the metadata database into git, you can use SQLite to visualize changes. It's not perfect but works in a pinch and probably better than you might think:</p>
+<pre><code>$ tee -a .gitattributes
+*.db       diff=sqlite3
+
+$ tee -a .git/config
+[diff "sqlite3"]
+    binary = true
+    textconv = "echo .dump | sqlite3"
+</code></pre>
+
