@@ -16,4 +16,5 @@ $ tee -a .git/config
     binary = true
     textconv = "echo .dump | sqlite3"
 </code></pre>
+<p>Though... if you have a way of dumping the metadata to sqlite, surely dumping it to CSV, or something more human-readable would also be possible and that will likely be better. You don't need to write any append or sync code--git handles that all that state for you--just obliterate the existing fstree each time</p>
 
