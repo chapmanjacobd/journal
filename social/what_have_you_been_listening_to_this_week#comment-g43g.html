@@ -1,0 +1,7 @@
+
+<p>I've been listening to <a href="https://mobygratis.com/">mobygratis</a>. It's a site where the artist Moby released for use in non-commercial work (under a well-intentioned but somewhat dubious license) 500 tracks of background music, incl. some that have multitrack.</p>
+<p>Add all to queue bookmarklet:</p>
+<pre><code>javascript:(function(){'use strict';function clickAllAddToQueueButtons(){const buttons=document.querySelectorAll('[title="add track to queue"]');let clickedCount=0;buttons.forEach(button=&gt;{if(button.offsetParent!==null&amp;&amp;!button.disabled&amp;&amp;!button.classList.contains('clicked')){try{button.click();button.classList.add('clicked');clickedCount++;}catch(e){}}});}clickAllAddToQueueButtons();})();
+</code></pre>
+<p>It's a mixed bag. I like that sorting by BPM is an option. Most of the weird (BPM not filled in) tracks are nice</p>
+
