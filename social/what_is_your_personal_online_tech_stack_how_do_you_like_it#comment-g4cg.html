@@ -1,0 +1,27 @@
+
+<p>Most of the big time sinks are consequences of my being cheap, experimenting, and/or running out of free space. Eg. buying <a href="https://news.ycombinator.com/item?id=26885390">HM-SMR drives</a>, moving from mdadm to raid10 btrfs, moving from raid10 btrfs to mergerfs, etc.</p>
+<p>The HM-SMR drives are rearing their ugly heads (pun?) again. They've been in read-only mode the past couple weeks... (edit: actually writing this out helped me to think to <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/btrfs_temp_device_add.fish">reuse this script</a> I wrote earlier for a different Btrfs problem--now I only have one read-only drive! woo-hoo!)</p>
+<p>With zoned devices like HM-SMR you have three options: Btrfs, f2fs, or writing your own low-level application instead of using a file system. If you can help it, don't buy HM-SMR. I bought it accidentally--but it was really cheap.</p>
+<p>Btrfs has been a blessing but also a big time sink of my life. I'm using more ext4 now for data that can be easily checked/re-downloaded. Silent data corruption is very real, and it <a href="https://en.wikipedia.org/wiki/Hard_disk_drive_failure#Modes_of_failure">happens more frequently than total failure</a>, but for video files a bit rot or two doesn't matter that much.</p>
+<hr/>
+<blockquote>
+<p>spend on maintaining and updating all of this on weekly or monthly basis</p>
+</blockquote>
+<p>Maintaining the <em>library</em> code doesn't take very long. If I get an idea then I'll spend a couple hours on it. Ideally, writing the code takes less time than doing manually what the code would be doing--that is usually the case. I'm great at early exiting (giving up early) or trying a different strategy completely if things don't seem like they will work. I use git to synchronize between computers so that is a big reason why I don't wait long before pushing up changes.</p>
+<blockquote>
+<p>how long did it take to get into what you consider a workable state</p>
+</blockquote>
+<p>It started out slowly--it looks completely different today than it did 4 years ago! I think the initial version took only 5 or 6 hours on a weekend before I had something working that I could iterate on in my free time. I never set out to make "99+ utilities" from the get-go. It just built up incrementally over time.</p>
+<p>Before I created the repo, I wasn't really satisfied with existing audio players. I wanted <a href="https://gist.github.com/chapmanjacobd/4b07d0f64b64ac6fa70056aa44ec02a7">something that could play music and not be distracting</a>. That is really the proto-inspiration for making it. I just got creative with it and had fun writing down ideas as they came to me for how it could be better.</p>
+<blockquote>
+<p>May I also ask what sort of data you are juggling around?</p>
+</blockquote>
+<p>Mostly it is video, audio. A lot of it is from YouTube. When I encounter an interesting video and try to download it--increasingly often it's already downloaded. yt-dlp's --download-archive prevents me from downloading it again. Then I just use plocate to see which computer it is on and rsync it over. The reason why it's already downloaded is because I basically downloaded all of <a href="https://github.com/chapmanjacobd/reddit_mining">reddit</a> (anything with +7 upvotes for the subreddits that I cared about) and <a href="https://github.com/chapmanjacobd/hn_mining">hackernews</a> external content.</p>
+<p>edit:</p>
+<blockquote>
+<p>re: Japanese rock garden, peace of mind / satisfaction</p>
+</blockquote>
+<p>hmm... I would say the programming aspect certainly does. Programming can be very relaxing and therapeutic. That part does give me satisfaction.</p>
+<p>There have been times when it felt like nothing is working and everything is broken--though that doesn't happen often now--I think writing all the integration tests definitely helped.</p>
+<p>When I wrote "Japanese rock garden" I was mostly referring to the big time sink of managing so many disks. But I guess from the peace of mind perspective the programming part fits better. I never liked monotonous work though... so maybe the managing of a rock garden analogy still fits the 37 hard drives aspect.</p>
+
