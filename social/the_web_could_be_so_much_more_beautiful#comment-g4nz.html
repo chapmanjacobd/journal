@@ -1,0 +1,22 @@
+
+<blockquote>
+<p>also genuinely I don't know where to</p>
+</blockquote>
+<p>oh! I can help with this. So if you right-click anywhere and see "Inspect" then it will pop up a big scary box and then you can click the "+" button [hover-text "Add new rule"] on the right-hand side it will let you add a custom CSS rule to the current page.</p>
+<p>When you click "+" it will open a textfield in that same area. You can replace the text that it says with "p" then press tab and paste in <code>text-align: justify;hyphens: auto;</code> and you should be good to go.</p>
+<p>Note you could also target <code>*</code> instead of <code>p</code> to change all elements to <code>text-align: justify;</code>. There isn't a big difference (aside from wasteful compute). But <code>p</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p">most common text block</a> in HTML.</p>
+<p>If you want this to be a permanent rule you could install something like the Stylus addon and add a global style which would look like this:</p>
+<pre><code>/* ==UserStyle==
+@name         Justify Text Globally
+@namespace    github.com/openstyles/stylus
+@version      1.0.0
+@description  Applies justified text alignment and automatic hyphenation to all websites.
+@author       casper
+==/UserStyle== */
+
+* {
+  text-align: justify !important;
+  hyphens: auto !important;
+}
+</code></pre>
+
