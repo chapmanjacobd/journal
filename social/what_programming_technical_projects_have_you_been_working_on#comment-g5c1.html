@@ -1,0 +1,18 @@
+
+<p>I wrote a small script that writes git commit messages for me instead of "wip". I don't use <em>wip</em> commits <em>all</em> the time but I will use them when it's mostly churn. It's a bad habit I know but no one is paying me so I don't bother with fixing myself.</p>
+<p>Git commit messages should primarily be a record of your state of mind and why you are making the change. But sometimes my state of mind is just "bleh" and that's not very useful to write down. Previously I was using <a href="https://github.com/nikitavoloboev/gitupdate">gitupdate</a> but the code is not doing much as you can see so I figured I could take a better stab at it: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/wip_message.py">bin/wip_message.py</a></p>
+<p>I think the most interesting part is this:</p>
+<pre><code>def track_moved(added_lines: list[str], removed_lines: list[str]):
+    added = list(added_lines)
+    removed = list(removed_lines)
+    moved = []    
+    for line in list(added_lines):
+        if line in removed:
+            added.remove(line)
+            removed.remove(line)
+            moved.append(line)
+
+    return added, removed, moved
+</code></pre>
+<p>Which is a pretty simple way to calculate moved lines. It's kind of pretty isn't it? I'm sure Git uses a slightly more complicated way to <a href="https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---color-movedmode">calculate moved lines</a> but it is surprisingly easy to do it yourself!</p>
+
