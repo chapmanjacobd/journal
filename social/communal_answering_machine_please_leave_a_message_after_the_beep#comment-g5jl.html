@@ -1,0 +1,120 @@
+
+<p>There's three components to my setup:</p>
+<ol>
+<li>
+<p>When I find a list of interesting links I save them to a links database:</p>
+<p>$ <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/cb">cb</a> | <a href="https://github.com/chapmanjacobd/library?tab=readme-ov-file#links-add">library links-add</a> ~/mc/links.db --skip-extract -</p>
+</li>
+</ol>
+<p>This isn't anything special but the command will let me know how many links were new or previously saved which is useful when the <em>Copy All Links</em> Firefox extension doesn't work so I know I need to try copying the links again, etc.</p>
+<p>If links have useful description as their link text. I'll do something like this to capture that as well:</p>
+<pre><code>$ library linksdb ~/mc/tv.db --local-html (cb -t text/html | psub)
+</code></pre>
+<p>Right now I have 110,672 links... which will take me 34 years, 16 days and 8 hours to get through at my current rate. But that number keeps growing so... probably won't ever read some of these.</p>
+<ol start="2">
+<li><a href="https://github.com/chapmanjacobd/library?tab=readme-ov-file#regex-sort">Regex-sort</a>. This is a bit technical but I feel like it is a big reason why I'm able to find very long-tail things. Having the additional metadata like page title helps here as that is fed in as additional text.</li>
+</ol>
+<p>Basically it is a text processor where all the words in each line (or dict values in the case of links) are enriched (eg. compared to the corpus as a whole, etc)/sorted within the line before sorting all the lines.</p>
+<details>
+<summary>details</summary>
+<pre><code>library regex-sort -h
+
+usage: library regex-sort [input_path | stdin] [output_path | stdout]
+
+    regex-sort is effectively a text-processing pipeline with the following steps:
+
+    line_splitter -- split lines into "words" (--regex)
+    word_sorter -- sort words within each line (--word-sort)
+    line_sorter -- sort lines (--line-sort)
+
+    Examples:
+
+        If your data has a lot of repeating rows it will help to sort by dup count:
+            --line-sort dup,natsort
+
+        You can use any matching regex to produce sorting words:
+            --regex \b\w\w+\b  # word boundaries (default)
+            --regex \b\d+\b    # digits
+            --regex '.{3}'     # char counts
+
+            --regex '.{3}' --line-sort dup,natsort -v
+            (0, ((' Ja',), ('Sva',), ('aye',), ('lba',), ('n M',), ('rd ',)))  # Svalbard and Jan Mayen
+            (0, ((' La',), ('Sri',), ('nka',)))  # Sri Lanka
+            (0, ((' Ma',), ('San',), ('rin',)))  # San Marino
+            (0, ((' Ri',), ('Pue',), ('rto',)))  # Puerto Rico
+            (0, (('And',), ('orr',)))  # Andorra
+            (0, (('Arm',), ('eni',)))  # Armenia
+
+        You can use 'mcda' as a strategy for ranking multiple sort score criteria:
+            --word-sorts '-dup, mcda, count, -len, -lastindex, alpha' \\  # count, -len, -lastindex, alpha are weighted by entropy
+            --line-sorts '-allunique, alpha, mcda, alldup, dupmode, line'  # alldup, dupmode, line are weighted by entropy
+
+...
+
+Regex-sort options:
+  --regexs (-re)         Default eliminates common URL chars like `-,_.` and use word breaks to build words
+    STRING
+  --word-sorts (-wu)            Specify the word sorting strategy to use within each line
+    STRING
+                                Choose ONE OR MORE of the following options:
+                                  skip       skip word sorting
+                                  len        length of word
+                                  unique     word is a unique in corpus (boolean)
+                                  dup        word is a duplicate in corpus (boolean)
+                                  count      count of same word in corpus
+                                  linecount  count of same word in line
+                                  index      index of word in line (first occurrence)
+                                  lastindex  index of word in line (last occurrence)
+                                  alpha      python alphabetic sorting
+
+                                  natural    natsort default sorting (numbers as integers)
+                                  signed     natsort signed numbers sorting (for negative numbers)
+                                  path       natsort path sorting
+                                (https://natsort.readthedocs.io/en/stable/api.html#the-ns-enum)
+                                  locale     natsort system locale sorting
+                                  os         natsort OS File Explorer sorting. To improve non-alphanumeric sorting
+                                on Mac OS X and Linux it is necessary to install pyicu (perhaps via python3-icu --
+                                https://gitlab.pyicu.org/main/pyicu#installing-pyicu)
+
+                                  mcda       all line_sort arguments after "mcda" will be consumed by MCDA and
+                                sorted by equal-weight
+
+                                (default: -dup, count, -len, -lastindex, alpha)
+  --line-sorts (-lu)            Specify the line sorting strategy to use on the text-processed words (after regex,
+    STRING                      word-sort, etc)
+
+                                Choose ONE OR MORE of the following options:
+                                  skip       skip line sorting
+                                  line       the original line (python alphabetic sorting)
+                                  len        length of line
+                                  count      count of words in line
+
+                                  dup        count of duplicate in corpus words (sum of boolean)
+                                  unique     count of unique in corpus words (sum of boolean)
+                                  alldup     all line-words are duplicate in corpus words (boolean)
+                                  allunique  all line-words are unique in corpus words (boolean)
+
+                                  sum        count of all uses of line-words (within corpus)
+                                  dupmax     highest line-word corpus usage
+                                  dupmin     lowest line-word corpus usage
+                                  dupavg     average line-word corpus usage
+                                  dupmedian  median line-word corpus usage
+                                  dupmode    mode (most repeated value) line-word corpus usage
+
+                                  alpha    python alphabetic sorting
+                                  natural  natsort default sorting (numbers as integers)
+                                  ...      the other natsort options specified in --word-sort are also allowed
+
+                                  mcda       all line_sort arguments after "mcda" will be consumed by MCDA and
+                                sorted by equal-weight
+
+                                 (default: -allunique, alpha, alldup, dupmode, line)
+</code></pre>
+</details>
+<ol start="3">
+<li>
+<p>Every day I will open at least 7. If I see anything worth discussing or sharing I'll post it here :)</p>
+<p>$ library openlinks -w 'play_count=0' --regex-sort --max-same-domain 2 --browser ~/mc/links.db</p>
+</li>
+</ol>
+
