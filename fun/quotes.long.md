@@ -184,3 +184,13 @@ management are constantly changing.
 > Criticism from people you’d trust is super valuable. But you can cut off the mental swirl and anxiety by considering the source. If you wouldn’t seek a person out for advice, why should you trust negative remarks from them?
 >
 > ~heymerideth
+
+> Jessica Taylor, an AI researcher who knew both Zizians and participants in Leverage Research, put it bluntly. “There’s this belief [among rationalists],” she said, “that society has these really bad behaviors, like developing self-improving AI, or that mainstream epistemology is really bad–not just religion, but also normal ‘trust-the-experts’ science. That can lead to the idea that we should figure it out ourselves. And what can show up is that some people aren't actually smart enough to form very good conclusions once they start thinking for themselves.”
+> 
+> One way that thinking for yourself goes wrong is that you realize your society is wrong about something, don’t realize that you can’t outperform it, and wind up even wronger. But another potential failure is that, knowing both that your society is wrong and that you can’t do better, you start looking for someone even more right. Paradoxically, the desire to ignore the experts can make rationalists more vulnerable to a charismatic leader.
+> 
+> Or, as Jessica Taylor said, “They do outsource their thinking to others, but not to the typical authorities.”
+> 
+> In and of itself, that dynamic is bad but not necessarily seriously so. Many effective altruists–members of a community closely linked to the rationality community–similarly defer to more experienced effective altruists. While effective altruists have widely critiqued this habit, it results only in poorly thought out viewpoints about charity evaluation, not in violent crime. But bad actors can easily take advantage of the desire to find someone to think for you. If you’re using neither the normal error-checking processes of society nor your own mind, how can you tell if someone is wrong?
+>
+> https://asteriskmag.com/issues/11/why-are-there-so-many-rationalist-cults
