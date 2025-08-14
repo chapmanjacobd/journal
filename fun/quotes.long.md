@@ -194,3 +194,7 @@ management are constantly changing.
 > In and of itself, that dynamic is bad but not necessarily seriously so. Many effective altruists–members of a community closely linked to the rationality community–similarly defer to more experienced effective altruists. While effective altruists have widely critiqued this habit, it results only in poorly thought out viewpoints about charity evaluation, not in violent crime. But bad actors can easily take advantage of the desire to find someone to think for you. If you’re using neither the normal error-checking processes of society nor your own mind, how can you tell if someone is wrong?
 >
 > https://asteriskmag.com/issues/11/why-are-there-so-many-rationalist-cults
+
+>Imagine if you, a person with an Internet connection to your laptop or phone, could just decide to host a website, or a forum on it. For moderate levels of load, they are certainly capable of this. The only thing in the way is the network management policies you can’t control.
+>
+> https://changelog.complete.org/archives/10231-recovering-our-lost-free-will-online-tools-and-techniques-that-are-available-now
