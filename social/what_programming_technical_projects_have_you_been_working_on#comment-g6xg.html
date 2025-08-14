@@ -1,0 +1,13 @@
+
+<p>I saw this <a href="https://forum.syncthing.net/t/one-time-sync/9801/25">old feature request</a> for one-way/one-time sync in Syncthing and I wanted to play around with the Syncthing API so I made a <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/syncthing_send.py">small script</a> to delete files from the source device after they are uploaded to at least one other node.</p>
+<p>I guess the most interesting part is that the <a href="https://docs.syncthing.net/rest/db-file-get.html#response">API response of db/file?folder</a> provides information about both the latest local and the latest global file. Very convenient! That's all I learned really... it is a pretty simple script.</p>
+<p>The funnest part about making it was testing out different scenarios between my computer and phone and developing an intuition for when/why Syncthing overwrites files.</p>
+<p>edit:</p>
+<p>Another thing that I just made is perhaps a bit more interesting. I made a script to <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/sort_by_ext_folders.py">move folders based on the file extensions of files inside</a>. This script is limited in that it expects independent folders to have the same depth. There is also no preview system so tread carefully!</p>
+<p>I was struggling to think how to choose the root folder for <code>--depth</code> processing. I was thinking I might need to start from the mountpoint but then it hit me--I can just count back up:</p>
+<pre><code>parent = os.path.dirname(folder)
+for _ in range(args.depth):
+    parent = os.path.dirname(parent)
+</code></pre>
+<p>It seems obvious in retrospect. After experimenting it works really well... but I also added a <code>--destination</code> flag which overrides this bit of magic. Both options are useful!</p>
+
