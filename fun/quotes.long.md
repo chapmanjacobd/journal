@@ -198,3 +198,7 @@ management are constantly changing.
 >Imagine if you, a person with an Internet connection to your laptop or phone, could just decide to host a website, or a forum on it. For moderate levels of load, they are certainly capable of this. The only thing in the way is the network management policies you can’t control.
 >
 > https://changelog.complete.org/archives/10231-recovering-our-lost-free-will-online-tools-and-techniques-that-are-available-now
+
+> Penny foolish and pound foolish: Your entire retirement fund spunked in two weeks on a project that was doomed to fail from the offset. Generational wealth being funnelled directly to Bezos's mega-yacht via AWS, for workloads that a Raspberry Pi cluster would be overkill for. Hundreds of highly paid people spending hours debating whether the $100 a month SaaS that underpins half the org is worth keeping. A two-year project being cancelled right before launch because it went slightly over budget, with senior leadership making the call that we'd save more money going out to tender. Your request for a new mouse has been denied.
+>
+> https://churchofturing.github.io/the-enterprise-experience.html
