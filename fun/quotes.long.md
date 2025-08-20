@@ -202,3 +202,7 @@ management are constantly changing.
 > Penny foolish and pound foolish: Your entire retirement fund spunked in two weeks on a project that was doomed to fail from the offset. Generational wealth being funnelled directly to Bezos's mega-yacht via AWS, for workloads that a Raspberry Pi cluster would be overkill for. Hundreds of highly paid people spending hours debating whether the $100 a month SaaS that underpins half the org is worth keeping. A two-year project being cancelled right before launch because it went slightly over budget, with senior leadership making the call that we'd save more money going out to tender. Your request for a new mouse has been denied.
 >
 > https://churchofturing.github.io/the-enterprise-experience.html
+
+> How Bue first encountered Big sis Billie isn’t clear, but his first interaction with the avatar on Facebook Messenger was just typing the letter “T.” That apparent typo was enough for Meta’s chatbot to get to work.
+>
+> https://www.reuters.com/investigates/special-report/meta-ai-chatbot-death/
