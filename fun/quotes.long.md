@@ -206,3 +206,11 @@ management are constantly changing.
 > How Bue first encountered Big sis Billie isn’t clear, but his first interaction with the avatar on Facebook Messenger was just typing the letter “T.” That apparent typo was enough for Meta’s chatbot to get to work.
 >
 > https://www.reuters.com/investigates/special-report/meta-ai-chatbot-death/
+
+> Life / Investment analogy:
+> 
+> Stock Investment: If you invest in the stock market and sell every time the market goes down only being happy when it goes up, you’ll go broke. If you use those down markets as an opportunity to invest more, you’ll make money.
+> 
+> Life: Life has its ups and downs too, these are natural cycles just like the market. So if every time life hits a downturn, you bail, feel like a victim, stop investing your time and effort, you’re missing an investment opportunity. If you use this time to build strengths, be they new skills, better health routines, or clarified analysis of the issues to bolster dealing with them better in the future, you’re investing in life’s lows by considering them opportunities. So when life has its natural up cycles after you've used down cycles to build your skillset, those cycles will be enhanced by the investments you made during the lows.
+>
+> https://www.halfbakery.com/idea/Life_20Challenges_20Investment_20Cycle_20Analogy#1756042008
