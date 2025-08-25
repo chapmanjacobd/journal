@@ -10,3 +10,6 @@ Progression: getting better at things I like.
 Making art.
 
 Consuming media, analysis, listening to music.
+
+80 70 30 50 40
+O  C  E  A  N
