@@ -1,0 +1,28 @@
+
+<p>So I was wondering how to rewrite all the previous git messages in my <a href="https://github.com/chapmanjacobd/journal/">journal</a> from the time that I was using <a href="https://github.com/nikitavoloboev/gitupdate/issues/15#issuecomment-3162181071">gitupdate</a>. I mentioned a couple weeks ago that I wrote my own replacement:</p>
+<blockquote>
+<p>With some extra time on my hands I made something a little more descriptive. If you're just modifying one file it will include the edit that you made into the commit message, or if too long, count the number of added, deleted, and moved lines</p>
+</blockquote>
+<p>I had to <a href="https://github.com/chapmanjacobd/computer/commit/0aff001a4b98a20f4638f860d0c662d41b8e0edb">modify my wip_message.py script</a> to not use <code>--staging</code> only but the script is a lot more flexible now and I did this to rewrite all the messages in my history:</p>
+<pre><code>git rebase -i (git log --reverse --pretty=%H | sed -n '2p') --exec '
+      git commit --amend -m "$(wip_message.py HEAD)"
+'
+</code></pre>
+<p>Pretty cool!</p>
+<p>Actually, I should also add <a href="https://stackoverflow.com/questions/41301627/how-to-update-git-commit-author-but-keep-original-date-when-amending">some additional flags</a> to also keep the author date original.</p>
+<hr/>
+<p>Another git related thing that I do, and probably more universally useful than the above, is that I have short commands for working with files based on their git status. For example I have this fish shell function:</p>
+<pre><code>function added
+    git status --porcelain --short $argv | awk 'substr($0, 1, 1) == "A" &amp;&amp; substr($0, 2, 1) == " " {print substr($0, 4)}' | string unescape --style=script
+end
+</code></pre>
+<p>then I can run something like <code>open (added)</code> to open all the files that are new. It's really useful! (but only if you remember to use it lol--sometimes I forget).</p>
+<p>I revamped these to be more robust and put them all here:</p>
+<p><a href="https://gist.github.com/chapmanjacobd/5ecb8be86f83dcfdcd043cf3b68b0b27">https://gist.github.com/chapmanjacobd/5ecb8be86f83dcfdcd043cf3b68b0b27</a></p>
+<hr/>
+<p>Here are a couple useful tools I found this week:</p>
+<ul>
+<li><a href="https://github.com/dlazesz/tr-unicode">https://github.com/dlazesz/tr-unicode</a></li>
+<li><a href="https://github.com/brendangregg/perf-tools/blob/master/deprecated/execsnoop-proc">execsnoop-proc</a>, <a href="https://github.com/bpftrace/bpftrace/blob/master/tools/execsnoop.bt">execsnoop.bt</a> (The proc version is older but still compatible with modern Linux kernels; execsnoop.bt is best but relies on having bpftrace installed)</li>
+</ul>
+
