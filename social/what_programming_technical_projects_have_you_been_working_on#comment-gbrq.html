@@ -1,0 +1,5 @@
+
+<p>I recently bought some 520 byte block size drives (HITACHI HUS72604 NEO4000 NAM4). They show up as state "Ready" in my r730xd iDRAC but they don't show up in <code>sg_scan -i</code>... I'd love to use them for cold storage but <a href="https://github.com/gms-electronics/formatingguide/blob/main/blocksizechange.md">it looks like</a> I'll need an alternative HBA to be able to reformat them. Kinda annoying.</p>
+<p>I guess I could try to switch my H730 Mini to RAID mode temporarily and see if I could somehow reformat them... I wonder if that will work... If not, what would adding another HBA involve? Does it have to replace the H730 Mini? Can it work together with the H730 Mini? Those are the questions on my mind this evening.</p>
+<p>maybe I'll just buy a SAS docking station or something... <a href="https://www.amazon.com/SAS-Enclosure-Adapter-Reader-Capacity/dp/B09VBTBG1K">kinda expensive tho</a>... actually I have another PC with a LSI 9207-8i SAS2.1 HBA which I've been using for only SATA drives with a Mini SAS to SATA breakout cable. I guess the only thing I'm missing is an actual Mini SAS+Molex (or SATA Power) to SAS cable.</p>
+
