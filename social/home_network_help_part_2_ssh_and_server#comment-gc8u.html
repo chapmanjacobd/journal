@@ -1,0 +1,12 @@
+
+<blockquote>
+<p>remoting into a server if you actually need the desktop</p>
+</blockquote>
+<p>NoMachine works pretty well on low-bandwidth links. Getting NoMachine to run securely without paying money is more involved so I won't get into it here.</p>
+<p>freerdp is also quite good! (but for some reason on my setup audio isn't forwarded). To use freerdp I run <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/rdpserve.fish">rdpserve.fish</a> on the server and <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/rdp.fish">rdp.fish</a> on the client in one go like this:</p>
+<pre><code>ssh -t pakon setsid -f 'fish -c "rdpserve"'
+rdp pakon.my_tailscale_subdomain.ts.net:35589
+</code></pre>
+<p>All that being said I usually just use ssh instead of GUI because there is still latency with remote X11. The feeling of <code>mstsc.exe</code> connecting between two Windows machines is a lot better: the UI feels very responsive and clear.</p>
+<p>If you're on Wayland maybe the situation is different with waypipe, etc.</p>
+
