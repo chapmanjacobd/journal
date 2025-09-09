@@ -1,3 +1,4 @@
+https://cloudinit.readthedocs.io/en/latest/reference/examples_library.html
 https://github.com/search?q=import+termuxgui+language%3APython&type=code&l=Python
 https://sandstorm.org/
 https://github.com/KittenML/KittenTTS
