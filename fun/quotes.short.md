@@ -168,3 +168,7 @@ https://blog.uvm.edu/aivakhiv/2021/10/20/being-present-while-screaming/
 > Notice your thoughts (the passengers), don’t argue with them, don’t try to get them off your bus, but don’t follow their instructions either. Just notice them, and realize you are the bus driver. Your rational mind is deciding where you’re driving to.
 
 ~atoxje, https://tildes.net/~health.mental/1poc/guilt_and_video_games#comment-g7n6
+
+> The average lifespan of a webpage is just 100 days. A clay tablet can last millennia.
+
+JA Westenberg, https://medium.com/westenberg/why-the-internet-era-might-be-historys-least-documented-period-7442d4d32b61
