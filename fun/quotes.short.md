@@ -104,7 +104,7 @@ Joseph Kaptur
 
 Nathan Lineback
 
-> The process of conjecture and criticism leads to progress only when criticisms are not evaded in pseudo-scientific ways. What distinguishes science is not just that its theories are, directly or indirectly, falsifiable but also that its procedures are not ad hoc. 
+> The process of conjecture and criticism leads to progress only when criticisms are not evaded in pseudo-scientific ways. What distinguishes science is not just that its theories are, directly or indirectly, falsifiable but also that its procedures are not ad hoc.
 > That requires that an amendment to a theory that removes an inconsistency identified by criticism is acceptable only if it solves some problem in addition to the problem of removing the inconsistency.
 
 Danny Frederick
@@ -172,9 +172,3 @@ https://blog.uvm.edu/aivakhiv/2021/10/20/being-present-while-screaming/
 > The average lifespan of a webpage is just 100 days. A clay tablet can last millennia.
 
 JA Westenberg, https://medium.com/westenberg/why-the-internet-era-might-be-historys-least-documented-period-7442d4d32b61
-
-> If you have a first impression of me, you can keep it, that's me, it has never changed.
->
-> Narcissism: Yes, I am narcissistic. The 2D wives I like are just gender-swapped, beautiful versions of me with inherited personalities. I never comment on them, and the occasional film review is just a way to vent my own sorrow. I only care about myself and people like me (their traits, not their specific people).
-
-https://wiki.scio.icu/index.php/%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F%E7%AE%80%E8%A6%81%E6%8A%A5%E5%91%8A

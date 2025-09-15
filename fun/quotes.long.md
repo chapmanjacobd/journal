@@ -186,11 +186,11 @@ management are constantly changing.
 > ~heymerideth
 
 > Jessica Taylor, an AI researcher who knew both Zizians and participants in Leverage Research, put it bluntly. “There’s this belief [among rationalists],” she said, “that society has these really bad behaviors, like developing self-improving AI, or that mainstream epistemology is really bad–not just religion, but also normal ‘trust-the-experts’ science. That can lead to the idea that we should figure it out ourselves. And what can show up is that some people aren't actually smart enough to form very good conclusions once they start thinking for themselves.”
-> 
+>
 > One way that thinking for yourself goes wrong is that you realize your society is wrong about something, don’t realize that you can’t outperform it, and wind up even wronger. But another potential failure is that, knowing both that your society is wrong and that you can’t do better, you start looking for someone even more right. Paradoxically, the desire to ignore the experts can make rationalists more vulnerable to a charismatic leader.
-> 
+>
 > Or, as Jessica Taylor said, “They do outsource their thinking to others, but not to the typical authorities.”
-> 
+>
 > In and of itself, that dynamic is bad but not necessarily seriously so. Many effective altruists–members of a community closely linked to the rationality community–similarly defer to more experienced effective altruists. While effective altruists have widely critiqued this habit, it results only in poorly thought out viewpoints about charity evaluation, not in violent crime. But bad actors can easily take advantage of the desire to find someone to think for you. If you’re using neither the normal error-checking processes of society nor your own mind, how can you tell if someone is wrong?
 >
 > https://asteriskmag.com/issues/11/why-are-there-so-many-rationalist-cults
@@ -208,9 +208,21 @@ management are constantly changing.
 > https://www.reuters.com/investigates/special-report/meta-ai-chatbot-death/
 
 > Life / Investment analogy:
-> 
+>
 > Stock Investment: If you invest in the stock market and sell every time the market goes down only being happy when it goes up, you’ll go broke. If you use those down markets as an opportunity to invest more, you’ll make money.
-> 
+>
 > Life: Life has its ups and downs too, these are natural cycles just like the market. So if every time life hits a downturn, you bail, feel like a victim, stop investing your time and effort, you’re missing an investment opportunity. If you use this time to build strengths, be they new skills, better health routines, or clarified analysis of the issues to bolster dealing with them better in the future, you’re investing in life’s lows by considering them opportunities. So when life has its natural up cycles after you've used down cycles to build your skillset, those cycles will be enhanced by the investments you made during the lows.
 >
 > https://www.halfbakery.com/idea/Life_20Challenges_20Investment_20Cycle_20Analogy#1756042008
+
+> A person without the social skills or the tools to fit in, whose status and living conditions are entirely determined by the people and events around them. A rural child with meager academic ability, whose hard work couldn't even pass the entrance exam. A spirited young man with no ambition or drive, a life filled with ordinary setbacks. Such a person's future seems instantly predictable, just like the countless overlooked NPCs working in low-level jobs, whose lives seem predetermined.
+>
+> https://wiki.scio.icu/index.php/2025%E5%B9%B4%E7%AC%AC2%E3%80%813%E3%80%814%E5%AD%A3%E5%BA%A6%E8%B5%B7%E5%B1%85%E5%BD%95
+
+> If you have a first impression of me, you can keep it, that's me, it has never changed.
+>
+> ...
+>
+> Narcissism: Yes, I am narcissistic. The 2D wives I like are just gender-swapped, beautiful versions of me with inherited personalities. I never comment on them, and the occasional film review is just a way to vent my own sorrow. I only care about myself and people like me (their traits, not their specific people).
+>
+> https://wiki.scio.icu/index.php/%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F%E7%AE%80%E8%A6%81%E6%8A%A5%E5%91%8A
