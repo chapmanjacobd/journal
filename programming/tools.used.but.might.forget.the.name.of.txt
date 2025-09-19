@@ -1,9 +1,9 @@
 git worktree add
-https://chir.ag/projects/tip-of-my-tongue/
-https://github.com/hydrargyrum/attic/blob/master/no-utf8-bom/no-utf8-bom
-https://github.com/hydrargyrum/attic/blob/master/ascetic/ascetic
-https://github.com/lark-parser/lark/blob/master/examples/fruitflies.py
-https://github.com/lark-parser/lark/blob/master/examples/calc.py
-https://github.com/hydrargyrum/attic/blob/master/replace-cased-names/replace-cased-names
-https://github.com/hydrargyrum/attic/blob/master/zeropipe/zeropipe
+https://chir.ag/projects/tip-of-my-tongue/  # Tip of My Tongue - Chirag Mehta : chir.ag
+https://github.com/hydrargyrum/attic/blob/master/no-utf8-bom/no-utf8-bom  # attic/no-utf8-bom/no-utf8-bom at master · hydrargyrum/attic · GitHub
+https://github.com/hydrargyrum/attic/blob/master/ascetic/ascetic  # attic/ascetic/ascetic at master · hydrargyrum/attic · GitHub
+https://github.com/lark-parser/lark/blob/master/examples/fruitflies.py  # lark/examples/fruitflies.py at master · lark-parser/lark · GitHub
+https://github.com/lark-parser/lark/blob/master/examples/calc.py  # lark/examples/calc.py at master · lark-parser/lark · GitHub
+https://github.com/hydrargyrum/attic/blob/master/replace-cased-names/replace-cased-names  # attic/replace-cased-names/replace-cased-names at master · hydrargyrum/attic · GitHub
+https://github.com/hydrargyrum/attic/blob/master/zeropipe/zeropipe  # attic/zeropipe/zeropipe at master · hydrargyrum/attic · GitHub
 

@@ -1,4 +1,4 @@
-https://blockly.games/
-https://grasshopper.app
-https://futurecoder.io/
-https://www.maria.cloud/
+https://blockly.games/  # Blockly Games
+https://grasshopper.app  # grasshopper.app   :
+https://futurecoder.io/  # futurecoder: learn python from scratch
+https://www.maria.cloud/  # Maria

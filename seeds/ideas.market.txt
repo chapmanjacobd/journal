@@ -1,6 +1,6 @@
 market plus
 
-  
+
 
 users enter their activity, how long it takes them, how much they earn per hour (optional)
 
@@ -92,18 +92,18 @@ eBay-like transparency for any customer to look at the aggregated balance sheet 
 
 
 
-https://snowdrift.coop/how-it-works
+https://snowdrift.coop/how-it-works  # How it Works — Snowdrift.coop
 
-https://medium.com/ted-hunt/why-i-refrained-from-minting-my-work-as-nfts-and-created-my-own-protocol-instead-1b929b0e96c4
+https://medium.com/ted-hunt/why-i-refrained-from-minting-my-work-as-nfts-and-created-my-own-protocol-instead-1b929b0e96c4  # Why I refrained from minting my work as NFT’s and created my own protocol instead. | by Ted Hunt | ted-hunt | Medium
 
-https://en.wikipedia.org/wiki/Ecological_economics
+https://en.wikipedia.org/wiki/Ecological_economics  # Ecological economics - Wikipedia
 
-https://cseweb.ucsd.edu/~goguen/courses/171sp02/lanier.agents.html
+https://cseweb.ucsd.edu/~goguen/courses/171sp02/lanier.agents.html  # Lanier
 
-https://en.wikipedia.org/wiki/Georgism
+https://en.wikipedia.org/wiki/Georgism  # Georgism - Wikipedia
 
 Related to my ABTAME idea: https://unli.xyz/p/2016/ABTAME.pdf
 
-https://drive.google.com/file/d/1UyqFX3zKHOkBlM0M5ggrmYjqa5WxtkRo/view
+https://drive.google.com/file/d/1UyqFX3zKHOkBlM0M5ggrmYjqa5WxtkRo/view  # 190328_gods_2.pdf - Google Drive
 
-https://unli.xyz/p/2016/ABTAME.pdf
+https://unli.xyz/p/2016/ABTAME.pdf  # https://unli.xyz/p/2016/ABTAME.pdf

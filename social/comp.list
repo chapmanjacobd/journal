@@ -1,25 +1,25 @@
 http://www.flexboxdefense.com/
 http://www.oldskool.org/shrines/lbd
-https://bartoszmilewski.com/2025/03/06/understanding-attention-in-llms/
-https://blog.nelhage.com/2010/02/a-very-subtle-bug/
-https://blogs.perl.org/users/zoffix_znet/2016/05/anguish-invisible-programming-language-and-invisible-data-theft.html
-https://drhagen.com/blog/the-missing-11th-of-the-month/
-https://gist.github.com/chapmanjacobd/f735c02015712d567d175ee668fe66f8
-https://gist.github.com/haasn/7919afd765e308fa91cbe19a64631d0f
-https://github.com/chapmanjacobd/journal/blob/main/programming/linux/misconceptions.md#mv-src-vs-mv-src
-https://groups.csail.mit.edu/mac/projects/amorphous/
-https://ideefixe.co/p/how-data-travels-in-f1
-https://jfrog.com/blog/leaked-pypi-secret-token-revealed-in-binary-preventing-suppy-chain-attack/
-https://knightsoftheflexboxtable.com/
-https://mccue.dev/pages/3-11-25-life-altering-postgresql-patterns
-https://pistachioapp.com/blog/copilot-broke-your-audit-log
-https://rambo.codes/posts/2025-04-24-how-a-single-line-of-code-could-brick-your-iphone
-https://sizeof.cat/post/tricks-with-web-browser-tabs/
-https://twobithistory.org/2021/02/07/arpanet.html
-https://wiki.archlinux.org/title/Firefox/Tweaks#Performance
-https://www.appdevforall.org/
-https://www.complete.org/the-pc-internet-revolution-in-rural-america/
-https://www.gdcvault.com/play/1024912/Beyond-Killzone-Creating-New-AI
-https://www.netmeister.org/blog/return-printf.html
-https://www.shayon.dev/post/2025/119/a-postgresql-planner-gotcha-with-ctes-delete-and-limit/
-https://zhero-web-sec.github.io/research-and-things/nextjs-and-the-corrupt-middleware
+https://bartoszmilewski.com/2025/03/06/understanding-attention-in-llms/  # Understanding Attention in LLMs |   Bartosz Milewski's Programming Cafe
+https://blog.nelhage.com/2010/02/a-very-subtle-bug/  # A Very Subtle Bug - Made of Bugs
+https://blogs.perl.org/users/zoffix_znet/2016/05/anguish-invisible-programming-language-and-invisible-data-theft.html  # "Anguish": Invisible Programming Language and Invisible Data Theft | Zoffix Znet [blogs.perl.org]
+https://drhagen.com/blog/the-missing-11th-of-the-month/  # The Missing 11th of the Month - David R Hagen
+https://gist.github.com/chapmanjacobd/f735c02015712d567d175ee668fe66f8  # Comparing OSS Photo Organizers · GitHub
+https://gist.github.com/haasn/7919afd765e308fa91cbe19a64631d0f  # mvi - set of configuration for turning mpv into an image viewer · GitHub
+https://github.com/chapmanjacobd/journal/blob/main/programming/linux/misconceptions.md#mv-src-vs-mv-src  # journal/programming/linux/misconceptions.md at main · chapmanjacobd/journal · GitHub
+https://groups.csail.mit.edu/mac/projects/amorphous/  # Amorphous Computing Home Page
+https://ideefixe.co/p/how-data-travels-in-f1  # How Data Travels in F1 - Idée Fixe by Toni Cowan-Brown
+https://jfrog.com/blog/leaked-pypi-secret-token-revealed-in-binary-preventing-suppy-chain-attack/  # Binary secret scanning helped us prevent (what might have been) the worst supply chain attack you can imagine | JFrog
+https://knightsoftheflexboxtable.com/  # Knights of the Flexbox table
+https://mccue.dev/pages/3-11-25-life-altering-postgresql-patterns  # Life Altering Postgresql Patterns
+https://pistachioapp.com/blog/copilot-broke-your-audit-log  # Copilot Broke Your Audit Log, but Microsoft Won’t Tell You - Pistachio Blog - Cybersecurity Awareness Training
+https://rambo.codes/posts/2025-04-24-how-a-single-line-of-code-could-brick-your-iphone  # How a Single Line Of Code Could Brick Your iPhone | Rambo Codes
+https://sizeof.cat/post/tricks-with-web-browser-tabs/  # Playing tricks with web browser tabs - sizeof(cat)
+https://twobithistory.org/2021/02/07/arpanet.html  # The Real Novelty of the ARPANET
+https://wiki.archlinux.org/title/Firefox/Tweaks#Performance  # Firefox/Tweaks - ArchWiki
+https://www.appdevforall.org/  # Expanding access to computer science and programming resources - App Dev For All
+https://www.complete.org/the-pc-internet-revolution-in-rural-america/  # The PC & Internet Revolution in Rural America | www.complete.org
+https://www.gdcvault.com/play/1024912/Beyond-Killzone-Creating-New-AI  # GDC Vault - Beyond 'Killzone': Creating New AI Systems for 'Horizon Zero Dawn'
+https://www.netmeister.org/blog/return-printf.html  # There is no 'printf'.
+https://www.shayon.dev/post/2025/119/a-postgresql-planner-gotcha-with-ctes-delete-and-limit/  # A PostgreSQL planner gotcha with CTEs DELETE and LIMIT
+https://zhero-web-sec.github.io/research-and-things/nextjs-and-the-corrupt-middleware  # Next.js and the corrupt middleware: the authorizing artifact - zhero_web_security
