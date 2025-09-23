@@ -1,3 +1,4 @@
+https://github.com/tp7/sushi
 https://github.com/openzim/zim-tools
 https://github.com/hyperknot/openfreemap/pull/85/files  # Some nginx related changes. by oxpa · Pull Request #85 · hyperknot/openfreemap · GitHub
 https://cloudinit.readthedocs.io/en/latest/reference/examples_library.html  # Cloud config examples library - cloud-init 25.2 documentation
