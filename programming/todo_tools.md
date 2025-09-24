@@ -1,3 +1,4 @@
+https://github.com/lrnselfreliance/wrolpi
 https://github.com/XTXMarkets/ternfs
 https://github.com/tp7/sushi
 https://github.com/openzim/zim-tools
