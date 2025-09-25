@@ -1,0 +1,8 @@
+
+<p>I encountered some weirdly encoded torrent files so I <a href="https://github.com/chapmanjacobd/library/commit/8af1307d819f0ef07cdfcc52332725cd2ea1e045">switched</a> from an "easy to use" python library to libtorrent to be able to parse them.</p>
+<p>It was a lot easier to switch than I anticipated. The whole thing only took about 30mins. If I had started with libtorrent when I first wrote the script I doubt that I'd figure out how to parse certain fields. Essentially you need to do something like this to get extra metadata:</p>
+<pre><code>torrent = lt.torrent_info(str(path), limits)
+extra_metadata = lt.bdecode(torrent.metadata())
+</code></pre>
+<p>It's super obvious once you know it--like getting a pile of LEGOs without instructions</p>
+
