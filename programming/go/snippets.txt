@@ -1,0 +1,11 @@
+import (
+	"fmt"
+	"runtime"
+)
+
+func getEnclosingFuncName() string {
+	// Skip = 1 means the caller of getEnclosingFuncInfo
+	pc, _, _, _ := runtime.Caller(1)
+	f := runtime.FuncForPC(pc)
+	return f.Name()
+}
