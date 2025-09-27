@@ -1,7 +1,7 @@
-https://github.com/lrnselfreliance/wrolpi
-https://github.com/XTXMarkets/ternfs
-https://github.com/tp7/sushi
-https://github.com/openzim/zim-tools
+https://github.com/lrnselfreliance/wrolpi  # GitHub - lrnselfreliance/wrolpi: Create your own off-grid library
+https://github.com/XTXMarkets/ternfs  # GitHub - XTXMarkets/ternfs: A distributed file system
+https://github.com/tp7/sushi  # GitHub - tp7/Sushi: Automatic subtitle shifter based on audio
+https://github.com/openzim/zim-tools  # GitHub - openzim/zim-tools: Various ZIM command line tools
 https://github.com/hyperknot/openfreemap/pull/85/files  # Some nginx related changes. by oxpa · Pull Request #85 · hyperknot/openfreemap · GitHub
 https://cloudinit.readthedocs.io/en/latest/reference/examples_library.html  # Cloud config examples library - cloud-init 25.2 documentation
 https://github.com/search?q=import+termuxgui+language%3APython&type=code&l=Python  # Code search results · GitHub
@@ -77,9 +77,9 @@ https://github.com/dolthub/dolt  # GitHub - dolthub/dolt: Dolt – Git for Data
 https://github.com/NotYourDadsMath/txt2dub  # GitHub - NotYourDadsMath/txt2dub: A text-based UI application for editing voiceover scripts and generating text to speech performances
 
 https://petl.readthedocs.io/en/stable/transform.html  # Documentation version not found
- - Read the Docs Community
+- Read the Docs Community
 https://petl.readthedocs.io/en/stable/util.html  # Documentation version not found
- - Read the Docs Community
+- Read the Docs Community
 
 PostgresML
 
