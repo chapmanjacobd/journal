@@ -226,3 +226,11 @@ management are constantly changing.
 > Narcissism: Yes, I am narcissistic. The 2D wives I like are just gender-swapped, beautiful versions of me with inherited personalities. I never comment on them, and the occasional film review is just a way to vent my own sorrow. I only care about myself and people like me (their traits, not their specific people).
 >
 > https://wiki.scio.icu/index.php/%E6%88%91%E7%9A%84%E4%BA%BA%E7%94%9F%E7%AE%80%E8%A6%81%E6%8A%A5%E5%91%8A
+
+> The amateur web didn't die and it has not disappeared but it is hidden. Search engine rating mechanisms rank the old amateur pages so low they're almost invisible and institutions don't collect or promote them with the same passion as they pursue net art or web design.
+>
+> Since the late 90's linking wasn't that hip any more. Search engines, portals and catalogues took over the linking responsibilities making searches faster and less surprising. In the quest for order and hierarchy the web changed completely. Sites with no external links at all became the norm and now constitute the facade of the mainstream web. Users jump back and forth between search engines.
+>
+> Links -- the once typical means of conveyance -- have lost their infrastructural importance.
+>
+> https://art.teleportacia.org/observation/vernacular/
