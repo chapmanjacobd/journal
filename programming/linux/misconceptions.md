@@ -56,8 +56,11 @@ Well... it depends what you want to do. The program can't read your mind so I ho
 | `rsync -auh --remove-source-files one/ two` | `one/`           | `two`     | `two`                                 |
 | `rsync -auh --remove-source-files one two`  | `one`            | `two`     | `two/one` (subfolder new inode)       | 🤔🤔     |
 | `rclone move -q --no-traverse one two`      | `one`            | `two`     | `two` (preserved inode)               |
-| `rclone move -q --no-traverse one two/one`  | `one`            | `two/one`     | `two/one` (preserved inode)       |
-| `library relmv one two`                     | `one`            | `two`     | `two/one` (subfolder preserved inode) |
+| `rclone move -q --no-traverse one two/one`  | `one`            | `two/one` | `two/one` (preserved inode)           |
+| `library mv one two`                        | `one`            | `two`     | `two` (preserved inode)               |
+| `library mv --parent one two`               | `one`            | `two`     | `two/one` (preserved inode)           |
+| `library mv one two/one`                    | `one`            | `two/one`     | `two/one` (preserved inode)           |
+| `library relmv one two`                     | `one`            | `two`     | `two/tmp/tmp.2eVKeig3SJ/one` (full path; subfolder preserved inode) | 🤔
 
 The errors are a bit surprising to me because it seems reasonable that the program would make its own new directories. `cp` already does anyway if you only specify exactly one src argument. I also prefer the way blob storage tools work where you can move files many nested levels deep without creating a bunch of folders first.
 
@@ -69,14 +72,15 @@ The errors are a bit surprising to me because it seems reasonable that the progr
 | ------------------------------------------- | ------------------ | --------- | ------------------------------------- | -------- |
 | `mv one two`                                | `one`              | `two`     | `two/one` (subfolder preserved inode) | 🤔🤔🤔   |
 | `mv one two/one`                            | `one`              | `two/one` | `two/one` (subfolder preserved inode) |          |
-| `mv one/* two`                              | `one/*`            | `two`     | `two` (files moved, preserved inodes) |
+| `mv one/* two`                              | `one/*`            | `two`     | `two` (files moved, preserved inodes) | 🤔 (does not include dot files) |
+| `mv one/* one/.* two`                       | `one/*`            | `two`     | mv: cannot stat 'one/.*': No such file or directory | 🤔 (no foolproof way; you need to _know_ whether there are hidden files)  |
 | `cp -r one two && rm -rf one`               | `one`              | `two`     | `two/one`                             | 🤔🤔🤔   |
 | `cp -r one two/one && rm -rf one`           | `one`              | `two/one` | `two/one`                             |          |
 | `cp -r one/. two && rm -rf one`             | `one/.` or `one/*` | `two`     | `two`                                 |
 | `rsync -auh --remove-source-files one/ two` | `one/`             | `two`     | `two`                                 |
 | `rsync -auh --remove-source-files one two`  | `one`              | `two`     | `two/one`                             | 🤔🤔     |
 | `rclone move -q --no-traverse one two`      | `one`              | `two`     | `two` (files moved, preserved inodes) |
-| `library relmv one two`                     | `one`              | `two`     | `two/one` (subfolder preserved inode) |
+| `library mv one two`                        | `one`              | `two`     | `two` (files moved, preserved inodes) |
 
 It's confusing that `cp` and `mv` with the same arguments will do different things just because an (empty) folder exists. And it seems kinda weird that two different destinations: `mv one two` and `mv one two/one` both lead to the same actual destination: `two/one`.
 
@@ -98,9 +102,6 @@ It's confusing that `cp` and `mv` with the same arguments will do different thin
 | `rclone move -q --no-traverse one three`         | `one`              | `three`         | `three`                                     |          |
 | `rclone move -q --no-traverse one three/one`     | `one`              | `three/one`     | `three/one`                                 |          |
 | `rclone move -q --no-traverse one three/one/one` | `one`              | `three/one/one` | `three/one/one`                             |          |
-| `library relmv one three` \*\*                   | `one`              | `three`         | `three`                                     | 🤔       |
-| `library relmv one three` \*                     | `one`              | `three`         | `three/one`                                 |          |
-| `library relmv one three/one` \*                 | `one`              | `three/one`     | `three/one/one`                             | 🤔🤔     |
 
 It is a bit annoying that `mv` doesn't know how to merge folders.
 
@@ -114,11 +115,9 @@ I think `mv` should be limited to tasks which don't change inodes. `cp` should p
 
 Out of all of these, I think rclone provides the least surprising result. But rclone is a lot slower than `mv` in many scenarios and it should be noted that you can't rename files with `rclone` or `lb relmv` like you can with `mv`.
 
-\* if no destination path parents are also named "one"
+[library](https://github.com/chapmanjacobd/library) [relmv](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/relmv.py) is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame.
 
-\*\* if any destination path parent is also named "one"
-
-[library](https://github.com/chapmanjacobd/library) [relmv](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/relmv.py) is an unusual case but I added it here because I was curious about the results. `relmv` preserves unique path data so each time you move a file the file will often gain more levels of nested folders. Given this property the results above are relatively tame. With `library relmv` it would only possible to end up with the merged destination if any of the parents of the destination folder were also named "one"--and in that case the other two end states would be impossible. [library] [merge-folders](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/merge_folders.py) follows rclone move but it only works on single filesystems. The only real benefit compared to rclone is that it supports multiple sources and shows a count of conflicts per source.
+[library] [merge-folders](https://github.com/chapmanjacobd/library/blob/main/xklb/scripts/merge_folders.py) follows rclone move but it only works on single filesystems. The only real benefit compared to rclone is that it supports multiple sources and shows a count of conflicts per source.
 
 Setup:
 
