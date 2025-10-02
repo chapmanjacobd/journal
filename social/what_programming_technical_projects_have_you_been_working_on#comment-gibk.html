@@ -1,0 +1,12 @@
+
+<p>PostGIS is great for vector data but for images it's a lot easier to use a tile server:</p>
+<ul>
+<li><a href="https://github.com/DHI/terracotta">https://github.com/DHI/terracotta</a></li>
+<li><a href="https://github.com/developmentseed/titiler">https://github.com/developmentseed/titiler</a></li>
+<li><a href="https://github.com/hyperknot/openfreemap">https://github.com/hyperknot/openfreemap</a> (filesystem as server!)</li>
+</ul>
+<p>Just use QGIS or gdal_translate to save your images to something like Cloud Optimized GeoTIFF first</p>
+<p>ALTHOUGH! I read this the other day and it seems like what you might want:</p>
+<p><a href="https://news.ycombinator.com/item?id=45382300">https://news.ycombinator.com/item?id=45382300</a></p>
+<p>The idea is to use ST_GeneratePoints and ST_VoronoiPolygons. Two vector PostGIS functions to randomly build land</p>
+
