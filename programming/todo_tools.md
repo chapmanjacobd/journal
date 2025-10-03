@@ -1,3 +1,4 @@
+https://github.com/fyne-io/fyne
 https://github.com/gabriel-vasile/mimetype
 https://github.com/lrnselfreliance/wrolpi  # GitHub - lrnselfreliance/wrolpi: Create your own off-grid library
 https://github.com/XTXMarkets/ternfs  # GitHub - XTXMarkets/ternfs: A distributed file system
