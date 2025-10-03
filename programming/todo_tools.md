@@ -1,3 +1,4 @@
+https://github.com/gabriel-vasile/mimetype
 https://github.com/lrnselfreliance/wrolpi  # GitHub - lrnselfreliance/wrolpi: Create your own off-grid library
 https://github.com/XTXMarkets/ternfs  # GitHub - XTXMarkets/ternfs: A distributed file system
 https://github.com/tp7/sushi  # GitHub - tp7/Sushi: Automatic subtitle shifter based on audio
