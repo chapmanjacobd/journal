@@ -234,3 +234,61 @@ management are constantly changing.
 > Links -- the once typical means of conveyance -- have lost their infrastructural importance.
 >
 > https://art.teleportacia.org/observation/vernacular/
+
+>> I like negative you, let’s keep this up. What have been your least favorite cities?
+> 
+> I don’t like negative me! I wouldn’t, and shouldn’t, be doing this job if I didn’t genuinely like every place I’ve been, and even the places I “hate” I can list five things I like about it.
+> 
+>> Come on, stop. Just list your least favorite cities you’ve been in, that if I said you had to go back to for a week you would be annoyed. Go.
+> 
+> Bully. OK. Brussels. Vientiane. Dakar. Phoenix.
+> 
+>> Do you think some cultures are better than others?
+> 
+> That’s a rather provocative framing, but sure, yes, I do.
+> 
+>> When you hear ‘better,’ what did you think that meant?
+> 
+> Whether it provides a very large percentage of its citizens a fulfilling life.
+> 
+>> OK, I’ll go with that. By that metric, what are the best cultures?
+> 
+> You’re being silly now.
+> 
+>> Just play the game. I won’t hold you accountable. Imagine we are two friends drinking in a bar and nobody is listening.
+> 
+> Sure. Of the places I’ve been, I will go with Italy and Australia. Gun to my head, I’ll go with Italy though.
+> 
+>> Why?
+> 
+> Because I’m Catholic and Italy is Catholic, in a deep cultural sense, and I believe Catholicism strikes the correct balance of the rational, emotional, transcendent, and material. It works for the City of God, and for the City of Man, to use Augustine’s framing.
+> 
+>> Explain that more please.
+> 
+> I have this toy model of the world that I keep in my mind, of cultures as a big game that is played by elites, a SimCulture if you will. I’ve alluded to it many times, and yes, I understand it’s oversimplified, but it helps me frame things. If you think of it that way, then you start asking, what’s the point of the game? How do you “win?” That is, what are you, the person playing the game, trying to accomplish? And I would say “winning” means providing fulfilling lives for the largest percentage of your citizens. Since I don’t believe every citizen is the same in terms of capacity/interest/capabilities, your culture has to work for a lot of different personality types, intelligence levels, and dispositions. It should fulfill both the top of the class and the bottom, and I believe Catholicism, or the intellectual and cultural framework around it, does that.
+> 
+>> Wow, you sound like a utilitarian arguing for faith based only on material outcomes.
+> 
+> Sure, for this exercise, although I do believe it is also True, in the capital T sense, but that seems beyond the scope of this discussion, which did start off after all talking about who has the best food, before you got all serious.
+> 
+>> Don’t wiggle out. I want to be serious now. Define fulfilling. I ask this because all of these answers so far strike me as a definitional game of kick the can down the road.
+> 
+> Fine. If you want to extend the metaphor of culture as the result of elites playing SimCulture, then you also need a model for your Sims. What are they? What is a person? I believe humans have an inherent purpose or telos, which provides (at least in my view) a clear definition of what makes life fulfilling. I can’t give you a precise answer, because I don’t believe I’m smart enough, but I do think that it’s about the spiritual. That is, material wealth alone will never be fulfilling. There needs to be something transcendent. Something beyond the here and now.
+> 
+> When I was doing the press rounds for Dignity, I realized I needed one take-home lesson, one platitude, that summarized what I’d learned from ten years talking to people all over the US, and my answer was, “Everyone wants to be a valued member of something larger than themselves,” and I still believe that, but I would now amend it to end with “something larger than themselves that transcends this material world.” Or, something that lives on for eternity.
+> 
+> To pontificate for a little bit more, I’m leaving in two days for China, and I believe no matter what else I think about the CCP, they do understand all of this. Maybe not the Catholic part, but the idea that there is an elite who build culture and that elite should have a goal in mind. The CCP of course sees themselves as that elite, and as I’ve written before, that self-recognition is, in my opinion, better than pretending, like the West does, that elites don’t shape culture, and consequently they don’t take their “jobs” seriously, so they don’t really know, or understand, what they want. What I believe Western elites want, judging from their policies and rhetoric, is maximum individual freedom for everyone. Which I believe is an incoherent telos. People are social creatures, and are only understandable within the context of a community, and so maximum individual freedom is a misguided goal. It feels good for most of the ride, but you’re going in the wrong direction, towards isolation, and away from the meaningful. It’s like driving in a really snazzy convertible deeper and deeper into the desert; the ride feels great until at some point you realize you’re utterly alone, which is immensely depressing.
+> 
+>> Hold on there buddy. There is a lot there that I want to push back on. Are you seriously suggesting China is better than the US? You, a person who wouldn’t have the freedom to do what you currently do, including writing this, if you lived there? Come on.
+> 
+> No, that’s not what I am saying. Remember, we are freewheeling here, thinking out loud over beers. What I am saying is China at least knows what it is doing, and I believe we in the West currently don’t. We once might have, but Western elites now embrace a form of progressivism that has lost sight of human nature, reducing people to mere consumers whose ultimate goals are material acquisition and unconstrained personal freedom.
+> 
+> So the game they are now playing is not only going in the wrong direction, it is also not working at the day to day level, because it is a fundamentally incoherent combination of a Libertarian understanding of the individual with a socialist vision of politics, because all politics is socialist, in the sense that citizens of a nation have to share things, but you can’t have socialist policies (a functional Nation) if your citizens don’t respect each other and something higher than themselves. You can’t share resources if you don’t feel a connection that transcends the adulation of the self.
+> 
+>> Wow. OK. That sounds pretty extreme?
+> 
+> No, I don’t see it that way. I see it as a simple recognition that to have nice things a society has to have some glue holding it together beyond the threat of jail. You need a moral arbiter independent of the government. Or, if you don’t have some moral underpinnings separate from the state, then you will either end up with chaos, or authoritarianism, as the state increases its role to stop the chaos.
+> 
+> Although I guess my most controversial view is the vast majority of people don’t want, and cannot deal with (or don’t find contentment with) the amount of liberty, freedoms, and free choices that Western elites (philosophical Liberals) see as the end point, or peak, of social and political organization. Or, our true telos is not emancipation from all obligations, rules, and regulations, but rather that old “being a valued member of something larger than themselves” thing from a few questions ago. I do believe in that sense, the Chinese are on to something, although I would suggest that Japan, Korea, and Taiwan also understand that, and accomplish much the same thing without all the nasty repression.
+>
+> Chris Arnade https://walkingtheworld.substack.com/p/four-years-of-walking-the-world
