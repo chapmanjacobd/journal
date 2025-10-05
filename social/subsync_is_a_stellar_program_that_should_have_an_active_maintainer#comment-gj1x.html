@@ -1,0 +1,17 @@
+
+<p>How does it compare to <a href="https://www.nikse.dk/subtitleedit"><em>Subtitle Edit</em></a>?</p>
+<p>In my experience most subtitles are simply time-shifted and can be adjusted via keyboard shortcuts. For example, in mpv:</p>
+<pre><code>ctrl+LEFT sub-step -1  # change subtitle timing such that the previous subtitle is displayed
+ctrl+RIGHT sub-step 1  # change subtitle timing such that the next subtitle is displayed
+
+alt+up    add sub-delay -0.1
+alt+down  add sub-delay +0.1
+ctrl+DOWN set sub-delay 0 # reset subtitle delay
+</code></pre>
+<p>If you're dealing with different fps like PAL subtitles on NTSC, this can often help:</p>
+<pre><code>ctrl+shift+LEFT add sub-speed +0.001
+ctrl+shift+DOWN set sub-speed 1
+ctrl+shift+RIGHT add sub-speed -0.001
+</code></pre>
+<p>I empathize with you. It's difficult to see software that you rely on stop being maintained. Given the nature of the tool, it will probably keep working for a long time without any changes. But it looks like there are also a lot of <a href="https://tatsumoto.neocities.org/blog/retiming-subtitles#retiming-methods">other options</a> too.</p>
+
