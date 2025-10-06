@@ -292,3 +292,7 @@ management are constantly changing.
 > Although I guess my most controversial view is the vast majority of people don’t want, and cannot deal with (or don’t find contentment with) the amount of liberty, freedoms, and free choices that Western elites (philosophical Liberals) see as the end point, or peak, of social and political organization. Or, our true telos is not emancipation from all obligations, rules, and regulations, but rather that old “being a valued member of something larger than themselves” thing from a few questions ago. I do believe in that sense, the Chinese are on to something, although I would suggest that Japan, Korea, and Taiwan also understand that, and accomplish much the same thing without all the nasty repression.
 >
 > Chris Arnade https://walkingtheworld.substack.com/p/four-years-of-walking-the-world
+
+> On the day of the hunt I came to know in the slick center of my bones this one thing: all animals kill to survive, and we are animals. The lion kills the baboon; the baboon kills fat grasshoppers. The elephant tears up living trees, dragging their precious roots from the dirt they love. The hungry antelope's shadow passes over startled grass. And we, even if we had no meat or even grass to gnaw, still boil our water to kill the invisible creatures that would like to kill us first... The death of something living is the price of our own survival, and we pay it again and again. We have no choice. It is the one solemn promise every life on earth is born and bound to keep.
+>
+> Kingsolver - the Poisonwood Bible
