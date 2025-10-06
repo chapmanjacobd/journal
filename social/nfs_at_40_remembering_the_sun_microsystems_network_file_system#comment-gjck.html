@@ -1,0 +1,23 @@
+
+<p>Performance is closer than you might think: <a href="https://blog.ja-ke.tech/2019/08/27/nas-performance-sshfs-nfs-smb.html">https://blog.ja-ke.tech/2019/08/27/nas-performance-sshfs-nfs-smb.html</a></p>
+<p>Personally, I like sshfs because it is pretty much set it and forget it. I can be anywhere in the world and I can securely connect to it.</p>
+<pre><code>$ cat ~/.config/systemd/user/net-backup.mount
+[Unit]
+Description=SSHFS backup
+After=network-online.target
+Before=remote-fs.target
+
+[Mount]
+What=backup:
+Where=/net/backup
+Type=fuse.sshfs
+Options=_netdev,nodev,nosuid,noatime,follow_symlinks,dirsync,ServerAliveInterval=10,reconnect,delay_connect,max_conns=15
+
+[Install]
+WantedBy=default.target
+</code></pre>
+<pre><code>systemctl --user enable --now net-backup.mount
+</code></pre>
+<p>The only weird quirk is that systemd requires that the <code>.mount</code> file be named exactly the same as the mountpoint; eg. <code>/net/backup</code> becomes <code>net-backup.mount</code></p>
+<p>The only other caveat, is that <code>eza --git --long /net/backup</code> hangs for a long time. I'm not really sure why... <code>eza --git /net/backup</code> works fast. <code>eza --long /net/backup</code> works fast. So that's weird. But other applications that I've used don't have this problem. I can stream 16 720p videos at the same time in mpv from the other side of the planet without any hiccups but <code>eza --git --long</code> makes it shudder...</p>
+
