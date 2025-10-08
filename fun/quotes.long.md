@@ -296,3 +296,25 @@ management are constantly changing.
 > On the day of the hunt I came to know in the slick center of my bones this one thing: all animals kill to survive, and we are animals. The lion kills the baboon; the baboon kills fat grasshoppers. The elephant tears up living trees, dragging their precious roots from the dirt they love. The hungry antelope's shadow passes over startled grass. And we, even if we had no meat or even grass to gnaw, still boil our water to kill the invisible creatures that would like to kill us first... The death of something living is the price of our own survival, and we pay it again and again. We have no choice. It is the one solemn promise every life on earth is born and bound to keep.
 >
 > Kingsolver - the Poisonwood Bible
+
+>> WHAT WOULD YOUR DEFINITION OF AN ARCHIVE BE?
+>
+> The archive is what is left over. An archive can be more or less complete, depending on how much remains and how much has been destroyed. When I first came to Eindhoven, I wanted to know about the period of the Second World War, when the Van Abbemuseum was open and there was a National Socialist government in the Netherlands. There was very little documentation, so we asked people what they remembered.
+>
+> We learnt that the actual archive was probably burned to avoid recriminations, so we had to rely on memory and what survives. Maybe, ironically, that is the best kind of archive! The way our current European society obsessively records everything in image and document is unhealthy. We should leave it to chance and memory. What then survives does so because it remains valuable to the next generation—and what it is lost, remains to be unearthed, speculated about, and constructed again—perhaps incorrectly but according to the needs of the present. And that is OK. There’s a video by Rabih Mroué called The Old House that is very important to me; it talks about how we need to remember that we forget and forget that we remember.
+>
+> Charles Esche 
+> Curatorial Archives in Curatorial Practices, https://archive.org/details/curatorial_archives_in_curatorial_practices/page/32/mode/2up
+
+> When I'm certain that I've forgotten, I attempt to remember what it is that I've forgotten.
+> ...
+> This way I reinvent what I've forgotten--on the basis that I have, in fact, remembered
+> After an indefinite while, I retell it, not to remember it, no, but to make sure that I've forgotten it
+> all or at least parts of it--so on and so forth--
+> ...
+> This operation might appear repetitive but it's the contrary; because it's a refusal to go back to the beginnings (and there are no real beginnings)
+> ...
+> This way I keep oscillating between remembering and forgetting; remembering and forgetting; remembering and forgetting--til death comes
+> I'm betting on death to make me discover everything anew
+>
+> Rabih Mroué -- Old House (2003)
