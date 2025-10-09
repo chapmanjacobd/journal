@@ -1,3 +1,4 @@
+https://hdersch.github.io/Editing.html
 https://github.com/Ajatt-Tools/autosubsync-mpv
 https://github.com/fyne-io/fyne
 https://github.com/gabriel-vasile/mimetype
