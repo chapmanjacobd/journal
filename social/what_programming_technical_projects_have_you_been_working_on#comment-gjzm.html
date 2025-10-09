@@ -1,0 +1,21 @@
+
+<p>I started work on a small CLI to <a href="https://github.com/chapmanjacobd/syncweb-py">make Syncthing easier to configure</a>. It's pretty fun!</p>
+<p>I can now launch multiple Syncthing instances on the same computer and get them talking to each other (just to verify and experiment with Syncthing behavior):</p>
+<pre><code>def test_w_r_r():
+    with SyncthingCluster(["w", "r", "r"]) as cluster:
+        cluster.wait_for_connection()
+        w, r1, r2 = cluster
+
+        r2.stop()
+
+        fstree.write({"test.txt": "hello world"}, w.local / cluster.folder_id)
+        fstree.check({"test.txt": "hello world"}, r1.local / cluster.folder_id)
+
+        # let's check that r2 can get a file from r1
+        w.stop()
+        r2.start()
+
+        fstree.check({"test.txt": "hello world"}, r2.local / cluster.folder_id)
+</code></pre>
+<p>This test starts one node with a "sendonly" folder configuration and shares it with two other nodes which use the folder in "receiveonly" configuration</p>
+
