@@ -172,3 +172,7 @@ https://blog.uvm.edu/aivakhiv/2021/10/20/being-present-while-screaming/
 > The average lifespan of a webpage is just 100 days. A clay tablet can last millennia.
 
 JA Westenberg, https://medium.com/westenberg/why-the-internet-era-might-be-historys-least-documented-period-7442d4d32b61
+
+> A computer the size of the earth's orbit will be bound by latency of 8 minutes. A computer the size of 2x of earth's orbit will be bound by a latency of 16 minutes, but have 4x the maximum information storage capacity.
+
+> jychang, https://news.ycombinator.com/item?id=45518971
