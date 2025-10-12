@@ -8,16 +8,16 @@ If there are truly temperate places in the world then those places are probably 
 
 Edit: there is an index of mythology constructed on index cards by some guy in his home in California sometime during the 1930-1980s. I'm struggling to remember the title but I think you'd find what you are looking for if you just look for an mythology index somewhere
 
-https://en.wikipedia.org/wiki/Comparative_mythology  # Comparative mythology - Wikipedia
+https://en.wikipedia.org/wiki/Comparative_mythology
 
 edit: I found the thing. you want something like this probably:
 
-https://en.wikipedia.org/wiki/Motif-Index_of_Folk-Literature  # Motif-Index of Folk-Literature - Wikipedia
+https://en.wikipedia.org/wiki/Motif-Index_of_Folk-Literature
 
 Thompson's motif-index
 
-https://en.wikipedia.org/wiki/Aarne%E2%80%93Thompson%E2%80%93Uther_Index  # Aarne–Thompson–Uther Index - Wikipedia
+https://en.wikipedia.org/wiki/Aarne%E2%80%93Thompson%E2%80%93Uther_Index
 
-https://en.wikipedia.org/wiki/Morphology_(folkloristics)  # Morphology (folkloristics) - Wikipedia
+https://en.wikipedia.org/wiki/Morphology_(folkloristics)
 
-https://en.wikipedia.org/wiki/Folklore_studies  # Folklore studies - Wikipedia
+https://en.wikipedia.org/wiki/Folklore_studies
