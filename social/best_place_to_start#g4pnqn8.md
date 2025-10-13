@@ -1,9 +1,9 @@
 yeah it's a good start but since you already know Scala well then I would just look for articles which compare elm and haskell. I've found that a lot of those articles are well-written and provide deeper insight which I need to first understand something.
 
-https://mmhaskell.com/elm
+https://mmhaskell.com/elm  # Elm — Monday Morning Haskell
 
-https://medium.com/@terezk_a/haskell-in-elm-terms-type-classes-415f1612b335
+https://medium.com/@terezk_a/haskell-in-elm-terms-type-classes-415f1612b335  # Haskell, in Elm terms: Type Classes | by terezka | Medium
 
-https://tompicton.com/learning-haskell/
+https://tompicton.com/learning-haskell/  # Learning Haskell (and Elm in the process) | tompicton.com
 
 I would recommend just starting a project and seeing what you need from there. Join the Elm slack to ask for help. they are very active and helpful
