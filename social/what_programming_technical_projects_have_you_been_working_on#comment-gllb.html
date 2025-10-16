@@ -1,0 +1,20 @@
+
+<p>I made a CLI for selective syncing via Syncthing. I don't have a Windows machine to test it on but it does seem to work on Linux and Android (Termux). If you have iOS or Mac OS it probably works as well, but <a href="https://github.com/pixelspark/sushitrain/">sushitrain</a> can do a lot more (<em>but</em> it's not a CLI).</p>
+<p>Configuration and metadata is stored independently of Syncthing so there's no harm in running it separately from Syncthing--just make sure to <code>syncweb shutdown</code> or <code>pkill -f syncweb</code> when you've had enough!</p>
+<p>By default it ignores all the remote files so it's only syncing metadata and you choose what files you want. With the file metadata you can query stuff like:</p>
+<pre><code>$ syncweb ls --long audio/
+Type       Size      Modified  Name
+-----------------------------------
+d        2.7GiB  06 Oct 20:56 Recordings/
+d        3.2MiB  28 Jul  2022 Documentation/
+</code></pre>
+<p>With the accurate folder size calculated. Or <code>find</code> (using fd-find syntax)</p>
+<pre><code>$ syncweb find --type=f --ext MKA --size=-20M --min-depth=2 Test
+audio/Recordings/TestRecording_1.mka
+audio/Recordings/TestRecording_22.mka
+audio/Recordings/TestRecording_23.mka
+...
+</code></pre>
+<p>I also wrote some helpers for sorting and "downloading" (really it just marks files as unignored and Syncthing handles all the downloading in a delay-tolerant fashion)</p>
+<p><a href="https://github.com/chapmanjacobd/syncweb-py?tab=readme-ov-file#sort">https://github.com/chapmanjacobd/syncweb-py?tab=readme-ov-file#sort</a></p>
+
