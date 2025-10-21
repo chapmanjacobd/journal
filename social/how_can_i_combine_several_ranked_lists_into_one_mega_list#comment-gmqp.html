@@ -1,0 +1,8 @@
+
+<p>If the files are already sorted and similar length you could just interleave them:</p>
+<pre><code>paste -d'\n' file1 file2 file3
+</code></pre>
+<p>Also, here's a weighted version which is kind of similar to the ideas above:</p>
+<p><a href="https://github.com/chapmanjacobd/computer/blob/main/bin/interleave_weighted.py">https://github.com/chapmanjacobd/computer/blob/main/bin/interleave_weighted.py</a></p>
+<p>Then you could deduplicate afterwards with something like this: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/dedupe.py">dedupe.py</a></p>
+
