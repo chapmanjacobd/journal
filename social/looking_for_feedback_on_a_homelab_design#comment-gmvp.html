@@ -1,0 +1,6 @@
+
+<p>If you're having trouble with NFS in terms of reliability, try comparing the speed with SSHFS or even rsync. Maybe you don't really need NFS</p>
+<p>I combine plocate and sftp/scp/rsync to search across many computers and it works well. I use it multiple times per day:</p>
+<p><a href="https://github.com/chapmanjacobd/computer/blob/main/bin/locate_remote_mv.py">https://github.com/chapmanjacobd/computer/blob/main/bin/locate_remote_mv.py</a></p>
+<p>SSHFS is also fast enough once you figure out the right config (setting max_conn to something between 8 and 40 is really important! essentially, how many files you expect to access at the same time--but don't set it to something ridiculous like 400 either--I imagine the overhead can get big)</p>
+
