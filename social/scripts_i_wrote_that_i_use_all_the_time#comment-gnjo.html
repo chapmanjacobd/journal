@@ -1,0 +1,11 @@
+
+<p>Found a couple neat ideas that I'm going to steal--thx for sharing; but I must mention:</p>
+<blockquote>
+<p>running foo is like ps aux | grep foo</p>
+</blockquote>
+<p>Should probably be <code>pgrep</code> and <code>pkill</code></p>
+<blockquote>
+<p>bb my_command is like my_command &amp; but it really really runs it in the background</p>
+</blockquote>
+<p>Should probably be <code>setsid -f</code> or at least use the double subshell trick (ie. <code>((command &amp;) &amp;)</code> which immediately backgrounds the process and orphans it, effectively daemonizing it)</p>
+

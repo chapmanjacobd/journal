@@ -1,0 +1,16 @@
+
+<ol>
+<li>
+<p>I finally got my <a href="https://unli.xyz/digitalfilmstock/">Digital Film Stock</a> site up. It took only about six hours of work to finish getting everything working so I regret not doing it sooner but I just wasn't in the mood to do it for several months. However, now that it is done I've noticed that <em>RED MINI-MAGs</em> aren't showing up. The eBay API is pretty frustrating to work with. But also it doesn't seem like other people are actually using the site so I'll just leave it be for now.</p>
+</li>
+<li>
+<p>I made a small script to <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/ffmpeg.keyframes.sort.py">visually sort keyframes</a>. I've attempted this half-heartedly in the past, but this one actually seems to be working pretty well. It uses the Annoy package (<a href="https://pypi.org/project/annoy/">https://pypi.org/project/annoy/</a>) to do the nearest neighbor clustering and it works pretty fast. The slowest part is reading the keyframes from the input video file.</p>
+</li>
+<li>
+<p>I fixed the <em>library shrink</em> subcommand to also move broken multi-part archives. <code>unar</code> does all the heavy lifting here: <code>part_files = lsar_json["lsarProperties"]["XADVolumes"]</code></p>
+</li>
+<li>
+<p>I added an "<a href="https://github.com/chapmanjacobd/syncweb-py/blob/main/syncweb/ensure.py">ensure</a>" procedure to Syncweb which will download Syncthing from GitHub. It's my first time working with the GitHub Releases API and it was surprisingly painless to work with.</p>
+</li>
+</ol>
+
