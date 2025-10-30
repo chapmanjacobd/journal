@@ -1,3 +1,4 @@
+https://labplot.org/download/
 https://docs.doltgres.com/reference/version-control/dolt-sql-functions
 https://github.com/wailsapp/wails
 https://hdersch.github.io/Editing.html

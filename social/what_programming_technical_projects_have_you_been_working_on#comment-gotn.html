@@ -1,0 +1,30 @@
+
+<p>I finally found a good use for systemd-nspawn: editing raw bootable images. I put together a few scripts for Internet in a Box and Raspberry Pi OS: <a href="https://github.com/chapmanjacobd/iiab-image">https://github.com/chapmanjacobd/iiab-image</a> I'm working on getting Debian images also working since those raw images are slightly different (EFI partition instead of simple boot partition)</p>
+<p>If you're interested in this, I recommend giving this video a watch: <a href="https://www.youtube.com/watch?v=89ESCBzM-3Q">Build your own Container Runtime with chroot</a></p>
+<p>bootc is perhaps a better alternative to this... but that mostly only works with Fedora (<a href="https://mrguitar.net/?p=2605">Bootable containers on the Raspberry Pi 4</a>) but I'm having fun~</p>
+<hr/>
+<p>Some other neat things I worked on this week:</p>
+<h3><a href="https://github.com/chapmanjacobd/computer/blob/main/bin/depth">depth.py</a></h3>
+<p>I can copy a bunch of links then:</p>
+<pre><code>$ cb | depth
+
+Depth | Count | Sample Line
+3     | 18    | https://github.com/search?q=topic%3Araspberry-pi+org%3Aoffspot&amp;type=Repositories
+4     | 24    | https://github.com/offspot/base-image
+5     | 92    | https://github.com/offspot/base-image/forks
+</code></pre>
+<p>Then choose a depth to filter the list</p>
+<pre><code>$ cb | depth 4
+https://github.com/offspot/base-image  # GitHub - offspot/base-image: Kiwix-BSF Hotspot Base Image
+https://github.com/offspot/offspot-config  # GitHub - offspot/offspot-config: Offspot Runtime Configuration Scripts
+https://github.com/offspot/imager-service  # GitHub - offspot/imager-service: Create Kiwix Hotspot images online
+https://github.com/offspot/provisioner  # GitHub - offspot/provisioner: Kiwix Hotspot H1 provisioning tool
+https://github.com/offspot/provision-os  # GitHub - offspot/provision-os: Bootable disk image running provisioner
+https://github.com/offspot/testbench  # GitHub - offspot/testbench: Solution to benchmark a RaspberryPi device with OffSpot
+...
+</code></pre>
+<h3>Linux only: see which files are being written to and how much they increase over time</h3>
+<p><a href="https://github.com/chapmanjacobd/computer/blob/main/bin/fatrace_agg_size.py">fatrace_agg_size.py</a></p>
+<pre><code>$ fatrace_agg_size.py --min-size=3M --min-delta=2M --sort=size
+</code></pre>
+
