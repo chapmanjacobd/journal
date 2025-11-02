@@ -318,3 +318,7 @@ management are constantly changing.
 > I'm betting on death to make me discover everything anew
 >
 > Rabih Mroué -- Old House (2003)
+
+> In the past, you would read about a scandal in your local paper, get upset, and vote out the relevant local politician. We all (collectively) stopped paying to local news, because it’s just not very interesting, and so now the local paper doesn’t exist. Instead, a few scandals are so embarassing that they make it to national media, then we read about faraway places and sigh “wow, the [party in power in that place] is bad at governing”, and now you just vote for the opposite letter. This process does still check the worst excesses. Enough bad stories means a bad national brand and a protracted struggle to fix that by changing policy directions (see, Democrats now, Republicans circa 2013). But the information transmitted per election has gone down a lot, down from two choices per town to two choices nationwide. That’s a low enough rate of information transmission that it can’t really be relied upon to produce good local governance.
+>
+> BxM11, https://developmentalism.substack.com/p/just-make-local-police-federal-already
