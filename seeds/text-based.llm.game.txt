@@ -1,0 +1,5 @@
+Random-seed text-based RPG adventure game where the seed/context/history is deleted when the character dies so that dying has meaning
+
+I guess Minecraft is like this in some way
+
+See also Will Crowther's Adventure.
