@@ -1,0 +1,11 @@
+
+<blockquote>
+<p>I (and many of my industry friends) have become increasingly concerned that PDS will be taken down</p>
+</blockquote>
+<p>I would try to download the content that is specifically relevant to your research (whether work or a personal project) and--if it's too big--try to download a small portion of it and figure out how to compress it more. Hopefully you can find a way to fit the lossless data locally--if not it may be worth having a lossy copy than no copy at all!</p>
+<ul>
+<li><a href="https://github.com/facebook/zstd">https://github.com/facebook/zstd</a></li>
+<li><a href="https://github.com/tukaani-project/xz">https://github.com/tukaani-project/xz</a></li>
+</ul>
+<p>For lossy compression, ImageMagick converting to AV1 Image (<code>.avif</code>) works very well on image documents. You could also try ghostscript for large, scanned PDF documents: <code>gs -q -dNOPAUSE -dBATCH -dSAFER -sProcessColorModel=DeviceGray -sColorConversionStrategy=Gray -dDownsampleColorImages=true -dOverrideICC -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dColorImageDownsampleType=/Bicubic -dColorImageResolution=120 -dGrayImageDownsampleType=/Bicubic -dGrayImageResolution=120 -dMonoImageDownsampleType=/Bicubic -dMonoImageResolution=120 -sOutputFile=out.pdf input.pdf</code></p>
+
