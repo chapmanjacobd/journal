@@ -1,0 +1,9 @@
+
+<p>Two interesting things I stumbled on this week:</p>
+<p>It's possible to know filesize of files as they are deleted via bpftrace: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/trace_unlinks_size.bt">trace_unlinks_size.bt</a></p>
+<pre><code> $inode = args.dentry-&gt;d_inode;
+ $size_bytes = (uint64)$inode-&gt;i_size;
+</code></pre>
+<p>My CPU was maxing out due to too many parallel processes which was causing realtime/low-latency processes like audio playback to stutter. I've experienced this problem before but I didn't think to pause processes to reduce the number of active parallel processes; ie. $ <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/unparallel.fish">unparallel</a> ffmpeg</p>
+<p>(I should probably just run these background processes in a systemd slice with a CPUQuota (cgroup) but this is working fine for now...)</p>
+
