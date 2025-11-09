@@ -1,0 +1,3 @@
+If you're used to living in your house most of the time it might be difficult to adapt to HK style houses... ie. you might always be wishing for more space. This seems like a trivial thing but some people basically live in their houses and some people only use their houses to sleep. Also, having a car can be a bit cheaper in GZ so if that's important to you then GZ might be a better fit. In HK using bus or rail is often faster than driving+parking. What kind of person are you?
+
+If you're a minimalist then this won't matter and the reasons you outlined above make sense. If you haven't yet, I'd try living in GZ for a month then move to HK and see if you want to move back to GZ (or the other way around).

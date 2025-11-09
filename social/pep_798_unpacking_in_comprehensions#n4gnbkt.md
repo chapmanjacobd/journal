@@ -1,0 +1,1 @@
+I agree it's difficult to parse as one line but the order is the same as regular `for` loops, the only thing out of place is the stuff before the first `for`. The way it is now makes it easy to switch back and forth between comprehensions and normal syntax but reverse order would be more readable but only when things are one liners

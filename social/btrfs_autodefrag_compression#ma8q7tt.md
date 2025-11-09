@@ -1,0 +1,1 @@
+I suspect the main cause of any large difference is that `btrfs fi defrag -c` is similar to the `compress-force` mount option. So you'll end up with more compression happening (compared to the `compress` mount option) even when the initial compression test does not seem to generate much compression.

@@ -1,0 +1,3 @@
+I think you could report a problem in Google Maps over the general neighborhood area then link to the correct data that you found. It might take a while for them to get around to it though... 
+
+Fix the small stuff directly that affects you personally. If other people complain to you tell them how to fix it for themselves

@@ -1,0 +1,3 @@
+On Windows I recommend getting familiar with [doskey](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/doskey) or [nushell abbreviations](https://github.com/chapmanjacobd/computer/blob/main/.github/Windows/nu/nushell_config.nu). While you're at it, upgrade to [WezTerm](https://github.com/chapmanjacobd/computer/blob/main/.github/Windows/User/.wezterm.lua) it's a lot more responsive than Windows Terminal.
+
+But if you don't care about learning the command-line it might be easier if you find a browser plugin which can open yt-dlp for you--or create a powershell script that reads from your clipboard and runs yt-dlp.

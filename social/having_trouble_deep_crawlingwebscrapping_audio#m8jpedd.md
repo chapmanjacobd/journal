@@ -1,0 +1,1 @@
+ah... I noticed a bug in the audio metadata extraction. I usually use the script for local files or remote videos. You'll need to wait until the next version. I'll try to push out an update in a few hours

@@ -1,0 +1,1 @@
+Discoverability in online platforms is centrally controlled. As platforms naturally become less democratic it can be difficult to know when you are the frog that is slowly being boiled. But mostly I just enjoy the extra control of "surfing" on the long tail of unpopular media.

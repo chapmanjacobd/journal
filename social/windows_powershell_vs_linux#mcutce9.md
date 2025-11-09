@@ -1,0 +1,1 @@
+It really depends. Both _should_ be around the same speed but some operations are a bit faster on Linux or Windows this also varies with CPU architecture and driver support/hardware acceleration. It's likely a toss-up in most cases.

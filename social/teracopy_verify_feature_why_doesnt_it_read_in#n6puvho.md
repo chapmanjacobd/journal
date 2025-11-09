@@ -1,0 +1,3 @@
+Because the (source) drive itself has error-correction checking when reading data. There is no benefit to reading the data twice in any meaningful sense, ie. if there was a misread which wasn't caught by the drive's [internal check](https://en.wikipedia.org/wiki/Error_detection_and_correction#Data_storage), how does the copying program know whether the first or second read is correct? It can't without some kind of reference data/checksum.
+
+This is the reason why using a simple checksum (like crc32) on the source data, while you are copying it the first time, is just as good as reading it again from the source disk after it is copied over to the destination disk.

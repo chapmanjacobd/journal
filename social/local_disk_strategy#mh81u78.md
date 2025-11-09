@@ -1,0 +1,1 @@
+I think the most important step is separating your core data from data that you don't really care much about. Definitely backup data that is personal and data that is rare. RAID is not a backup. The purpose of RAID is to prevent downtime during recovery. If you don't care about downtime it is often preferable to store offline disks in a clean, low-humidity, and cool environment

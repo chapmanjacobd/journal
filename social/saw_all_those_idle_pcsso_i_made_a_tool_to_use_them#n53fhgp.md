@@ -1,0 +1,1 @@
+Just so you're aware, the additional load is not necessarily free. If the business has 100 computers and the computers each use 50W more on average that could be an extra $10k of electricity used per year

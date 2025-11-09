@@ -1,0 +1,1 @@
+While the head of many organized churches take the stance of political impartiality, there are many local leaders who try to nudge their flock one way or the other. These church leaders should take a long think themselves first.
