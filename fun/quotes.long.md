@@ -328,3 +328,11 @@ management are constantly changing.
 > Nope. Just a visitor to this reality, same as you. We're all made of the same star-stuff. Now treading through these petty cliques created by insecure fellow lifeforms to temporarily control a little patch of reality before they die. I mean, all of this is man-made. Governments, religions, nations - all artificial. Their power is mostly illusory, certainly fleeting, surviving off the energy of the individuals they seduce. Some day the old Sun's going to flare, and the Earth will explode, and for all the great dreams and deeds done and undone by mankind, the only things that will remain will be crabgrass and AOL disks. So... Enjoy Life! You can't take it with you, and you're not leaving it alive. If there's anything next...well, it couldn't hurt to be a little kinder and more understanding, in the here-and-now.
 >
 > Mike Jittlov, https://www.wizworld.com/taxes/
+
+> Libertarianism isn’t dead because libertarians lost elections or because their policies were tried and failed. It’s dead because the philosophy itself, when examined honestly, leads to conclusions its adherents claim to oppose.
+>
+> If you take seriously the premise that property rights are inviolable and that democratic constraint on property is illegitimate, you cannot avoid the concentration of power in private hands. You cannot prevent the emergence of hierarchy. You cannot maintain anything resembling equal liberty for all.
+>
+> The libertarian response has always been: “But the market will prevent that! Competition will discipline power!” But this is faith, not argument. History shows us repeatedly that markets, left unconstrained by democratic governance, produce monopoly, oligopoly, and systematic advantage for those who already have power.
+>
+> Mike Brock, https://www.notesfromthecircus.com/p/libertarianism-is-dead
