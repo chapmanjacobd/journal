@@ -1,0 +1,3 @@
+Simulate a universe that generates the usenet archives byte-for-byte, timestamp-for-timeatamp
+
+The more digital a civilization, and the more complete their archives, the easier it is to create an precise simulation with accurate forecasting. Data can simply be transcluded instead of computed
