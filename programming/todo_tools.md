@@ -1,13 +1,13 @@
-https://arcan-fe.com/
-https://sw.kovidgoyal.net/kitty/sessions/
-https://github.com/gsliepen/tinc/blob/1.1/QUICKSTART.md
-https://labplot.org/download/
-https://docs.doltgres.com/reference/version-control/dolt-sql-functions
-https://github.com/wailsapp/wails
-https://hdersch.github.io/Editing.html
-https://github.com/Ajatt-Tools/autosubsync-mpv
-https://github.com/fyne-io/fyne
-https://github.com/gabriel-vasile/mimetype
+https://arcan-fe.com/  # Arcan | IRC: #arcan @ irc.libera.chat
+https://sw.kovidgoyal.net/kitty/sessions/  # Sessions - kitty
+https://github.com/gsliepen/tinc/blob/1.1/QUICKSTART.md  # tinc/QUICKSTART.md at 1.1 · gsliepen/tinc · GitHub
+https://labplot.org/download/  # Download – LabPlot
+https://docs.doltgres.com/reference/version-control/dolt-sql-functions  # Functions | Doltgres
+https://github.com/wailsapp/wails  # GitHub - wailsapp/wails: Create beautiful applications using Go
+https://hdersch.github.io/Editing.html  # https://hdersch.github.io/Editing.html
+https://github.com/Ajatt-Tools/autosubsync-mpv  # GitHub - Ajatt-Tools/autosubsync-mpv: 🍦 Automatic subtitle synchronization script for mpv media player.
+https://github.com/fyne-io/fyne  # GitHub - fyne-io/fyne: Cross platform GUI toolkit in Go inspired by Material Design
+https://github.com/gabriel-vasile/mimetype  # GitHub - gabriel-vasile/mimetype: A fast Golang library for media type and file extension detection, based on magic numbers
 https://github.com/lrnselfreliance/wrolpi  # GitHub - lrnselfreliance/wrolpi: Create your own off-grid library
 https://github.com/XTXMarkets/ternfs  # GitHub - XTXMarkets/ternfs: A distributed file system
 https://github.com/tp7/sushi  # GitHub - tp7/Sushi: Automatic subtitle shifter based on audio
