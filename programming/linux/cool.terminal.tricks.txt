@@ -1,0 +1,26 @@
+vipe | count
+
+printf (vipe -s 1.json) --exclude=(vipe -s excludes)
+
+https://github.com/niedzielski/cb
+
+tee | cb
+
+cb | vipe | cb
+
+print 1 2 3 | sponge file
+
+cmd (cat file) (program returns lines)
+
+token-wise cut and paste of arguments
+
+transpose-tokens
+
+alt+#
+
+cbfile
+
+cb | cmd -
+
+cmd (cb)
+
