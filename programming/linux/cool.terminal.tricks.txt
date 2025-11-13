@@ -24,3 +24,6 @@ cb | cmd -
 
 cmd (cb)
 
+echo $argv > (iter_filename ~/memo/)
+
+
