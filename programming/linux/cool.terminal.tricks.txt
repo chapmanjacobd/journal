@@ -1,12 +1,13 @@
+tee | cb
+tee | count
+
+cb | vipe | cb
+
 vipe | count
 
 printf (vipe -s 1.json) --exclude=(vipe -s excludes)
 
 https://github.com/niedzielski/cb
-
-tee | cb
-
-cb | vipe | cb
 
 print 1 2 3 | sponge file
 
@@ -25,5 +26,7 @@ cb | cmd -
 cmd (cb)
 
 echo $argv > (iter_filename ~/memo/)
+
+fd -er(seq -w 00 99)
 
 
