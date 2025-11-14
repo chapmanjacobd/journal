@@ -1,0 +1,15 @@
+All lowercase
+No seperator or dash seperator
+Try to reuse existing Objects and Actions, prefixes and suffixes
+
+Object + Action
+
+foldersflatten
+foldersemptydelete
+linesemptyfilter
+
+Action + Object
+
+flattenfolders
+deleteemptyfolders
+filteremptylines
