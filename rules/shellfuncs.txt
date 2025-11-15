@@ -2,12 +2,6 @@ All lowercase
 No seperator or dash seperator
 Try to reuse existing Objects and Actions, prefixes and suffixes
 
-Action + Object
-
-flatten-folders
-delete-empty-folders
-filter-empty-lines
-
 Object + Action
 
 folders.flatten
