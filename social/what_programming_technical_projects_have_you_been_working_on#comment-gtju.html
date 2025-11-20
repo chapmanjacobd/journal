@@ -1,0 +1,25 @@
+
+<p>The code itself isn't that interesting, and it only works for content which shares the same parent tag (though perhaps I can extend this later), but it was really satisfying to add just a <a href="https://github.com/chapmanjacobd/library/commit/c9496b4395c5aaa84e5c41303f6800afd16ae1d5">few dozen lines of code</a> to extend the functionality of an existing subcommand so that something like this would be possible to add a bit more structure to text extraction:</p>
+<pre><code>$ library text --firefox https://aaronson.org/full-moon-albums/ --select .album-artist,.album-title --sep ' - '
+Way Dynamic - Massive Shoe
+Scritti Politti - Cupid &amp; Psyche 85
+YHWH Nailgun - 45 Pounds
+I Am Robot and Proud - Bird at Sunrise
+Water from Your Eyes - Long Days, No Dreams
+XTC - Skylarking
+...
+</code></pre>
+<p>Initially, I was writing a separate script that borrowed a lot of code from <code>library text</code> but once I had an MVP hardcoded for working with CSS classes I realized I could generalize it to work with other CSS selectors using <a href="https://github.com/facelessuser/soupsieve">Soup Sieve</a> and at that point I realized it would be useful to have in the <code>library text</code> command.</p>
+<hr/>
+<p>It's really satisfying when the solution to a problem is just a minor tweak. Last week I had a similar experience when <a href="https://github.com/chapmanjacobd/library/commit/52554a0f40aab543e873b3a13d8276a8cbc94fa8">adding archive.org/ghostarchive/preservetube as backup locations</a> for when downloading directly from YouTube doesn't work. At first I felt dread because it seemed like something that would be brittle and difficult to add but after playing around with it for a bit it, a solution appears which turns out to be not so bad.</p>
+<p>Another satisfying simple thing that I finally sat down and made is a <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/r730xd.disks">script to print out the layout of disks</a> on my LFF r730xd. I've been buying cheaper-than-tape small-capacity SAS drives (3TB, 4TB, sometimes 8TB) from server farm surplus stores so I'm hot-swapping disks several times per week and relying on lsblk <a href="https://medium.com/opsops/lore-where-your-drive-is-connected-e22a8e4638f7">HCTL</a> was growing a bit tedious as I don't want to accidentally eject a drive that's in-use.</p>
+<pre><code>$ r730xd.disks
+[!] sda   b9 | [!] sdh  x19 | [!] sdc  b11 | [!] sdj  b10
+[!] sdb   b8 | [O] sde      | [ ]          | [!] sdk    d
+[!] sdg  x18 | [!] sdf  x15 | [!] sdi   b2 | [!] sdl   b4
+
+[O] = unmounted
+[ ] = empty bay
+</code></pre>
+<p>It's beautiful.</p>
+
