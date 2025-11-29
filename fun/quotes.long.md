@@ -336,3 +336,9 @@ management are constantly changing.
 > The libertarian response has always been: “But the market will prevent that! Competition will discipline power!” But this is faith, not argument. History shows us repeatedly that markets, left unconstrained by democratic governance, produce monopoly, oligopoly, and systematic advantage for those who already have power.
 >
 > Mike Brock, https://www.notesfromthecircus.com/p/libertarianism-is-dead
+
+> All of us and everything we are are victims of entropy, and we will lose.
+>
+> It doesn't matter if you store papers or hard drives or carve it into stone - decay wins on any scale beyond a few human generations, more or less.
+>
+> /u/TherronKeen, https://old.reddit.com/r/DataHoarder/comments/1p950s1/none_of_it_will_last/
