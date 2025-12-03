@@ -1,0 +1,11 @@
+
+<p>I spent quite a bit of time renaming my fish functions to be a bit more consistent, consolidated similar ones, and deleted any that I don't use often.<br/>
+I had about 1000 and now only around 850 or so. I used an LLM to write a script to help with this task: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/fish_functions_rename.py">fish_functions_rename.py</a></p>
+<p>The <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/funcmv.fish">funcmv.fish</a> function has improved significantly over the past week but it's still imperfect. I recommend committing your .config/fish folder to a local git repo prior to attempting this so you can see where it is making mistakes.<br/>
+I should probably do something similar for my ~/bin folder but fewer of those have poor names</p>
+<p>edit:</p>
+<p>One thing that I'm very happy to discover is that <a href="https://unix.stackexchange.com/a/773185/426217">recent versions of tmux support OSC 133</a>:</p>
+<pre><code>bind -T copy-mode C-Up send-keys -X previous-prompt
+bind -T copy-mode C-Down send-keys -X next-prompt
+</code></pre>
+
