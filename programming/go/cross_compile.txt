@@ -1,0 +1,28 @@
+Ideally don't use CGO. eg. modernc.org/sqlite
+
+export CGO_ENABLED=0 # no c cross-compilation please
+
+export GOOS=linux
+GOARCH=amd64 go build -o hello-linux-amd64 hello.go
+GOARCH=arm64 go build -o hello-linux-arm64 hello.go
+
+export GOOS=darwin   # aka mac
+GOARCH=amd64 go build -o hello-darwin-amd64 hello.go
+GOARCH=arm64 go build -o hello-darwin-arm64 hello.go
+
+export GOOS=windows
+GOARCH=amd64 go build -o hello-windows-amd64.exe hello.go
+GOARCH=arm64 go build -o hello-windows-arm64.exe hello.go
+
+## otherwise...
+
+# Linux
+CGO_ENABLED=1 CC="zig cc -target native-native-musl" CXX="zig cc -target native-native-musl" go test -c
+
+# Mac OS
+CGO_ENABLED=1 GOOS=darwin GOARCH=arm64 CC="zig cc -target aarch64-macos" CXX="zig cc -target aarch64-macos" go test -c
+
+CGO_ENABLED=1 GOOS=darwin GOARCH=arm64 CC="zig cc -target aarch64-macos -F/host/Frameworks" CXX="zig cc -target aarch64-macos -F/host/Frameworks" go test -c -ldflags="-s -w"
+
+# Windows
+CGO_ENABLED=1 GOOS=windows GOARCH=amd64 CC="zig cc -target x86_64-windows" CXX="zig cc -target x86_64-windows" go test -c
