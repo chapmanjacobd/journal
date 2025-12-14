@@ -1,0 +1,3 @@
+ocrmypdf then Calibre's ebook-convert can replace the raster text with the OCR vector text but it depends on the output format (ie. you might need to go PDF -> HTML -> PDF, for example--but there is likely a better intermediate format which loses less formatting). The reason why OCR tools don't do this is that even if OCR works 99% of the time, that 1% of the time will still occur pretty often and it's nice to be able to check against the original scan visually
+
+For things that are not text, if you want a good result, I think you'll need to export each image and vectorize using something like Vector Magic--but this could probably be automated

@@ -1,0 +1,5 @@
+There is value in having an imperfect system but sticking to it. The Dewey Decimal Classification is a good example of this. Having neat categories that are perfect for today's uses and all possible futures is an intractable problem.
+
+I advise to start with only organizing the things that you actively use every day. Things that you need on your phone or laptop. Organize those separately from the other stuff. 
+
+Keep the "junk drawer" and don't be ashamed of it. In the short and medium term, both the "junk drawer" and the organization system are only valuable when they save you time. If you spend > 2 minutes finding something then that is the time to organize those related things. On Linux/macOS, you might use `plocate`, `fd-find`, or `ripgrep` to find the clusters of files you are looking for. On Windows, you might use [everything](https://www.voidtools.com/) or [search](https://github.com/reduf/search). The key is incremental organization. You are training your brain to be organized at the same time. It takes time. You won't get the best results by trying to organize everything all at once.

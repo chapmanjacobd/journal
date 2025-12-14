@@ -1,0 +1,1 @@
+You could also imagine a service that provides a fake tax return for you that says you made a billion dollars in self-employed income as a novelty item. This is different from them claiming to be a Certified Public Accountant

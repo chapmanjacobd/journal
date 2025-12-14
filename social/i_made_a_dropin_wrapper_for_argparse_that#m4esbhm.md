@@ -1,0 +1,3 @@
+I really think parseArgsWithGui should return argparse.Namespace. Not an Optional. If arguments can't be parsed then raise SystemExit or raise something! lol
+
+probably easier to debug if you raise the original error...

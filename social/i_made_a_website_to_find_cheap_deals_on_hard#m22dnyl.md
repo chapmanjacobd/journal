@@ -1,0 +1,3 @@
+You can search the brand name in the top search box!
+
+I definitely want to add support for SSDs, LTO, BluRay discs! Actually, all of that code is written already but I need to get to the next tier in eBay API access to be able to do it. I also want to add support for the other non-USA regions but I first need to show eBay that my site is useful. These things take time...

@@ -1,0 +1,1 @@
+Great site! I use that all the time but they only support Amazon not eBay. My site is the opposite. Sometimes Amazon has better deals so I would use both. I don't plan on ever adding Amazon support because eBay doesn't allow mixing eBay and third party listings

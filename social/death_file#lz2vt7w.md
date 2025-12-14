@@ -1,0 +1,1 @@
+100% this. Instead of documentation you could try making things more robust with greenboot and some kind of dead man's switch which would enable automatic maintenance mode: automatic restarting of services every 12h or something like that

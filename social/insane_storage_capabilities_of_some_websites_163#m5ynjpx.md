@@ -1,0 +1,1 @@
+Cloud offerings are never going to be cheaper than cost (SANs, electricity, labor). The goal is to make a profit. If anything that price tag should make you think that they are not using cloud providers... their costs are likely closer to $30,000/mo (10,000 * 163 / 5 / 12)
