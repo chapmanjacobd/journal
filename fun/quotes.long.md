@@ -342,3 +342,7 @@ management are constantly changing.
 > It doesn't matter if you store papers or hard drives or carve it into stone - decay wins on any scale beyond a few human generations, more or less.
 >
 > /u/TherronKeen, https://old.reddit.com/r/DataHoarder/comments/1p950s1/none_of_it_will_last/
+
+> Architectural Myopia: Gifford et al. (2002) surveyed other research and noted that "architects did not merely disagree with laypersons about the aesthetic qualities of buildings, they were unable to predict how laypersons would assess buildings, even when they were explicitly asked to do so".
+>
+> https://www.guernicamag.com/the_architect_has_no_clothes/
