@@ -1,0 +1,9 @@
+
+<p>I've been getting more into multiline rewriting for simple scripts. In Rust or Go I'd import a library to do it because it seems complicated. Two months ago I discovered that one can call clear via execve or something like <code>os.system("clear")</code> in Python and it actually works but there are some downsides like the scrollback being obliterated.</p>
+<p>Yesterday, I dug into this a bit more by searching à la LLM and discovered that it is actually quite simple to do. You only need to count the number of lines that you print and then move the cursor back up. I made these two commits:</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/library/commit/675d45d23500a8ef4598ae7c60045c06eb73e425">printing: add MultilineOverwriteConsole</a></li>
+<li><a href="https://github.com/chapmanjacobd/computer/commit/b6c2f6d408bb918efb4f03779f23112e562c9a8e">fatrace_agg_size.py: MultilineOverwriteConsole instead of os.system("clear")</a></li>
+</ul>
+<p>The code itself is not very interesting but I'm really happy with how it works and I want to write more scripts that make use of this.</p>
+
