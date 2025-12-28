@@ -1,0 +1,3 @@
+Yes this. You can run `fsck` but it doesn't check file content. Something like btrfs or zfs scrub will but ext4 doesn't have anything like that by default. You'd need [special config](https://docs.kernel.org/filesystems/ext4/checksums.html) or dm-integrity.
+
+Running `ffmpeg -report -i` can also have a lot of false positives. You can get a lot of errors from decoding everything but it might be completely unnoticeable in playback. The only thing without false positives is to run `ffprobe`--if it can't decode any metadata then that file is not going to play in any media player without some serious file surgery.
