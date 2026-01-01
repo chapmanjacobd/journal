@@ -1,0 +1,7 @@
+
+<p>I've been favoring golang over python recently for writing programs to fix small everyday nuisances. Google Gemini seems to be quite good at writing golang but mostly, I imagine, this is due to my inexperience with it.</p>
+<p>Normally, I'd just use mv to move files off a large hard drive to many smaller drives but that's difficult to do when the big drive is read-only. So I wrote a little program that keeps track of the remaining files, asks the user to "insert disk 2" (could be a different mountpoint), and also allows quiting and resuming.</p>
+<p><a href="https://github.com/chapmanjacobd/splitcopy/blob/main/main.go">splitcopy/main.go</a></p>
+<p>I should double check the sync.Cond/mutex stuff as maybe that could be written more concisely but I'm pretty happy with this.</p>
+<p>I only had to prompt Gemini specifically about how to treat paths to be relative to input and output prefixes, tell it to prefer certain go libraries, and tell it to use a struct instead of passing more than 3 parameters around.</p>
+
