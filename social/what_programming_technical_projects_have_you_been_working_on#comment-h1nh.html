@@ -4,4 +4,12 @@
 <p><a href="https://github.com/chapmanjacobd/splitcopy/blob/main/main.go">splitcopy/main.go</a></p>
 <p>I should double check the sync.Cond/mutex stuff as maybe that could be written more concisely but I'm pretty happy with this.</p>
 <p>I only had to prompt Gemini specifically about how to treat paths to be relative to input and output prefixes, tell it to prefer certain go libraries, and tell it to use a struct instead of passing more than 3 parameters around.</p>
+<p>edit: <a href="https://github.com/chapmanjacobd/splitcopy/commit/3808dc07565f7b5b97ff609f054c340bcc2a4b69">got rid</a> of the sync.Cond. I think it's simpler overall now but I may have introduced a couple race conditions for a second there--the flow is more complex than what it looked like at first glance. Also, I added progress information</p>
+<hr/>
+<p>edit2: Another thing I whipped up last night is <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/throttledisk">throttledisk</a>! I think I've had the inkling for a tool like this before but it always seemed to be unclear how to build it--or maybe I made it before but forgot the name of the script :)) In any case this script helps if you have multiple concurrent <code>mv</code> operations going from one disk to another and you don't want either disk to run out of space. It will pause the process until there's enough room. I run it like this:</p>
+<pre><code>throttledisk /mnt/b lb mv /mnt/a/ /mnt/b/
+# or
+throttledisk /mnt/b lb torrents /mnt/a/ --move /mnt/b/
+</code></pre>
+<p>Where I'm moving files or torrents from one disk to another, passing in the destination disk to <code>throttledisk</code> so that it knows how much space there should be before continuing. Right now these are hard-coded as pause at 20GB free, resume at 30GB free. It works fabulously! The only caveat I have is that it runs the application in the background and any input your program might be expecting won't be passed to it. Let me take a look to see if there's an easy fix for that...</p>
 
