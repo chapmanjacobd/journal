@@ -1,0 +1,10 @@
+
+<p>You need to type in the website area rather than the console area :))</p>
+<p>If it was my own creation I'd try to make it work both ways so that it would not be confusing... I guess one could do something similar by assigning a string to the variable <code>c</code>... or maybe something like this would be better:</p>
+<pre><code>Object.defineProperty(window, 'c', {
+  get: function() {
+    console.log("Function executed!");
+  }
+});
+</code></pre>
+
