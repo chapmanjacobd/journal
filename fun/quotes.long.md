@@ -346,3 +346,11 @@ management are constantly changing.
 > Architectural Myopia: Gifford et al. (2002) surveyed other research and noted that "architects did not merely disagree with laypersons about the aesthetic qualities of buildings, they were unable to predict how laypersons would assess buildings, even when they were explicitly asked to do so".
 >
 > https://www.guernicamag.com/the_architect_has_no_clothes/
+
+> There are two futures, the future of desire and the future of fate, and man's reason has never learnt to separate them.
+>
+> ...
+>
+> Can we in any better way reconcile desire and fate? In the belief of the scientist the future can yield to an objective analysis only if he can put aside all desire of one future or another; and yet, in reaching for this unattainable understanding, by some mutual influence his desires and the events may grow more and more into harmony. Holding this hope, or better still, moved by a pure curiosity for things to come, how is it possible to examine scientifically the future? For in the science of the future observation is as impossible as experiment; and of the three methods there is left to us only prediction. In the other sciences prediction plays but a small part, and rightly so, for verification follows closely on its heels; but there are general methods in scientific prediction and we may try to apply them in dealing with the whole future state. [We seek the future we desire now, but in achieving it, we change, and thus our desires change]
+>
+> J.D. Bernal, The World, the Flesh & the Devil: An Enquiry into the Future of the Three Enemies of the Rational Soul

@@ -175,4 +175,4 @@ JA Westenberg, https://medium.com/westenberg/why-the-internet-era-might-be-histo
 
 > A computer the size of the earth's orbit will be bound by latency of 8 minutes. A computer the size of 2x of earth's orbit will be bound by a latency of 16 minutes, but have 4x the maximum information storage capacity.
 
-> jychang, https://news.ycombinator.com/item?id=45518971
+jychang, https://news.ycombinator.com/item?id=45518971
