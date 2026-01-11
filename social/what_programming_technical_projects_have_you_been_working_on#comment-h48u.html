@@ -1,0 +1,32 @@
+
+<p>I've been playing around a bit more with <code>tmux</code> and wrote a couple small fish functions that let's me run multiple programs on different windows and wait for them to finish similar to GNU Parallel but just for tmux:</p>
+<pre><code>function args.or.stdin
+    if count $argv &gt;/dev/null
+        printf "%s\n" $argv
+    else
+        cat
+    end
+end
+</code></pre>
+<p>This lets me use arguments or stdin to provide commands to run.</p>
+<pre><code>function tmux.waitgroup
+    set -l session_id (random)
+    set -l signals
+
+    args.or.stdin $argv | while read -l cmd
+        set -l sig "sig_$session_id"_(random)
+        set -a signals $sig
+        # The window runs the command, then signals it is done
+        tmux new-window "$cmd; tmux wait-for -S $sig"
+    end
+
+    for sig in $signals
+        tmux wait-for $sig
+    end
+end
+</code></pre>
+<p>And it works pretty well... <code>tmux.waitgroup 'sleep 2' 'sleep 5'</code> will open two tabs in tmux, one will sleep for 2 seconds and the other will sleep for 5 seconds. They close when they are done and the window that ran the <code>tmux.waitgroup</code> will block until all the windows/processes are done.</p>
+<p>It works well for long running processes that you want to keep an eye on. Like I'm using it to run a script on each subfolder of a disk:</p>
+<pre><code>printf 'lb shrink -vy %s --move ../processed/ --move-broken ../processed-broken/ --delete-unplayable\n' (fd -td --exact-depth=1 . $argv | grep -Ev '/lost\+found/|/processed/|/processed-broken/|/downloading/|/seeding/') | tmux.waitgroup
+</code></pre>
+
