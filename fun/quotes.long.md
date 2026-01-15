@@ -354,3 +354,17 @@ management are constantly changing.
 > Can we in any better way reconcile desire and fate? In the belief of the scientist the future can yield to an objective analysis only if he can put aside all desire of one future or another; and yet, in reaching for this unattainable understanding, by some mutual influence his desires and the events may grow more and more into harmony. Holding this hope, or better still, moved by a pure curiosity for things to come, how is it possible to examine scientifically the future? For in the science of the future observation is as impossible as experiment; and of the three methods there is left to us only prediction. In the other sciences prediction plays but a small part, and rightly so, for verification follows closely on its heels; but there are general methods in scientific prediction and we may try to apply them in dealing with the whole future state. [We seek the future we desire now, but in achieving it, we change, and thus our desires change]
 >
 > J.D. Bernal, The World, the Flesh & the Devil: An Enquiry into the Future of the Three Enemies of the Rational Soul
+
+> The problem at the heart of this is the insistence on markets as a means of distributing art. This has been a glaring logical inconsistency that has been allowed to drag out far too long.
+>
+> Markets exist to find the reasonable price of scarce resources. Scarcity is the fundamental premise of markets and in the age of print and film this almost made sense for media distribution. Digital computers are not just copy machines by default, they are calculators running at extreme speeds that don't just copy but dis-assemble and re-assemble the components of the data at extreme speeds creating new distribution concepts like torrents that don't even fit into conventional legal frameworks for copyright and fair use because they are outside of that world.
+>
+> Legally and commercially, we're pretending that we're still in an age of print and film but we're not. This is the digital era, there is no basis for using markets to control media distribution. Sure, cinema producers need a way to be paid for their work but selling distribution rights is not the way. It's the only way we've tried before but it's not the only way.
+>
+> We need to stop looking at media as a commodity and seeing it for what it is, it's data. In a digital era, the notion of controlling the flow of data is obsolete. It belongs to everybody and it belongs to nobody. The library model of shared access to the collective works of humanity is clearly the workable alternative to the market model of selling data by the bit to the highest bidders.
+>
+> As to how fim producers are supposed to finance their works. . . well how is a journalist supposed to sell their work or a musician or a painter? For the most part, they can't and they don't as it is. Let's stop pretending otherwise. Yes, we need to find a way to fund the arts but selling the rights to the media is the wrong way.
+>
+> Ultimately, there's nothing to argue about here. I'm being descriptive not prescriptive. This isn't me saying how it should be but rather how it appears to be.
+>
+> /u/ahfoo
