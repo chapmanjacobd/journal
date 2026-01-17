@@ -1,0 +1,10 @@
+
+<p>I think there is a lot of value in building tools that help you build tools. Debuggers are good but sometimes they are way, way, way too generic. Some problems are better solved with <a href="https://www.folklore.org/Calculator_Construction_Set.html">Construction Sets</a>.</p>
+<p>See the Direct Manipulation craze of the 1980s for more examples; or Bret Victor:</p>
+<ul>
+<li><a href="https://worrydream.com/LearnableProgramming/">https://worrydream.com/LearnableProgramming/</a></li>
+<li><a href="https://vimeo.com/906418692">https://vimeo.com/906418692</a></li>
+</ul>
+<p>But some problems are efficiently solved with a generic debugger. And some problems can be solved by logging and aggregating statistics over logs. It's best to learn the basics of each strategy and learn to reach for the right tool when the shape of the problem is different.</p>
+<p>One thing that a lot of systems are missing is introspection and observability. Just because there is no error does not guarantee a system is doing the right thing. Debuggers are not a great fit here but often logs aren't either--but well-designed custom tools can bubble up the same kind of information that debuggers can so that would be one reason to avoid generic debuggers.</p>
+
