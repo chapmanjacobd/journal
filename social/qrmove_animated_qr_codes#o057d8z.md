@@ -1,0 +1,1 @@
+I can imagine PepsiCo execs paying a million dollars for a variation of this which just animates the non-data pixels with an advertisement full of spilled Dr. Pepsi and a basketball player doing dunks over and over and really loud music that is daring to explode the tiny speakers out of whatever damned machine this would be projected on
