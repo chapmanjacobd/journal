@@ -368,3 +368,7 @@ management are constantly changing.
 > Ultimately, there's nothing to argue about here. I'm being descriptive not prescriptive. This isn't me saying how it should be but rather how it appears to be.
 >
 > /u/ahfoo
+
+> Here’s what I think art is: it starts with an artist, who has some vast, complex, numinous, irreducible feeling in their mind. And the artist infuses that feeling into some artistic medium. They make a song, a poem, a painting, a drawing, a dance, a book or a photograph. And the idea is, when you experience this work, a facsimile of the big, numinous, irreducible feeling will materialize in your mind.
+>
+> Cory Doctorow, https://www.theguardian.com/us-news/ng-interactive/2026/jan/18/tech-ai-bubble-burst-reverse-centaur
