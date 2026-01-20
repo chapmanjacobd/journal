@@ -372,3 +372,7 @@ management are constantly changing.
 > Here’s what I think art is: it starts with an artist, who has some vast, complex, numinous, irreducible feeling in their mind. And the artist infuses that feeling into some artistic medium. They make a song, a poem, a painting, a drawing, a dance, a book or a photograph. And the idea is, when you experience this work, a facsimile of the big, numinous, irreducible feeling will materialize in your mind.
 >
 > Cory Doctorow, https://www.theguardian.com/us-news/ng-interactive/2026/jan/18/tech-ai-bubble-burst-reverse-centaur
+
+> "We are shipwrecked passengers on a doomed planet. Yet even in a shipwreck, human decencies and human values do not necessarily vanish, and we must make the most of them. We shall go down, but let it be in a manner to which we may look forward as worthy of our dignity". Cybernetic government is inherently apocalyptic. Its purpose is to locally impede the spontaneously entropic, chaotic movement of the world and to ensure "enclaves of order," of stability, and--who knows?--the perpetual self-regulation of systems, through the unrestrained, transparent, and controllable circulation of information. "Communication is the cement of society and those whose work consists in keeping the channels of communication open are the ones on whom the con- tinuance or downfall of our civilization largely depends"
+>
+> Norbert Wiener, https://www.themarginalian.org/2018/06/15/the-human-use-of-human-beings-norbert-wiener/
