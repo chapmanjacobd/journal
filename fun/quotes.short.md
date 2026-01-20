@@ -176,3 +176,7 @@ JA Westenberg, https://medium.com/westenberg/why-the-internet-era-might-be-histo
 > A computer the size of the earth's orbit will be bound by latency of 8 minutes. A computer the size of 2x of earth's orbit will be bound by a latency of 16 minutes, but have 4x the maximum information storage capacity.
 
 jychang, https://news.ycombinator.com/item?id=45518971
+
+> It is possible to interpret the information carried by a message as essentially the negative of its entropy, and the negative logarithm of its probability. That is, the more probable the message, the less information it gives.
+
+Norbert Wiener, https://www.thenewatlantis.com/text-patterns/pynchon-entropy-cybernetics
