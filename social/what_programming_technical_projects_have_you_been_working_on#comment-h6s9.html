@@ -1,0 +1,8 @@
+
+<p>I like flacon!</p>
+<p>There's also unflac if you want to just point a bunch of CUE files and let it rip!</p>
+<pre><code>go install git.sr.ht/~ft/unflac@latest
+fd -eCUE -tf | parallel unflac
+# fd -eCUE -tf -x rm
+</code></pre>
+
