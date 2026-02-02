@@ -1,3 +1,4 @@
+https://github.com/rebane2001/xikipedia
 https://gitlab.com/then-try-this/samplebrain
 https://arcan-fe.com/  # Arcan | IRC: #arcan @ irc.libera.chat
 https://sw.kovidgoyal.net/kitty/sessions/  # Sessions - kitty
