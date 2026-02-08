@@ -1,0 +1,1 @@
+If you're ingesting video files that share the same camera or creating/publishing video files then doing something deeper like `ffmpeg -report` is a very useful sanity check--but it requires much more in-depth parsing as each format gives different warnings and false positives
