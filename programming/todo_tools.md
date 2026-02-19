@@ -1,3 +1,4 @@
+https://gist.github.com/jexchan/2351996
 https://github.com/rebane2001/xikipedia
 https://gitlab.com/then-try-this/samplebrain
 https://arcan-fe.com/  # Arcan | IRC: #arcan @ irc.libera.chat
