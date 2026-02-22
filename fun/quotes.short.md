@@ -180,3 +180,7 @@ jychang, https://news.ycombinator.com/item?id=45518971
 > It is possible to interpret the information carried by a message as essentially the negative of its entropy, and the negative logarithm of its probability. That is, the more probable the message, the less information it gives.
 
 Norbert Wiener, https://www.thenewatlantis.com/text-patterns/pynchon-entropy-cybernetics
+
+> I take my time and wait until it is converted into something I can express -- I take my time in my research and in my search for sounds
+
+Eiko Ishibashi, https://kaput-mag.com/stories_en/eiko-ishibashi-i-dont-believe-that-music-can-solve-anything-but-i-cant-ignore-the-world-when-im-making-music/
