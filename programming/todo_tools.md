@@ -1,3 +1,9 @@
+https://vybestack.dev/llxprt-code/docs/cli/configuration.html
+https://huggingface.co/bartowski/zai-org_GLM-4.7-Flash-GGUF/blob/main/zai-org_GLM-4.7-Flash-Q6_K_L.gguf
+https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF
+https://unsloth.ai/docs/models/glm-4.7-flash
+https://gist.github.com/Artefact2/b5f810600771265fc1e39442288e8ec9
+https://github.com/vybestack/llxprt-code
 https://gist.github.com/jexchan/2351996
 https://github.com/rebane2001/xikipedia
 https://gitlab.com/then-try-this/samplebrain
