@@ -1,0 +1,23 @@
+
+<blockquote>
+<p>Would love any feedback folks are willing to share about the script</p>
+</blockquote>
+<p>Where you have an unix shell you probably have access to git. I frequently copy notes between computers using ssh, git, or rsync as they can often do very similar things. For example you could pipe a git diff through ssh, if you are in the middle of making a commit:</p>
+<pre><code>ssh phone "cd $(pwd); git diff" | git apply -
+</code></pre>
+<p>Git is a technical tool so of course it's not perfect for everything... But you'll never be able to escape file/line conflicts without making choices about tradeoffs as I'm sure you're familiar with by now!</p>
+<p>Also, you don't need to trust GitHub/Lab/Berg with your private notes. Git itself works fine computer to computer. Personally, I choose one computer as the center hub--though I'm sure there are more decentralized ways to do it:</p>
+<pre><code># hub pc
+cd /home/$USER/notes
+git remote -v
+git remote remove origin
+git config receive.denyCurrentBranch updateInstead
+
+# other devices
+git remote remove origin
+git remote add server ssh://$USER@hub-pc/home/$USER/notes/
+git branch --set-upstream-to=server/main main
+git fetch
+</code></pre>
+<p>But you will still probably want something like Tailscale to make the DNS stuff easy (or use something like Syncthing which does UDP hole-punching using its own mechanism instead... But git has superior conflict management)</p>
+
