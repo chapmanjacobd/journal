@@ -1,3 +1,5 @@
+https://github.com/can1357/oh-my-pi
+https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent
 https://github.com/badlogic/pi-mono
 https://vybestack.dev/llxprt-code/docs/cli/configuration.html
 https://huggingface.co/bartowski/zai-org_GLM-4.7-Flash-GGUF/blob/main/zai-org_GLM-4.7-Flash-Q6_K_L.gguf
