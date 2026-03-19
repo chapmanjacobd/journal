@@ -1,0 +1,43 @@
+
+<p>I'm entering that LLM "Vice" Coding phase where it feels like I'm treading water as different models keep making similar mistakes and breaking features when unrelated features are added.</p>
+<p>Closing the loop and implementing full e2e testing with playwright has helped in a lot of ways but you have to be especially careful when having the LLM write tests because it will very quickly decide that the incorrect behavior is expected and your test will actually be completely useless because it does a skip test, return early, or <code>&gt;=</code> instead of <code>&gt;</code> etc.</p>
+<p>One strategy that I've really started to like is having an abstraction layer for the tests like a page-object model (POM). These are much too verbose if I was coding by hand but with an LLM it helps to have these types of things because the LLM really has no idea what is going on in the page without some kind of reference system à la API.</p>
+<p>The Qwen Coder free limits are starting to feel really generous compared to Gemini over the past few days. I would never pay for AI credits or cloud anything because it is all insanely priced but maybe I would buy a bigger graphics card next time. Using llmfit to find a good model, it seems pretty straightforward to run a Qwen Coder model locally via vLLM... but my graphics card is a bit too old and it is AMD so that limits my options somewhat.</p>
+<p>For a couple days last week I got really into Bleve and running SQLite fts5 with detail=none and hand-tokenized trigrams. But after doing a lot of benchmarking it seems like normal SQLite fts5 with detail=full and trigram tokenizer will be the best balance for the performance profile that I'm targeting. If disk space was free then I'd absolutely add Bleve just for the stellar search performance but alas it is not free and adding it just for that almost doubles the database size requirements and binary size.</p>
+<details>
+<summary>my favorite thing about coding assistance tools...</summary>
+<p>are the poetics of the insane</p>
+<p>deranged code comments</p>
+<p>of excessive length</p>
+<pre><code>// Need to resolve path to media_id if we want to store it as a caption
+// However, if we store the path here, it's problematic for InsertCaptionParams
+// Let's store the path temporarily in a different way or resolve ID later.
+// Given the current structure, we'll keep MediaPath in db.InsertCaptionParams?
+// Wait, the db package expects MediaID. Let's see how we can resolve it.
+// For now, let's keep the path in a temporary field, we can add a helper.
+// Actually, the InsertCaptionParams struct in db/queries.go has MediaID.
+// I'll leave the path in, and handle resolution in the db layer.
+// Wait, the db/queries.go uses MediaID in InsertCaptionParams, so I need an ID.
+// Let's resolve the ID.
+// We need access to db.Queries in metadata.go
+// I'll add GetMediaID as a helper to Metadata, but let's assume path is enough for now?
+// No, the DB requires MediaID.
+// I'll use a placeholder or resolve later.
+// Actually, I'll update InsertCaptionParams to have a temporary path if needed, or resolve it.
+// Let's change InsertCaptionParams to include MediaID.
+// I already did that in internal/db/queries.go.
+// How do I get MediaID here?
+// I have the path. I can use queries.GetMediaID(ctx, path).
+// But metadata.go doesn't have a queries object.
+// I'll skip this for now or pass it.
+// Actually, I'll pass the path in the struct but rename the field to MediaPath just for temporary use?
+// No, that breaks the refactoring.
+// Let's resolve ID:
+// I'll assume that the DB layer or a helper will be used.
+// For now, I'll store the path in MediaID field as a hack, and add a TODO.
+// No, that will cause a type error.
+// Okay, let's just use 0 as a placeholder for now and hope it's updated later.
+</code></pre>
+<p>💄🤡</p>
+</details>
+

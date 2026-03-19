@@ -1,0 +1,12 @@
+
+<blockquote>
+<p>agents or skills</p>
+</blockquote>
+<p>Yeah... I would say the most important control that you have which determines whether the LLM output will be useful or not is context. Unfortunately, a lot of these skills, agents, and LLM appendages are often counterproductive if not actively harmful:</p>
+<p><a href="https://arxiv.org/pdf/2602.11988">https://arxiv.org/pdf/2602.11988</a></p>
+<p>For example, I've never once had Gemini's "generalist subagent" do anything remotely useful which the simple find and replace program <code>sed</code> would be able to do a thousand times faster.</p>
+<p>Some harnesses and workflows are useful though. "Plan mode", where a large agent decides what to do and hands off the tasks to a medium sized agent, works pretty well. I think the generalist subagent is trying to do something similar but the model is just too small to do anything useful.</p>
+<p>It's useful to ask different large models the same question, with varying amounts of context. Using certain words can predetermine the output like if you ask "is this a bee sting"? or "is this a wasp bite"? then the output could be completely different depending on (bee, wasp) but also (sting, bite). This can have dangerous consequences of course!</p>
+<p>So you need to disprove often and withhold information at times to get the best result.</p>
+<p>The other point in variation is that many of the big LLM providers are constantly tweaking their models and offloading certain queries to caches or smaller LLMs even while billing you under a different one depending on resource availability. And at the same time there are Mixture of Experts models which is the same idea just at the model level so technically they are billing you for the model you paid for in these cases but because you worded the question in a certain way the response comes from a smaller part of the model. But even normal big models have this locality aspect too... So there are many things which cause the quality of results to vary.</p>
+
