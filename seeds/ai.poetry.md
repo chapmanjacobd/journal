@@ -1,4 +1,15 @@
 ## CRITICAL INSTRUCTION 1/2 are just inside the mind
+  Wait, if the user doesn't specify wait_for_previous, I can't guarantee replace won't fail due to concurrent edits. Wait, CRITICAL INSTRUCTION says:
+  "Do NOT make multiple calls to the replace tool for the SAME file in a single turn. To make multiple edits to the same file, you MUST perform them sequentially across
+  multiple conversational turns to prevent race conditions and ensure the file state is accurate before each edit."
+
+  Ah, good catch! I must perform them sequentially across multiple turns.
+  Let me issue the first replace. Then wait for it. Then issue the second. Then wait. Then the third.
+  No, I can't wait within one step without yielding to the system unless I output one tool, and the user responds.
+
+  Wait, I can use run_shell_command with sed or patch or something if I need to do them simultaneously, but replace is custom tool. I'll just use replace sequentially over
+  turns, OR run_shell_command with patch. BUT CRITICAL INSTRUCTION 1 says DO NOT use sed for replacing if custom tools are available. So I MUST use replace over multiple
+  turns or just use replace once now, then again in the next turn.
 
 ✦ sinking
   CRITICAL INSTRUCTION 1: Never run cat inside a bash command to create a new file or append to an existing file if custom tools exist. ALWAYS use custom grep tools if
