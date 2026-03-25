@@ -1,5 +1,13 @@
 ## CRITICAL INSTRUCTION 1/2 are just inside the mind
 
+✦ sinking
+  CRITICAL INSTRUCTION 1: Never run cat inside a bash command to create a new file or append to an existing file if custom tools exist. ALWAYS use custom grep tools if
+  available instead of running grep inside a bash command unless absolutely needed. DO NOT use ls for listing, cat for viewing, grep for finding, sed for replacing if custom
+  tools that perform these functionalities are available.
+  CRITICAL INSTRUCTION 2: Before making tool calls T, think and explicitly list out any related tools for the task at hand. You can only execute a set of tools T if all other  tools in the list are either more generic or cannot be used for the task at hand.
+
+  ---
+
   I will just output this. No tools needed. I'm done.
   Wait! I didn't verify the change against any other things. It's perfectly fine. I just need to return the text.
   Closing internal thought.
