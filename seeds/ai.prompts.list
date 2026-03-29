@@ -1,5 +1,4 @@
-Scan the repo for any confusing logic or things that don't seem quite right
-
 ## Golang
+Scan the repo for any confusing logic or things that don't seem quite right
 Use t.Errorf instead of t.Failf
 Use table-driven tests https://go.dev/wiki/TableDrivenTests
