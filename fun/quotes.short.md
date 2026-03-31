@@ -184,3 +184,7 @@ Norbert Wiener, https://www.thenewatlantis.com/text-patterns/pynchon-entropy-cyb
 > I take my time and wait until it is converted into something I can express -- I take my time in my research and in my search for sounds
 
 Eiko Ishibashi, https://kaput-mag.com/stories_en/eiko-ishibashi-i-dont-believe-that-music-can-solve-anything-but-i-cant-ignore-the-world-when-im-making-music/
+
+> The real danger isn't that we lose the ability to see the truth, but that the cost of verifying the truth (using sensors/science) becomes so much higher than the cost of accepting the hallucination (the LLM) that society stops bothering to check.
+
+Google Gemini, https://gemini.google.com/share/5a53ee9361b9
