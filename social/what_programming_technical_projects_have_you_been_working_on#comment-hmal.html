@@ -1,0 +1,12 @@
+
+<p>I made a small alternative to mergerfs because I have had traumatic experiences with FUSE in the past and just wanted something simpler: <a href="https://github.com/chapmanjacobd/nofs">https://github.com/chapmanjacobd/nofs</a></p>
+<p>I think the most interesting part is playing around with strict clippy settings for working with LLMs can be a mixed bag of usefulness. Some settings really do help and it is important to set "deny" so that the LLM doesn't make the temptation to write an <code>#[allow(lint_name)]</code>, etc. But a lot of linting settings don't actually help much to guide LLMs to produce high quality code--it just forces them to make that low-quality code look nice :-)</p>
+<p>Another thing that I learned is that the CLI parser clap can silently (no build errors) overwrite variables if the positional arg and optional flags <a href="https://github.com/chapmanjacobd/nofs/commit/c273f32ee90d6aae7f584137ea28a13a4e05c191">have the same name</a> [eg. --paths and &lt;paths&gt; ...].</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/nofs/blob/main/.clippy.toml">https://github.com/chapmanjacobd/nofs/blob/main/.clippy.toml</a></li>
+</ul>
+<p>I'm doing a similar thing now in golang via golangci-lint (this <a href="https://github.com/maratori/golangci-lint-config">golden config</a> was really helpful as there are way too many knobs to turn) and similar observations... cognitive complexity linters help a lot if you can strictly enforce them. Unfortunately, go doesn't have a "deny" setting but I've noticed that Qwen Coder doesn't want to lean on <code>//nolint</code> nearly as much as <code>#[allow...]</code> for whatever reason. So thankfully it's not a big problem!</p>
+<ul>
+<li><a href="https://github.com/chapmanjacobd/syncweb/blob/main/.golangci.yml">https://github.com/chapmanjacobd/syncweb/blob/main/.golangci.yml</a></li>
+</ul>
+
