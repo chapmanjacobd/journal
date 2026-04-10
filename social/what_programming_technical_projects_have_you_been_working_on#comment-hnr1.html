@@ -1,0 +1,16 @@
+
+<blockquote>
+<p>rtorrent</p>
+</blockquote>
+<p>I tried it out for a few months and to be honest... not too impressed. Something like <code>qbittorrent-nox</code> (that is, no X11, no GUI) or <code>transmission-cli</code> is a lot more responsive and scalable.</p>
+<p>I've slowly built up a collection of qbit scripts that make managing thousands of torrents across different servers a breeze (...once I remember the script name!):</p>
+<p><em>library torrents-info</em> does a lot of heavy lifting and it's my main interface into qbit:</p>
+<pre><code>parallel server.ssh {} lb torrents $argv ::: (servers.ssh.connectable $servers) 
+</code></pre>
+<p>This uses GNU Parallel, fish functions, <a href="https://github.com/chapmanjacobd/library/blob/main/library/playback/torrents_info.py">lb torrents</a>, also see <a href="https://github.com/chapmanjacobd/library/blob/main/library/multidb/allocate_torrents.py">allocate_torrents</a></p>
+<p>nb. if you use these you'll need <code>rb_libtorrent-python3</code> on Fedora, in Arch the correct python bindings are already included in the main libtorrent-rasterbar package, other distros might be even different but most likely installing via package manager will be very easy once you locate the correct one)</p>
+<p>There's also these scripts which I mostly only use in an automated way (if you search the script name in my computer repo you might find a reference in daily.fish or weekly.fish, etc):</p>
+<p><a href="https://github.com/chapmanjacobd/computer/blob/main/bin/">https://github.com/chapmanjacobd/computer/blob/main/bin/</a> (see the qbt_* and torrent_* scripts)</p>
+<p>Let me know if you see anything confusing, or if you have a specific problem, and I can try to explain how I would deal with it.</p>
+<p>There are a lot of other qbittorrent CLI options too so you aren't limited to my scripts... I just have less experience with them--but if you don't like what I have, I'd still encourage a deeper look at qbittorrent!</p>
+
