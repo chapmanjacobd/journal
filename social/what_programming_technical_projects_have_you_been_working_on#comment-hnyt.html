@@ -1,0 +1,9 @@
+
+<p>It should be similar to wireguard. That is, it depends how you set it up. If you want to map a specific port to the open internet it's a similar situation either way.</p>
+<p>The difference is just connecting between your server and your home computer.</p>
+<p>Tailscale does have some products (some are free) for exposing to open internet without your own server <a href="https://tailscale.com/docs/features/tailscale-funnel">https://tailscale.com/docs/features/tailscale-funnel</a> --but you don't need to use them. You can use Tailscale like wireguard because it is running wireguard under the hood but with hole punching and other features which make it easier and more robust for many scenarios like not having a static IP address.</p>
+<p>You could just do that final part of VPS to public port via reverse proxy like Caddy, HAProxy, Nginx. I think... maybe it is slightly more complicated:</p>
+<p><a href="https://old.reddit.com/r/teamspeak3/comments/fm39qx/nginx_reverse_proxy_for_teamspeak/">https://old.reddit.com/r/teamspeak3/comments/fm39qx/nginx_reverse_proxy_for_teamspeak/</a></p>
+<p><a href="https://old.reddit.com/r/Tailscale/comments/1cskoya/port_forwarding_public_vps_local_machine/">https://old.reddit.com/r/Tailscale/comments/1cskoya/port_forwarding_public_vps_local_machine/</a></p>
+<p>Well for low latency stuff you probably want as few programs streaming the data so it sounds like wg-easy will be a better fit</p>
+

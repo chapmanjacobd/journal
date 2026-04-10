@@ -8,7 +8,7 @@
 <pre><code>parallel server.ssh {} lb torrents $argv ::: (servers.ssh.connectable $servers) 
 </code></pre>
 <p>This uses GNU Parallel, fish functions, <a href="https://github.com/chapmanjacobd/library/blob/main/library/playback/torrents_info.py">lb torrents</a>, also see <a href="https://github.com/chapmanjacobd/library/blob/main/library/multidb/allocate_torrents.py">allocate_torrents</a></p>
-<p>nb. if you use these you'll need <code>rb_libtorrent-python3</code> on Fedora, in Arch the correct python bindings are already included in the main libtorrent-rasterbar package, other distros might be even different but most likely installing via package manager will be very easy once you locate the correct one)</p>
+<p>nb. if you use these you'll need <code>rb_libtorrent-python3</code> on Fedora, in Arch the correct python bindings are already included in the main libtorrent-rasterbar package (other distros might be even different but most likely installing via package manager will be very easy once you locate the correct one)</p>
 <p>There's also these scripts which I mostly only use in an automated way (if you search the script name in my computer repo you might find a reference in daily.fish or weekly.fish, etc):</p>
 <p><a href="https://github.com/chapmanjacobd/computer/blob/main/bin/">https://github.com/chapmanjacobd/computer/blob/main/bin/</a> (see the qbt_* and torrent_* scripts)</p>
 <p>Let me know if you see anything confusing, or if you have a specific problem, and I can try to explain how I would deal with it.</p>
