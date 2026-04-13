@@ -1,0 +1,1 @@
+Firefox updates not crashing firefox is another reason to not use fedora from DNF or any other package manager. Just use Mozilla's shell script on their site and install to .local/bin! It auto-updates by itself without crashing
