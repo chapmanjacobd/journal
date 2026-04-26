@@ -1,0 +1,7 @@
+
+<p>WAV is pretty unique in that it almost always is uncompressed (there are ways like ACM but usually people use a different file extension so that it isn't confusing). FLAC can recreate a WAV file bit for bit (or at least the PCM part) and it actually has a compression option which is why it's so much better than WAV.</p>
+<p>I think audio gets away with this because audio is so small. Purely uncompressed image pixel matricies are huge which is probably why it isn't very common.</p>
+<p>For images I think you can find an analogy of TIFF to PNG. You can convert between them losslessly, depending on your settings. But the results might be much less impressive as TIFF is a much more robust format with many compression options built-in. So your file might even increase in size if the TIFF compression algorithm of the original file is better than PNG.</p>
+<p>For a lossy option you might try this, I wrote a multi-file optimizer that will, among other things, convert images and even CBZ/CBR archives to AVIF images. This can reduce file sizes A LOT. The default settings might be too extreme but you can override them with flags like setting the max image width/height:</p>
+<p><a href="https://github.com/chapmanjacobd/shrink">https://github.com/chapmanjacobd/shrink</a></p>
+
