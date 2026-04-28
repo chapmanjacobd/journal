@@ -188,3 +188,7 @@ Eiko Ishibashi, https://kaput-mag.com/stories_en/eiko-ishibashi-i-dont-believe-t
 > The real danger isn't that we lose the ability to see the truth, but that the cost of verifying the truth (using sensors/science) becomes so much higher than the cost of accepting the hallucination (the LLM) that society stops bothering to check.
 
 Google Gemini, https://gemini.google.com/share/5a53ee9361b9
+
+> What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention, and a need to allocate that attention efficiently among the overabundance of information sources that might consume it.
+
+Herbert Simon
