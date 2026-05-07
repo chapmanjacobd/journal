@@ -1,0 +1,10 @@
+
+<pre><code>grep API_AEAD= /boot/config-$(uname -r)
+</code></pre>
+<p>For enterprise kernels where CONFIG_CRYPTO_USER_API_AEAD=y</p>
+<p>add</p>
+<pre><code>initcall_blacklist=algif_aead_init
+</code></pre>
+<p>to the kernel command line and reboot</p>
+<p><a href="https://www.openwall.com/lists/oss-security/2026/04/30/2">https://www.openwall.com/lists/oss-security/2026/04/30/2</a></p>
+
