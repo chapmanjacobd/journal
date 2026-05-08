@@ -1,0 +1,6 @@
+
+<p>Let’s Encrypt doesn't care how you route to the server, only that the domain name in the browser matches the domain name on the certificate.</p>
+<p>So one strategy for this is to use split-horizon DNS where you configure the DNS on each client to point to the private address when in your local network and the public address when outside your local network.</p>
+<p>Let's Encrypt needs that public routing to verify you own the domain but after that you could copy the certificate to another machine and it would still be valid until it expires.</p>
+<p>You will need to ensure VLAN A can talk to VLAN B on the specific port the server uses (443?) but as long as this is simply inter-VLAN routing and not crossing a NAT boundary then there should be no problem with this.</p>
+
