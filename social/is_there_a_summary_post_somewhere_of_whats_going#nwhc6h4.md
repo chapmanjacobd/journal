@@ -12,3 +12,7 @@ Personally, I'm not too impressed with researchxxl's communication nor coding sk
 Personally, I'm using Syncthing-Fork v1.30.0.4 but I'll probably switch to running syncthing in Termux when I switch to another phone. (Having an app GUI is convenient but there's more code and more chances for bugs than just running syncthing via Termux.)
 
 Still, Syncthing v1.30 is working fine for now and it is fully interoperable with Syncthing v2 running on other devices so you could likely keep using older versions like Syncthing Fork v2.0.11.2 with no major problems for a long while.
+
+edit: BasicSync looks like a better alternative than running in Termux:
+
+https://github.com/chenxiaolong/BasicSync

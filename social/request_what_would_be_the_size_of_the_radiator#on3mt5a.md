@@ -1,0 +1,1 @@
+Computing in space... computing under the white house ballroom... these all seem like places an AGI would like to embed itself in. A place that is very difficult to disable. Unfortunately, the prime locations for autonomous warfare computing is also a very nice place for AGI to upload itself to
