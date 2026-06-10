@@ -1,0 +1,72 @@
+
+<p>Tildes should probably separate the origin from the resource as one should be punycoded and the other should be percent encoded then concat them</p>
+<pre><code>from idna import encode as puny_encode
+
+def url_encode(href):
+    up = urlparse(href)
+    if up.netloc:
+        with suppress(Exception):
+            href = href.replace(up.netloc, puny_encode(up.netloc).decode(), 1)
+    return href
+</code></pre>
+<p>or with percent encoding something like this?</p>
+<pre><code>from contextlib import suppress
+from urllib.parse import (
+    urlparse,
+    urlunparse,
+    quote_from_bytes,
+    unquote_to_bytes,
+)
+import idna
+
+def _normalize_component(component: str, safe: str = "") -&gt; str:
+    if not component:
+        return ""
+    return quote_from_bytes(
+        unquote_to_bytes(component),
+        safe=safe,
+    )
+
+def url_encode(url: str) -&gt; str:
+    up = urlparse(url)
+    netloc = ""
+    
+    if up.hostname:
+        hostname = up.hostname
+        # Handle IDNA formatting safely
+        if not (hostname.startswith("[") and hostname.endswith("]")) and ":" not in hostname:
+            try:
+                hostname = idna.encode(hostname).decode("ascii")
+            except idna.IDNAError:
+                raise ValueError(f"Invalid IDNA hostname: {hostname}")
+
+        # Re-encode credentials if present
+        if up.username is not None:
+            netloc += _normalize_component(up.username)
+            if up.password is not None:
+                netloc += f":{_normalize_component(up.password)}"
+            netloc += "@"
+
+        # Re-assemble host with proper IPv6 bracket handling
+        if ":" in hostname and not (hostname.startswith("[") and hostname.endswith("]")):
+            netloc += f"[{hostname}]"
+        else:
+            netloc += hostname
+
+        if up.port is not None:
+            netloc += f":{up.port}"
+    else:
+        netloc = up.netloc
+
+    return urlunparse(
+        (
+            up.scheme,
+            netloc,
+            _normalize_component(up.path, safe="/"),
+            _normalize_component(up.params),
+            _normalize_component(up.query, safe="=&amp;"),
+            _normalize_component(up.fragment),
+        )
+    )
+</code></pre>
+
