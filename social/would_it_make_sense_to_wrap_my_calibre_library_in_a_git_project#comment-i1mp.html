@@ -1,0 +1,25 @@
+
+<p>I've done worse things with git... The only thing you really need to be careful of is to make sure that you aren't committing an open database. One thing that can help is to run</p>
+<pre><code>PRAGMA wal_checkpoint(TRUNCATE);
+</code></pre>
+<p>before <code>git add file.db; git commit</code>.</p>
+<p>You can add this line to <code>~/.config/git/attributes</code> to have git diff between sqlite changes:</p>
+<pre><code>*.db       diff=sqlite3
+</code></pre>
+<p>You could also add diff zip files. For example, listing zip contents:</p>
+<pre><code>git config --global diff.lsar_list.textconv lsar
+
+tee -a ~/.config/git/attributes
+*.zip diff=lsar_list
+*.tar.gz diff=lsar_list
+*.tgz diff=lsar_list
+*.7z diff=lsar_list
+</code></pre>
+<p>or even file contents of files within zip <a href="https://github.com/lvc/pkgdiff">and other supported archives</a>... assuming the files within are text encoded:</p>
+<pre><code>git config --global diff.zip_content.command "pkgdiff"
+
+tee -a ~/.config/git/attributes
+*.zip diff=zip_content
+</code></pre>
+<p>But yeah storing large files in git will usually result in the git index being at least as big as the files you store so you lose 1/2 of your storage space</p>
+
