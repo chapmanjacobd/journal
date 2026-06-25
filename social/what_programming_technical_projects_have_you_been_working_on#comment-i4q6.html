@@ -1,0 +1,9 @@
+
+<p>I'm building an collaborative P2P mapping app with <code>iroh</code> and Kotlin Multiplatform / CMP. It's my first time building a GUI that can compile to such a wide variety of platforms (Android, iOS, Linux/macOS/Windows desktops, Server [via Ktor]) where it doesn't feel like I'm having to special case everything. Things mostly just work and that is a great feeling.</p>
+<p>One very cool crate that I came across is <code>iroh-topic-tracker</code>:</p>
+<blockquote>
+<p>Serverless, decentralized peer discovery for iroh-gossip topics using experimental DHT Signed Peer Announcements.</p>
+<p>This crate uses the implementation of the experimental Draft BEP (PR #174) for announcing and discovering cryptographically signed peer identities (Ed25519 public keys) on the Mainline DHT by Nuhvi. This enables overlay networks like Iroh to discover peers without centralized trackers, utilizing signed announcements to verify identity before connection.</p>
+</blockquote>
+<p>I'm using it to build a "Discover" page based on the nearest level 7 H3 Cells (~5 km) using the user's location (or they can choose a different location on the map). by broadcasting to an iroh gossip channel of the given H3 Cell name. It's a bit social media-y but it's pretty cool that it all works without a central server.</p>
+
