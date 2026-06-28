@@ -192,3 +192,7 @@ Google Gemini, https://gemini.google.com/share/5a53ee9361b9
 > What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention, and a need to allocate that attention efficiently among the overabundance of information sources that might consume it.
 
 Herbert Simon
+
+> full article is available by deleting cookies, then Googling the article's title
+
+Society
