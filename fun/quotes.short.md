@@ -196,3 +196,7 @@ Herbert Simon
 > full article is available by deleting cookies, then Googling the article's title
 
 Society
+
+> Conservatism consists of exactly one proposition, to wit: There must be in-groups whom the law protects but does not bind, alongside out-groups whom the law binds but does not protect.
+
+Frank Wilhoit
