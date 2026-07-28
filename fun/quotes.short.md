@@ -200,3 +200,7 @@ Society
 > Conservatism consists of exactly one proposition, to wit: There must be in-groups whom the law protects but does not bind, alongside out-groups whom the law binds but does not protect.
 
 Frank Wilhoit
+
+> Many critics of AI complain about 'hallucinations', a class of errors where models make up confident-sounding but factually incorrect answers. When there is no factually correct answer, however, AI’s shortcomings can be even more pronounced and less easy to detect. When you ask a model to summarise the news, it reaches a subjective judgment about what to include.
+
+The Economist
