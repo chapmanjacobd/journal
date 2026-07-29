@@ -390,3 +390,7 @@ management are constantly changing.
 > The problem being that I don't think there's a definite proof that any of human thinking is more than a sum of high-granularity partial solutions that can be put together. It could be that with enough tokens, big enough context window, and ability to dig out the relevant partials, many such thought processes could be simulated. ~3form
 >
 > https://news.ycombinator.com/item?id=48998362
+
+> The physics of software is not algorithms, data structures, languages and abstractions. These are just tools we make, use, throw away. The real physics of software is the physics of people--specifically, our limitations when it comes to complexity, and our desire to work together to solve large problems in pieces. This is the science of programming: make building blocks that people can understand and use easily, and people will work together to solve the very largest problems.
+>
+> ZeroMQ - The Guide: Chapter 1, https://zguide.zeromq.org/docs/chapter1/
