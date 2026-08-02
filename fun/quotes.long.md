@@ -394,3 +394,9 @@ management are constantly changing.
 > The physics of software is not algorithms, data structures, languages and abstractions. These are just tools we make, use, throw away. The real physics of software is the physics of people--specifically, our limitations when it comes to complexity, and our desire to work together to solve large problems in pieces. This is the science of programming: make building blocks that people can understand and use easily, and people will work together to solve the very largest problems.
 >
 > ZeroMQ - The Guide: Chapter 1, https://zguide.zeromq.org/docs/chapter1/
+
+> For many households, buying and selling a home is one of the most consequential financial transactions in their lifetime. It has immediate and potentially far-reaching implications for their economic and financial well-being.
+> ...
+> Individuals and firms faced with making large, infrequent financial transactions under imperfect information often seek the advice of experts and are willing to pay high costs for their services. We find little evidence that the average listing agent secures a price premium for their clients that justifies their commission. The average prices of homes sold by traditional agents in our sample are below those obtained by homeowners who sell their own properties using flat-fee brokers, even after controlling for location and property fixed effects. Similarly, we find little evidence that the average exclusive buyer’s agent secures a better price than when an agent is shared by both parties. 
+> 
+> https://www.econstor.eu/bitstream/10419/270454/1/1818042312.pdf
