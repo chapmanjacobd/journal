@@ -5,6 +5,7 @@ Make a decision table for all the states and outputs. Think about possible edge-
 Do a PR review of git show HEAD
 Lets get `make lint` passing by strictly following linting recommendations. don't add ignores or modify lint config
 Remove any change-oriented phrasing and rewrite *.md documentation as stable present-tense behavior.
+break down these tasks into user decision artifact plans where structural changes happen first. Include context for a future agent as each plan will be executed independently
 
 ## Golang
 Use t.Errorf instead of t.Failf
