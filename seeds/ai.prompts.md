@@ -6,6 +6,7 @@ Do a PR review of git show HEAD
 Lets get `make lint` passing by strictly following linting recommendations. don't add ignores or modify lint config
 Remove any change-oriented phrasing and rewrite *.md documentation as stable present-tense behavior.
 break down these tasks into user decision artifact plans where structural changes happen first. Include context for a future agent as each plan will be executed independently
+Adhere the documentation and application interfaces to the ADS-STE100 standard. Clarify confusing or duplicated synonyms as distinct before conflating / coalescing.
 
 ## Golang
 Use t.Errorf instead of t.Failf
