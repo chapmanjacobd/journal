@@ -400,3 +400,7 @@ management are constantly changing.
 > Individuals and firms faced with making large, infrequent financial transactions under imperfect information often seek the advice of experts and are willing to pay high costs for their services. We find little evidence that the average listing agent secures a price premium for their clients that justifies their commission. The average prices of homes sold by traditional agents in our sample are below those obtained by homeowners who sell their own properties using flat-fee brokers, even after controlling for location and property fixed effects. Similarly, we find little evidence that the average exclusive buyer’s agent secures a better price than when an agent is shared by both parties. 
 > 
 > https://www.econstor.eu/bitstream/10419/270454/1/1818042312.pdf
+
+> The owners of the city have managed to insulate themselves so well against history that they no longer believe that it exists. But they still dream about it, and in the depths of their seclusion the dream resembles a nightmare. A tangled procession of ceremonies and masks, conspiracies and motiveless coups and murders in hidden rooms And so that's what we stage for them, day after day, to soothe them in their dreaming business.
+>
+> Face of the Killer
