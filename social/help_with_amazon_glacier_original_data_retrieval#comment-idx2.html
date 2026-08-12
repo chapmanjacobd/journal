@@ -1,0 +1,6 @@
+
+<p>Glacier is cheap for day to day storage but expensive for retrieval so the bill will probably be more expensive than you expect. It may help to migrate to a specific storage class first (via a storage lifecycle mechanism?)</p>
+<p><a href="https://aws.amazon.com/s3/storage-classes/glacier/">https://aws.amazon.com/s3/storage-classes/glacier/</a></p>
+<p>Looks like S3 Glacier Flexible Bulk Retrieval or S3 Glacier Deep Archive are the less expensive options.</p>
+<p>Also, Amazon will charge egress separately so it will help to use Direct Connect / or CloudFront if you can!</p>
+
