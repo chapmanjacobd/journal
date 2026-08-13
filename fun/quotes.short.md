@@ -208,3 +208,7 @@ The Economist
 > Buying $399 of Apple stock instead of the first iPod in 2001 would have turned into about $500k today
 
 https://investedinstead.com/best
+
+> When my husband is telling me an assinine or super boring story, I pretend that I died and asked God for 5 more minutes with my family and these are the 5 minutes I get.
+
+/u/ankareeda
