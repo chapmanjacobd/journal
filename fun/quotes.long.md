@@ -404,3 +404,9 @@ management are constantly changing.
 > The owners of the city have managed to insulate themselves so well against history that they no longer believe that it exists. But they still dream about it, and in the depths of their seclusion the dream resembles a nightmare. A tangled procession of ceremonies and masks, conspiracies and motiveless coups and murders in hidden rooms And so that's what we stage for them, day after day, to soothe them in their dreaming business.
 >
 > Face of the Killer
+
+> In wider society, we are used to cutting out people we disagree with or don't want to deal with. We don't have to abide difficult or disruptive people. We can largely choose to interface with whom we please. Furthermore, we are used to handling people as they present themselves to us, not as who they could be down the line. I encourage anyone reading this to consider: what would your life be like if you had to abide everyone?
+>
+> Most people think that sounds hellish, and for good reason, but let me ask a different question: what would your life be like if you had to see human value and potential in everyone? What would your worldview look like if you saw people not as they are but as the best potential version of themselves, at some point down the line?
+>
+> ~kfwyre, https://tildes.net/~humanities/v81/book_review_the_cult_of_smart#comment-677o
