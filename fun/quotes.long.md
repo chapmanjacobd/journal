@@ -410,3 +410,9 @@ management are constantly changing.
 > Most people think that sounds hellish, and for good reason, but let me ask a different question: what would your life be like if you had to see human value and potential in everyone? What would your worldview look like if you saw people not as they are but as the best potential version of themselves, at some point down the line?
 >
 > ~kfwyre, https://tildes.net/~humanities/v81/book_review_the_cult_of_smart#comment-677o
+
+> After a fortnight in Europe the concept of “overkill” starts to seep in, but that’s because you’ve seen one incredible place after the other. If you’re living in the city, perhaps you’re used to your city’s landmarks; the statues are pigeon-poop platforms, little more. You have to wait for a visitor to remind you. But even so, I doubt 10% of the population knows who half these statues are meant to represent. The characters stand on their plinths like actors in a play whose sets were never struck, even though the play ran out of lines and the plot was picked up by another show down the street. A lucky few were memorialized inside City Hall: Herr Schuback, for example. 1732-1817: there’s an interesting time to be alive. There must have been a hundred faces carved in the pillars of the City Hall. Ignored and unknown - and they’re the special ones.
+> 
+> All those fossils: it weighs on you. But there are different ways to deal with the burden, I suppose; last summer in the Mediterranean we saw how everything just basks and shrugs and moves along towards the end of the day: raise a glass to the glorious sunset.
+>
+> James Lileks, https://www.lileks.com/travel/trips/2012/5.html
