@@ -1,0 +1,11 @@
+
+<blockquote>
+<p>forced to restart</p>
+</blockquote>
+<p>Unless it's a grounding issue, try this next time instead of restarting the whole OS:</p>
+<pre><code>systemctl --user restart pipewire-pulse.socket pipewire-pulse.service pipewire.service wireplumber.service
+</code></pre>
+<p>or if your OS is older perhaps:</p>
+<pre><code>sudo systemctl restart pulseaudio
+</code></pre>
+

@@ -1,0 +1,7 @@
+
+<p>I've never had problems like this with schedutil</p>
+<p>I would try compiling with</p>
+<pre><code>systemd-run --user --scope -p MemorySwapMax=0 -p MemoryMax=28G ...
+</code></pre>
+<p>I would say it's more likely I/O related as CPU stalls recover pretty much instantaneously in comparison. Could be from reading lots of tiny files? Or maybe there's something quadratic going on in your build processes?</p>
+

@@ -1,0 +1,6 @@
+
+<p>The other alternative is to prefix the command with systemd-inhibit:</p>
+<pre><code>systemd-inhibit mpv ./audio.mp3
+</code></pre>
+<p>(if you are using mpv maybe you just need to set this in your config: <code>stop-screensaver=yes</code> (or <code>always</code> if you want it to prevent sleep even when playback is paused)... But I think that's the default anyway--ahh it only works when there's a window so playing audio only won't do it, you need <code>force-window=yes</code>)</p>
+
