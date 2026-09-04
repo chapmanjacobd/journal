@@ -1,0 +1,14 @@
+
+<p><code>echo $0</code> is a POSIX standard but it doesn't work in all shells. Fish shell might have supported it in v3 but in the v4 rust rewrite it doesn't print anything. However, I've done <code>echo $SHELL</code> before and that seems pretty robust. I haven't seen a shell that doesn't support <code>echo $SHELL</code> but I'm sure there are a few...</p>
+<hr/>
+<p>In fish shell I like that you can partially type any argument (not just command-name or last CLI argument of the last command) and press <code>alt+.</code> and it will complete with argument which match what you've already typed--I use that a lot but it didn't click with me until I accidentally discovered it a few times.</p>
+<hr/>
+<p>One thing that I've learned from using <code>opencode</code> / <code>agy</code> etc via tmux (where shift+enter isn't supported and just acts like regular enter): <code>Ctrl+j</code> to do a line break.</p>
+<p>But actually looking into this more while writing this comment... maybe I learned the wrong lesson. Maybe I just need to update my tmux config to something like this?</p>
+<pre><code>set -gu terminal-features
+set -as terminal-features ',xterm-kitty:extkeys:RGB'
+set -g extended-keys on
+set -g extended-keys-format csi-u
+</code></pre>
+<p><a href="https://github.com/chapmanjacobd/computer/commit/49bf759c52877046d245513681a3955fd486868f">https://github.com/chapmanjacobd/computer/commit/49bf759c52877046d245513681a3955fd486868f</a></p>
+
