@@ -1,3 +1,4 @@
+https://github.com/quarto-dev/quarto-cli
 https://linux.die.net/man/1/tcpflow
 https://github.com/sinelaw/fresh
 https://github.com/speced/bikeshed
