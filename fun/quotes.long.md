@@ -416,3 +416,7 @@ management are constantly changing.
 > All those fossils: it weighs on you. But there are different ways to deal with the burden, I suppose; last summer in the Mediterranean we saw how everything just basks and shrugs and moves along towards the end of the day: raise a glass to the glorious sunset.
 >
 > James Lileks, https://www.lileks.com/travel/trips/2012/5.html
+
+> Modern man lives isolated in his artificial environment, not because the artificial is evil as such, but because of his lack of comprehension of the forces which make it work—of the principles which relate his gadgets to the forces of nature, to the universal order. It is not central heating which makes his existence "unnatural," but his refusal to take an interest in the principles behind it. By being entirely dependent on science, yet closing his mind to it, he leads the life of an urban barbarian.
+>
+> Arthur Koestler
