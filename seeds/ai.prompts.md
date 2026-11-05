@@ -1,6 +1,6 @@
 Scan the repo for any confusing logic or things that don't seem quite right
-Check for unfinished scaffolding beyond simple TODO checks
-List all the incomplete, contradictory, or redundant features
+Check for unfinished scaffolding beyond simple TODO checks; and any incomplete, contradictory, or redundant features
+Interrogate the data types and schema we plan to use in plans/ as well as any existing data and schema that will be as-of-yet unchanged by our plans
 play around with this site in playwright and note any bugs or strange behavior
 Make a decision table for all the states and outputs. Think about possible edge-cases and suggest guarding strategies
 Do a PR review of git show HEAD
