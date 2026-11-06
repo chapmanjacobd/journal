@@ -1,6 +1,6 @@
 Scan the repo for any confusing logic or things that don't seem quite right
 Check for unfinished scaffolding beyond simple TODO checks; and any incomplete, contradictory, or redundant features. Any blocking ambiguities?
-Interrogate the data types and schema we plan to use in plans/ as well as any existing data and schema that will be as-of-yet unchanged by our plans
+Interrogate the data types and schema we plan to use for its performance and data storage costs, as well as any existing data and schema that will be as-of-yet unchanged by our plans.
 play around with this site in playwright and note any bugs or strange behavior
 which of the following critiques are valid?
 Make a decision table for all the states and outputs. Think about possible edge-cases and suggest guarding strategies
