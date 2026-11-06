@@ -1,3 +1,4 @@
+https://github.com/Blosc/python-blosc2
 https://github.com/deepanwadhwa/OpenDecision
 https://github.com/martinellimarco/indexed_zstd
 https://github.com/quarto-dev/quarto-cli
