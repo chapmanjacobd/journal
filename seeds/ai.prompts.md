@@ -4,6 +4,7 @@ Interrogate the data types and schema we plan to use for its performance and dat
 play around with this site in playwright and note any bugs or strange behavior
 which of the following critiques are valid?
 Make a decision table for all the states and outputs. Think about possible edge-cases and suggest guarding strategies
+verify that this codebase is following modern linux conventions and note any Unix/POSIX irregularities
 Do a PR review of git show HEAD
 Lets get `make lint` passing by strictly following linting recommendations. don't add ignores or modify lint config
 Remove any change-oriented phrasing and rewrite *.md documentation as stable present-tense behavior.
