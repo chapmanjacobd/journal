@@ -1,2 +1,4 @@
-    favorite, cool characters of all the writing systems
-    favorite/worst fashion, color
+# List ideas
+
+- favorite, cool characters of all the writing systems
+- favorite/worst fashion, color

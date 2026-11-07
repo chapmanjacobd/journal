@@ -1,27 +1,34 @@
-https://youtube.com/@onpointnpr  # onpointnpr
-https://traffic.megaphone.fm/BUR1113101089.mp3  # https://traffic.megaphone.fm/BUR1113101089.mp3
-https://wbur.org/onpoint/2024/03/13/human-cost-cobalt-modern-slavery-in-the-democratic-republic-of-congo  # The human cost of cobalt: Modern slavery in the Democratic Republic of the Congo | On Point
-https://m.youtube.com/channel/UCkdnY2hNC0sdlVXPtWuNQ8g  # New York Times Podcasts
-https://m.youtube.com/@TheAtlantic/videos  # The Atlantic
+# Video research
 
-https://www.wbur.org/onpoint/2024/03/07/elements-of-energy-mining-for-a-green-future  # Elements of energy: Mining for a green future | On Point
-https://radio.montezpress.com/#/  # Montez Press Radio
+## Sources to review
 
-Target Audience Age
-Target Audience Specialization
-Topic
-Language
-Popularity
-Number of Videos
-Quality
-Reason for Exclusion
-Recommended By
+- https://youtube.com/@onpointnpr  # onpointnpr
+- https://traffic.megaphone.fm/BUR1113101089.mp3  # https://traffic.megaphone.fm/BUR1113101089.mp3
+- https://wbur.org/onpoint/2024/03/13/human-cost-cobalt-modern-slavery-in-the-democratic-republic-of-congo  # The human cost of cobalt: Modern slavery in the Democratic Republic of the Congo | On Point
+- https://m.youtube.com/channel/UCkdnY2hNC0sdlVXPtWuNQ8g  # New York Times Podcasts
+- https://m.youtube.com/@TheAtlantic/videos  # The Atlantic
+- https://www.wbur.org/onpoint/2024/03/07/elements-of-energy-mining-for-a-green-future  # Elements of energy: Mining for a green future | On Point
+- https://radio.montezpress.com/#/  # Montez Press Radio
 
+## Classification fields
 
-https://en.m.wikipedia.org/wiki/List_of_academic_fields  # List of academic fields - Wikipedia
-https://www.statcan.gc.ca/en/subjects/standard/cip/2021/index  # Classification of Instructional Programs (CIP) Canada 2021 Version 1.0
+- Target Audience Age
+- Target Audience Specialization
+- Topic
+- Language
+- Popularity
+- Number of Videos
+- Quality
+- Reason for Exclusion
+- Recommended By
 
-text to parse
-reddit teacher, professor subreddits
-https://rss.feedspot.com/science_teacher_rss_feeds/  # Top 40 Science Teacher RSS Feeds
-https://rss.feedspot.com/stem_rss_feeds/  # Top 90 STEM RSS Feeds (Science, Technology, Engineering and Mathematics)
+## Reference lists
+
+- https://en.m.wikipedia.org/wiki/List_of_academic_fields  # List of academic fields - Wikipedia
+- https://www.statcan.gc.ca/en/subjects/standard/cip/2021/index  # Classification of Instructional Programs (CIP) Canada 2021 Version 1.0
+
+## text to parse
+
+- reddit teacher, professor subreddits
+- https://rss.feedspot.com/science_teacher_rss_feeds/  # Top 40 Science Teacher RSS Feeds
+- https://rss.feedspot.com/stem_rss_feeds/  # Top 90 STEM RSS Feeds (Science, Technology, Engineering and Mathematics)
