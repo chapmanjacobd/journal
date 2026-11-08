@@ -3,6 +3,7 @@
 ## Code review
 - Scan the repo for any confusing logic or things that don't seem quite right
 - Check for unfinished scaffolding beyond simple TODO checks; and any incomplete, contradictory, or redundant features. Any blocking ambiguities?
+- Can we simplify anything by removing compatability guarantees? What are the tradeoffs?
 - which of the following critiques are valid?
 - Do a PR review of git show HEAD
 
