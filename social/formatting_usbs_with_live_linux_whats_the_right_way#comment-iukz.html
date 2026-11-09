@@ -1,0 +1,15 @@
+
+<blockquote>
+<p>have to hop into Windows and use DISKPART</p>
+</blockquote>
+<p>This creates a new GPT partition table with a linux partition:</p>
+<pre><code>sudo sgdisk --zap-all -n 0:0:0 -t 0:8300 /dev/sdX
+</code></pre>
+<p>Then you can do mkfs on /dev/sdX1.</p>
+<p>You could also do <code>sudo wipefs -a /dev/sdX</code> to clear the device but the above <code>--zap-all</code> already includes this step. If you have <code>sgdisk</code> you don't really need <code>wipefs</code>.</p>
+<hr/>
+<p>If you want a bootable USB just do:</p>
+<pre><code>sudo dd bs=4M oflag=direct status=progress if=Fedora-KDE-Desktop-Live-44.iso of=/dev/sdX
+</code></pre>
+<p>And this should do all that you need to do for you as long as you used /dev/sdX and not /dev/sdX1.</p>
+
