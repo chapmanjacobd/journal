@@ -32,3 +32,7 @@
 ## Golang
 - Use t.Errorf instead of t.Failf
 - Use table-driven tests https://go.dev/wiki/TableDrivenTests
+
+## Web
+
+- Follow modern web practices like those defined in https://developer.chrome.com/docs/modern-web-guidance/guides.md
