@@ -12,7 +12,9 @@
 - Make a decision table for all the states and outputs. Think about possible edge-cases and suggest guarding strategies
 
 ## Testing and diagnostics
-- play around with this site in playwright and note any bugs or strange behavior
+- play around with this site in playwright Chromium (Blink) and note any bugs or strange behavior
+- play around with this site in playwright Firefox (Gecko) and note any bugs or strange behavior
+- play around with this site in playwright WebKit and note any bugs or strange behavior
 - Take a look at the workflow tests and other tests to see where there are gaps in UX (eg. a common task requiring more than 2 CLI commands); as well as duplicated functionality (ignore different names for things--like if there's two different commands but they both have the same type signature). Identify candidates for subcommand merging or core API refactoring. reverse compatibility is not needed anywhere at this time as everything is alpha
 - aggregate the most common (with at least repeat qty >5) lines in journalctl from the last 25 hours
 
