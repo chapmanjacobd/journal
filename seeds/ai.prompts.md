@@ -27,6 +27,7 @@
 - lets rewrite .md to be better technical writing but don't get too crazy. try to keep things concise
 - Adhere the documentation and application interfaces to the ADS-STE100 standard. Ensure confusing or duplicated synonyms are not distinct before conflating / coalescing. But don't add a definition or terms section literally to the document.
 - Remove repetitive bold lead-ins. Use bold only for key metrics, comparisons, and meaningful emphasis.
+- Only use simpler words when they fit. Do not needlessly churn text.
 
 ## Planning
 - Break down these tasks into user decision artifact plans where structural changes happen first. Include context for a future agent as each plan will be executed independently
