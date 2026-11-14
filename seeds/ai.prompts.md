@@ -23,8 +23,9 @@
 - Lets get `make lint` passing by strictly following linting recommendations. don't add ignores or modify lint config
 
 ## Documentation and technical writing
-- Remove any change-oriented phrasing and rewrite *.md documentation as stable present-tense behavior.
-- lets rewrite .md to be better technical writing but don't get too crazy. try to keep things concise
+- Remove any change-oriented phrasing in *.md documentation as stable present-tense behavior.
+- If the documentation is too verbose, rewrite .md to be better technical writing but don't get too crazy.
+- In general, try to keep things concise and tidy.
 - Adhere the documentation and application interfaces to the ADS-STE100 standard. Ensure confusing or duplicated synonyms are not distinct before conflating / coalescing. But don't add a definition or terms section literally to the document.
 - Remove repetitive bold lead-ins. Use bold only for key metrics, comparisons, and meaningful emphasis.
 - Only use simpler words when they fit. Do not needlessly churn text.
