@@ -1,0 +1,8 @@
+
+<p>I've made a few attempts over the years but this week AI helped me over the hump transitioning from X11 to Wayland and I'm at the point where I finally feel comfortable only using Wayland from now on.</p>
+<p>You can see some of the recent changes here: <a href="https://github.com/chapmanjacobd/computer/commits/main/">chapmanjacobd/computer</a></p>
+<p>One of the neat ideas that I had this week is this <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/git.edit">git.edit</a> command. It provides the same interface of <code>git add --patch</code> but for existing commits. It's really handy! It's probably imperfect so only use it if you're comfortable digging yourself out of the reflog but it works for me.</p>
+<p>Another thing which might be interesting (though I rarely use it as I usually do <code>git am</code> on a clean worktree) is <a href="https://github.com/chapmanjacobd/computer/blob/main/.config/fish/functions/git.applyhead.fish">git.applyhead</a>. It uses <code>git commit-tree</code> and <code>git update-ref</code> to apply a patch under a dirty worktree.</p>
+<hr/>
+<p>A couple other recent things that I'm happy with are CLI helpers for installing/fixing/running Windows games in <a href="https://en.wikipedia.org/wiki/Wine_(software)">WINE</a>: <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/wine.game">wine.game</a>, <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/wine.game.add">wine.game.add</a>, <a href="https://github.com/chapmanjacobd/computer/blob/main/bin/wine.dxvk">wine.dxvk</a>. It just automates a lot of clicking around and I no longer feel panic at having to open a GUI or remember the correct WINE prefix to find and launch a game.</p>
+
