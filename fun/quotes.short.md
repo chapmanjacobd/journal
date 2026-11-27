@@ -216,3 +216,7 @@ https://investedinstead.com/best
 > It's been a long time since we worshipped the radio. Since we set it on the altar and paid tribute. Since we broke open the vacuum tubes and breathed in the noble gasses of jazz and bulletins. But the signal still passes though you, filling the space between your atoms. The radio lives on inside you.
 
 https://bsky.app/profile/thedoorthedoor.bsky.social/post/3n2zdcrxcm22r
+
+> There are cathedrals everywhere for those with the eyes to see
+
+https://twitter.com/jordanbpeterson/status/1633882580746653696
